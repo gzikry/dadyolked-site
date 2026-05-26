@@ -1,0 +1,1149 @@
+<!doctype html>
+<html lang="en" data-mode="dark" data-accent="copper">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>DadYolked — Pregnancy &amp; baby ops for dads</title>
+<meta name="description" content="DadYolked is the pregnancy and baby companion built for dads — hospital bag, kick counts, contractions, feeds, medicine, milestones. The chaos, organized." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800;900&family=Geist+Mono:wght@400;500;600&family=Newsreader:ital,wght@1,400;1,500;1,600&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --ink:        #0E1320;
+    --ink-2:      #151B2B;
+    --ink-3:      #1E2638;
+    --paper:      #F6F1E7;
+    --paper-2:    #EFE7D6;
+    --line-dark:  rgba(255,255,255,0.10);
+    --line-light: rgba(14,19,32,0.10);
+    --copper:     #C07A3E;
+    --copper-2:   #E0975A;
+    --teal:       #20616F;
+    --sand:       #95583A;
+    --sage:       #51705C;
+    --slate:      #4B5B6E;
+    --ink-text:   #1A1F2E;
+    --ink-muted:  #5F6675;
+    --paper-muted:rgba(246,241,231,0.62);
+
+    --accent:       #C07A3E;
+    --accent-soft:  rgba(192,122,62,0.16);
+    --accent-glow:  rgba(224,151,90,0.32);
+
+    --r-card: 22px;
+    --r-lg:   32px;
+    --r-pill: 999px;
+
+    --max: 1280px;
+
+    color-scheme: dark;
+  }
+
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; }
+  body{
+    font-family:'Geist', system-ui, -apple-system, sans-serif;
+    font-weight:450;
+    background:var(--ink);
+    color:#E9E4D8;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+    overflow-x:hidden;
+  }
+
+  a{ color:inherit; text-decoration:none; }
+  img{ max-width:100%; display:block; }
+
+  ::selection{ background:var(--accent); color:#fff; }
+
+  .wrap{ max-width:var(--max); margin:0 auto; padding:0 28px; }
+
+  /* ---------- Type ---------- */
+  .display{
+    font-family:'Geist', sans-serif;
+    font-weight:800;
+    letter-spacing:-0.045em;
+    line-height:0.94;
+  }
+  .italic-serif{
+    font-family:'Newsreader', serif;
+    font-style:italic;
+    font-weight:500;
+    letter-spacing:-0.02em;
+  }
+  .mono{
+    font-family:'Geist Mono', ui-monospace, monospace;
+    font-weight:500;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    font-size:11px;
+  }
+  .kicker{
+    display:inline-flex; align-items:center; gap:10px;
+    font-family:'Geist Mono', ui-monospace, monospace;
+    font-size:11px; font-weight:500;
+    letter-spacing:0.16em; text-transform:uppercase;
+    color:var(--accent);
+  }
+  .kicker::before{
+    content:""; width:24px; height:1px; background:currentColor; opacity:0.6;
+  }
+
+  /* ---------- Nav ---------- */
+  .nav{
+    position:sticky; top:0; z-index:50;
+    backdrop-filter:blur(16px) saturate(140%);
+    -webkit-backdrop-filter:blur(16px) saturate(140%);
+    background:color-mix(in oklab, var(--ink) 70%, transparent);
+    border-bottom:1px solid var(--line-dark);
+  }
+  .nav-row{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:18px 0;
+  }
+  .brand{
+    display:inline-flex; align-items:center; gap:12px;
+    font-weight:700; font-size:18px; letter-spacing:-0.02em;
+  }
+  .brand-mark{
+    width:34px; height:34px; border-radius:9px;
+    background:var(--ink-3); border:1px solid var(--line-dark);
+    overflow:hidden; display:grid; place-items:center;
+  }
+  .brand-mark img{ width:100%; height:100%; object-fit:cover; }
+  .nav-links{
+    display:flex; align-items:center; gap:28px;
+    font-size:14px; color:var(--paper-muted);
+  }
+  .nav-links a:hover{ color:#fff; }
+  .nav-links .pill{ color:#fff; }
+
+  .pill{
+    display:inline-flex; align-items:center; gap:8px;
+    height:42px; padding:0 18px;
+    border-radius:var(--r-pill);
+    font-size:14px; font-weight:600;
+    letter-spacing:-0.01em;
+    border:1px solid transparent;
+    transition: transform 160ms ease, background 160ms ease, color 160ms ease;
+    cursor:pointer;
+  }
+  .pill:hover{ transform:translateY(-1px); }
+  .pill.primary{
+    background:var(--accent); color:#fff;
+    box-shadow: 0 12px 30px -10px var(--accent-glow);
+  }
+  .pill.ghost{
+    background:transparent; color:inherit;
+    border-color:rgba(255,255,255,0.18);
+  }
+  .pill.ghost:hover{ border-color:rgba(255,255,255,0.40); }
+
+  /* ---------- Hero (bold layout) ---------- */
+  .hero{
+    position:relative;
+    padding:80px 0 100px;
+    overflow:hidden;
+  }
+  .hero-grid{
+    display:grid;
+    grid-template-columns: 1fr;
+    gap:60px;
+  }
+  .hero h1{
+    font-size: clamp(80px, 16vw, 240px);
+    line-height:0.88;
+    text-align:center;
+    margin:24px 0 28px;
+  }
+  .hero h1 .accent{ color:var(--accent); }
+  .hero h1 .serif{
+    font-family:'Newsreader', serif;
+    font-style:italic;
+    font-weight:500;
+    letter-spacing:-0.02em;
+    color:var(--paper);
+  }
+  .hero p.lead{
+    font-size: clamp(18px, 1.5vw, 21px);
+    line-height:1.5;
+    max-width: 560px;
+    color: rgba(233,228,216,0.72);
+    margin:0 auto 36px;
+    text-align:center;
+  }
+  .hero-cta{ display:flex; flex-wrap:wrap; gap:12px; align-items:center; justify-content:center; }
+  .hero-trust{
+    margin-top:36px;
+    display:flex; flex-wrap:wrap; gap:18px 28px;
+    font-size:13px;
+    color: rgba(233,228,216,0.55);
+    justify-content:center;
+  }
+  .hero-trust span{ display:inline-flex; align-items:center; gap:8px; }
+  .hero-trust .dot{
+    width:6px; height:6px; border-radius:50%; background:var(--accent);
+  }
+
+  /* Hero illustration card */
+  .hero-art{
+    position:relative;
+    border-radius: var(--r-lg);
+    border:1px solid var(--line-dark);
+    background:
+      radial-gradient(120% 80% at 80% 0%, rgba(192,122,62,0.20), transparent 60%),
+      linear-gradient(180deg, #0B101C 0%, #060912 100%);
+    padding:22px;
+    overflow:hidden;
+    box-shadow: 0 50px 120px -40px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.04);
+    max-width: 920px;
+    margin: 0 auto;
+  }
+  .art-meta{
+    display:flex; justify-content:space-between; align-items:flex-start;
+    padding: 6px 8px 18px;
+  }
+  .art-meta .week{
+    font-family:'Geist', sans-serif;
+    font-weight:800;
+    font-size:34px;
+    letter-spacing:-0.04em;
+    line-height:0.9;
+  }
+  .art-meta .label{
+    color: rgba(233,228,216,0.55);
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:0.14em;
+    font-family:'Geist Mono', monospace;
+  }
+  .art-meta .tag{
+    align-self:flex-start;
+    padding:6px 10px; border-radius:999px;
+    border:1px solid var(--line-dark);
+    font-size:11px; font-family:'Geist Mono', monospace;
+    letter-spacing:0.12em; text-transform:uppercase;
+    color:var(--accent);
+    background:var(--accent-soft);
+  }
+
+  .art-image{
+    border-radius:18px;
+    overflow:hidden;
+    aspect-ratio: 1024 / 1536;
+    background:#000;
+    position:relative;
+  }
+  .art-image img{ width:100%; height:100%; object-fit:cover; }
+
+  .art-stat-row{
+    display:grid; grid-template-columns: repeat(3, 1fr);
+    gap:10px; margin-top:14px;
+  }
+  .art-stat{
+    border:1px solid var(--line-dark);
+    border-radius:14px;
+    padding:12px 14px;
+    background: rgba(255,255,255,0.02);
+  }
+  .art-stat .v{
+    font-weight:700; font-size:20px;
+    letter-spacing:-0.03em;
+  }
+  .art-stat .k{
+    font-size:11px;
+    color: rgba(233,228,216,0.55);
+    text-transform:uppercase; letter-spacing:0.12em;
+    font-family:'Geist Mono', monospace;
+    margin-top:2px;
+  }
+
+  /* ---------- Marquee strip ---------- */
+  .strip{
+    border-top:1px solid var(--line-dark);
+    border-bottom:1px solid var(--line-dark);
+    background: rgba(255,255,255,0.02);
+    overflow:hidden;
+  }
+  .strip-row{
+    display:flex; align-items:center; gap:56px;
+    padding:18px 0;
+    white-space:nowrap;
+    animation: marq 38s linear infinite;
+    font-family:'Geist Mono', monospace;
+    font-size:13px;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color:rgba(233,228,216,0.6);
+  }
+  .strip-row span{ display:inline-flex; align-items:center; gap:18px; }
+  .strip-row .dot{
+    width:6px; height:6px; border-radius:50%; background:var(--accent);
+  }
+  @keyframes marq{
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+
+  /* ---------- Section base ---------- */
+  section{ position:relative; padding: 120px 0; }
+  .section-head{
+    display:grid; grid-template-columns: 1fr 1fr;
+    gap:48px; align-items:end;
+    margin-bottom:64px;
+  }
+  .section-head h2{
+    font-family:'Geist', sans-serif;
+    font-weight:800;
+    letter-spacing:-0.045em;
+    line-height:0.96;
+    font-size: clamp(40px, 5.5vw, 76px);
+    margin: 18px 0 0;
+  }
+  .section-head h2 .serif{
+    font-family:'Newsreader', serif;
+    font-style:italic; font-weight:500;
+    color:var(--accent);
+  }
+  .section-head p{
+    font-size:17px; line-height:1.55;
+    color: rgba(233,228,216,0.65);
+    max-width:480px;
+    margin:0; justify-self:end;
+  }
+
+  /* ---------- Features ---------- */
+  .features{
+    display:grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap:16px;
+  }
+  .feature{
+    grid-column: span 4;
+    border-radius:var(--r-card);
+    padding:28px 26px 30px;
+    border:1px solid var(--line-dark);
+    background: linear-gradient(180deg, rgba(255,255,255,0.025), rgba(255,255,255,0.005));
+    min-height:240px;
+    display:flex; flex-direction:column; justify-content:space-between;
+    transition: border-color 200ms ease, transform 200ms ease;
+  }
+  .feature:hover{ border-color:var(--accent); transform: translateY(-2px); }
+  .feature .glyph{
+    width:46px; height:46px; border-radius:14px;
+    border:1px solid var(--line-dark);
+    background: var(--accent-soft);
+    color:var(--accent);
+    display:grid; place-items:center;
+    font-family:'Geist Mono', monospace; font-weight:600; font-size:14px;
+  }
+  .feature h3{
+    font-family:'Geist', sans-serif;
+    font-size:26px; font-weight:700; letter-spacing:-0.03em;
+    margin:24px 0 10px;
+    line-height:1.05;
+  }
+  .feature p{
+    font-size:15px; line-height:1.55;
+    color: rgba(233,228,216,0.62);
+    margin:0;
+  }
+
+  .feature.wide{ grid-column: span 8; }
+  .feature.wide .glyph{ background:var(--accent); color:#fff; }
+  .feature.wide h3{ font-size: 36px; }
+  .feature.wide p{ font-size:17px; max-width: 480px; }
+
+  /* ---------- Stages ---------- */
+  .stages{
+    display:grid; grid-template-columns: repeat(3, 1fr); gap:18px;
+  }
+  .stage{
+    border-radius:var(--r-card);
+    border:1px solid var(--line-dark);
+    background:var(--ink-2);
+    overflow:hidden;
+    display:flex; flex-direction:column;
+  }
+  .stage-art{
+    aspect-ratio: 4 / 5;
+    background:#000;
+    overflow:hidden;
+    position:relative;
+  }
+  .stage-art img{ width:100%; height:100%; object-fit:cover; }
+  .stage-art::after{
+    content:"";
+    position:absolute; inset:auto 0 0 0; height:35%;
+    background: linear-gradient(180deg, transparent, rgba(0,0,0,0.55));
+    pointer-events:none;
+  }
+  .stage-art .badge{
+    position:absolute; top:18px; left:18px;
+    background: rgba(14,19,32,0.55);
+    border:1px solid rgba(255,255,255,0.16);
+    backdrop-filter: blur(10px);
+    color:#fff;
+    padding:7px 12px; border-radius:999px;
+    font-family:'Geist Mono', monospace; font-size:11px;
+    letter-spacing:0.12em; text-transform:uppercase;
+  }
+  .stage-body{
+    padding:26px 24px 28px;
+    display:flex; flex-direction:column; gap:14px;
+  }
+  .stage-body .num{
+    font-family:'Geist Mono', monospace;
+    font-size:11px; letter-spacing:0.16em;
+    text-transform:uppercase; color:var(--accent);
+  }
+  .stage-body h3{
+    font-size:28px; font-weight:700;
+    letter-spacing:-0.03em; margin:0;
+    line-height:1.05;
+  }
+  .stage-body p{
+    margin:0;
+    font-size:14.5px; line-height:1.55;
+    color: rgba(233,228,216,0.62);
+  }
+  .stage-body ul{
+    list-style:none; padding:0; margin:6px 0 0;
+    display:flex; flex-direction:column; gap:8px;
+  }
+  .stage-body li{
+    font-size:13px;
+    color: rgba(233,228,216,0.74);
+    display:flex; align-items:center; gap:10px;
+  }
+  .stage-body li::before{
+    content:""; width:14px; height:14px; flex-shrink:0;
+    border:1.5px solid var(--accent); border-radius:4px;
+    background:
+      linear-gradient(135deg, transparent 50%, var(--accent) 50%);
+  }
+
+  /* ---------- Inside ---------- */
+  .inside{
+    background:
+      radial-gradient(60% 50% at 50% 0%, rgba(192,122,62,0.10), transparent 70%),
+      var(--ink);
+    border-top:1px solid var(--line-dark);
+    border-bottom:1px solid var(--line-dark);
+  }
+  .modules{
+    display:grid; grid-template-columns: 5fr 7fr; gap:18px;
+  }
+  .module{
+    border-radius:var(--r-card);
+    border:1px solid var(--line-dark);
+    background:var(--ink-2);
+    padding:28px;
+    display:flex; flex-direction:column; gap:18px;
+  }
+  .module .modkicker{ color:var(--accent); }
+  .module h3{
+    font-size:32px; font-weight:700; letter-spacing:-0.035em;
+    margin:0; line-height:1.05;
+  }
+  .module p{
+    margin:0; font-size:15px; line-height:1.55;
+    color: rgba(233,228,216,0.62);
+  }
+
+  .today-mock{
+    margin-top:auto;
+    border-radius:18px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01));
+    border:1px solid var(--line-dark);
+    padding:18px;
+  }
+  .today-mock .row{
+    display:flex; align-items:center; gap:14px;
+    padding:12px 0;
+    border-bottom:1px solid var(--line-dark);
+  }
+  .today-mock .row:last-child{ border-bottom:none; }
+  .today-mock .icon{
+    width:36px; height:36px; border-radius:10px;
+    background:var(--accent-soft); color:var(--accent);
+    display:grid; place-items:center; flex-shrink:0;
+    font-family:'Geist Mono', monospace; font-weight:600; font-size:12px;
+  }
+  .today-mock .t{ font-size:14px; font-weight:600; letter-spacing:-0.01em; }
+  .today-mock .s{ font-size:12px; color:rgba(233,228,216,0.5); margin-top:2px; }
+  .today-mock .v{
+    margin-left:auto; font-family:'Geist Mono', monospace;
+    font-size:12px; color:rgba(233,228,216,0.7);
+    letter-spacing:0.05em;
+  }
+
+  .timeline{
+    position:relative;
+    padding:8px 0 0 0;
+  }
+  .timeline .lane{
+    position:relative;
+    display:grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap:6px;
+    margin-top:14px;
+  }
+  .timeline .week{
+    height:64px;
+    border-radius:10px;
+    background: rgba(255,255,255,0.04);
+    border:1px solid var(--line-dark);
+    position:relative;
+    overflow:hidden;
+  }
+  .timeline .week.active{
+    background: var(--accent);
+    border-color: var(--accent);
+  }
+  .timeline .week.filled{
+    background: var(--accent-soft);
+    border-color: var(--accent);
+  }
+  .timeline .week .num{
+    position:absolute; bottom:6px; left:8px;
+    font-family:'Geist Mono', monospace;
+    font-size:10px;
+    color:rgba(233,228,216,0.55);
+    letter-spacing:0.05em;
+  }
+  .timeline .week.active .num,
+  .timeline .week.filled .num{ color: rgba(14,19,32,0.85); }
+  .timeline .axis{
+    display:flex; justify-content:space-between;
+    margin-top:14px;
+    font-family:'Geist Mono', monospace;
+    font-size:11px;
+    color: rgba(233,228,216,0.5);
+    letter-spacing:0.1em;
+  }
+
+  .timeline-fact{
+    margin-top:20px;
+    display:grid; grid-template-columns: repeat(3, 1fr);
+    gap:14px;
+  }
+  .timeline-fact .cell{
+    border:1px solid var(--line-dark);
+    border-radius:14px;
+    padding:18px;
+  }
+  .timeline-fact .cell .big{
+    font-size:32px; font-weight:700; letter-spacing:-0.04em;
+    line-height:1;
+  }
+  .timeline-fact .cell .big .unit{ font-size:14px; color:rgba(233,228,216,0.55); margin-left:4px; letter-spacing:0; }
+  .timeline-fact .cell .lbl{
+    margin-top:8px; font-family:'Geist Mono', monospace;
+    font-size:11px; color:rgba(233,228,216,0.55);
+    letter-spacing:0.12em; text-transform:uppercase;
+  }
+
+  /* ---------- Quote ---------- */
+  .quote{
+    padding: 140px 0;
+  }
+  .quote blockquote{
+    font-family:'Newsreader', serif;
+    font-style:italic;
+    font-weight:500;
+    font-size: clamp(36px, 5vw, 64px);
+    line-height:1.1;
+    letter-spacing:-0.025em;
+    margin:0;
+    max-width: 1100px;
+    color: #F1ECDE;
+  }
+  .quote blockquote .high{ color: var(--accent); }
+  .quote .cite{
+    margin-top:36px;
+    display:flex; align-items:center; gap:14px;
+    font-family:'Geist Mono', monospace;
+    font-size:12px; color: rgba(233,228,216,0.55);
+    letter-spacing:0.12em; text-transform:uppercase;
+  }
+  .quote .cite .av{
+    width:36px; height:36px; border-radius:50%;
+    background: linear-gradient(135deg, var(--accent), var(--sand));
+  }
+
+  /* ---------- Privacy ---------- */
+  .privacy{
+    background: var(--ink-2);
+    border-top:1px solid var(--line-dark);
+    border-bottom:1px solid var(--line-dark);
+  }
+  .privacy-grid{
+    display:grid; grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap:16px;
+  }
+  .priv-card{
+    padding:24px;
+    border-radius:18px;
+    border:1px solid var(--line-dark);
+    background: rgba(255,255,255,0.02);
+  }
+  .priv-card .num{
+    font-family:'Geist Mono', monospace; font-size:11px;
+    letter-spacing:0.16em; color:var(--accent);
+    text-transform:uppercase;
+  }
+  .priv-card h4{
+    margin:14px 0 8px;
+    font-size:20px; font-weight:700; letter-spacing:-0.025em;
+  }
+  .priv-card p{
+    margin:0; font-size:14px; line-height:1.55;
+    color: rgba(233,228,216,0.62);
+  }
+
+  /* ---------- Big CTA ---------- */
+  .cta{
+    padding: 160px 0;
+    text-align:center;
+    background:
+      radial-gradient(60% 60% at 50% 30%, rgba(192,122,62,0.18), transparent 70%);
+  }
+  .cta h2{
+    font-size: clamp(56px, 9vw, 132px);
+    font-weight:800; letter-spacing:-0.05em; line-height:0.92;
+    margin: 0 0 24px;
+  }
+  .cta h2 .serif{
+    font-family:'Newsreader', serif; font-style:italic; font-weight:500;
+    color: var(--accent);
+  }
+  .cta p{
+    font-size:18px; line-height:1.5;
+    color: rgba(233,228,216,0.65);
+    max-width:560px; margin:0 auto 36px;
+  }
+  .cta-row{ display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
+
+  /* ---------- Footer ---------- */
+  footer{
+    border-top:1px solid var(--line-dark);
+    padding: 48px 0 56px;
+    background: var(--ink);
+  }
+  .foot-grid{
+    display:grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap:32px;
+    margin-bottom:48px;
+  }
+  .foot-grid h5{
+    margin:0 0 16px;
+    font-family:'Geist Mono', monospace;
+    font-size:11px; letter-spacing:0.16em;
+    text-transform:uppercase;
+    color: rgba(233,228,216,0.5);
+    font-weight:500;
+  }
+  .foot-grid ul{
+    list-style:none; padding:0; margin:0;
+    display:flex; flex-direction:column; gap:10px;
+    font-size:14px;
+  }
+  .foot-grid li a{ color:rgba(233,228,216,0.78); }
+  .foot-grid li a:hover{ color:var(--accent); }
+  .foot-blurb{
+    color: rgba(233,228,216,0.6);
+    font-size:14px; line-height:1.5;
+    max-width:320px;
+    margin-top:18px;
+  }
+  .foot-bottom{
+    display:flex; justify-content:space-between; align-items:center;
+    border-top:1px solid var(--line-dark);
+    padding-top:24px;
+    font-size:13px; color:rgba(233,228,216,0.5);
+    font-family:'Geist Mono', monospace;
+    letter-spacing:0.08em;
+  }
+
+  .megaword{
+    font-size: clamp(120px, 22vw, 320px);
+    font-weight:800; letter-spacing:-0.06em; line-height:0.85;
+    margin:-30px 0 0;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(233,228,216,0.16);
+    text-align:center;
+    pointer-events:none;
+    user-select:none;
+  }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 980px){
+    .hero{ padding: 56px 0 80px; }
+    .section-head{ grid-template-columns: 1fr; gap:16px; }
+    .section-head p{ justify-self:start; }
+    .features{ grid-template-columns: repeat(2, 1fr); }
+    .feature{ grid-column: span 1; }
+    .feature.wide{ grid-column: span 2; }
+    .stages{ grid-template-columns: 1fr; }
+    .modules{ grid-template-columns: 1fr; }
+    .privacy-grid{ grid-template-columns: 1fr 1fr; }
+    .foot-grid{ grid-template-columns: 1fr 1fr; }
+    section{ padding:80px 0; }
+    .quote{ padding:80px 0; }
+    .cta{ padding:100px 0; }
+  }
+  @media (max-width: 620px){
+    .wrap{ padding:0 20px; }
+    .nav-links a:not(.pill){ display:none; }
+    .features{ grid-template-columns: 1fr; }
+    .feature.wide{ grid-column: span 1; }
+    .privacy-grid{ grid-template-columns: 1fr; }
+    .timeline .lane{ grid-template-columns: repeat(4, 1fr); }
+    .timeline-fact{ grid-template-columns: 1fr; }
+    .art-stat-row{ grid-template-columns: 1fr 1fr; }
+    .art-stat:last-child{ grid-column: span 2; }
+    .foot-grid{ grid-template-columns: 1fr; }
+    .foot-bottom{ flex-direction:column; gap:12px; }
+  }
+</style>
+</head>
+<body data-mode="dark">
+
+<!-- ============== NAV ============== -->
+<nav class="nav">
+  <div class="wrap nav-row">
+    <a href="#" class="brand" aria-label="DadYolked">
+      <span class="brand-mark"><img src="Assets/logo_core.png" alt=""></span>
+      DadYolked
+    </a>
+    <div class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#stages">Stages</a>
+      <a href="#inside">Inside the app</a>
+      <a href="/privacy/">Privacy</a>
+      <a href="/support/">Support</a>
+      <a class="pill primary" href="#download">Get the app</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ============== HERO ============== -->
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="kicker">Built for dads · iOS</span>
+      <h1 class="display">
+        Show up <span class="serif">prepared.</span><br>
+        Show up <span class="accent">on time.</span>
+      </h1>
+      <p class="lead">
+        DadYolked is the pregnancy and baby companion built for the guy doing the prep — hospital bag, kick counts, contractions, feeds at 3 a.m., medicine, milestones, appointments. The chaos, organized. Without a single nursery pastel.
+      </p>
+      <div class="hero-cta">
+        <a href="https://apps.apple.com/" class="pill primary" target="_blank" rel="noopener" data-app-store-link="pending-apple-id">
+          <svg width="14" height="16" viewBox="0 0 14 16" fill="currentColor" aria-hidden="true"><path d="M11.6 8.5c0-2.2 1.8-3.2 1.9-3.3-1-1.5-2.6-1.7-3.1-1.7-1.3-.1-2.6.8-3.3.8-.7 0-1.7-.8-2.9-.7-1.5 0-2.8.9-3.6 2.2-1.5 2.7-.4 6.7 1.1 8.9.7 1.1 1.6 2.3 2.7 2.2 1.1 0 1.5-.7 2.8-.7s1.7.7 2.8.7c1.2 0 1.9-1.1 2.6-2.2.8-1.2 1.2-2.5 1.2-2.5-.1 0-2.3-.9-2.2-3.7zM9.5 2c.6-.7 1-1.7.9-2.7-.9 0-1.9.6-2.5 1.3-.5.6-1 1.6-.9 2.6 1 .1 2-.5 2.5-1.2z"/></svg>
+          Download for iPhone
+        </a>
+        <a href="#features" class="pill ghost">See what it does →</a>
+      </div>
+      <div class="hero-trust">
+        <span><i class="dot"></i> Private by design — no ads, no brokers</span>
+        <span><i class="dot"></i> Apple Watch + Live Activities</span>
+        <span><i class="dot"></i> Free, no account required</span>
+      </div>
+    </div>
+
+    <div class="hero-art" aria-hidden="true">
+      <div class="art-meta">
+        <div>
+          <div class="label">Today · Week 20</div>
+          <div class="week">Halfway, dad.</div>
+        </div>
+        <span class="tag">Pregnancy</span>
+      </div>
+      <div class="art-image">
+        <img src="Assets/week20.png" alt="DadYolked week 20 illustration">
+      </div>
+      <div class="art-stat-row">
+        <div class="art-stat">
+          <div class="v">02:14</div>
+          <div class="k">Last kick</div>
+        </div>
+        <div class="art-stat">
+          <div class="v">37 min</div>
+          <div class="k">Contraction Δ</div>
+        </div>
+        <div class="art-stat">
+          <div class="v">14 / 20</div>
+          <div class="k">Prep complete</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ============== MARQUEE ============== -->
+<div class="strip" aria-hidden="true">
+  <div class="strip-row">
+    <span>Pregnancy timeline <i class="dot"></i></span>
+    <span>Contractions <i class="dot"></i></span>
+    <span>Kick counter <i class="dot"></i></span>
+    <span>Hospital bag <i class="dot"></i></span>
+    <span>Feeds <i class="dot"></i></span>
+    <span>Sleep <i class="dot"></i></span>
+    <span>Diapers <i class="dot"></i></span>
+    <span>Medicine <i class="dot"></i></span>
+    <span>Milestones <i class="dot"></i></span>
+    <span>Appointments <i class="dot"></i></span>
+    <span>Dad check-ins <i class="dot"></i></span>
+    <span>Apple Watch <i class="dot"></i></span>
+    <span>Pregnancy timeline <i class="dot"></i></span>
+    <span>Contractions <i class="dot"></i></span>
+    <span>Kick counter <i class="dot"></i></span>
+    <span>Hospital bag <i class="dot"></i></span>
+    <span>Feeds <i class="dot"></i></span>
+    <span>Sleep <i class="dot"></i></span>
+    <span>Diapers <i class="dot"></i></span>
+    <span>Medicine <i class="dot"></i></span>
+    <span>Milestones <i class="dot"></i></span>
+    <span>Appointments <i class="dot"></i></span>
+    <span>Dad check-ins <i class="dot"></i></span>
+    <span>Apple Watch <i class="dot"></i></span>
+  </div>
+</div>
+
+<!-- ============== FEATURES ============== -->
+<section id="features">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="kicker">What it does</span>
+        <h2>From <span class="serif">is this normal?</span><br>to <em style="font-style:normal;">I handled it.</em></h2>
+      </div>
+      <p>One private place for the boring-but-critical stuff so the loud, beautiful, terrifying stuff has room to be loud, beautiful, and terrifying.</p>
+    </div>
+
+    <div class="features">
+      <article class="feature wide">
+        <div class="glyph">01</div>
+        <div>
+          <h3>The Today screen, but for dads.</h3>
+          <p>One adaptive surface for whatever phase you're in. Pregnancy weeks. Newborn rotations. Toddler chaos. It changes with the kid — you don't reconfigure it every quarter.</p>
+        </div>
+      </article>
+      <article class="feature">
+        <div class="glyph">02</div>
+        <div>
+          <h3>Logs that survive 3 a.m.</h3>
+          <p>One-handed feeds, naps, diapers, meds. Big buttons. No moodboards.</p>
+        </div>
+      </article>
+      <article class="feature">
+        <div class="glyph">03</div>
+        <div>
+          <h3>Pregnancy command deck.</h3>
+          <p>Week-by-week context, kick counter, contraction timer, hospital bag — all in one stream.</p>
+        </div>
+      </article>
+      <article class="feature">
+        <div class="glyph">04</div>
+        <div>
+          <h3>Dad coaching, not dad jokes.</h3>
+          <p>Practical, stage-aware nudges. Burping, soothing, safety, sleep. Less vibes, more verbs.</p>
+        </div>
+      </article>
+      <article class="feature">
+        <div class="glyph">05</div>
+        <div>
+          <h3>Milestones &amp; appointments.</h3>
+          <p>Track what changed this week. See what's coming next. Export-ready for pediatrician visits.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============== STAGES ============== -->
+<section id="stages" style="padding-top:40px;">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="kicker">Every stage</span>
+        <h2>One app. <span class="serif">Forty weeks,</span><br>then a thousand more.</h2>
+      </div>
+      <p>Most baby apps treat dad like an optional accessory. DadYolked treats you like an operator with a small, adorable, extremely demanding mission.</p>
+    </div>
+
+    <div class="stages">
+      <article class="stage">
+        <div class="stage-art">
+          <span class="badge">Stage 01</span>
+          <img src="Assets/week12.png" alt="Week 12 pregnancy illustration">
+        </div>
+        <div class="stage-body">
+          <span class="num">Expecting</span>
+          <h3>Prep, not panic.</h3>
+          <p>Walk into the delivery room knowing where the carseat is, what a contraction is supposed to feel like, and where you stashed the snacks.</p>
+          <ul>
+            <li>40-week timeline</li>
+            <li>Contractions &amp; kicks</li>
+            <li>Hospital bag tracker</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="stage">
+        <div class="stage-art">
+          <span class="badge">Stage 02</span>
+          <img src="Assets/week40.png" alt="Newborn illustration">
+        </div>
+        <div class="stage-body">
+          <span class="num">Newborn</span>
+          <h3>Survive the blur.</h3>
+          <p>Fast logs, sleep windows, feeding sides, diaper trends. The 3 a.m. screen that doesn't make you cry harder.</p>
+          <ul>
+            <li>Feeds, naps, diapers</li>
+            <li>Routine builder</li>
+            <li>Live Activity timers</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="stage">
+        <div class="stage-art">
+          <span class="badge">Stage 03</span>
+          <img src="Assets/week32.png" alt="Growing illustration">
+        </div>
+        <div class="stage-body">
+          <span class="num">Growing</span>
+          <h3>Catch the wins.</h3>
+          <p>Milestones, medicine, appointments, photos. The hand-off package the pediatrician actually wants to see.</p>
+          <ul>
+            <li>Milestone catalog</li>
+            <li>Medicine log + reminders</li>
+            <li>Pediatrician export</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============== INSIDE THE APP ============== -->
+<section id="inside" class="inside">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="kicker">Inside the app</span>
+        <h2>The dashboard that <span class="serif">acts like a co-pilot,</span> not a database.</h2>
+      </div>
+      <p>Tap-friendly. One-handed. Built around the next thing you have to do — not a wall of charts you'll never open.</p>
+    </div>
+
+    <div class="modules">
+      <div class="module">
+        <span class="kicker modkicker">Today</span>
+        <h3>What's next, said simply.</h3>
+        <p>Your day, stack-ranked. Reminders fire from a place that understands what newborn week 6 is supposed to look like.</p>
+
+        <div class="today-mock" aria-hidden="true">
+          <div class="row">
+            <div class="icon">F</div>
+            <div>
+              <div class="t">Next feed window</div>
+              <div class="s">Right side · ~14 min · in 1h 12m</div>
+            </div>
+            <div class="v">14:32</div>
+          </div>
+          <div class="row">
+            <div class="icon">N</div>
+            <div>
+              <div class="t">Nap overdue</div>
+              <div class="s">Awake window: 2h 18m</div>
+            </div>
+            <div class="v">+38m</div>
+          </div>
+          <div class="row">
+            <div class="icon">M</div>
+            <div>
+              <div class="t">Tylenol</div>
+              <div class="s">Last dose 3h 40m ago</div>
+            </div>
+            <div class="v">soon</div>
+          </div>
+          <div class="row">
+            <div class="icon">A</div>
+            <div>
+              <div class="t">4-month checkup</div>
+              <div class="s">Dr. Halpern · Thursday 10:15</div>
+            </div>
+            <div class="v">Thu</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="module">
+        <span class="kicker modkicker">Pregnancy timeline</span>
+        <h3>Forty weeks, mapped.</h3>
+        <p>Every week unlocks context, prep tasks, and what the baby is up to right now. You're at week 20.</p>
+
+        <div class="timeline" aria-hidden="true">
+          <div class="lane">
+            <div class="week filled"><span class="num">13</span></div>
+            <div class="week filled"><span class="num">14</span></div>
+            <div class="week filled"><span class="num">15</span></div>
+            <div class="week filled"><span class="num">16</span></div>
+            <div class="week filled"><span class="num">17</span></div>
+            <div class="week filled"><span class="num">18</span></div>
+            <div class="week filled"><span class="num">19</span></div>
+            <div class="week active"><span class="num">20</span></div>
+            <div class="week"><span class="num">21</span></div>
+            <div class="week"><span class="num">22</span></div>
+            <div class="week"><span class="num">23</span></div>
+            <div class="week"><span class="num">24</span></div>
+            <div class="week"><span class="num">25</span></div>
+            <div class="week"><span class="num">26</span></div>
+            <div class="week"><span class="num">27</span></div>
+            <div class="week"><span class="num">28</span></div>
+          </div>
+          <div class="axis">
+            <span>2nd trimester</span>
+            <span>3rd trimester →</span>
+          </div>
+
+          <div class="timeline-fact">
+            <div class="cell">
+              <div class="big">20<span class="unit">wk</span></div>
+              <div class="lbl">Current week</div>
+            </div>
+            <div class="cell">
+              <div class="big">141<span class="unit">d</span></div>
+              <div class="lbl">Until due date</div>
+            </div>
+            <div class="cell">
+              <div class="big">3<span class="unit">prep</span></div>
+              <div class="lbl">Tasks this week</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== QUOTE ============== -->
+<section class="quote">
+  <div class="wrap">
+    <blockquote>
+      "We built the dad app we wanted at 3 a.m. with one hand free, <span class="high">a cold coffee,</span> and a kid who'd just figured out screaming."
+    </blockquote>
+  </div>
+</section>
+
+<!-- ============== PRIVACY ============== -->
+<section id="privacy" class="privacy">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="kicker">Privacy</span>
+        <h2>Your family data is <span class="serif">not</span> our business model.</h2>
+      </div>
+      <p>Local-first storage, optional private iCloud sync, plain-language policy. Tiny humans make enough chaos. The privacy page shouldn't.</p>
+    </div>
+
+    <div class="privacy-grid">
+      <article class="priv-card">
+        <div class="num">01 · Local</div>
+        <h4>On-device by default</h4>
+        <p>Your logs live on your phone. iCloud sync is optional and end-to-end through Apple's private container.</p>
+      </article>
+      <article class="priv-card">
+        <div class="num">02 · No brokers</div>
+        <h4>No ads, no resale</h4>
+        <p>Zero advertising SDKs. Zero third-party trackers. No data sold, rented, or traded — ever.</p>
+      </article>
+      <article class="priv-card">
+        <div class="num">03 · No account</div>
+        <h4>No login required</h4>
+        <p>Use the entire app without making an account. Email is only for support requests you actually send.</p>
+      </article>
+      <article class="priv-card">
+        <div class="num">04 · Export anytime</div>
+        <h4>Your data, exportable</h4>
+        <p>One-tap export to PDF or CSV for pediatrician visits, partners, or moving off the app entirely.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============== CTA ============== -->
+<section id="download" class="cta">
+  <div class="wrap">
+    <span class="kicker" style="justify-content:center; display:inline-flex;">Ready when you are</span>
+    <h2 class="display" style="margin-top:18px;">
+      You got this, <span class="serif">dad.</span>
+    </h2>
+    <p>Download DadYolked on iPhone. Free. No account. No nursery pastels. The full kit, ready before the next contraction or the next diaper incident — whichever shows up first.</p>
+    <div class="cta-row">
+      <a href="https://apps.apple.com/" class="pill primary" target="_blank" rel="noopener" data-app-store-link="pending-apple-id">
+        <svg width="14" height="16" viewBox="0 0 14 16" fill="currentColor" aria-hidden="true"><path d="M11.6 8.5c0-2.2 1.8-3.2 1.9-3.3-1-1.5-2.6-1.7-3.1-1.7-1.3-.1-2.6.8-3.3.8-.7 0-1.7-.8-2.9-.7-1.5 0-2.8.9-3.6 2.2-1.5 2.7-.4 6.7 1.1 8.9.7 1.1 1.6 2.3 2.7 2.2 1.1 0 1.5-.7 2.8-.7s1.7.7 2.8.7c1.2 0 1.9-1.1 2.6-2.2.8-1.2 1.2-2.5 1.2-2.5-.1 0-2.3-.9-2.2-3.7zM9.5 2c.6-.7 1-1.7.9-2.7-.9 0-1.9.6-2.5 1.3-.5.6-1 1.6-.9 2.6 1 .1 2-.5 2.5-1.2z"/></svg>
+        Download on the App Store
+      </a>
+      <a href="/privacy/" class="pill ghost">Read the privacy policy</a>
+    </div>
+  </div>
+
+  <div class="megaword" aria-hidden="true">DadYolked</div>
+</section>
+
+<!-- ============== FOOTER ============== -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a href="#" class="brand">
+          <span class="brand-mark"><img src="Assets/logo_core.png" alt=""></span>
+          DadYolked
+        </a>
+        <p class="foot-blurb">The pregnancy and baby companion built for dads doing the work. Made in California. Made for the night shift.</p>
+      </div>
+      <div>
+        <h5>Product</h5>
+        <ul>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#stages">Every stage</a></li>
+          <li><a href="#inside">Inside the app</a></li>
+          <li><a href="https://apps.apple.com/" target="_blank" rel="noopener" data-app-store-link="pending-apple-id">Download</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Company</h5>
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Field notes</a></li>
+          <li><a href="#">Press kit</a></li>
+          <li><a href="mailto:support@dadyolked.com">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Legal</h5>
+        <ul>
+          <li><a href="/privacy/">Privacy</a></li>
+          <li><a href="/support/">Support</a></li>
+          <li><a href="#">DPA</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 DadYolked</span>
+      <span>iOS 17+</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
