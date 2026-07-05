@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en" data-mode="dark" data-accent="copper">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bottle Feeding Amount Calculator — DadYolked</title>
+  <meta name="description" content="Estimate daily and per-feed bottle amounts using age, weight, and feeding count. A calm formula and bottle feeding calculator for new parents." />
+  <link rel="canonical" href="https://dadyolked.com/tools/bottle-feeding-calculator/" />
+  <style>
+    :root{--ink:#090b0f;--ink-2:#101318;--text:#f7efe4;--muted:rgba(247,239,228,.72);--line:rgba(247,239,228,.14);--accent:#c07a3e;--accent-2:#f0b36a;--good:#79c987;--watch:#f0b36a;--call:#ff8178;--card:rgba(255,255,255,.065);--card-2:rgba(255,255,255,.04);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color-scheme:dark}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(90% 80% at 50% -10%,rgba(192,122,62,.25),transparent 70%),linear-gradient(180deg,var(--ink),var(--ink-2));color:var(--text);min-height:100vh}a{color:var(--accent-2)}.wrap{width:min(1120px,calc(100% - 40px));margin:0 auto}.nav{border-bottom:1px solid var(--line);background:rgba(9,11,15,.82);backdrop-filter:blur(18px);position:sticky;top:0;z-index:10}.nav-row{display:flex;align-items:center;justify-content:space-between;padding:16px 0}.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--text);font-weight:850;letter-spacing:-.02em}.brand img{width:36px;height:36px;border-radius:12px}.links{display:flex;gap:18px;align-items:center}.links a{color:var(--muted);text-decoration:none;font-size:14px}.links a:hover{color:var(--text)}main{padding:64px 0 96px}.kicker{color:var(--accent-2);text-transform:uppercase;letter-spacing:.16em;font-size:12px;font-weight:850}.hero{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(360px,.95fr);gap:34px;align-items:start}.hero h1{font-size:clamp(44px,7vw,86px);line-height:.94;letter-spacing:-.06em;margin:14px 0 20px;max-width:760px}.lead{font-size:20px;line-height:1.65;color:var(--muted);max-width:720px}.pill{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:13px 18px;background:var(--accent);color:white;text-decoration:none;font-weight:850;border:1px solid transparent}.pill.ghost{background:transparent;border-color:var(--line);color:var(--text)}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.trust{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.chip{border:1px solid var(--line);background:var(--card-2);border-radius:999px;padding:9px 12px;color:rgba(247,239,228,.78);font-size:13px}.panel{background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.04));border:1px solid var(--line);border-radius:30px;padding:26px;box-shadow:0 30px 120px rgba(0,0,0,.28)}.checker{position:sticky;top:90px}.field{margin:18px 0}.field label{display:flex;justify-content:space-between;gap:16px;color:var(--text);font-weight:800;margin-bottom:8px}.field label span{color:var(--muted);font-weight:600;font-size:13px;text-align:right}.field input,.field select{width:100%;border:1px solid var(--line);background:rgba(0,0,0,.18);color:var(--text);border-radius:16px;padding:14px 14px;font:inherit;outline:none}.field input:focus,.field select:focus{border-color:rgba(240,179,106,.65);box-shadow:0 0 0 4px rgba(240,179,106,.10)}.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}.button-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}button{appearance:none;border:0;cursor:pointer}.result{margin-top:22px;border-radius:24px;padding:20px;border:1px solid var(--line);background:rgba(0,0,0,.18)}.result h2{margin:0 0 8px;font-size:28px;letter-spacing:-.04em}.result p{margin:8px 0;color:var(--muted);line-height:1.6}.big-number{font-size:42px;font-weight:900;letter-spacing:-.05em;color:var(--accent-2);margin:8px 0}.status{font-size:12px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-2)}section{margin-top:44px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:22px}.card h3{margin:0 0 8px;font-size:20px;letter-spacing:-.02em}.card p,.card li{color:var(--muted);line-height:1.65}.card ul{margin:10px 0 0;padding-left:20px}.table{overflow:auto;border:1px solid var(--line);border-radius:24px;background:var(--card-2)}table{width:100%;border-collapse:collapse;min-width:640px}th,td{padding:14px 16px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}th{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--accent-2)}td{color:var(--muted)}tr:last-child td{border-bottom:0}.callout{border:1px solid rgba(240,179,106,.30);background:rgba(240,179,106,.10);border-radius:24px;padding:22px;margin-top:18px}.app-cta{display:grid;grid-template-columns:1fr auto;gap:22px;align-items:center;background:radial-gradient(90% 120% at 100% 0%,rgba(192,122,62,.28),transparent 60%),var(--card);border:1px solid var(--line);border-radius:28px;padding:26px}.app-cta h2{margin:0 0 8px;font-size:34px;letter-spacing:-.045em}.app-cta p{margin:0;color:var(--muted);line-height:1.6}footer{border-top:1px solid var(--line);padding:28px 0;color:rgba(247,239,228,.48)}@media(max-width:900px){.hero{grid-template-columns:1fr}.checker{position:static}.grid{grid-template-columns:1fr}.app-cta{grid-template-columns:1fr}.links{gap:10px}.links a{font-size:13px}}@media(max-width:560px){.two{grid-template-columns:1fr}.links a:nth-child(2),.links a:nth-child(3){display:none}.hero h1{font-size:46px}}
+  </style>
+</head>
+<body>
+  <nav class="nav"><div class="wrap nav-row"><a class="brand" href="/"><img src="../../assets/dadyolked_logo_08.png" alt="" />DadYolked</a><div class="links"><a href="/">Home</a><a href="/tools/">Tools</a><a href="/privacy/">Privacy</a><a href="mailto:support@dadyolked.com">Contact</a></div></div></nav>
+  <main class="wrap">
+    <div class="hero">
+      <div>
+        <span class="kicker">Free newborn tool</span>
+        <h1>Bottle feeding amount calculator.</h1>
+        <p class="lead">Estimate a reasonable daily and per-bottle range from your baby’s age, weight, and number of feeds. Then track the real pattern in DadYolked so the next pediatrician visit is less guesswork.</p>
+        <div class="hero-actions"><a class="pill" href="#calculator">Calculate bottles</a><a class="pill ghost" href="https://apps.apple.com/app/id6773113095" target="_blank" rel="noopener">Track in DadYolked</a></div>
+        <div class="trust"><span class="chip">No account</span><span class="chip">Runs in your browser</span><span class="chip">Private by design</span></div>
+        <div class="callout"><strong>Important:</strong> this calculator is educational. Babies eat differently during growth spurts, prematurity, illness, reflux, breastfeeding supplementation, and medical situations. Use your pediatrician’s plan if you have one, and feed responsively when your baby shows hunger/fullness cues.</div>
+      </div>
+
+      <form class="panel checker" id="calculator">
+        <span class="kicker">Bottle estimate</span>
+        <div class="two">
+          <div class="field"><label for="ageMonths">Age <span>months</span></label><input id="ageMonths" type="number" min="0" max="12" step="0.1" value="1" inputmode="decimal" /></div>
+          <div class="field"><label for="weightLb">Weight <span>pounds</span></label><input id="weightLb" type="number" min="4" max="35" step="0.1" value="9" inputmode="decimal" /></div>
+        </div>
+        <div class="two">
+          <div class="field"><label for="feedsPerDay">Feeds <span>per 24h</span></label><input id="feedsPerDay" type="number" min="4" max="16" step="1" value="8" inputmode="numeric" /></div>
+          <div class="field"><label for="milkType">Bottle type <span>context</span></label><select id="milkType"><option value="formula">Formula</option><option value="breastmilk">Expressed breast milk</option><option value="mixed">Mixed feeding</option></select></div>
+        </div>
+        <div class="button-row"><button class="pill" type="submit">Calculate</button><button class="pill ghost" type="button" id="resetBtn">Reset</button></div>
+        <div id="result" class="result" aria-live="polite"></div>
+      </form>
+    </div>
+
+    <section>
+      <div class="grid">
+        <article class="card"><h3>Use it as a range, not a rule.</h3><p>Common formula guidance estimates around 2.5 ounces per pound of body weight per day, often capped near 32 ounces before solids. Your baby’s cues matter more than a spreadsheet.</p></article>
+        <article class="card"><h3>Per-bottle math is just division.</h3><p>Daily amount divided by feeds per day gives a starting per-bottle estimate. Some bottles will be bigger or smaller.</p></article>
+        <article class="card"><h3>Tracking makes patterns obvious.</h3><p>DadYolked helps you log bottles, diapers, sleep, medicine, and notes so you can see trends instead of relying on tired memory.</p></article>
+      </div>
+    </section>
+
+    <section>
+      <span class="kicker">Common reference points</span>
+      <div class="table" style="margin-top:14px"><table><thead><tr><th>Age / context</th><th>Typical bottle pattern</th><th>Notes</th></tr></thead><tbody><tr><td>First days</td><td>Small, frequent feeds.</td><td>Newborn intake changes quickly; follow discharge/pediatrician guidance.</td></tr><tr><td>First month</td><td>Often gradually works toward 3–4 oz per feeding.</td><td>Many formula-fed babies feed about every 3–4 hours.</td></tr><tr><td>Before solids</td><td>About 2.5 oz/lb/day is a common estimate.</td><td>Many references mention a practical daily cap around 32 oz.</td></tr><tr><td>Mixed/breast milk bottles</td><td>May not map perfectly to formula rules.</td><td>Use output, growth, cues, and clinician guidance.</td></tr></tbody></table></div>
+    </section>
+
+    <section class="app-cta"><div><h2>Log the bottle. Remember less.</h2><p>DadYolked is built for fast one-handed newborn logging: bottles, pumping notes, diapers, sleep, medicine, milestones, widgets, Apple Watch, Siri, and private local-first records.</p></div><a class="pill" href="https://apps.apple.com/app/id6773113095" target="_blank" rel="noopener">Download DadYolked</a></section>
+
+    <section><div class="card"><h3>Sources and review notes</h3><p>The calculator uses common formula guidance reflected by HealthyChildren.org / AAP: about 2.5 ounces of formula per pound of body weight per day, with many references noting a practical daily maximum around 32 ounces before solids. For breast milk bottles and mixed feeding, actual intake can vary.</p><ul><li><a href="https://www.healthychildren.org/English/ages-stages/baby/formula-feeding/Pages/amount-and-schedule-of-formula-feedings.aspx" target="_blank" rel="noopener">HealthyChildren.org: amount and schedule of formula feedings</a></li><li><a href="https://www.healthychildren.org/English/tips-tools/ask-the-pediatrician/Pages/How-much-formula-does-my-baby-need.aspx" target="_blank" rel="noopener">HealthyChildren.org: how much formula does my baby need?</a></li><li><a href="https://www.mayoclinic.org/healthy-lifestyle/infant-and-toddler-health/in-depth/healthy-baby/art-20047741" target="_blank" rel="noopener">Mayo Clinic: feeding your newborn</a></li></ul></div></section>
+  </main>
+  <footer><div class="wrap">© 2026 DadYolked · <a href="/tools/">Tools</a> · <a href="/support/">Support</a> · <a href="/privacy/">Privacy</a></div></footer>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+    const round = (n) => Math.round(n * 10) / 10;
+    function calculate(){
+      const age = Number($('ageMonths').value || 0);
+      const weight = Number($('weightLb').value || 0);
+      const feeds = Math.max(1, Number($('feedsPerDay').value || 1));
+      const type = $('milkType').value;
+      let daily = weight * 2.5;
+      let capNote = '';
+      if (age < 0.25) { daily = Math.min(daily, 24); capNote = 'In the first days, intake can be much smaller and rises quickly. Use your discharge instructions or pediatrician plan.'; }
+      else if (daily > 32) { daily = 32; capNote = 'This estimate hit the common 32 oz/day practical cap used by many references before solids.'; }
+      const low = Math.max(0.5, daily * 0.85);
+      const high = daily * 1.15;
+      const perLow = low / feeds;
+      const perHigh = high / feeds;
+      let context = 'For formula feeding, a common estimate is about 2.5 oz per pound per day before solids.';
+      if(type === 'breastmilk') context = 'Expressed breast milk bottles may not follow formula math perfectly. Use this as a starting estimate and watch growth, diapers, and cues.';
+      if(type === 'mixed') context = 'For mixed feeding, this estimate only covers bottle planning. Nursing sessions and actual intake vary.';
+      $('result').innerHTML = `<div class="status">Estimated range</div><h2>About ${round(low)}–${round(high)} oz/day</h2><div class="big-number">${round(perLow)}–${round(perHigh)} oz/bottle</div><p>Based on ${feeds} feeds per day. ${context}</p>${capNote ? `<p>${capNote}</p>` : ''}<p><strong>Safety:</strong> call your pediatrician if your baby has poor feeding, fewer wet diapers, unusual sleepiness, fever, vomiting, poor weight gain, or if you feel something is off.</p>`;
+    }
+    $('calculator').addEventListener('submit', (e)=>{e.preventDefault(); calculate();});
+    ['ageMonths','weightLb','feedsPerDay','milkType'].forEach(id => $(id).addEventListener('input', calculate));
+    $('resetBtn').addEventListener('click', ()=>{ $('ageMonths').value=1; $('weightLb').value=9; $('feedsPerDay').value=8; $('milkType').value='formula'; calculate(); });
+    calculate();
+  </script>
+</body>
+</html>

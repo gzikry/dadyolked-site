@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en" data-mode="dark" data-accent="copper">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Newborn Diaper Output Checker — DadYolked</title>
+  <meta name="description" content="A calm newborn diaper output checker for wet and dirty diapers in the first weeks. Estimate whether today's diaper count is typical and know when to call your pediatrician." />
+  <link rel="canonical" href="https://dadyolked.com/tools/newborn-diaper-output-checker/" />
+  <style>
+    :root{--ink:#090b0f;--ink-2:#101318;--text:#f7efe4;--muted:rgba(247,239,228,.72);--line:rgba(247,239,228,.14);--accent:#c07a3e;--accent-2:#f0b36a;--good:#79c987;--watch:#f0b36a;--call:#ff8178;--card:rgba(255,255,255,.065);--card-2:rgba(255,255,255,.04);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color-scheme:dark}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:radial-gradient(90% 80% at 50% -10%,rgba(192,122,62,.25),transparent 70%),linear-gradient(180deg,var(--ink),var(--ink-2));color:var(--text);min-height:100vh} a{color:var(--accent-2)}
+    .wrap{width:min(1120px,calc(100% - 40px));margin:0 auto}.nav{border-bottom:1px solid var(--line);background:rgba(9,11,15,.82);backdrop-filter:blur(18px);position:sticky;top:0;z-index:10}.nav-row{display:flex;align-items:center;justify-content:space-between;padding:16px 0}.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--text);font-weight:850;letter-spacing:-.02em}.brand img{width:36px;height:36px;border-radius:12px}.links{display:flex;gap:18px;align-items:center}.links a{color:var(--muted);text-decoration:none;font-size:14px}.links a:hover{color:var(--text)}
+    main{padding:64px 0 96px}.kicker{color:var(--accent-2);text-transform:uppercase;letter-spacing:.16em;font-size:12px;font-weight:850}.hero{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(360px,.95fr);gap:34px;align-items:start}.hero h1{font-size:clamp(44px,7vw,86px);line-height:.94;letter-spacing:-.06em;margin:14px 0 20px;max-width:760px}.lead{font-size:20px;line-height:1.65;color:var(--muted);max-width:720px}.pill{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:13px 18px;background:var(--accent);color:white;text-decoration:none;font-weight:850;border:1px solid transparent}.pill.ghost{background:transparent;border-color:var(--line);color:var(--text)}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.trust{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.chip{border:1px solid var(--line);background:var(--card-2);border-radius:999px;padding:9px 12px;color:rgba(247,239,228,.78);font-size:13px}
+    .panel{background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.04));border:1px solid var(--line);border-radius:30px;padding:26px;box-shadow:0 30px 120px rgba(0,0,0,.28)}.checker{position:sticky;top:90px}.field{margin:18px 0}.field label{display:flex;justify-content:space-between;gap:16px;color:var(--text);font-weight:800;margin-bottom:8px}.field label span{color:var(--muted);font-weight:600;font-size:13px;text-align:right}.field input,.field select{width:100%;border:1px solid var(--line);background:rgba(0,0,0,.18);color:var(--text);border-radius:16px;padding:14px 14px;font:inherit;outline:none}.field input:focus,.field select:focus{border-color:rgba(240,179,106,.65);box-shadow:0 0 0 4px rgba(240,179,106,.10)}.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}.button-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}button{appearance:none;border:0;cursor:pointer}.result{margin-top:22px;border-radius:24px;padding:20px;border:1px solid var(--line);background:rgba(0,0,0,.18)}.result h2{margin:0 0 8px;font-size:26px;letter-spacing:-.035em}.result p{margin:8px 0;color:var(--muted);line-height:1.6}.result.good{border-color:rgba(121,201,135,.38);background:rgba(121,201,135,.08)}.result.watch{border-color:rgba(240,179,106,.42);background:rgba(240,179,106,.09)}.result.call{border-color:rgba(255,129,120,.45);background:rgba(255,129,120,.09)}.status{font-size:12px;font-weight:900;letter-spacing:.12em;text-transform:uppercase}.good .status{color:var(--good)}.watch .status{color:var(--watch)}.call .status{color:var(--call)}
+    section{margin-top:44px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:22px}.card h3{margin:0 0 8px;font-size:20px;letter-spacing:-.02em}.card p,.card li{color:var(--muted);line-height:1.65}.card ul{margin:10px 0 0;padding-left:20px}.table{overflow:auto;border:1px solid var(--line);border-radius:24px;background:var(--card-2)}table{width:100%;border-collapse:collapse;min-width:640px}th,td{padding:14px 16px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}th{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--accent-2)}td{color:var(--muted)}tr:last-child td{border-bottom:0}.callout{border:1px solid rgba(240,179,106,.30);background:rgba(240,179,106,.10);border-radius:24px;padding:22px;margin-top:18px}.app-cta{display:grid;grid-template-columns:1fr auto;gap:22px;align-items:center;background:radial-gradient(90% 120% at 100% 0%,rgba(192,122,62,.28),transparent 60%),var(--card);border:1px solid var(--line);border-radius:28px;padding:26px}.app-cta h2{margin:0 0 8px;font-size:34px;letter-spacing:-.045em}.app-cta p{margin:0;color:var(--muted);line-height:1.6}footer{border-top:1px solid var(--line);padding:28px 0;color:rgba(247,239,228,.48)}
+    @media(max-width:900px){.hero{grid-template-columns:1fr}.checker{position:static}.grid{grid-template-columns:1fr}.app-cta{grid-template-columns:1fr}.links{gap:10px}.links a{font-size:13px}}@media(max-width:560px){.two{grid-template-columns:1fr}.links a:nth-child(2),.links a:nth-child(3){display:none}.hero h1{font-size:46px}}
+  </style>
+</head>
+<body>
+  <nav class="nav"><div class="wrap nav-row"><a class="brand" href="/"><img src="../../assets/dadyolked_logo_08.png" alt="" />DadYolked</a><div class="links"><a href="/">Home</a><a href="/tools/newborn-diaper-output-checker/">Tools</a><a href="/privacy/">Privacy</a><a href="mailto:support@dadyolked.com">Contact</a></div></div></nav>
+  <main class="wrap">
+    <div class="hero">
+      <div>
+        <span class="kicker">Free newborn tool</span>
+        <h1>Newborn diaper output checker.</h1>
+        <p class="lead">Count wet and dirty diapers for today and get a calm read on whether the pattern looks typical, worth watching, or worth a pediatrician call. Built for tired parents who need signal, not panic.</p>
+        <div class="hero-actions">
+          <a class="pill" href="#checker">Check diapers now</a>
+          <a class="pill ghost" href="https://apps.apple.com/app/id6773113095" target="_blank" rel="noopener">Track in DadYolked</a>
+        </div>
+        <div class="trust">
+          <span class="chip">No account</span><span class="chip">No data leaves this page</span><span class="chip">Private by design</span>
+        </div>
+        <div class="callout">
+          <strong>Quick safety note:</strong> this tool is educational and cannot diagnose dehydration, jaundice, feeding problems, or illness. If your baby has no wet diaper for 6–8 hours, seems unusually sleepy, refuses feeds, has blood in urine/stool, has white stool, or you feel something is wrong, call your pediatrician or urgent care.
+        </div>
+      </div>
+
+      <form class="panel checker" id="checker">
+        <span class="kicker">Today's check</span>
+        <div class="field">
+          <label for="ageDays">Baby age <span>days old</span></label>
+          <input id="ageDays" type="number" min="0" max="60" value="5" inputmode="numeric" />
+        </div>
+        <div class="two">
+          <div class="field">
+            <label for="wetCount">Wet diapers <span>today</span></label>
+            <input id="wetCount" type="number" min="0" max="30" value="6" inputmode="numeric" />
+          </div>
+          <div class="field">
+            <label for="dirtyCount">Dirty diapers <span>today</span></label>
+            <input id="dirtyCount" type="number" min="0" max="30" value="3" inputmode="numeric" />
+          </div>
+        </div>
+        <div class="two">
+          <div class="field">
+            <label for="lastWetHours">Hours since last wet <span>optional</span></label>
+            <input id="lastWetHours" type="number" min="0" max="24" value="2" inputmode="numeric" />
+          </div>
+          <div class="field">
+            <label for="feedingType">Feeding <span>context</span></label>
+            <select id="feedingType">
+              <option value="mixed">Mixed / not sure</option>
+              <option value="breast">Mostly breast milk</option>
+              <option value="formula">Mostly formula</option>
+            </select>
+          </div>
+        </div>
+        <div class="button-row">
+          <button class="pill" type="submit">Check output</button>
+          <button class="pill ghost" type="button" id="resetBtn">Reset</button>
+        </div>
+        <div id="result" class="result good" aria-live="polite">
+          <div class="status">Typical range</div>
+          <h2>Looks broadly on track.</h2>
+          <p>For a baby around day 5+, many pediatric references use about 6+ wet diapers/day as a reassuring hydration signal. Keep logging and watch the overall baby, not one number in isolation.</p>
+        </div>
+      </form>
+    </div>
+
+    <section>
+      <div class="grid">
+        <article class="card"><h3>Wet diapers are a hydration signal.</h3><p>In the first few days, wet diapers often climb roughly with age. By about day 5, many newborn guides look for at least 6 wet diapers in 24 hours.</p></article>
+        <article class="card"><h3>Dirty diapers tell a second story.</h3><p>Stools change from dark meconium to transitional green/brown, then yellow-ish for many babies. Frequency varies by feeding type, especially after the early weeks.</p></article>
+        <article class="card"><h3>Patterns beat memory.</h3><p>When everyone is sleep-deprived, tracking feeds and diapers gives you something concrete to share at pediatrician visits.</p></article>
+      </div>
+    </section>
+
+    <section>
+      <span class="kicker">Simple day-by-day guide</span>
+      <div class="table" style="margin-top:14px">
+        <table>
+          <thead><tr><th>Age</th><th>Wet diapers to look for</th><th>Dirty diaper notes</th></tr></thead>
+          <tbody>
+            <tr><td>Day 1</td><td>About 1+ wet diaper can be normal.</td><td>Meconium often appears in the first 24–48 hours.</td></tr>
+            <tr><td>Day 2</td><td>About 2+ wet diapers.</td><td>Dark sticky meconium may continue.</td></tr>
+            <tr><td>Day 3</td><td>About 3+ wet diapers.</td><td>Stool often begins transitioning color/texture.</td></tr>
+            <tr><td>Day 4</td><td>About 4+ wet diapers.</td><td>More regular stools are common as intake increases.</td></tr>
+            <tr><td>Day 5+</td><td>Often 6+ wet diapers in 24 hours.</td><td>Patterns vary; call for white, bloody, or concerning stool.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="app-cta">
+      <div>
+        <h2>Do this without the mental math.</h2>
+        <p>DadYolked logs diapers, feeds, sleep, medicine, milestones, kick counts, contractions, Dad Recovery, Siri shortcuts, widgets, and Apple Watch quick actions — private by design and built for dads doing the work.</p>
+      </div>
+      <a class="pill" href="https://apps.apple.com/app/id6773113095" target="_blank" rel="noopener">Download DadYolked</a>
+    </section>
+
+    <section>
+      <div class="card">
+        <h3>Sources and review notes</h3>
+        <p>This checker uses common newborn diaper-count guidance reflected by pediatric/parenting references: wet diapers often rise day by day during the first week, and by day 5 many babies have about 6+ wet diapers per day. Stool color and frequency varies, but black/tarry stool after the first several days, white stool, blood, or signs of dehydration should be reviewed by a clinician.</p>
+        <ul>
+          <li><a href="https://www.pampers.com/en-us/baby/diapering/article/baby-pee-and-wet-diapers" target="_blank" rel="noopener">Pampers: baby pee and wet diapers</a></li>
+          <li><a href="https://www.sutterhealth.org/health/how-many-diapers-a-day-your-newborn-should-have" target="_blank" rel="noopener">Sutter Health: newborn diaper expectations</a></li>
+          <li><a href="https://www.mayoclinic.org/healthy-lifestyle/infant-and-toddler-health/expert-answers/baby-poop/faq-20057971" target="_blank" rel="noopener">Mayo Clinic: baby poop basics</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  <footer><div class="wrap">© 2026 DadYolked · <a href="/support/">Support</a> · <a href="/privacy/">Privacy</a> · <a href="mailto:support@dadyolked.com">Contact</a></div></footer>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+    const expectedWet = (age) => age <= 0 ? 1 : Math.min(Math.max(Math.floor(age), 1), 6);
+    function evaluate() {
+      const age = Number($('ageDays').value || 0);
+      const wet = Number($('wetCount').value || 0);
+      const dirty = Number($('dirtyCount').value || 0);
+      const lastWet = Number($('lastWetHours').value || 0);
+      const feeding = $('feedingType').value;
+      const minWet = expectedWet(age);
+      let level = 'good';
+      let status = 'Typical range';
+      let title = 'Looks broadly on track.';
+      let notes = [];
+
+      if (lastWet >= 8 || (age >= 5 && wet < 3) || (age <= 4 && wet === 0)) {
+        level = 'call'; status = 'Call your pediatrician'; title = 'This is worth a pediatrician call.';
+        notes.push('The wet diaper count or time since last wet diaper is low enough that a clinician should help you decide what to do next.');
+      } else if (wet < minWet || lastWet >= 6) {
+        level = 'watch'; status = 'Watch closely'; title = 'A little below the common target.';
+        notes.push(`For about day ${Math.max(1, Math.floor(age))}, a common wet-diaper target is around ${minWet}+ in 24 hours. Keep feeding/logging and call if the gap grows or your baby seems off.`);
+      } else {
+        notes.push(`Wet diapers are at or above the common day-${Math.max(1, Math.floor(age))} target of about ${minWet}+ in 24 hours.`);
+      }
+
+      if (dirty === 0 && age <= 2) notes.push('No dirty diaper can happen early, but meconium usually appears within the first 24–48 hours. Ask your care team if it has not.');
+      if (dirty === 0 && age >= 3 && level !== 'call') notes.push('No dirty diapers today is worth watching, especially in the first week. Feeding type matters, so use your pediatrician’s guidance.');
+      if (feeding === 'breast') notes.push('For mostly breastfed babies, stool frequency can be an especially useful intake clue in the early weeks.');
+      if (feeding === 'formula') notes.push('Formula-fed stool patterns may differ, but hydration signs and overall baby behavior still matter.');
+
+      const result = $('result');
+      result.className = `result ${level}`;
+      result.innerHTML = `<div class="status">${status}</div><h2>${title}</h2>${notes.map(n => `<p>${n}</p>`).join('')}<p><strong>Safety:</strong> trust your gut. Call now for poor feeding, unusual sleepiness, fever, blood, white stool, very dark urine, or no wet diaper for 6–8 hours.</p>`;
+    }
+    $('checker').addEventListener('submit', (e) => { e.preventDefault(); evaluate(); });
+    ['ageDays','wetCount','dirtyCount','lastWetHours','feedingType'].forEach(id => $(id).addEventListener('input', evaluate));
+    $('resetBtn').addEventListener('click', () => { $('ageDays').value = 5; $('wetCount').value = 6; $('dirtyCount').value = 3; $('lastWetHours').value = 2; $('feedingType').value = 'mixed'; evaluate(); });
+    evaluate();
+  </script>
+</body>
+</html>
