@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en" data-mode="dark" data-accent="copper">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Baby Wake Window Calculator — DadYolked</title>
+  <meta name="description" content="Calculate your baby's next nap window from age and last wake time. A calm wake window calculator for newborns and infants." />
+  <link rel="canonical" href="https://dadyolked.com/tools/wake-window-calculator/" />
+  <style>
+    :root{--ink:#090b0f;--ink-2:#101318;--text:#f7efe4;--muted:rgba(247,239,228,.72);--line:rgba(247,239,228,.14);--accent:#c07a3e;--accent-2:#f0b36a;--card:rgba(255,255,255,.065);--card-2:rgba(255,255,255,.04);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color-scheme:dark}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(90% 80% at 50% -10%,rgba(192,122,62,.25),transparent 70%),linear-gradient(180deg,var(--ink),var(--ink-2));color:var(--text);min-height:100vh}a{color:var(--accent-2)}.wrap{width:min(1120px,calc(100% - 40px));margin:0 auto}.nav{border-bottom:1px solid var(--line);background:rgba(9,11,15,.82);backdrop-filter:blur(18px);position:sticky;top:0;z-index:10}.nav-row{display:flex;align-items:center;justify-content:space-between;padding:16px 0}.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--text);font-weight:850;letter-spacing:-.02em}.brand img{width:36px;height:36px;border-radius:12px}.links{display:flex;gap:18px;align-items:center}.links a{color:var(--muted);text-decoration:none;font-size:14px}.links a:hover{color:var(--text)}main{padding:64px 0 96px}.kicker{color:var(--accent-2);text-transform:uppercase;letter-spacing:.16em;font-size:12px;font-weight:850}.hero{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(360px,.95fr);gap:34px;align-items:start}.hero h1{font-size:clamp(44px,7vw,86px);line-height:.94;letter-spacing:-.06em;margin:14px 0 20px;max-width:760px}.lead{font-size:20px;line-height:1.65;color:var(--muted);max-width:720px}.pill{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:13px 18px;background:var(--accent);color:white;text-decoration:none;font-weight:850;border:1px solid transparent}.pill.ghost{background:transparent;border-color:var(--line);color:var(--text)}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.trust{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.chip{border:1px solid var(--line);background:var(--card-2);border-radius:999px;padding:9px 12px;color:rgba(247,239,228,.78);font-size:13px}.panel{background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.04));border:1px solid var(--line);border-radius:30px;padding:26px;box-shadow:0 30px 120px rgba(0,0,0,.28)}.checker{position:sticky;top:90px}.field{margin:18px 0}.field label{display:flex;justify-content:space-between;gap:16px;color:var(--text);font-weight:800;margin-bottom:8px}.field label span{color:var(--muted);font-weight:600;font-size:13px;text-align:right}.field input,.field select{width:100%;border:1px solid var(--line);background:rgba(0,0,0,.18);color:var(--text);border-radius:16px;padding:14px 14px;font:inherit;outline:none}.field input:focus,.field select:focus{border-color:rgba(240,179,106,.65);box-shadow:0 0 0 4px rgba(240,179,106,.10)}.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}.button-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}button{appearance:none;border:0;cursor:pointer}.result{margin-top:22px;border-radius:24px;padding:20px;border:1px solid var(--line);background:rgba(0,0,0,.18)}.result h2{margin:0 0 8px;font-size:28px;letter-spacing:-.04em}.result p{margin:8px 0;color:var(--muted);line-height:1.6}.big-number{font-size:42px;font-weight:900;letter-spacing:-.05em;color:var(--accent-2);margin:8px 0}.status{font-size:12px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-2)}section{margin-top:44px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:22px}.card h3{margin:0 0 8px;font-size:20px;letter-spacing:-.02em}.card p,.card li{color:var(--muted);line-height:1.65}.card ul{margin:10px 0 0;padding-left:20px}.table{overflow:auto;border:1px solid var(--line);border-radius:24px;background:var(--card-2)}table{width:100%;border-collapse:collapse;min-width:640px}th,td{padding:14px 16px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}th{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--accent-2)}td{color:var(--muted)}tr:last-child td{border-bottom:0}.callout{border:1px solid rgba(240,179,106,.30);background:rgba(240,179,106,.10);border-radius:24px;padding:22px;margin-top:18px}.app-cta{display:grid;grid-template-columns:1fr auto;gap:22px;align-items:center;background:radial-gradient(90% 120% at 100% 0%,rgba(192,122,62,.28),transparent 60%),var(--card);border:1px solid var(--line);border-radius:28px;padding:26px}.app-cta h2{margin:0 0 8px;font-size:34px;letter-spacing:-.045em}.app-cta p{margin:0;color:var(--muted);line-height:1.6}footer{border-top:1px solid var(--line);padding:28px 0;color:rgba(247,239,228,.48)}@media(max-width:900px){.hero{grid-template-columns:1fr}.checker{position:static}.grid{grid-template-columns:1fr}.app-cta{grid-template-columns:1fr}.links{gap:10px}.links a{font-size:13px}}@media(max-width:560px){.two{grid-template-columns:1fr}.links a:nth-child(2),.links a:nth-child(3){display:none}.hero h1{font-size:46px}}
+  </style>
+</head>
+<body>
+  <nav class="nav"><div class="wrap nav-row"><a class="brand" href="/"><img src="../../assets/dadyolked_logo_08.png" alt="" />DadYolked</a><div class="links"><a href="/">Home</a><a href="/tools/">Tools</a><a href="/privacy/">Privacy</a><a href="mailto:support@dadyolked.com">Contact</a></div></div></nav>
+  <main class="wrap">
+    <div class="hero">
+      <div>
+        <span class="kicker">Free sleep tool</span>
+        <h1>Baby wake window calculator.</h1>
+        <p class="lead">Use your baby’s age and last wake time to estimate the next nap window. It is not a rigid schedule — it is a calm planning tool for the exhausted shift lead.</p>
+        <div class="hero-actions"><a class="pill" href="#calculator">Calculate next nap</a><a class="pill ghost" href="https://apps.apple.com/app/id6773113095" target="_blank" rel="noopener">Track sleep in DadYolked</a></div>
+        <div class="trust"><span class="chip">Newborn-friendly</span><span class="chip">Runs in your browser</span><span class="chip">Private by design</span></div>
+        <div class="callout"><strong>Reality check:</strong> wake windows are estimates. Growth spurts, feeds, sickness, premature birth, daycare, travel, and temperament can all change sleep timing. If sleep concerns feel medical or extreme, ask your pediatrician.</div>
+      </div>
+
+      <form class="panel checker" id="calculator">
+        <span class="kicker">Next nap estimate</span>
+        <div class="two">
+          <div class="field"><label for="ageWeeks">Age <span>weeks</span></label><input id="ageWeeks" type="number" min="0" max="104" step="1" value="8" inputmode="numeric" /></div>
+          <div class="field"><label for="lastWake">Last wake time <span>today</span></label><input id="lastWake" type="time" value="07:30" /></div>
+        </div>
+        <div class="two">
+          <div class="field"><label for="temperament">Baby today <span>optional</span></label><select id="temperament"><option value="normal">Normal day</option><option value="sleepy">Sleepy / short window</option><option value="wired">Wired / long window</option></select></div>
+          <div class="field"><label for="napNumber">Nap context <span>optional</span></label><select id="napNumber"><option value="morning">Morning / early day</option><option value="afternoon">Afternoon</option><option value="evening">Evening / bedtime lead-in</option></select></div>
+        </div>
+        <div class="button-row"><button class="pill" type="submit">Calculate</button><button class="pill ghost" type="button" id="resetBtn">Reset</button></div>
+        <div id="result" class="result" aria-live="polite"></div>
+      </form>
+    </div>
+
+    <section>
+      <div class="grid">
+        <article class="card"><h3>Wake window = awake time.</h3><p>It usually means the time from when your baby wakes until the next sleep. Newborn windows can be very short.</p></article>
+        <article class="card"><h3>Use sleepy cues too.</h3><p>Rubbing eyes, zoning out, red eyebrows, fussing, or turning away can matter more than the exact minute.</p></article>
+        <article class="card"><h3>Track the real baby.</h3><p>DadYolked sleep logs help you see the actual rhythm: naps, longest stretches, and what usually happens after feeds.</p></article>
+      </div>
+    </section>
+
+    <section>
+      <span class="kicker">Approximate wake windows by age</span>
+      <div class="table" style="margin-top:14px"><table><thead><tr><th>Age</th><th>Typical wake window</th><th>Notes</th></tr></thead><tbody><tr><td>0–4 weeks</td><td>30–60 minutes</td><td>Many newborns barely finish feeding before they are ready again.</td></tr><tr><td>4–12 weeks</td><td>60–90 minutes</td><td>Still flexible; overtired can happen fast.</td></tr><tr><td>3–4 months</td><td>75–120 minutes</td><td>Some babies begin showing more predictable rhythms.</td></tr><tr><td>5–7 months</td><td>2–3 hours</td><td>Nap count often starts consolidating.</td></tr><tr><td>7–10 months</td><td>2.5–3.5 hours</td><td>Many babies move toward two naps.</td></tr><tr><td>11–14 months</td><td>3–4 hours</td><td>One-to-two nap transition may start for some babies.</td></tr><tr><td>14–24 months</td><td>4–6 hours</td><td>Often one nap, but individual needs vary.</td></tr></tbody></table></div>
+    </section>
+
+    <section class="app-cta"><div><h2>Turn sleep chaos into a pattern.</h2><p>DadYolked logs naps, sleep locations, feeds, diapers, medicine, milestones, widgets, Apple Watch, Siri shortcuts, and private local-first records for the newborn day.</p></div><a class="pill" href="https://apps.apple.com/app/id6773113095" target="_blank" rel="noopener">Download DadYolked</a></section>
+
+    <section><div class="card"><h3>Sources and review notes</h3><p>This calculator uses common wake-window ranges reflected by pediatric and sleep-education references. Wake windows are behavioral planning estimates, not medical rules.</p><ul><li><a href="https://health.clevelandclinic.org/wake-windows-by-age" target="_blank" rel="noopener">Cleveland Clinic: wake windows by age</a></li><li><a href="https://www.takingcarababies.com/blogs/sleep-basics/wake-windows-and-baby-sleep" target="_blank" rel="noopener">Taking Cara Babies: wake windows and baby sleep</a></li><li><a href="https://huckleberrycare.com/blog/first-year-of-sleep-expectations" target="_blank" rel="noopener">Huckleberry: first year sleep expectations</a></li></ul></div></section>
+  </main>
+  <footer><div class="wrap">© 2026 DadYolked · <a href="/tools/">Tools</a> · <a href="/support/">Support</a> · <a href="/privacy/">Privacy</a></div></footer>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+    const ranges = [
+      {max:4, low:30, high:60, label:'0–4 weeks'},
+      {max:12, low:60, high:90, label:'4–12 weeks'},
+      {max:17, low:75, high:120, label:'3–4 months'},
+      {max:30, low:120, high:180, label:'5–7 months'},
+      {max:43, low:150, high:210, label:'7–10 months'},
+      {max:61, low:180, high:240, label:'11–14 months'},
+      {max:104, low:240, high:360, label:'14–24 months'}
+    ];
+    function fmtMinutes(m){ const h=Math.floor(m/60)%24; const min=m%60; const hour12=((h+11)%12)+1; const ampm=h<12?'AM':'PM'; return `${hour12}:${String(min).padStart(2,'0')} ${ampm}`; }
+    function parseTime(t){ const [h,m]=(t||'07:30').split(':').map(Number); return (h||0)*60+(m||0); }
+    function calculate(){
+      const weeks = Number($('ageWeeks').value || 0);
+      const last = parseTime($('lastWake').value);
+      const temperament = $('temperament').value;
+      const context = $('napNumber').value;
+      const base = ranges.find(r => weeks <= r.max) || ranges[ranges.length-1];
+      let low = base.low, high = base.high;
+      if(temperament === 'sleepy'){ low -= 10; high -= 15; }
+      if(temperament === 'wired'){ low += 10; high += 20; }
+      if(context === 'evening' && weeks < 12){ low -= 5; high -= 10; }
+      low = Math.max(25, low); high = Math.max(low + 15, high);
+      const start = last + low, end = last + high;
+      const ideal = Math.round((start + end) / 2);
+      $('result').innerHTML = `<div class="status">Estimated nap window</div><h2>${fmtMinutes(start)}–${fmtMinutes(end)}</h2><div class="big-number">Aim around ${fmtMinutes(ideal)}</div><p>For ${base.label}, a common wake-window range is about ${base.low}–${base.high} minutes. I adjusted slightly for today’s context.</p><p>Watch your baby’s cues. If they are melting down before the window, go earlier. If they are calm and alert, a little later may be fine.</p>`;
+    }
+    $('calculator').addEventListener('submit', (e)=>{e.preventDefault(); calculate();});
+    ['ageWeeks','lastWake','temperament','napNumber'].forEach(id => $(id).addEventListener('input', calculate));
+    $('resetBtn').addEventListener('click', ()=>{ $('ageWeeks').value=8; $('lastWake').value='07:30'; $('temperament').value='normal'; $('napNumber').value='morning'; calculate(); });
+    calculate();
+  </script>
+</body>
+</html>
