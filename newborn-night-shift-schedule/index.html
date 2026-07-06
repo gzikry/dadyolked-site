@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en" data-mode="dark" data-accent="copper">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Newborn Night Shift Schedule Generator — DadYolked</title>
+  <meta name="description" content="Build a newborn night shift schedule for two parents: split wake-ups, protect sleep blocks, plan feeding windows, and log what happened overnight." />
+  <link rel="canonical" href="https://dadyolked.com/newborn-night-shift-schedule/" />
+  <style>
+    :root{--ink:#090b0f;--ink-2:#101318;--text:#f7efe4;--muted:rgba(247,239,228,.72);--line:rgba(247,239,228,.14);--accent:#c07a3e;--accent-2:#f0b36a;--good:#79c987;--card:rgba(255,255,255,.065);--card-2:rgba(255,255,255,.04);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color-scheme:dark}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(90% 80% at 50% -10%,rgba(192,122,62,.25),transparent 70%),linear-gradient(180deg,var(--ink),var(--ink-2));color:var(--text);min-height:100vh}a{color:var(--accent-2)}.wrap{width:min(1120px,calc(100% - 40px));margin:0 auto}.nav{border-bottom:1px solid var(--line);background:rgba(9,11,15,.82);backdrop-filter:blur(18px);position:sticky;top:0;z-index:10}.nav-row{display:flex;align-items:center;justify-content:space-between;padding:16px 0}.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--text);font-weight:850}.brand img{width:36px;height:36px;border-radius:12px}.links{display:flex;gap:18px;align-items:center}.links a{color:var(--muted);text-decoration:none;font-size:14px}.links a:hover{color:var(--text)}main{padding:64px 0 96px}.kicker{color:var(--accent-2);text-transform:uppercase;letter-spacing:.16em;font-size:12px;font-weight:850}h1{font-size:clamp(46px,8vw,92px);line-height:.94;letter-spacing:-.06em;margin:14px 0 20px;max-width:960px}.lead{font-size:20px;line-height:1.65;color:var(--muted);max-width:790px}.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:34px;align-items:start}.panel,.card{background:var(--card);border:1px solid var(--line);border-radius:28px;padding:26px;box-shadow:0 30px 120px rgba(0,0,0,.22)}.generator{position:sticky;top:90px}.pill{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:13px 18px;background:var(--accent);color:white;text-decoration:none;font-weight:850;border:1px solid transparent}.pill.ghost{background:transparent;border-color:var(--line);color:var(--text)}button{appearance:none;border:0;cursor:pointer}.actions,.button-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}.chip{border:1px solid var(--line);background:var(--card-2);border-radius:999px;padding:8px 11px;color:rgba(247,239,228,.78);font-size:13px}.field{margin:18px 0}.field label{display:flex;justify-content:space-between;gap:16px;color:var(--text);font-weight:800;margin-bottom:8px}.field label span{color:var(--muted);font-weight:600;font-size:13px;text-align:right}.field input,.field select{width:100%;border:1px solid var(--line);background:rgba(0,0,0,.18);color:var(--text);border-radius:16px;padding:14px 14px;font:inherit;outline:none}.field input:focus,.field select:focus{border-color:rgba(240,179,106,.65);box-shadow:0 0 0 4px rgba(240,179,106,.10)}.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}.result{margin-top:22px;border-radius:24px;padding:20px;border:1px solid var(--line);background:rgba(0,0,0,.18)}.result h2{margin:0 0 8px;font-size:28px;letter-spacing:-.04em}.result p,.result li{margin:8px 0;color:var(--muted);line-height:1.6}.big-number{font-size:38px;font-weight:900;letter-spacing:-.05em;color:var(--accent-2);margin:8px 0}.status{font-size:12px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-2)}section{margin-top:54px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.grid.two-col{grid-template-columns:repeat(2,1fr)}.card h2{font-size:30px;letter-spacing:-.045em;margin:0 0 12px}.card h3{font-size:21px;letter-spacing:-.025em;margin:0 0 8px}.card p,.card li{color:var(--muted);line-height:1.7}.schedule{display:grid;gap:10px;margin-top:14px}.shift{display:grid;grid-template-columns:110px 1fr;gap:14px;align-items:center;border:1px solid var(--line);border-radius:18px;padding:14px;background:var(--card-2)}.shift strong{color:var(--accent-2)}.note{border:1px solid rgba(240,179,106,.30);background:rgba(240,179,106,.10);border-radius:24px;padding:20px;color:var(--muted);line-height:1.65}.table{overflow:auto;border:1px solid var(--line);border-radius:24px;background:var(--card-2)}table{width:100%;border-collapse:collapse;min-width:760px}th,td{padding:15px 16px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}th{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--accent-2)}td{color:var(--muted);line-height:1.55}tr:last-child td{border-bottom:0}.cta{display:grid;grid-template-columns:1fr auto;gap:22px;align-items:center;background:radial-gradient(90% 120% at 100% 0%,rgba(192,122,62,.28),transparent 60%),var(--card);border:1px solid var(--line);border-radius:30px;padding:30px}.cta h2{font-size:38px;letter-spacing:-.05em;margin:0 0 8px}.cta p{margin:0;color:var(--muted);line-height:1.6}footer{border-top:1px solid var(--line);padding:28px 0;color:rgba(247,239,228,.48)}@media(max-width:900px){.hero,.grid,.grid.two-col,.cta{grid-template-columns:1fr}.generator{position:static}.links{gap:10px}.links a{font-size:13px}}@media(max-width:560px){.two,.shift{grid-template-columns:1fr}.links a:nth-child(2),.links a:nth-child(3){display:none}h1{font-size:46px}}
+  </style>
+</head>
+<body>
+  <nav class="nav"><div class="wrap nav-row"><a class="brand" href="/"><img src="../assets/dadyolked_logo_08.png" alt="" />DadYolked</a><div class="links"><a href="/">Home</a><a href="/tools/">Tools</a><a href="/best-baby-tracker-app-for-dads/">For dads</a><a href="/paternity-leave-planner/">Leave plan</a></div></div></nav>
+  <main class="wrap">
+    <div class="hero">
+      <div>
+        <span class="kicker">Newborn survival ops</span>
+        <h1>Newborn night shift schedule generator.</h1>
+        <p class="lead">Split the overnight chaos into a plan before 2 a.m. turns everyone into a goblin. Generate a simple two-parent schedule, protect at least one decent sleep block, and know who owns the next wake-up.</p>
+        <div class="actions"><a class="pill" href="#generator">Generate schedule</a><a class="pill ghost" href="https://apps.apple.com/app/id6773113095" target="_blank" rel="noopener">Log nights in DadYolked</a></div>
+        <div class="chips"><span class="chip">Feed windows</span><span class="chip">Two-parent shifts</span><span class="chip">Protected sleep</span><span class="chip">3 a.m.-proof</span></div>
+        <div class="note" style="margin-top:24px"><strong>Safety note:</strong> newborns often feed every 2–3 hours and may need to be awakened for feeds depending on age, weight gain, jaundice, prematurity, or pediatrician guidance. Always follow your clinician’s feeding plan.</div>
+      </div>
+
+      <form class="panel generator" id="generator">
+        <span class="kicker">Build your night</span>
+        <div class="two">
+          <div class="field"><label for="startTime">Night starts <span>parent shift</span></label><input id="startTime" type="time" value="20:00" /></div>
+          <div class="field"><label for="endTime">Night ends <span>morning handoff</span></label><input id="endTime" type="time" value="07:00" /></div>
+        </div>
+        <div class="two">
+          <div class="field"><label for="feedEvery">Expected feeds <span>hours apart</span></label><select id="feedEvery"><option value="2">Every 2 hours</option><option value="2.5" selected>Every 2.5 hours</option><option value="3">Every 3 hours</option><option value="4">Every 4 hours / pediatrician okayed</option></select></div>
+          <div class="field"><label for="strategy">Shift style <span>choose one</span></label><select id="strategy"><option value="split" selected>Split night in half</option><option value="earlydad">Dad early, partner late</option><option value="latedad">Partner early, dad late</option></select></div>
+        </div>
+        <div class="two">
+          <div class="field"><label for="parentA">Parent A <span>name</span></label><input id="parentA" value="Dad" /></div>
+          <div class="field"><label for="parentB">Parent B <span>name</span></label><input id="parentB" value="Partner" /></div>
+        </div>
+        <div class="button-row"><button class="pill" type="submit">Generate</button><button class="pill ghost" type="button" id="resetBtn">Reset</button></div>
+        <div id="result" class="result" aria-live="polite"></div>
+      </form>
+    </div>
+
+    <section>
+      <div class="grid">
+        <article class="card"><h3>Protect a real sleep block.</h3><p>The goal is not fairness theater. The goal is each adult getting one protected stretch whenever possible, even if the rest of the night is messy.</p></article>
+        <article class="card"><h3>Log the handoff.</h3><p>Write down last feed, diaper, medicine, wake time, and any weird note. Future-you at 4:12 a.m. is an unreliable witness.</p></article>
+        <article class="card"><h3>Change the plan weekly.</h3><p>Cluster feeding, pumping, return-to-work, and recovery can all change the right split. Treat the schedule as a living operating system.</p></article>
+      </div>
+    </section>
+
+    <section>
+      <span class="kicker">Common shift patterns</span>
+      <div class="table" style="margin-top:14px"><table><thead><tr><th>Pattern</th><th>Example</th><th>Best for</th></tr></thead><tbody><tr><td>Half-night split</td><td>One parent covers 8 p.m.–1 a.m.; the other covers 1 a.m.–7 a.m.</td><td>Two parents with similar daytime demands and bottle/pumped/formula options.</td></tr><tr><td>Task split</td><td>One parent feeds; the other handles diaper, burp, resettle, dishes, and logging.</td><td>Breastfeeding families where the birthing parent must wake but should not do every task.</td></tr><tr><td>Staggered sleep</td><td>One adult sleeps early, the other sleeps late.</td><td>Households trying to protect one four-ish hour block for each adult.</td></tr><tr><td>Recovery-first</td><td>Non-birthing parent owns more household/night support early.</td><td>Birth recovery, C-section recovery, complications, or severe sleep deprivation.</td></tr></tbody></table></div>
+    </section>
+
+    <section class="grid two-col">
+      <article class="card"><h2>Handoff checklist</h2><ul><li>Last feed time and amount/side.</li><li>Last wet/dirty diaper.</li><li>Any medicine, temperature, spit-up, or unusual crying.</li><li>Where baby is sleeping and when they went down.</li><li>What needs washing/refilling before the next wake-up.</li></ul></article>
+      <article class="card"><h2>When to break the schedule</h2><ul><li>Baby is not feeding well or has fewer wet diapers.</li><li>Your pediatrician gave a specific feeding plan.</li><li>One parent is recovering from birth, surgery, illness, or severe sleep deprivation.</li><li>Everyone is too tired to drive, cook, or safely stay awake with baby.</li></ul></article>
+    </section>
+
+    <section class="cta"><div><h2>DadYolked makes the handoff less stupid.</h2><p>Log feeds, bottles, diapers, sleep, medicine, notes, widgets, Siri shortcuts, and Apple Watch quick actions so the next parent on duty knows what happened without interrogating a zombie.</p></div><a class="pill" href="https://apps.apple.com/app/id6773113095" target="_blank" rel="noopener">Download DadYolked</a></section>
+
+    <section><div class="card"><h3>Sources and notes</h3><p>Newborn night schedules vary by feeding method, recovery needs, and medical guidance. Common parent-sleep advice emphasizes protected rest blocks and pre-agreed shifts; feeding references commonly note that newborns often eat every 2–3 hours.</p><ul><li><a href="https://huckleberrycare.com/blog/parent-sleep-schedule-night-shift-system-with-newborn" target="_blank" rel="noopener">Huckleberry: parent sleep schedule with a newborn</a></li><li><a href="https://www.whattoexpect.com/first-year/baby-feeding/creating-night-shift-system-newborn-baby" target="_blank" rel="noopener">What to Expect: creating a newborn night shift system</a></li><li><a href="https://www.healthychildren.org/English/ages-stages/baby/feeding-nutrition/Pages/how-often-and-how-much-should-your-baby-eat.aspx" target="_blank" rel="noopener">HealthyChildren.org: how often and how much babies eat</a></li></ul></div></section>
+  </main>
+  <footer><div class="wrap">© 2026 DadYolked · <a href="/tools/">Tools</a> · <a href="/best-baby-tracker-app-for-dads/">For dads</a> · <a href="/privacy/">Privacy</a></div></footer>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+    const parse = (t) => { const [h,m]=(t||'20:00').split(':').map(Number); return (h||0)*60+(m||0); };
+    const fmt = (mins) => { mins=((mins%1440)+1440)%1440; const h=Math.floor(mins/60), m=mins%60; const h12=((h+11)%12)+1; return `${h12}:${String(m).padStart(2,'0')} ${h<12?'AM':'PM'}`; };
+    function build(){
+      const start=parse($('startTime').value), rawEnd=parse($('endTime').value); const end=rawEnd<=start?rawEnd+1440:rawEnd;
+      const hours=(end-start)/60; const feedEvery=Number($('feedEvery').value); const strategy=$('strategy').value;
+      const a=$('parentA').value.trim()||'Parent A', b=$('parentB').value.trim()||'Parent B';
+      const mid=Math.round((start+end)/2/15)*15;
+      let first=a, second=b;
+      if(strategy==='latedad'){ first=b; second=a; }
+      if(strategy==='earlydad'){ first=a; second=b; }
+      const feeds=[]; for(let t=start; t<=end+1; t+=Math.round(feedEvery*60)){ feeds.push(fmt(t)); if(feeds.length>10) break; }
+      const protectedA = strategy==='latedad' ? `${fmt(start)}–${fmt(mid)}` : `${fmt(mid)}–${fmt(end)}`;
+      const protectedB = strategy==='latedad' ? `${fmt(mid)}–${fmt(end)}` : `${fmt(start)}–${fmt(mid)}`;
+      $('result').innerHTML = `<div class="status">Tonight's draft</div><h2>${fmt(start)}–${fmt(end)} coverage</h2><div class="big-number">${Math.round(hours*10)/10} hour night</div><div class="schedule"><div class="shift"><strong>${fmt(start)}–${fmt(mid)}</strong><span>${first} owns wake-ups, diapers, feed prep/support, resettling, and logging.</span></div><div class="shift"><strong>${fmt(mid)}–${fmt(end)}</strong><span>${second} owns wake-ups, diapers, feed prep/support, resettling, and logging.</span></div></div><p><strong>Likely feed checks:</strong> ${feeds.join(', ')}. Follow your pediatrician's plan if it differs.</p><p><strong>Protected sleep:</strong> ${a}: ${protectedA}. ${b}: ${protectedB}.</p>`;
+    }
+    $('generator').addEventListener('submit', (e)=>{e.preventDefault(); build();});
+    ['startTime','endTime','feedEvery','strategy','parentA','parentB'].forEach(id => $(id).addEventListener('input', build));
+    $('resetBtn').addEventListener('click', ()=>{ $('startTime').value='20:00'; $('endTime').value='07:00'; $('feedEvery').value='2.5'; $('strategy').value='split'; $('parentA').value='Dad'; $('parentB').value='Partner'; build(); });
+    build();
+  </script>
+</body>
+</html>
