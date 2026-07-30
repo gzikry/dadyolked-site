@@ -45,6 +45,64 @@
   ]
 }
   </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "@id": "https://dadyolked.com/tools/newborn-diaper-output-checker/#app",
+      "name": "Newborn Diaper Output Checker",
+      "url": "https://dadyolked.com/tools/newborn-diaper-output-checker/",
+      "description": "A free browser-based tool for comparing a newborn's wet and dirty diaper counts with common first-week reference points and identifying when to contact a pediatrician.",
+      "applicationCategory": "HealthApplication",
+      "operatingSystem": "Any",
+      "browserRequirements": "Requires JavaScript",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "DadYolked",
+        "url": "https://dadyolked.com/"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://dadyolked.com/tools/newborn-diaper-output-checker/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How does the newborn diaper output checker work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It compares the baby's age, wet diaper count, dirty diaper count, and time since the last wet diaper with common first-week reference points. The result is an educational prompt to keep watching or contact a pediatrician, not a diagnosis."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do dirty diaper counts differ by feeding type?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Stool frequency and appearance can vary with breast milk, formula, mixed feeding, and age. Look at the baby's overall pattern and use your pediatrician's guidance rather than relying on one daily number."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can this checker diagnose dehydration or a feeding problem?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. It cannot diagnose dehydration, jaundice, feeding problems, or illness. Contact a clinician for concerning output, poor feeding, unusual sleepiness, fever, blood, white stool, very dark urine, or whenever something feels wrong."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
   <style>
     :root{--ink:#090b0f;--ink-2:#101318;--text:#f7efe4;--muted:rgba(247,239,228,.72);--line:rgba(247,239,228,.14);--accent:#c07a3e;--accent-2:#f0b36a;--good:#79c987;--watch:#f0b36a;--call:#ff8178;--card:rgba(255,255,255,.065);--card-2:rgba(255,255,255,.04);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color-scheme:dark}
     *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:radial-gradient(90% 80% at 50% -10%,rgba(192,122,62,.25),transparent 70%),linear-gradient(180deg,var(--ink),var(--ink-2));color:var(--text);min-height:100vh} a{color:var(--accent-2)}
@@ -57,7 +115,7 @@
   <script defer src="/assets/cloudflare-web-analytics.js"></script>
 </head>
 <body>
-  <nav class="nav"><div class="wrap nav-row"><a class="brand" href="/"><img src="../../assets/dadyolked_logo_08.png" alt="" />DadYolked</a><div class="links"><a href="/">Home</a><a href="/tools/newborn-diaper-output-checker/">Tools</a><a href="/privacy/">Privacy</a><a href="mailto:support@dadyolked.com">Contact</a></div></div></nav>
+  <nav class="nav"><div class="wrap nav-row"><a class="brand" href="/"><img src="../../assets/dadyolked_logo_08.png" alt="" />DadYolked</a><div class="links"><a href="/">Home</a><a href="/tools/">Tools</a><a href="/privacy/">Privacy</a><a href="mailto:support@dadyolked.com">Contact</a></div></div></nav>
   <main class="wrap">
     <div class="hero">
       <div>
@@ -159,6 +217,16 @@
           <li><a href="https://www.sutterhealth.org/health/how-many-diapers-a-day-your-newborn-should-have" target="_blank" rel="noopener">Sutter Health: newborn diaper expectations</a></li>
           <li><a href="https://www.mayoclinic.org/healthy-lifestyle/infant-and-toddler-health/expert-answers/baby-poop/faq-20057971" target="_blank" rel="noopener">Mayo Clinic: baby poop basics</a></li>
         </ul>
+      </div>
+    </section>
+
+    <section id="faq">
+      <span class="kicker">Diaper output FAQ</span>
+      <h2>Use the pattern as a prompt, not a diagnosis.</h2>
+      <div class="grid">
+        <article class="card"><h3>How does the checker work?</h3><p>It compares age, wet and dirty diaper counts, and time since the last wet diaper with common first-week reference points. The result is an educational prompt to keep watching or contact a pediatrician, not a diagnosis.</p></article>
+        <article class="card"><h3>Does feeding type change dirty diaper counts?</h3><p>It can. Stool frequency and appearance vary with breast milk, formula, mixed feeding, and age. Look at the whole pattern and use your pediatrician's guidance rather than relying on one daily number.</p></article>
+        <article class="card"><h3>Can this diagnose dehydration?</h3><p>No. It cannot diagnose dehydration, jaundice, feeding problems, or illness. Contact a clinician for concerning output, poor feeding, unusual sleepiness, fever, blood, white stool, very dark urine, or whenever something feels wrong.</p></article>
       </div>
     </section>
   </main>
