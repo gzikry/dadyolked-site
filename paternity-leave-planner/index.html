@@ -22,19 +22,67 @@
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
+  "@graph": [
     {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://dadyolked.com/"
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://dadyolked.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Paternity Leave Planner for Dads",
+          "item": "https://dadyolked.com/paternity-leave-planner/"
+        }
+      ]
     },
     {
-      "@type": "ListItem",
-      "position": 2,
+      "@type": "WebApplication",
+      "@id": "https://dadyolked.com/paternity-leave-planner/#planner",
       "name": "Paternity Leave Planner for Dads",
-      "item": "https://dadyolked.com/paternity-leave-planner/"
+      "url": "https://dadyolked.com/paternity-leave-planner/",
+      "description": "A free browser-based worksheet for sketching paternity leave timing, HR notice, leave shape, work handoffs, and newborn-care preparation.",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Any",
+      "browserRequirements": "Requires JavaScript",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is this paternity leave planner legal or HR advice?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. It creates a planning draft only. Eligibility, pay, job protection, notice, and intermittent leave depend on applicable law and your employer's policies, so confirm the details with HR and the relevant government program."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can dads split paternity leave into more than one block?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sometimes. Employer policies and applicable leave rules determine whether intermittent or split bonding leave is available. Use the split option to sketch a household plan, then ask HR what is permitted and how it must be documented."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What should a paternity leave plan include besides dates?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A useful draft includes HR notice, pay and benefits questions, work coverage, flexibility around the actual birth date, partner recovery support, newborn appointments, household responsibilities, and a return-to-work handoff."
+          }
+        }
+      ]
     }
   ]
 }
@@ -91,6 +139,15 @@
     <section>
       <span class="kicker">Common leave shapes</span>
       <div class="table" style="margin-top:14px"><table><thead><tr><th>Plan</th><th>When it works</th><th>Tradeoff</th></tr></thead><tbody><tr><td>All at birth</td><td>Best when the birthing parent needs immediate recovery support, older kids need coverage, or work is easiest to pause once.</td><td>You may run out of protected time before later regressions/return-to-work needs.</td></tr><tr><td>Split leave</td><td>Useful when you can take a few weeks at birth and save time for partner return-to-work, daycare transition, or medical follow-ups.</td><td>Needs HR approval and more planning.</td></tr><tr><td>Stagger after partner</td><td>Useful when one parent has longer leave and the other can extend baby-at-home care before daycare/nanny start.</td><td>You may miss some early recovery support unless you take a short birth block too.</td></tr></tbody></table></div>
+    </section>
+
+    <section>
+      <span class="kicker">Paternity leave planner FAQ</span>
+      <div class="grid" style="margin-top:14px">
+        <article class="card"><h3>Is this legal or HR advice?</h3><p>No. The planner creates a draft, not an eligibility decision. Confirm pay, job protection, notice, paperwork, and applicable federal or state rules with HR and the relevant government program.</p></article>
+        <article class="card"><h3>Can dads split leave into multiple blocks?</h3><p>Sometimes. Employer policies and leave rules determine whether intermittent or split bonding leave is available. Sketch the household plan here, then ask HR what is permitted and how to document it.</p></article>
+        <article class="card"><h3>What belongs in a leave plan besides dates?</h3><p>Include work coverage, HR notice, pay and benefits questions, flexibility around the actual birth date, partner recovery support, newborn appointments, household owners, and the return-to-work handoff.</p></article>
+      </div>
     </section>
 
     <section class="cta"><div><h2>Make the first weeks less improvised.</h2><p>DadYolked helps dads prep for birth, track contractions, pack the hospital bag, log newborn feeds/diapers/sleep/medicine, and keep private records with widgets, Siri, and Apple Watch quick logs.</p></div><a data-analytics-context="paternity_leave_planner_2" data-analytics-event="app_store_click" class="pill" href="https://apps.apple.com/app/id6773113095?ct=site_paternity_leave_planner_2&mt=8" target="_blank" rel="noopener">Download DadYolked</a></section>
