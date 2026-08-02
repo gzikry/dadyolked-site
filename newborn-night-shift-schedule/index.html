@@ -22,19 +22,67 @@
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
+  "@graph": [
     {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://dadyolked.com/"
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://dadyolked.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Newborn Night Shift Schedule Generator",
+          "item": "https://dadyolked.com/newborn-night-shift-schedule/"
+        }
+      ]
     },
     {
-      "@type": "ListItem",
-      "position": 2,
+      "@type": "WebApplication",
+      "@id": "https://dadyolked.com/newborn-night-shift-schedule/#generator",
       "name": "Newborn Night Shift Schedule Generator",
-      "item": "https://dadyolked.com/newborn-night-shift-schedule/"
+      "url": "https://dadyolked.com/newborn-night-shift-schedule/",
+      "description": "A free browser-based tool for drafting two-parent newborn night shifts, protected sleep blocks, expected feeding check-ins, and caregiver handoffs.",
+      "applicationCategory": "LifestyleApplication",
+      "operatingSystem": "Any",
+      "browserRequirements": "Requires JavaScript",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How does the newborn night shift generator divide the night?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It divides the selected overnight period into two coverage blocks, assigns one parent to each block, estimates feeding check-in times, and shows a protected sleep block for each adult. It creates a coordination draft, not a medical feeding schedule."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can parents use night shifts when the baby is breastfed?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Even when the breastfeeding parent needs to wake, the other parent can own diapers, bringing and resettling the baby, feed support, washing pump or bottle parts, logging, and the caregiver handoff. Families should adapt the plan to feeding and recovery needs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does this generator decide when a newborn should eat?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. The feeding check-ins are planning estimates only. Newborn feeding needs vary with age, weight gain, jaundice, prematurity, feeding method, and clinician guidance. Follow the baby's cues and the pediatrician's feeding plan."
+          }
+        }
+      ]
     }
   ]
 }
@@ -92,6 +140,15 @@
     <section class="grid two-col">
       <article class="card"><h2>Handoff checklist</h2><ul><li>Last feed time and amount/side.</li><li>Last wet/dirty diaper.</li><li>Any medicine, temperature, spit-up, or unusual crying.</li><li>Where baby is sleeping and when they went down.</li><li>What needs washing/refilling before the next wake-up.</li></ul></article>
       <article class="card"><h2>When to break the schedule</h2><ul><li>Baby is not feeding well or has fewer wet diapers.</li><li>Your pediatrician gave a specific feeding plan.</li><li>One parent is recovering from birth, surgery, illness, or severe sleep deprivation.</li><li>Everyone is too tired to drive, cook, or safely stay awake with baby.</li></ul></article>
+    </section>
+
+    <section>
+      <span class="kicker">Newborn night shift FAQ</span>
+      <div class="grid" style="margin-top:14px">
+        <article class="card"><h3>How does the generator divide the night?</h3><p>It splits your selected overnight period into two coverage blocks, assigns one parent to each block, estimates feeding check-ins, and shows a protected sleep block for each adult. It is a coordination draft, not a medical feeding schedule.</p></article>
+        <article class="card"><h3>Can night shifts work with breastfeeding?</h3><p>Yes. Even when the breastfeeding parent needs to wake, the other parent can own diapers, bringing and resettling the baby, feed support, washing pump or bottle parts, logging, and the handoff. Adapt the split to feeding and recovery needs.</p></article>
+        <article class="card"><h3>Does this decide when a newborn should eat?</h3><p>No. Feed check-ins are planning estimates only. Needs vary with age, weight gain, jaundice, prematurity, feeding method, and clinician guidance. Follow your baby's cues and your pediatrician's feeding plan.</p></article>
+      </div>
     </section>
 
     <section class="cta"><div><h2>DadYolked makes the handoff less stupid.</h2><p>Log feeds, bottles, diapers, sleep, medicine, notes, widgets, Siri shortcuts, and Apple Watch quick actions so the next parent on duty knows what happened without interrogating a zombie.</p></div><a data-analytics-context="newborn_night_shift_schedule_2" data-analytics-event="app_store_click" class="pill" href="https://apps.apple.com/app/id6773113095?ct=site_newborn_night_shift_schedule_2&mt=8" target="_blank" rel="noopener">Download DadYolked</a></section>
