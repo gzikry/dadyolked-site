@@ -55,14 +55,14 @@
     <p class="lead">This privacy policy covers both <strong>dadyolked.com</strong> and the <strong>DadYolked iOS app</strong> (available on the App Store). DadYolked is built to be local-first and private by design.</p>
 
     <div class="card">
-      <p><strong>Last updated:</strong> May 28, 2026</p>
+      <p><strong>Last updated:</strong> August 2, 2026</p>
 
     <div class="callout">
         <p><strong>v1.1 updates:</strong> Dynamic background-refreshed notifications, fully functional Siri and App Intents that adapt to pregnancy or post-birth mode, improved birth preparation checklist, and stronger deep-link support for widgets and Live Activities. All new features continue to keep your family data local-first on your device with the same privacy commitments.</p>
     </div>
 
       <div class="callout">
-        <p><strong>The short version:</strong> DadYolked stores your parenting data on your device by default. Optional Apple services, such as iCloud, HealthKit, Calendar, MapKit, and Speech Recognition, are used only when you enable features that need them. We use Firebase Crashlytics to find and fix crashes. We do not sell your data, run ads, or share your information with data brokers.</p>
+        <p><strong>The short version:</strong> DadYolked is local-first. Parenting data stays on your device unless you explicitly export it, share it through Apple’s CloudKit shared-care flow, or enable an Apple system integration. Assistant Q&amp;A history is stored in protected local app storage and can be cleared or included in an export. We use Firebase Crashlytics to find and fix crashes. We do not sell your data, run ads, or share your information with data brokers.</p>
       </div>
 
       <h2>1. Who we are</h2>
@@ -78,8 +78,9 @@
         <div class="mini"><strong>Appointments & reminders</strong><span>Dates, notes, checklist states, and local notification preferences.</span></div>
       </div>
 
-      <h2>3. Storage and iCloud sync</h2>
-      <p>DadYolked does not operate a parenting-data server that reads your baby-tracking data. If you enable iCloud sync, your app data is handled through your private Apple iCloud account and Apple infrastructure. Apple’s handling of iCloud data is governed by <a href="https://www.apple.com/legal/privacy/">Apple’s Privacy Policy</a>.</p>
+      <h2>3. Storage and shared care through Apple CloudKit</h2>
+      <p>DadYolked does not operate a general-purpose parenting-data server. If you choose to invite a caregiver, DadYolked uses Apple CloudKit and Apple’s CKShare system to synchronize the specific shared-care workspace you select. The Apple share—not an invitation URL, SMS message, caregiver label, or code—is the authorization boundary.</p>
+      <p>A recipient must review and accept Apple’s share invitation before access is granted. Shared records may include the care logs and profile information you deliberately place in that workspace. Private journal bodies, private mood notes, and other non-shared records remain outside the shared projection unless you explicitly share them through an app flow. Apple’s handling of iCloud data is governed by <a href="https://www.apple.com/legal/privacy/">Apple’s Privacy Policy</a>.</p>
 
       <h2>4. Photos</h2>
       <p>Photos are selected through Apple’s system photo picker and are used only for in-app memories, milestones, profiles, or journal features you choose. We do not use photos for advertising or brokered data sale.</p>
@@ -114,7 +115,11 @@
         <li>No third-party tracking for advertising.</li>
       </ul>
 
-      <h2>9. Third-party processors</h2>
+      <h2>9. Assistant Q&amp;A and on-device intelligence</h2>
+      <p>Assistant questions and answers are stored locally in protected app storage to provide bounded history and follow-up context. You can clear history for one child or all children. Generic Assistant requests receive minimal active-child context; private journal bodies, mood notes, and free-text medical/allergen details are not automatically included.</p>
+      <p>On supported devices, Apple on-device intelligence may refine responses. When unavailable, DadYolked uses deterministic local fallbacks. DadYolked does not send parenting logs to an unapproved external AI service. Assistant-generated text is informational and cannot silently perform privileged app actions.</p>
+
+      <h2>10. Third-party processors</h2>
       <ul>
         <li><strong>Google / Firebase:</strong> crash reporting through Crashlytics.</li>
         <li><strong>Apple iCloud / CloudKit:</strong> optional private sync and system storage services.</li>
@@ -123,17 +128,17 @@
         <li><strong>Apple HealthKit and Calendar:</strong> optional system integrations when permission is granted.</li>
       </ul>
 
-      <h2>10. Export and deletion</h2>
-      <p>You can export supported data from inside the app. You can delete app data in the app, by uninstalling DadYolked, or by removing associated iCloud data from your Apple account settings if iCloud sync is enabled.</p>
+      <h2>11. Export and deletion</h2>
+      <p>You can export supported data from inside the app, including Assistant Q&amp;A history in the JSON backup. You can clear Assistant history by child or globally. The app’s delete-all-data flow removes SwiftData records and protected Assistant history; shared CloudKit records and shares may require separate Apple/iCloud actions and are subject to Apple’s retention and deletion behavior.</p>
       <p>For deletion requests or privacy questions, contact <a href="mailto:support@dadyolked.com">support@dadyolked.com</a>. Crash reports are associated with a random installation identifier rather than an Apple ID or email, so individual crash records may not always be retrievable, but we will make a good-faith effort to help.</p>
 
-      <h2>11. Children’s privacy</h2>
+      <h2>12. Children’s privacy</h2>
       <p>DadYolked is designed for expectant and new fathers, parents, and caregivers. It is not directed to children under 13, and children should not create or manage app data.</p>
 
-      <h2>12. Changes to this policy</h2>
+      <h2>13. Changes to this policy</h2>
       <p>If we make material changes to this Privacy Policy, we will update the “Last updated” date above and, where appropriate, notify users through the app or App Store release notes.</p>
 
-      <h2>13. Contact</h2>
+      <h2>14. Contact</h2>
       <p>Questions, concerns, or deletion requests? Email <a href="mailto:support@dadyolked.com">support@dadyolked.com</a>.</p>
     </div>
   </main>
