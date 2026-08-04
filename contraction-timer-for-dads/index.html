@@ -20,7 +20,51 @@
   <meta name="twitter:description" content="A contraction timer for dads: what to track, how to describe contraction duration and spacing, what to pack, and when to follow your care team's instructions.">
   <meta name="twitter:image" content="https://dadyolked.com/assets/dadyolked-social-card.png">
   <script type="application/ld+json">
-{"@context":"https://schema.org","@graph":[{"@id":"https://dadyolked.com/#organization","@type":"Organization","name":"DadYolked","url":"https://dadyolked.com/","logo":{"@type":"ImageObject","url":"https://dadyolked.com/assets/dadyolked_logo_08.png"}},{"@type":"Article","@id":"https://dadyolked.com/contraction-timer-for-dads/#article","url":"https://dadyolked.com/contraction-timer-for-dads/","headline":"Contraction Timer for Dads","description":"What dads should track during contractions: start time, end time, duration, spacing, notes, hospital instructions, and escalation signs.","author":{"@id":"https://dadyolked.com/#organization"},"publisher":{"@id":"https://dadyolked.com/#organization"},"about":[{"@type":"Thing","name":"contraction timing"},{"@type":"Thing","name":"labor preparation"},{"@id":"https://dadyolked.com/#app"}],"mainEntityOfPage":"https://dadyolked.com/contraction-timer-for-dads/"},{"@type":"FAQPage","@id":"https://dadyolked.com/contraction-timer-for-dads/#faq","mainEntity":[{"@type":"Question","name":"What should dads track during contractions?","acceptedAnswer":{"@type":"Answer","text":"Track when each contraction starts, when it ends, how long it lasted, how far apart contractions are from start to start, what changed, and any instructions from the care team."}},{"@type":"Question","name":"When should we call the hospital or care team?","acceptedAnswer":{"@type":"Answer","text":"Follow your OB, midwife, hospital, or care team's instructions. Call immediately for bleeding, water breaking if instructed, severe pain, decreased fetal movement, high blood pressure symptoms, fever, or anything that feels wrong."}}]}]}
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@id": "https://dadyolked.com/#organization",
+      "@type": "Organization",
+      "name": "DadYolked",
+      "url": "https://dadyolked.com/",
+      "logo": {"@type": "ImageObject", "url": "https://dadyolked.com/assets/dadyolked_logo_08.png"}
+    },
+    {
+      "@type": "Article",
+      "@id": "https://dadyolked.com/contraction-timer-for-dads/#article",
+      "url": "https://dadyolked.com/contraction-timer-for-dads/",
+      "headline": "Contraction Timer for Dads",
+      "description": "What dads should track during contractions: start time, end time, duration, spacing, notes, hospital instructions, and escalation signs.",
+      "author": {"@id": "https://dadyolked.com/#organization"},
+      "publisher": {"@id": "https://dadyolked.com/#organization"},
+      "about": [{"@type": "Thing", "name": "contraction timing"}, {"@type": "Thing", "name": "labor preparation"}, {"@id": "https://dadyolked.com/#app"}],
+      "mainEntityOfPage": "https://dadyolked.com/contraction-timer-for-dads/"
+    },
+    {
+      "@type": "WebApplication",
+      "@id": "https://dadyolked.com/contraction-timer-for-dads/#tool",
+      "name": "Contraction Timer for Dads",
+      "url": "https://dadyolked.com/contraction-timer-for-dads/",
+      "applicationCategory": "HealthApplication",
+      "operatingSystem": "Any",
+      "browserRequirements": "Requires JavaScript",
+      "description": "A free browser-based practice timer for recording contraction start time, duration, and start-to-start spacing.",
+      "isAccessibleForFree": true,
+      "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
+      "publisher": {"@id": "https://dadyolked.com/#organization"}
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://dadyolked.com/contraction-timer-for-dads/#faq",
+      "mainEntity": [
+        {"@type": "Question", "name": "What should dads track during contractions?", "acceptedAnswer": {"@type": "Answer", "text": "Track when each contraction starts and ends, its duration, start-to-start spacing, relevant changes, and the care team's instructions."}},
+        {"@type": "Question", "name": "Does a contraction timer tell us when to go to the hospital?", "acceptedAnswer": {"@type": "Answer", "text": "No. A timer records a pattern; it cannot assess labor or replace instructions from your OB, midwife, hospital, or other qualified care professional."}},
+        {"@type": "Question", "name": "Does the timer save or send contraction data?", "acceptedAnswer": {"@type": "Answer", "text": "No. The practice timer runs in this browser tab and does not save, upload, or send its entries. Clearing the page or closing the tab removes the temporary list."}}
+      ]
+    }
+  ]
+}
   </script>
   <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://dadyolked.com/"},{"@type":"ListItem","position":2,"name":"Contraction Timer for Dads","item":"https://dadyolked.com/contraction-timer-for-dads/"}]}
@@ -37,7 +81,7 @@
         <span class="kicker">Labor prep for dads</span>
         <h1>Contraction timing is a job. Give dad the clipboard.</h1>
         <p class="lead">When labor may be starting, dads can help by tracking contraction start times, end times, spacing, notes, bags, chargers, route, and the care team’s instructions — without turning into a panicked spreadsheet goblin.</p>
-        <div class="actions"><a class="pill" href="https://apps.apple.com/app/id6773113095?ct=site_contraction_timer&mt=8" target="_blank" rel="noopener">Download DadYolked</a><a class="pill ghost" href="/dad-app-for-pregnancy/">Dad pregnancy app guide</a></div>
+        <div class="actions"><a data-analytics-context="contraction_timer_hero" data-analytics-event="app_store_click" class="pill" href="https://apps.apple.com/app/id6773113095?ct=site_contraction_timer&mt=8" target="_blank" rel="noopener">Download DadYolked</a><a class="pill ghost" href="/dad-app-for-pregnancy/">Dad pregnancy app guide</a></div>
       </div>
       <aside class="panel timer">
         <span class="kicker">Simple practice timer</span>
@@ -54,11 +98,23 @@
 
     <section><span class="kicker">Dad checklist</span><div class="grid"><article class="card"><h3>Before calling</h3><ul><li>Contraction pattern</li><li>Due date / gestational week</li><li>Water broken?</li><li>Bleeding or concerning symptoms?</li></ul></article><article class="card"><h3>Before leaving</h3><ul><li>Hospital bag</li><li>Phone chargers</li><li>ID / insurance</li><li>Car seat ready</li></ul></article><article class="card"><h3>In DadYolked</h3><ul><li>Pregnancy prep</li><li>Contraction notes</li><li>Hospital bag checklist</li><li>Post-birth baby logs</li></ul></article></div></section>
 
-    <section class="cta"><div><h2>Pregnancy prep should survive the drive to the hospital.</h2><p>DadYolked helps dads organize pregnancy prep, then keeps going after birth with feeds, diapers, sleep, medicine, milestones, Dad Recovery, Apple Watch, Siri, widgets, and private local-first records.</p></div><a class="pill" href="https://apps.apple.com/app/id6773113095?ct=site_contraction_timer_bottom&mt=8" target="_blank" rel="noopener">Get DadYolked</a></section>
+    <section>
+      <span class="kicker">Contraction timer FAQ</span>
+      <div class="grid">
+        <article class="card"><h3>What should dads track during contractions?</h3><p>Track when each contraction starts and ends, its duration, start-to-start spacing, relevant changes, and the care team’s instructions.</p></article>
+        <article class="card"><h3>Does a contraction timer tell us when to go to the hospital?</h3><p>No. A timer records a pattern; it cannot assess labor or replace instructions from your OB, midwife, hospital, or other qualified care professional.</p></article>
+        <article class="card"><h3>Does the timer save or send contraction data?</h3><p>No. This practice timer runs in this browser tab and does not save, upload, or send its entries. Clearing the page or closing the tab removes the temporary list.</p></article>
+      </div>
+    </section>
+
+    <section><div class="card"><h3>Sources and further reading</h3><p>Use your own care team’s plan first. For general education, see <a href="https://www.acog.org/womens-health/faqs/how-to-tell-when-labor-begins" target="_blank" rel="noopener">ACOG: How to Tell When Labor Begins</a> and <a href="https://www.marchofdimes.org/find-support/topics/birth/contractions-and-signs-labor" target="_blank" rel="noopener">March of Dimes: Contractions and signs of labor</a>.</p></div></section>
+
+    <section class="cta"><div><h2>Pregnancy prep should survive the drive to the hospital.</h2><p>DadYolked helps dads organize pregnancy prep, then keeps going after birth with feeds, diapers, sleep, medicine, milestones, Dad Recovery, Apple Watch, Siri, widgets, and private local-first records.</p></div><a data-analytics-context="contraction_timer_bottom" data-analytics-event="app_store_click" class="pill" href="https://apps.apple.com/app/id6773113095?ct=site_contraction_timer_bottom&mt=8" target="_blank" rel="noopener">Get DadYolked</a></section>
 
     <section><div class="card"><h3>Helpful related pages</h3><p><a href="/dad-app-for-pregnancy/">Dad app for pregnancy</a> · <a href="/hospital-bag-checklist-for-dad/">Hospital bag checklist for dad</a> · <a href="/paternity-leave-planner/">Paternity leave planner</a> · <a href="/newborn-care-tools/">Newborn care tools</a></p></div></section>
   </main>
   <footer><div class="wrap">© 2026 DadYolked · <a href="/tools/">Tools</a> · <a href="/support/">Support</a> · <a href="/privacy/">Privacy</a></div></footer>
+  <script defer src="/assets/cloudflare-web-analytics.js"></script>
   <script>
     const clock=document.getElementById('clock'), statusEl=document.getElementById('status'), log=document.getElementById('log');
     let start=null, interval=null, lastStart=null, entries=[];
