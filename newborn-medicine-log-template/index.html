@@ -22,19 +22,69 @@
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
+  "@graph": [
     {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://dadyolked.com/"
+      "@type": "WebApplication",
+      "@id": "https://dadyolked.com/newborn-medicine-log-template/#tool",
+      "name": "Newborn Medicine Log Template",
+      "url": "https://dadyolked.com/newborn-medicine-log-template/",
+      "applicationCategory": "LifestyleApplication",
+      "operatingSystem": "Any device with a modern web browser",
+      "browserRequirements": "JavaScript is only used to open the browser print dialog",
+      "description": "A free printable record for clinician-directed newborn medicines, times, caregiver initials, symptoms, reactions, and pediatrician questions.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "isAccessibleForFree": true
     },
     {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Newborn Medicine Log Template",
-      "item": "https://dadyolked.com/newborn-medicine-log-template/"
+      "@type": "FAQPage",
+      "@id": "https://dadyolked.com/newborn-medicine-log-template/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What should a newborn medicine log include?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Record the medicine name and concentration from the label, the exact clinician-directed dose, time given, caregiver initials, reason, and any symptoms or reactions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does this medicine log tell me what dose to give a newborn?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. It is a record-keeping aid and provides no dosing, diagnosis, treatment, or triage advice. Confirm newborn medicine and dosing with a pediatrician or pharmacist."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does the printable medicine log save or upload health information?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. The page does not collect, save, or upload entries. Its print button only opens the browser print dialog, so printed or saved copies remain under the user's device and browser controls."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://dadyolked.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Newborn Medicine Log Template",
+          "item": "https://dadyolked.com/newborn-medicine-log-template/"
+        }
+      ]
     }
   ]
 }
@@ -98,6 +148,16 @@
     <section class="grid two-col">
       <article class="card"><h2>What to track</h2><ul><li>Medicine name and concentration from the bottle/label.</li><li>Dose exactly as directed by clinician, pharmacist, or label.</li><li>Time given and next allowed time if provided.</li><li>Who gave it, especially with multiple caregivers.</li><li>Symptoms before and after, including any reaction.</li></ul></article>
       <article class="card"><h2>What not to do</h2><ul><li>Do not guess a newborn dose from internet snippets.</li><li>Do not combine medicines unless a clinician/pharmacist says it is safe.</li><li>Do not use adult medicine for a baby.</li><li>Do not give extra doses because symptoms seem scary.</li><li>Do not wait on serious symptoms like breathing trouble or unusual lethargy.</li></ul></article>
+    </section>
+
+    <section>
+      <span class="kicker">Newborn medicine log FAQ</span>
+      <h2>Record clearly. Leave dosing to the care team.</h2>
+      <div class="grid">
+        <article class="card"><h3>What should a newborn medicine log include?</h3><p>Record the medicine name and concentration from the label, the exact clinician-directed dose, time given, caregiver initials, reason, and any symptoms or reactions. Keep the original label and measuring device with the medicine.</p></article>
+        <article class="card"><h3>Does this log tell me what dose to give a newborn?</h3><p>No. This is a record-keeping aid, not dosing, diagnosis, treatment, or triage advice. Confirm every newborn medicine and dose with your pediatrician or pharmacist, and seek urgent help for serious symptoms.</p></article>
+        <article class="card"><h3>Does the printable log save or upload health information?</h3><p>No. This page does not collect, save, or upload entries. The print button only opens your browser's print dialog; printed or saved copies remain under your device and browser controls.</p></article>
+      </div>
     </section>
 
     <section class="cta"><div><h2>DadYolked keeps medicine logs with the rest of the night.</h2><p>Paper works for one sheet. DadYolked keeps medicine alongside feeds, diapers, sleep, notes, caregiver handoffs, widgets, Siri, and Apple Watch quick logs — because newborn care does not happen in separate spreadsheets.</p></div><a data-analytics-context="newborn_medicine_log_template_2" data-analytics-event="app_store_click" class="pill" href="https://apps.apple.com/app/id6773113095?ct=site_newborn_medicine_log_template_2&mt=8" target="_blank" rel="noopener">Download DadYolked</a></section>
