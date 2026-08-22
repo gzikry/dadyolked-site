@@ -6,21 +6,21 @@
   <meta name="apple-itunes-app" content="app-id=6773113095">
   <meta property="og:site_name" content="DadYolked">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="DadYolked — Pregnancy, baby tracking, and dad recovery for iPhone">
-  <meta property="og:description" content="DadYolked is the private iPhone companion for expecting and new dads: pregnancy prep, Night Quiet Today, kick counts, contractions, one-tap logs with undo, shared care states, Dad Recovery, Apple Watch, Siri, and privacy-first Assistant.">
+  <meta property="og:title" content="DadYolked: Pregnancy &amp; Baby Tracker for Dads on iPhone">
+  <meta property="og:description" content="The private iPhone tracker for expecting and new dads: pregnancy prep, feeds, diapers, sleep, medicine, and dad recovery. No account required.">
   <meta property="og:url" content="https://dadyolked.com/">
   <meta property="og:image" content="https://dadyolked.com/assets/dadyolked-social-card.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="DadYolked — Pregnancy, baby tracking, and dad recovery for iPhone">
-  <meta name="twitter:description" content="DadYolked is the private iPhone companion for expecting and new dads: pregnancy prep, kick counts, contractions, baby quick logs, sleep, feeds, diapers, medicine, Dad Recovery, Apple Watch, Siri, privacy, and support.">
+  <meta name="twitter:title" content="DadYolked: Pregnancy &amp; Baby Tracker for Dads on iPhone">
+  <meta name="twitter:description" content="The private iPhone tracker for expecting and new dads: pregnancy prep, feeds, diapers, sleep, medicine, and dad recovery. No account required.">
   <meta name="twitter:image" content="https://dadyolked.com/assets/dadyolked-social-card.png">
-<title>DadYolked — Pregnancy, baby tracking, and dad recovery for iPhone</title>
-<meta name="description" content="DadYolked is the private iPhone companion for expecting and new dads: pregnancy prep, kick counts, contractions, baby quick logs, sleep, feeds, diapers, medicine, Dad Recovery, Apple Watch, Siri, privacy, and support." />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800;900&family=Geist+Mono:wght@400;500;600&family=Newsreader:ital,wght@1,400;1,500;1,600&display=swap" rel="stylesheet">
+<title>DadYolked: Pregnancy &amp; Baby Tracker for Dads on iPhone</title>
+<meta name="description" content="The private iPhone tracker for expecting and new dads: pregnancy prep, feeds, diapers, sleep, medicine, and dad recovery. No account required." />
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preload" href="/assets/fonts/geist-04.woff2" as="font" type="font/woff2" crossorigin>
 
   <script type="application/ld+json">
 {
@@ -111,6 +111,9 @@
 }
   </script>
   <style>
+  @font-face{font-family:'Geist';font-style:normal;font-weight:400 900;font-display:swap;src:url('/assets/fonts/geist-04.woff2') format('woff2')}
+  @font-face{font-family:'Geist Mono';font-style:normal;font-weight:400 600;font-display:swap;src:url('/assets/fonts/geistmono-07.woff2') format('woff2')}
+  @font-face{font-family:'Newsreader';font-style:italic;font-weight:400 600;font-display:swap;src:url('/assets/fonts/newsreader-11.woff2') format('woff2')}
   :root{
     --ink:        #0E1320;
     --ink-2:      #151B2B;
@@ -156,6 +159,14 @@
 
   a{ color:inherit; text-decoration:none; }
   img{ max-width:100%; display:block; }
+
+  .skip-link{
+    position:fixed; left:16px; top:12px; z-index:100;
+    transform:translateY(-160%); padding:10px 14px;
+    border-radius:10px; background:var(--paper); color:var(--ink);
+    font-weight:700;
+  }
+  .skip-link:focus{ transform:translateY(0); }
 
   ::selection{ background:var(--accent); color:#fff; }
 
@@ -219,7 +230,7 @@
     font-size:14px; color:var(--paper-muted);
   }
   .nav-links a:hover{ color:#fff; }
-  .nav-links .pill{ color:#fff; }
+  .nav-links .pill{ color:var(--ink); }
 
   .pill{
     display:inline-flex; align-items:center; gap:8px;
@@ -233,7 +244,7 @@
   }
   .pill:hover{ transform:translateY(-1px); }
   .pill.primary{
-    background:var(--accent); color:#fff;
+    background:var(--accent); color:var(--ink);
     box-shadow: 0 12px 30px -10px var(--accent-glow);
   }
   .pill.ghost{
@@ -696,7 +707,7 @@
     letter-spacing:0.16em; color:var(--accent);
     text-transform:uppercase;
   }
-  .priv-card h4{
+  .priv-card h3{
     margin:14px 0 8px;
     font-size:20px; font-weight:700; letter-spacing:-0.025em;
   }
@@ -723,6 +734,23 @@
     margin:0; font-size:15px; line-height:1.65;
     color:rgba(233,228,216,0.66);
   }
+  .product-proof{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:20px;
+  }
+  .screen-card{
+    margin:0; padding:14px 14px 20px;
+    border:1px solid var(--line-dark); border-radius:28px;
+    background:rgba(255,255,255,0.025);
+  }
+  .screen-card img{
+    width:100%; height:auto; border-radius:20px;
+    box-shadow:0 24px 60px rgba(0,0,0,0.25);
+  }
+  .screen-card figcaption{
+    padding:16px 6px 0; color:rgba(233,228,216,0.66);
+    font-size:14px; line-height:1.55;
+  }
+  .screen-card strong{ display:block; color:var(--paper); font-size:17px; margin-bottom:4px; }
 
   /* ---------- Big CTA ---------- */
   .cta{
@@ -759,12 +787,12 @@
     gap:32px;
     margin-bottom:48px;
   }
-  .foot-grid h5{
+  .foot-heading{
     margin:0 0 16px;
     font-family:'Geist Mono', monospace;
     font-size:11px; letter-spacing:0.16em;
     text-transform:uppercase;
-    color: rgba(233,228,216,0.5);
+    color: rgba(233,228,216,0.68);
     font-weight:500;
   }
   .foot-grid ul{
@@ -784,20 +812,9 @@
     display:flex; justify-content:space-between; align-items:center;
     border-top:1px solid var(--line-dark);
     padding-top:24px;
-    font-size:13px; color:rgba(233,228,216,0.5);
+    font-size:13px; color:rgba(233,228,216,0.68);
     font-family:'Geist Mono', monospace;
     letter-spacing:0.08em;
-  }
-
-  .megaword{
-    font-size: clamp(120px, 22vw, 320px);
-    font-weight:800; letter-spacing:-0.06em; line-height:0.85;
-    margin:-30px 0 0;
-    color: transparent;
-    -webkit-text-stroke: 1px rgba(233,228,216,0.16);
-    text-align:center;
-    pointer-events:none;
-    user-select:none;
   }
 
   /* ---------- Responsive ---------- */
@@ -812,6 +829,7 @@
     .modules{ grid-template-columns: 1fr; }
     .privacy-grid{ grid-template-columns: 1fr 1fr; }
     .faq-grid{ grid-template-columns:1fr 1fr; }
+    .product-proof{ grid-template-columns:repeat(3,1fr); }
     .foot-grid{ grid-template-columns: 1fr 1fr; }
     section{ padding:80px 0; }
     .quote{ padding:80px 0; }
@@ -824,6 +842,7 @@
     .feature.wide{ grid-column: span 1; }
     .privacy-grid{ grid-template-columns: 1fr; }
     .faq-grid{ grid-template-columns:1fr; }
+    .product-proof{ grid-template-columns:1fr; }
     .timeline .lane{ grid-template-columns: repeat(4, 1fr); }
     .timeline-fact{ grid-template-columns: 1fr; }
     .art-stat-row{ grid-template-columns: 1fr 1fr; }
@@ -882,7 +901,7 @@
   /* Quote emphasis */
   .quote blockquote .high{ text-shadow:0 0 32px rgba(224,151,90,0.25); }
 
-  
+
   /* glyph dot marker (replaces numbered glyphs) */
   .feature .glyph{
     width:10px; height:10px; border-radius:50%;
@@ -893,14 +912,17 @@
   </style>
   <script defer src="/assets/cloudflare-web-analytics.js"></script>
 <link rel="canonical" href="https://dadyolked.com/" />
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; font-src 'self'; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com; connect-src 'self' https://cloudflareinsights.com; base-uri 'self'; form-action 'self' mailto:; upgrade-insecure-requests">
 </head>
 <body data-mode="dark">
+<a class="skip-link" href="#main-content">Skip to main content</a>
 
 <!-- ============== NAV ============== -->
 <nav class="nav">
   <div class="wrap nav-row">
     <a href="#" class="brand" aria-label="DadYolked">
-      <span class="brand-mark"><img src="assets/dadyolked_logo_sm.png" alt="" loading="lazy" decoding="async"></span>
+      <span class="brand-mark"><img src="assets/dadyolked_logo_sm.webp" alt="" decoding="async" width="64" height="64"></span>
       DadYolked
     </a>
     <div class="nav-links">
@@ -924,7 +946,9 @@
     </div>
   </div>
 </nav>
-  <div style="background:#C07A3E;color:white;text-align:center;padding:12px 20px;font-weight:600;font-size:15px;">Now live: Dad Recovery / Dad Readiness insights, Apple Watch quick logs, Siri shortcuts, widgets, Live Activities, and a privacy policy covering both the app and website.</div>
+  <div style="background:#C07A3E;color:#0E1320;text-align:center;padding:12px 20px;font-weight:700;font-size:15px;">Now live: Dad Recovery / Dad Readiness insights, Apple Watch quick logs, Siri shortcuts, widgets, Live Activities, and a privacy policy covering both the app and website.</div>
+
+<main id="main-content">
 
 <!-- ============== HERO ============== -->
 <header class="hero">
@@ -961,7 +985,12 @@
         <span class="tag">Pregnancy</span>
       </div>
       <div class="art-image">
-        <img src="assets/week20.webp" onerror="this.onerror=null;this.src='assets/week20.png'" alt="DadYolked week 20 illustration" loading="lazy" decoding="async">      </div>
+        <picture>
+          <source media="(max-width: 700px)" srcset="assets/week20-400.webp">
+          <source srcset="assets/week20-720.webp 720w, assets/week20.webp 1200w" sizes="571px">
+          <img src="assets/week20-720.webp" width="720" height="1080" onerror="this.onerror=null;this.parentElement.querySelectorAll('source').forEach(s=>s.remove());this.src='assets/week20.png'" alt="DadYolked week 20 illustration" fetchpriority="high" decoding="async">
+        </picture>
+      </div>
       <div class="art-stat-row">
         <div class="art-stat">
           <div class="v">82</div>
@@ -1139,7 +1168,7 @@
     <div class="reveal stages">
       <article class="stage">
         <div class="reveal stage-art">
-          <img src="assets/week12.webp" onerror="this.onerror=null;this.src='assets/week12.png'" alt="Week 12 pregnancy illustration" loading="lazy" decoding="async">        </div>
+          <img src="assets/week12.webp" srcset="assets/week12-480.webp 480w, assets/week12-720.webp 720w, assets/week12.webp 1200w" sizes="(max-width: 700px) calc(100vw - 56px), 520px" width="1200" height="1600" onerror="this.onerror=null;this.src='assets/week12.png';this.removeAttribute('srcset')" alt="Week 12 pregnancy illustration" loading="lazy" decoding="async">        </div>
         <div class="reveal stage-body">
           <span class="num">Expecting</span>
           <h3>Prep, not panic.</h3>
@@ -1153,7 +1182,7 @@
       </article>
 
       <article class="stage">
-        
+
         <div class="reveal stage-body">
           <span class="num">Newborn</span>
           <h3>Survive the blur.</h3>
@@ -1167,7 +1196,7 @@
       </article>
 
       <article class="stage">
-        
+
         <div class="reveal stage-body">
           <span class="num">Growing</span>
           <h3>Catch the wins.</h3>
@@ -1285,6 +1314,52 @@
   </div>
 </section>
 
+<!-- ============== REAL APP SCREENS ============== -->
+<section aria-labelledby="real-app-title">
+  <div class="wrap">
+    <div class="reveal section-head">
+      <div>
+        <span class="kicker">The actual app</span>
+        <h2 id="real-app-title">Real screens. <span class="serif">No concept mockups.</span></h2>
+      </div>
+      <p>Captured from the current iPhone build with demo family data.</p>
+    </div>
+    <div class="product-proof">
+      <figure class="reveal screen-card">
+        <img src="/assets/app-screens/milestones.webp" width="600" height="1305" loading="lazy" decoding="async" alt="DadYolked Milestones and Growth Guide screen on iPhone">
+        <figcaption><strong>Milestones without the scorecard</strong>Play ideas, bonding prompts, progress notes, and clear safety boundaries.</figcaption>
+      </figure>
+      <figure class="reveal screen-card">
+        <img src="/assets/app-screens/medicine.webp" width="600" height="1305" loading="lazy" decoding="async" alt="DadYolked medicine tracking screen on iPhone">
+        <figcaption><strong>Medicine history for tired brains</strong>Log what was given and when, while keeping dosing decisions with the prescriber.</figcaption>
+      </figure>
+      <figure class="reveal screen-card">
+        <img src="/assets/app-screens/appointments.webp" width="600" height="1305" loading="lazy" decoding="async" alt="DadYolked pediatric appointment organizer screen on iPhone">
+        <figcaption><strong>The medical tour, in one place</strong>Upcoming visits, notes, locations, medicine, support, and telehealth.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============== START HERE ============== -->
+<section aria-labelledby="start-here-title">
+  <div class="wrap">
+    <div class="reveal section-head">
+      <div>
+        <span class="kicker">Start with the job in front of you</span>
+        <h2 id="start-here-title">Find the useful page. <span class="serif">Skip the maze.</span></h2>
+      </div>
+      <p>Four practical starting points, depending on what tonight looks like.</p>
+    </div>
+    <div class="faq-grid">
+      <article class="reveal faq-card"><h3>Still pregnant</h3><p>Birth prep, kick counts, contractions, appointments, and the hospital bag.</p><p><a href="/dad-app-for-pregnancy/">Pregnancy guide for dads →</a></p></article>
+      <article class="reveal faq-card"><h3>Running the newborn shift</h3><p>Feeds, diapers, sleep, medicine, schedules, and quick calculators.</p><p><a href="/newborn-care-tools/">Newborn care tools →</a></p></article>
+      <article class="reveal faq-card"><h3>Handing care to somebody else</h3><p>Night shifts, caregiver notes, emergency contacts, and pediatrician handoffs.</p><p><a href="/baby-caregiver-tools/">Caregiver handoff tools →</a></p></article>
+      <article class="reveal faq-card"><h3>Dad is running on fumes</h3><p>A private check-in for sleep, energy, mood, support, and the next conversation.</p><p><a href="/dad-recovery-checklist/">Dad recovery checklist →</a></p></article>
+    </div>
+  </div>
+</section>
+
 <!-- ============== QUOTE ============== -->
 <section class="quote">
   <div class="wrap">
@@ -1309,19 +1384,19 @@
 
     <div class="privacy-grid">
       <article class="reveal priv-card">
-        <h4>On-device by default</h4>
+        <h3>On-device by default</h3>
         <p>Your logs live on your phone by default. Export and Apple shared-care sync are explicit choices.</p>
       </article>
       <article class="reveal priv-card">
-        <h4>No ads, no resale</h4>
+        <h3>No ads, no resale</h3>
         <p>No ad SDKs, no data brokers, no family-profile resale, and no third-party tracking for advertising.</p>
       </article>
       <article class="reveal priv-card">
-        <h4>Sharing stays explicit</h4>
+        <h3>Sharing stays explicit</h3>
         <p>Caregiver access comes from accepting Apple’s CKShare invitation—not from a URL, code, label, or SMS.</p>
       </article>
       <article class="reveal priv-card">
-        <h4>Your data, exportable</h4>
+        <h3>Your data, exportable</h3>
         <p>Export supported data as JSON or CSV for visits, backup, or moving off the app. Assistant history can be included in the JSON backup.</p>
       </article>
     </div>
@@ -1377,19 +1452,21 @@
   </div>
 </section>
 
+</main>
+
 <!-- ============== FOOTER ============== -->
 <footer>
   <div class="wrap">
     <div class="foot-grid">
       <div>
         <a href="#" class="brand">
-          <span class="brand-mark"><img src="assets/dadyolked_logo_sm.png" alt="" loading="lazy" decoding="async"></span>
+          <span class="brand-mark"><img src="assets/dadyolked_logo_sm.webp" alt="" decoding="async" width="64" height="64"></span>
           DadYolked
         </a>
         <p class="foot-blurb">The online home for DadYolked: pregnancy prep, newborn tracking, dad recovery, privacy, support, and App Store links.</p>
       </div>
       <div>
-        <h5>Product</h5>
+        <p class="foot-heading">Product</p>
         <ul>
           <li><a href="#features">Features</a></li>
           <li><a href="#stages">Every stage</a></li>
@@ -1403,15 +1480,17 @@
         </ul>
       </div>
       <div>
-        <h5>Company</h5>
+        <p class="foot-heading">Company</p>
         <ul>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/editorial-standards/">Editorial standards</a></li>
           <li><a href="/support/">Support</a></li>
           <li><a href="mailto:support@dadyolked.com">Contact</a></li>
           <li><a data-analytics-context="home_4" data-analytics-event="app_store_click" href="https://apps.apple.com/app/id6773113095?ct=site_home_4&mt=8" target="_blank" rel="noopener">App Store</a></li>
         </ul>
       </div>
       <div>
-        <h5>Legal</h5>
+        <p class="foot-heading">Legal</p>
         <ul>
           <li><a href="/privacy/">Privacy</a></li>
           <li><a href="/support/">Support</a></li>
