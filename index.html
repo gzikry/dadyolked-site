@@ -68,6 +68,44 @@
       "publisher": {
         "@id": "https://dadyolked.com/#organization"
       }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://dadyolked.com/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What does DadYolked track?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "DadYolked covers pregnancy prep, kick counts, contractions, feeds, diapers, sleep, medicine, appointments, milestones, and dad recovery in one iPhone app."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does DadYolked require an account?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Core tracking works without creating an account, and family records stay on the device by default."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use DadYolked from Apple Watch or Siri?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. DadYolked supports Apple Watch quick logs, Siri shortcuts, widgets, Live Activities, and other Apple surfaces for faster one-handed tracking."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is DadYolked medical advice?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. DadYolked helps families organize information and prepare questions, but it does not diagnose conditions or replace guidance from a qualified healthcare professional."
+          }
+        }
+      ]
     }
   ]
 }
@@ -667,6 +705,25 @@
     color: rgba(233,228,216,0.62);
   }
 
+  /* ---------- FAQ ---------- */
+  .faq-grid{
+    display:grid; grid-template-columns:1fr 1fr; gap:16px;
+  }
+  .faq-card{
+    padding:28px;
+    border-radius:18px;
+    border:1px solid var(--line-dark);
+    background:rgba(255,255,255,0.025);
+  }
+  .faq-card h3{
+    margin:0 0 10px;
+    font-size:20px; font-weight:700; letter-spacing:-0.025em;
+  }
+  .faq-card p{
+    margin:0; font-size:15px; line-height:1.65;
+    color:rgba(233,228,216,0.66);
+  }
+
   /* ---------- Big CTA ---------- */
   .cta{
     padding: 160px 0;
@@ -754,6 +811,7 @@
     .stages{ grid-template-columns: 1fr; }
     .modules{ grid-template-columns: 1fr; }
     .privacy-grid{ grid-template-columns: 1fr 1fr; }
+    .faq-grid{ grid-template-columns:1fr 1fr; }
     .foot-grid{ grid-template-columns: 1fr 1fr; }
     section{ padding:80px 0; }
     .quote{ padding:80px 0; }
@@ -765,6 +823,7 @@
     .features{ grid-template-columns: 1fr; }
     .feature.wide{ grid-column: span 1; }
     .privacy-grid{ grid-template-columns: 1fr; }
+    .faq-grid{ grid-template-columns:1fr; }
     .timeline .lane{ grid-template-columns: repeat(4, 1fr); }
     .timeline-fact{ grid-template-columns: 1fr; }
     .art-stat-row{ grid-template-columns: 1fr 1fr; }
@@ -1264,6 +1323,37 @@
       <article class="reveal priv-card">
         <h4>Your data, exportable</h4>
         <p>Export supported data as JSON or CSV for visits, backup, or moving off the app. Assistant history can be included in the JSON backup.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============== FAQ ============== -->
+<section id="faq">
+  <div class="wrap">
+    <div class="reveal section-head">
+      <div>
+        <span class="kicker">Quick answers</span>
+        <h2>Before you <span class="serif">download.</span></h2>
+      </div>
+      <p>The basics, without the sales pitch.</p>
+    </div>
+    <div class="faq-grid">
+      <article class="reveal faq-card">
+        <h3>What does DadYolked track?</h3>
+        <p>DadYolked covers pregnancy prep, kick counts, contractions, feeds, diapers, sleep, medicine, appointments, milestones, and dad recovery in one iPhone app.</p>
+      </article>
+      <article class="reveal faq-card">
+        <h3>Does DadYolked require an account?</h3>
+        <p>No. Core tracking works without creating an account, and family records stay on the device by default.</p>
+      </article>
+      <article class="reveal faq-card">
+        <h3>Can I use DadYolked from Apple Watch or Siri?</h3>
+        <p>Yes. DadYolked supports Apple Watch quick logs, Siri shortcuts, widgets, Live Activities, and other Apple surfaces for faster one-handed tracking.</p>
+      </article>
+      <article class="reveal faq-card">
+        <h3>Is DadYolked medical advice?</h3>
+        <p>No. DadYolked helps families organize information and prepare questions, but it does not diagnose conditions or replace guidance from a qualified healthcare professional.</p>
       </article>
     </div>
   </div>
