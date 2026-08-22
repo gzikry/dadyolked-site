@@ -12,7 +12,7 @@ jobs:
   submit:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Wait for GitHub Pages deployment
         run: sleep 75
       - name: Submit sitemap URLs
