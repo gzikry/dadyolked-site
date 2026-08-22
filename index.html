@@ -772,7 +772,58 @@
     .foot-grid{ grid-template-columns: 1fr; }
     .foot-bottom{ flex-direction:column; gap:12px; }
   }
-</style>
+
+  /* ---------- Design polish (2026-08-21) ---------- */
+  html{ scroll-behavior:smooth; }
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior:auto; }
+    .reveal{ opacity:1 !important; transform:none !important; transition:none !important; }
+  }
+
+  :focus-visible{ outline:2px solid var(--copper-2); outline-offset:3px; border-radius:6px; }
+
+  /* Scroll reveal */
+  .reveal{ opacity:0; transform:translateY(22px); transition:opacity .7s cubic-bezier(.22,.61,.36,1), transform .7s cubic-bezier(.22,.61,.36,1); }
+  .reveal.in{ opacity:1; transform:none; }
+  .reveal-d1{ transition-delay:.08s; } .reveal-d2{ transition-delay:.16s; } .reveal-d3{ transition-delay:.24s; }
+
+  /* Card hover lift */
+  .feature, .module, .stage, .priv-card{
+    transition:transform .35s cubic-bezier(.22,.61,.36,1), border-color .35s ease, box-shadow .35s ease;
+  }
+  .feature:hover, .module:hover, .priv-card:hover{
+    transform:translateY(-4px);
+    border-color:rgba(192,122,62,0.45);
+    box-shadow:0 18px 44px rgba(0,0,0,0.38), 0 0 0 1px rgba(192,122,62,0.10);
+  }
+  .feature .glyph{ transition:transform .35s cubic-bezier(.22,.61,.36,1), color .35s ease; }
+  .feature:hover .glyph{ transform:translateY(-2px) scale(1.06); color:var(--copper-2); }
+
+  /* Primary CTA glow */
+  .pill.primary{
+    box-shadow:0 10px 30px rgba(192,122,62,0.32), inset 0 1px 0 rgba(255,255,255,0.18);
+  }
+  .pill.primary:hover{
+    box-shadow:0 14px 40px rgba(192,122,62,0.45), inset 0 1px 0 rgba(255,255,255,0.22);
+    transform:translateY(-1px);
+  }
+  .pill{ will-change:transform; }
+
+  /* Section rhythm: soften hard section edges with a hairline gradient divider */
+  section + section::before{
+    content:""; position:absolute; top:0; left:50%; transform:translateX(-50%);
+    width:min(720px,70%); height:1px;
+    background:linear-gradient(90deg, transparent, rgba(233,228,216,0.14), transparent);
+  }
+
+  /* Stage art zoom on hover */
+  .stage-art img{ transition:transform .8s cubic-bezier(.22,.61,.36,1); }
+  .stage:hover .stage-art img{ transform:scale(1.04); }
+
+  /* Quote emphasis */
+  .quote blockquote .high{ text-shadow:0 0 32px rgba(224,151,90,0.25); }
+
+  </style>
   <script defer src="/assets/cloudflare-web-analytics.js"></script>
 </head>
 <body data-mode="dark">
@@ -894,7 +945,7 @@
 <!-- ============== FEATURES ============== -->
 <section id="features">
   <div class="wrap">
-    <div class="section-head">
+    <div class="reveal section-head">
       <div>
         <span class="kicker">What it does</span>
         <h2>From <span class="serif">what do I do?</span><br>to <em style="font-style:normal;">handled.</em></h2>
@@ -903,56 +954,56 @@
     </div>
 
     <div class="features">
-      <article class="feature wide">
+      <article class="reveal feature wide">
         <div class="glyph">01</div>
         <div>
           <h3>The Today screen, but for dads.</h3>
           <p>One adaptive surface for the phase you are in: Dad Readiness during pregnancy, Dad Recovery after birth, and the next best action when the day gets messy.</p>
         </div>
       </article>
-      <article class="feature">
+      <article class="reveal reveal-d1 feature">
         <div class="glyph">02</div>
         <div>
           <h3>Baby quick logs that survive 3 a.m.</h3>
           <p>One-handed feeds, sleep, diapers, medicine, pumping/bottle details, and sleep locations. Big buttons. Fast saves. Fewer midnight guesses. <a href="/baby-feeding-tracker-app/">Feeding tracker guide →</a> · <a href="/feeding-schedule-by-age/">Feeding schedule guide →</a> · <a href="/starting-solids-checklist-for-dads/">Starting solids checklist →</a> · <a href="/baby-sleep-tracker-app/">Sleep tracker guide →</a> · <a href="/diaper-tracker-app-for-dads/">Diaper tracker guide →</a> · <a href="/baby-medicine-tracker-app/">Medicine tracker guide →</a> · <a href="/newborn-schedule-app-for-dads/">Schedule guide →</a> · <a href="/baby-tracker-with-pediatrician-report/">Pediatrician report guide →</a> · <a href="/baby-tracker-app-with-siri-widgets/">Siri/widgets guide →</a></p>
         </div>
       </article>
-      <article class="feature">
+      <article class="reveal feature">
         <div class="glyph">03</div>
         <div>
           <h3>Pregnancy command deck.</h3>
           <p>Week-by-week context, birth prep, kick counter, contraction timer, hospital bag, appointments, and reminders in one stream. <a href="/dad-app-for-pregnancy/">See the dad pregnancy app guide →</a> · <a href="/kick-counter-app-for-dads/">Kick counter guide →</a> · <a href="/contraction-timer-for-dads/">Contraction timing guide →</a></p>
         </div>
       </article>
-      <article class="feature">
+      <article class="reveal feature">
         <div class="glyph">04</div>
         <div>
           <h3>Dad Recovery and Readiness.</h3>
           <p>Private Apple Health sleep and step context turns into simple guidance: bank rest before birth, spot burnout risk after birth, and plan the next shift.</p>
         </div>
       </article>
-      <article class="feature">
+      <article class="reveal feature">
         <div class="glyph">05</div>
         <div>
           <h3>Search, coach, and remember.</h3>
           <p>Universal Search finds logs, sleep locations, appointments, milestones, journals, and saved details. AI Coach keeps answers grounded in the family context you choose.</p>
         </div>
       </article>
-      <article class="feature">
+      <article class="reveal feature">
         <div class="glyph">06</div>
         <div>
           <h3>Built for Apple surfaces.</h3>
           <p>Apple Watch, Siri/App Intents, widgets, Dynamic Island, and Live Activities keep quick actions close without digging through the app. <a href="/baby-tracker-app-with-apple-watch/">See the Apple Watch baby tracker guide →</a></p>
         </div>
       </article>
-      <article class="feature">
+      <article class="reveal feature">
         <div class="glyph">07</div>
         <div>
           <h3>Assistant, with boundaries.</h3>
           <p>Ask grounded questions about the active child — with stage-safe answers, named log context, and review-first memory. Private notes stay private; off-topic questions stay out of the care digest.</p>
         </div>
       </article>
-      <article class="feature wide">
+      <article class="reveal feature wide">
         <div class="glyph">08</div>
         <div>
           <h3>Shared care on your terms.</h3>
@@ -966,7 +1017,7 @@
 <!-- ============== WHAT'S NEW ============== -->
 <section id="whats-new" style="padding-top:24px;padding-bottom:8px;">
   <div class="wrap">
-    <div class="section-head">
+    <div class="reveal section-head">
       <div>
         <span class="kicker">August 2026</span>
         <h2>Built for 2&nbsp;AM. <span class="serif">Trusted by design.</span></h2>
@@ -974,28 +1025,28 @@
       <p class="lede">The latest DadYolked release deepens calm, correctness, and shared-care clarity — not feature sprawl.</p>
     </div>
     <div class="feature-grid">
-      <article class="feature">
+      <article class="reveal feature">
         <div class="glyph">N1</div>
         <div>
           <h3>Night Quiet Today</h3>
           <p>Overnight, Today shows current state and the next useful action only. Post-birth one-thumb logging stays available when you need it.</p>
         </div>
       </article>
-      <article class="feature">
+      <article class="reveal feature">
         <div class="glyph">N2</div>
         <div>
           <h3>Undo a mis-tap</h3>
           <p>One-tap care logs get a five-second Undo window. Active feed and sleep timers can keep the screen awake so you don’t dig for the lock button.</p>
         </div>
       </article>
-      <article class="feature">
+      <article class="reveal feature">
         <div class="glyph">N3</div>
         <div>
           <h3>Right child, right stage</h3>
           <p>Notifications, widgets, and Assistant ground on the active child. Wrong-stage questions get a calm redirect before model answers run.</p>
         </div>
       </article>
-      <article class="feature">
+      <article class="reveal feature">
         <div class="glyph">N4</div>
         <div>
           <h3>Share states you can read</h3>
@@ -1009,7 +1060,7 @@
 <!-- ============== STAGES ============== -->
 <section id="stages" style="padding-top:40px;">
   <div class="wrap">
-    <div class="section-head">
+    <div class="reveal section-head">
       <div>
         <span class="kicker">Every stage</span>
         <h2>One app. <span class="serif">Forty weeks,</span><br>then a thousand more.</h2>
@@ -1017,12 +1068,12 @@
       <p>Most baby apps treat dad like an optional accessory. DadYolked treats you like an operator with a small, adorable, extremely demanding mission.</p>
     </div>
 
-    <div class="stages">
+    <div class="reveal stages">
       <article class="stage">
-        <div class="stage-art">
+        <div class="reveal stage-art">
           <span class="badge">Stage 01</span>
           <img src="assets/week12.webp" onerror="this.onerror=null;this.src='assets/week12.png'" alt="Week 12 pregnancy illustration" loading="lazy" decoding="async">        </div>
-        <div class="stage-body">
+        <div class="reveal stage-body">
           <span class="num">Expecting</span>
           <h3>Prep, not panic.</h3>
           <p>Walk into the delivery room knowing where the carseat is, what a contraction is supposed to feel like, and where you stashed the snacks.</p>
@@ -1035,10 +1086,10 @@
       </article>
 
       <article class="stage">
-        <div class="stage-art">
+        <div class="reveal stage-art">
           <span class="badge">Stage 02</span>
           <img src="assets/week40.webp" onerror="this.onerror=null;this.src='assets/week40.png'" alt="Newborn illustration" loading="lazy" decoding="async">        </div>
-        <div class="stage-body">
+        <div class="reveal stage-body">
           <span class="num">Newborn</span>
           <h3>Survive the blur.</h3>
           <p>Fast logs, sleep windows, feeding sides, diaper trends. The 3 a.m. screen that doesn't make you cry harder.</p>
@@ -1051,10 +1102,10 @@
       </article>
 
       <article class="stage">
-        <div class="stage-art">
+        <div class="reveal stage-art">
           <span class="badge">Stage 03</span>
           <img src="assets/week32.webp" onerror="this.onerror=null;this.src='assets/week32.png'" alt="Growing illustration" loading="lazy" decoding="async">        </div>
-        <div class="stage-body">
+        <div class="reveal stage-body">
           <span class="num">Growing</span>
           <h3>Catch the wins.</h3>
           <p>Milestones, medicine, appointments, photos. The hand-off package the pediatrician actually wants to see.</p>
@@ -1072,7 +1123,7 @@
 <!-- ============== INSIDE THE APP ============== -->
 <section id="inside" class="inside">
   <div class="wrap">
-    <div class="section-head">
+    <div class="reveal section-head">
       <div>
         <span class="kicker">Inside the app</span>
         <h2>The dashboard that <span class="serif">acts like a co-pilot,</span> not a database.</h2>
@@ -1080,8 +1131,8 @@
       <p>Tap-friendly. One-handed. Built around the next thing you have to do — not a wall of charts you'll never open.</p>
     </div>
 
-    <div class="modules">
-      <div class="module">
+    <div class="reveal modules">
+      <div class="reveal module">
         <span class="kicker modkicker">Today</span>
         <h3>What is next, said simply.</h3>
         <p>A practical dashboard for feeds, naps, diapers, meds, appointments, dad recovery, and pregnancy prep. It changes with the profile instead of making you manage tabs.</p>
@@ -1122,7 +1173,7 @@
         </div>
       </div>
 
-      <div class="module">
+      <div class="reveal module">
         <span class="kicker modkicker">Pregnancy + post-birth</span>
         <h3>Pregnancy prep becomes baby ops.</h3>
         <p>Expecting mode keeps birth prep, kicks, contractions, and week-by-week context in front. Post-birth mode shifts to quick logs, recovery, routines, and pediatrician-ready history.</p>
@@ -1183,7 +1234,7 @@
 <!-- ============== PRIVACY ============== -->
 <section id="privacy" class="privacy">
   <div class="wrap">
-    <div class="section-head">
+    <div class="reveal section-head">
       <div>
         <span class="kicker">Privacy</span>
         <h2>Your family data is <span class="serif">not</span> our business model.</h2>
@@ -1194,22 +1245,22 @@
     </div>
 
     <div class="privacy-grid">
-      <article class="priv-card">
+      <article class="reveal priv-card">
         <div class="num">01 · Local</div>
         <h4>On-device by default</h4>
         <p>Your logs live on your phone by default. Export and Apple shared-care sync are explicit choices.</p>
       </article>
-      <article class="priv-card">
+      <article class="reveal priv-card">
         <div class="num">02 · No brokers</div>
         <h4>No ads, no resale</h4>
         <p>No ad SDKs, no data brokers, no family-profile resale, and no third-party tracking for advertising.</p>
       </article>
-      <article class="priv-card">
+      <article class="reveal priv-card">
         <div class="num">03 · Apple boundary</div>
         <h4>Sharing stays explicit</h4>
         <p>Caregiver access comes from accepting Apple’s CKShare invitation—not from a URL, code, label, or SMS.</p>
       </article>
-      <article class="priv-card">
+      <article class="reveal priv-card">
         <div class="num">04 · Export anytime</div>
         <h4>Your data, exportable</h4>
         <p>Export supported data as JSON or CSV for visits, backup, or moving off the app. Assistant history can be included in the JSON backup.</p>
@@ -1287,5 +1338,15 @@
   </div>
 </footer>
 
+
+<script>
+(function(){
+  if (!('IntersectionObserver' in window)) { document.querySelectorAll('.reveal').forEach(el=>el.classList.add('in')); return; }
+  const io = new IntersectionObserver((entries)=>{
+    for (const e of entries) if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+  },{rootMargin:'0px 0px -8% 0px', threshold:0.08});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+})();
+</script>
 </body>
 </html>
