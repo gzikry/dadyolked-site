@@ -228,7 +228,13 @@
   .nav-links{
     display:flex; align-items:center; gap:28px;
     font-size:14px; color:var(--paper-muted);
+    flex-wrap:wrap; row-gap:10px; justify-content:flex-end;
+    max-width:100%; min-width:0;
   }
+  /* Laptop widths: tighten spacing so 17 links never push the page past the viewport */
+  @media (max-width:1500px){ .nav-links{ gap:18px; font-size:13.5px; } }
+  @media (max-width:1300px){ .nav-links{ gap:13px; font-size:13px; } }
+  @media (max-width:1150px){ .nav-links{ gap:11px; font-size:12.5px; } }
   .nav-links a:hover{ color:#fff; }
   .nav-links .pill{ color:var(--ink); }
 
@@ -909,7 +915,16 @@
     box-shadow:0 0 14px rgba(192,122,62,0.5);
   }
 
-  </style>
+  
+/* ===== Polish layer (universal refinements) ===== */
+h1,h2,h3{text-wrap:balance}
+p,li{text-wrap:pretty}
+.metric strong,.compare-table td:first-child,.stat,.num{font-variant-numeric:tabular-nums}
+@media print{
+  .reveal{opacity:1 !important;transform:none !important}
+  .feature,.module,.priv-card,.stage{box-shadow:none !important}
+}
+</style>
   <script defer src="/assets/cloudflare-web-analytics.js"></script>
 <link rel="canonical" href="https://dadyolked.com/" />
   <meta name="referrer" content="strict-origin-when-cross-origin">
@@ -1220,7 +1235,7 @@
         <span class="kicker">Inside the app</span>
         <h2>The dashboard that <span class="serif">acts like a co-pilot,</span> not a database.</h2>
       </div>
-      <p>Tap-friendly. One-handed. Built around the next thing you have to do — not a wall of charts you'll never open.</p>
+      <p>Tap-friendly. One-handed. Built around the next thing you have to do, instead of a wall of charts you will never open.</p>
     </div>
 
     <div class="reveal modules">
@@ -1393,7 +1408,7 @@
       </article>
       <article class="reveal priv-card">
         <h3>Sharing stays explicit</h3>
-        <p>Caregiver access comes from accepting Apple’s CKShare invitation—not from a URL, code, label, or SMS.</p>
+        <p>Caregiver access comes from accepting Apple’s CKShare invitation. A URL, code, label, or SMS never grants it.</p>
       </article>
       <article class="reveal priv-card">
         <h3>Your data, exportable</h3>

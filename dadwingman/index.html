@@ -59,6 +59,138 @@ section{padding:72px 0}
 .band h2{font-size:clamp(26px,4vw,40px);margin:0 0 12px}
 footer{padding:48px 0;border-top:1px solid var(--line-dark);font-size:13px;color:rgba(246,241,231,0.45)}
 footer .wrap{display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;align-items:center}
+
+/* ===== Polish layer: shared visual enhancements (injected) ===== */
+h1,h2,h3{text-wrap:balance}
+p,li{text-wrap:pretty}
+
+/* Scroll reveal */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.22,.61,.36,1),transform .7s cubic-bezier(.22,.61,.36,1)}
+.reveal.in{opacity:1;transform:none}
+.reveal[data-d="1"]{transition-delay:.08s}
+.reveal[data-d="2"]{transition-delay:.16s}
+.reveal[data-d="3"]{transition-delay:.24s}
+.reveal[data-d="4"]{transition-delay:.32s}
+
+/* Card + CTA interaction */
+.card,.cta{transition:transform .35s cubic-bezier(.22,.61,.36,1),border-color .35s ease,box-shadow .35s ease}
+.card:hover{transform:translateY(-4px);border-color:color-mix(in oklab,var(--accent) 55%,var(--line));box-shadow:0 26px 70px rgba(0,0,0,.4)}
+.grid .card{will-change:transform}
+
+/* Buttons */
+.pill{transition:transform .25s ease,box-shadow .25s ease,background-color .25s ease,border-color .25s ease}
+.pill:hover{transform:translateY(-2px);box-shadow:0 12px 34px color-mix(in oklab,var(--accent) 42%,transparent)}
+.pill.ghost:hover{border-color:color-mix(in oklab,var(--accent) 60%,var(--line));box-shadow:none}
+.pill:active{transform:translateY(0)}
+
+/* Links */
+.links a,.editorial-note a,.privacy a{transition:color .2s ease}
+main a:not(.pill):not(.chip){text-decoration-color:color-mix(in oklab,var(--accent-2) 45%,transparent);text-underline-offset:3px;transition:text-decoration-color .2s ease}
+main a:not(.pill):not(.chip):hover{text-decoration-color:var(--accent-2)}
+
+/* Focus visibility */
+a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid var(--accent-2);outline-offset:3px;border-radius:6px}
+
+/* Section dividers */
+main > section + section{position:relative}
+main > section + section::before{content:"";position:absolute;top:-27px;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--line) 18%,var(--line) 82%,transparent)}
+
+/* Numeric polish */
+.metric strong,.compare-table td:first-child{font-variant-numeric:tabular-nums}
+
+/* Table ergonomics */
+.compare-table th{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.compare-table tbody tr{transition:background-color .2s ease}
+.compare-table tbody tr:hover{background:var(--card-2)}
+
+/* Printable sheet: keep crisp on dark UI */
+.printable-sheet{box-shadow:0 20px 60px rgba(0,0,0,.35)}
+
+/* Chips */
+.chip{transition:border-color .2s ease,color .2s ease,transform .2s ease}
+.chip:hover{border-color:color-mix(in oklab,var(--accent) 55%,var(--line));color:var(--text);transform:translateY(-1px)}
+
+/* Reduced motion: honor the user */
+@media (prefers-reduced-motion: reduce){
+  .reveal{opacity:1 !important;transform:none !important;transition:none !important}
+  .card,.cta,.pill,.chip{transition:none !important}
+  .card:hover,.pill:hover,.chip:hover{transform:none !important}
+  html{scroll-behavior:auto}
+}
+
+/* Mobile refinements */
+@media (max-width:620px){
+  main{padding:44px 0 72px}
+  h1{letter-spacing:-.045em}
+  .card,.panel,.note,.cta{padding:20px;border-radius:22px}
+  .compare-table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .compare-table th,.compare-table td{padding:10px;font-size:13px}
+  .grid.two{grid-template-columns:1fr}
+  .hero{grid-template-columns:1fr}
+  .panel{position:static}
+}
+
+/* Print: never print the decoration */
+@media print{
+  .reveal{opacity:1 !important;transform:none !important}
+  main > section + section::before{display:none}
+  .card,.cta{box-shadow:none !important}
+}
+
+/* Nav: allow wrapping and tighten gaps on narrow screens */
+.nav-row{flex-wrap:wrap;gap:10px 0}
+.links{flex-wrap:wrap;row-gap:6px;column-gap:14px}
+@media (max-width:520px){
+  .nav-row{padding:12px 0}
+  .brand img{width:30px;height:30px;border-radius:10px}
+  .brand{font-size:15px}
+  .links{font-size:13px;column-gap:12px}
+  .links a{font-size:13px}
+}
+@media (max-width:380px){
+  .links{column-gap:10px}
+  .links a{font-size:12.5px}
+}
+
+/* Footer: breathing room on mobile */
+footer{font-size:13px}
+@media (max-width:620px){
+  footer{padding:32px 0 40px}
+  footer .wrap{display:flex;flex-wrap:wrap;gap:6px 10px;justify-content:center;text-align:center}
+}
+
+/* Table containment: wide data tables must scroll inside their section, never push the page */
+main > section{min-width:0;max-width:100%}
+main > section > div, main > section > .card, main > section > .table, main > section > .table-wrap{max-width:100%;min-width:0}
+main table{max-width:100%}
+/* Any block-level wrapper of a wide table becomes a scroll container (all widths) */
+main > section > div:has(> table),
+main > section > div:has(> .printable-sheet),
+main > section > .table,
+main > section > .table-wrap{
+  overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%
+}
+main > section > div:has(> table) > table,
+main > section > .table > table,
+main > section > .table-wrap > table{max-width:100%}
+@media (max-width:900px){
+  main table{width:100%}
+  main table th,main table td{white-space:normal;word-break:break-word;padding:9px}
+}
+
+/* Printable sheets: long underscore runs must be able to wrap, never widen the page */
+.sheet,.sheet-row,.printable,.printable-sheet{max-width:100%;min-width:0;overflow-wrap:anywhere;word-break:break-word}
+.sheet-row b,.sheet-row strong{overflow-wrap:anywhere}
+@media (max-width:620px){
+  .sheet,.printable-sheet,.printable{padding:18px}
+  .sheet-row{padding:11px 0}
+  .chips{gap:8px}
+  .chip{font-size:12.5px;padding:7px 10px}
+}
+
+/* Skip link (keyboard users) */
+.skip-link{position:fixed;left:16px;top:12px;z-index:100;transform:translateY(-180%);padding:10px 14px;border-radius:10px;background:var(--accent);color:#fff;font-weight:700;text-decoration:none;transition:transform .2s ease}
+.skip-link:focus{transform:translateY(0)}
 </style>
 <link rel="canonical" href="https://dadyolked.com/dadwingman/" />
   <link rel="icon" href="/favicon.ico" sizes="32x32">
@@ -66,12 +198,13 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; font-src 'self'; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com; connect-src 'self' https://cloudflareinsights.com; base-uri 'self'; form-action 'self' mailto:; upgrade-insecure-requests">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 
 <header class="hero">
   <div class="wrap">
     <span class="kicker">◆ From the makers of DadYolked (iOS)</span>
     <h1 class="display">Stop improvising fatherhood.<br><span class="italic-serif">Start running it.</span></h1>
-    <p class="sub">DadWingman is the co-parenting system behind the DadYolked app — proven scripts, a weekly cadence, and a crew of dads in the trenches. No hype, no income claims. Just what works at 2am.</p>
+    <p class="sub">DadWingman is the co-parenting system behind the DadYolked app: proven scripts, a weekly cadence, and a crew of dads in the trenches. No hype, no income claims. Just what works at 2am.</p>
     <div class="cta-row">
       <a class="btn btn-primary" id="join-free" href="#">Grab the free First Week Playbook →</a>
       <a class="btn btn-ghost" id="join-circle" href="#">Join the Circle · $19/mo</a>
@@ -80,19 +213,21 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;
   </div>
 </header>
 
+<main id="main-content">
+
 <section>
   <div class="wrap grid3">
     <div class="card">
-      <h3>📋 Proven scripts, ready to use</h3>
+      <h3>Proven scripts, ready to use</h3>
       <p>Handoffs, pediatrician prep, overnight shifts, recovery conversations. Copy, personalize, send.</p>
       <p class="script-quote">"Quick handoff — last feed was [time], [amount]. One thing to watch: [watch-item]. Nothing urgent."</p>
     </div>
     <div class="card">
-      <h3>👨‍👧‍👦 A weekly cadence, not another dead Discord</h3>
+      <h3>A weekly cadence, not another dead Discord</h3>
       <p>Wins thread Monday, practical script Wednesday, digest tip Friday. Built by dads, for dads.</p>
     </div>
     <div class="card">
-      <h3>🔒 Real product, real privacy</h3>
+      <h3>Real product, real privacy</h3>
       <p>Backed by the DadYolked iOS app — local-first records, no accounts in the cloud. Scripts are support; your pediatrician owns the medicine.</p>
     </div>
   </div>
@@ -105,6 +240,8 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;
     <a class="btn btn-primary" id="join-free-2" href="#">Get the First Week Playbook →</a>
   </div>
 </section>
+
+</main>
 
 <footer>
   <div class="wrap">
@@ -121,5 +258,59 @@ for (const id of ["join-free","join-free-2","join-circle"]) {
 }
 </script>
 <p style="max-width:760px;margin:28px auto;color:rgba(246,241,231,.72);line-height:1.6"><strong>Boundary:</strong> DadWingman provides communication scripts and peer support, not medical, legal, or mental-health treatment. Use qualified professionals and emergency services when the situation calls for them.</p>
+<script>
+/* Scroll-reveal. Content is visible unless JS actively hides it, and every path
+   ends with it visible: no IO, reduced motion, or any missed element. */
+(function(){
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce || !('IntersectionObserver' in window)) return;  /* leave content fully visible */
+
+  var els = document.querySelectorAll('main > section, main > section > .grid > *, main > section > .card');
+  if (!els.length) return;
+
+  var vh = window.innerHeight || 800;
+  /* Only hide what is BELOW the fold. Above-the-fold content never animates,
+     so there is no flash-of-invisible-content on load (worst on mobile). */
+  var pending = [];
+  els.forEach(function(el, i){
+    var r = el.getBoundingClientRect();
+    if (r.top < vh * 0.92) return;              /* already visible: leave it alone */
+    el.classList.add('reveal');
+    if (i % 4) el.setAttribute('data-d', String(i % 4));
+    pending.push(el);
+  });
+  if (!pending.length) return;
+
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, {rootMargin:'0px 0px -5% 0px', threshold:0.04});
+
+  function show(el){ el.classList.add('in'); io.unobserve(el); }
+
+  pending.forEach(function(el){ io.observe(el); });
+
+  /* Watchdog: anything that scrolled into view but missed its callback gets shown. */
+  var timer = null;
+  function sweep(){
+    timer = null;
+    var h = window.innerHeight || 800;
+    pending.forEach(function(el){
+      if (el.classList.contains('in')) return;
+      var r = el.getBoundingClientRect();
+      if (r.top < h * 1.02) show(el);
+    });
+  }
+  function queueSweep(){ if (!timer) timer = setTimeout(sweep, 150); }
+  window.addEventListener('scroll', queueSweep, {passive:true});
+  window.addEventListener('resize', queueSweep, {passive:true});
+  window.addEventListener('load', queueSweep);
+
+  /* Last resort: never leave content hidden. */
+  setTimeout(function(){ pending.forEach(show); }, 2000);
+})();
+</script>
+
 </body>
 </html>

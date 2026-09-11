@@ -14,13 +14,146 @@
 .field.wide{grid-column:1/-1}
 .field b{font-size:13px;color:#555}
 .line{display:block;border-bottom:1px solid #ccc;min-height:18px;margin-top:4px}
-@media print{.nav,footer,.cta,.actions,.chips,.editorial-note,#faq,.hero,.grid,.note,.panel,section:not(#printable):not(.cta){display:none!important}body{background:#fff;color:#000}.template{box-shadow:none;border:none;padding:0;margin:0;max-width:none;border-radius:0}.field{background:#fff;border:1px solid #ccc}.field .line{border-bottom:1px solid #999}}</style><script defer src="/assets/cloudflare-web-analytics.js"></script>
+@media print{.nav,footer,.cta,.actions,.chips,.editorial-note,#faq,.hero,.grid,.note,.panel,section:not(#printable):not(.cta){display:none!important}body{background:#fff;color:#000}.template{box-shadow:none;border:none;padding:0;margin:0;max-width:none;border-radius:0}.field{background:#fff;border:1px solid #ccc}.field .line{border-bottom:1px solid #999}}
+/* ===== Polish layer: shared visual enhancements (injected) ===== */
+h1,h2,h3{text-wrap:balance}
+p,li{text-wrap:pretty}
+
+/* Scroll reveal */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.22,.61,.36,1),transform .7s cubic-bezier(.22,.61,.36,1)}
+.reveal.in{opacity:1;transform:none}
+.reveal[data-d="1"]{transition-delay:.08s}
+.reveal[data-d="2"]{transition-delay:.16s}
+.reveal[data-d="3"]{transition-delay:.24s}
+.reveal[data-d="4"]{transition-delay:.32s}
+
+/* Card + CTA interaction */
+.card,.cta{transition:transform .35s cubic-bezier(.22,.61,.36,1),border-color .35s ease,box-shadow .35s ease}
+.card:hover{transform:translateY(-4px);border-color:color-mix(in oklab,var(--accent) 55%,var(--line));box-shadow:0 26px 70px rgba(0,0,0,.4)}
+.grid .card{will-change:transform}
+
+/* Buttons */
+.pill{transition:transform .25s ease,box-shadow .25s ease,background-color .25s ease,border-color .25s ease}
+.pill:hover{transform:translateY(-2px);box-shadow:0 12px 34px color-mix(in oklab,var(--accent) 42%,transparent)}
+.pill.ghost:hover{border-color:color-mix(in oklab,var(--accent) 60%,var(--line));box-shadow:none}
+.pill:active{transform:translateY(0)}
+
+/* Links */
+.links a,.editorial-note a,.privacy a{transition:color .2s ease}
+main a:not(.pill):not(.chip){text-decoration-color:color-mix(in oklab,var(--accent-2) 45%,transparent);text-underline-offset:3px;transition:text-decoration-color .2s ease}
+main a:not(.pill):not(.chip):hover{text-decoration-color:var(--accent-2)}
+
+/* Focus visibility */
+a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid var(--accent-2);outline-offset:3px;border-radius:6px}
+
+/* Section dividers */
+main > section + section{position:relative}
+main > section + section::before{content:"";position:absolute;top:-27px;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--line) 18%,var(--line) 82%,transparent)}
+
+/* Numeric polish */
+.metric strong,.compare-table td:first-child{font-variant-numeric:tabular-nums}
+
+/* Table ergonomics */
+.compare-table th{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.compare-table tbody tr{transition:background-color .2s ease}
+.compare-table tbody tr:hover{background:var(--card-2)}
+
+/* Printable sheet: keep crisp on dark UI */
+.printable-sheet{box-shadow:0 20px 60px rgba(0,0,0,.35)}
+
+/* Chips */
+.chip{transition:border-color .2s ease,color .2s ease,transform .2s ease}
+.chip:hover{border-color:color-mix(in oklab,var(--accent) 55%,var(--line));color:var(--text);transform:translateY(-1px)}
+
+/* Reduced motion: honor the user */
+@media (prefers-reduced-motion: reduce){
+  .reveal{opacity:1 !important;transform:none !important;transition:none !important}
+  .card,.cta,.pill,.chip{transition:none !important}
+  .card:hover,.pill:hover,.chip:hover{transform:none !important}
+  html{scroll-behavior:auto}
+}
+
+/* Mobile refinements */
+@media (max-width:620px){
+  main{padding:44px 0 72px}
+  h1{letter-spacing:-.045em}
+  .card,.panel,.note,.cta{padding:20px;border-radius:22px}
+  .compare-table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .compare-table th,.compare-table td{padding:10px;font-size:13px}
+  .grid.two{grid-template-columns:1fr}
+  .hero{grid-template-columns:1fr}
+  .panel{position:static}
+}
+
+/* Print: never print the decoration */
+@media print{
+  .reveal{opacity:1 !important;transform:none !important}
+  main > section + section::before{display:none}
+  .card,.cta{box-shadow:none !important}
+}
+
+/* Nav: allow wrapping and tighten gaps on narrow screens */
+.nav-row{flex-wrap:wrap;gap:10px 0}
+.links{flex-wrap:wrap;row-gap:6px;column-gap:14px}
+@media (max-width:520px){
+  .nav-row{padding:12px 0}
+  .brand img{width:30px;height:30px;border-radius:10px}
+  .brand{font-size:15px}
+  .links{font-size:13px;column-gap:12px}
+  .links a{font-size:13px}
+}
+@media (max-width:380px){
+  .links{column-gap:10px}
+  .links a{font-size:12.5px}
+}
+
+/* Footer: breathing room on mobile */
+footer{font-size:13px}
+@media (max-width:620px){
+  footer{padding:32px 0 40px}
+  footer .wrap{display:flex;flex-wrap:wrap;gap:6px 10px;justify-content:center;text-align:center}
+}
+
+/* Table containment: wide data tables must scroll inside their section, never push the page */
+main > section{min-width:0;max-width:100%}
+main > section > div, main > section > .card, main > section > .table, main > section > .table-wrap{max-width:100%;min-width:0}
+main table{max-width:100%}
+/* Any block-level wrapper of a wide table becomes a scroll container (all widths) */
+main > section > div:has(> table),
+main > section > div:has(> .printable-sheet),
+main > section > .table,
+main > section > .table-wrap{
+  overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%
+}
+main > section > div:has(> table) > table,
+main > section > .table > table,
+main > section > .table-wrap > table{max-width:100%}
+@media (max-width:900px){
+  main table{width:100%}
+  main table th,main table td{white-space:normal;word-break:break-word;padding:9px}
+}
+
+/* Printable sheets: long underscore runs must be able to wrap, never widen the page */
+.sheet,.sheet-row,.printable,.printable-sheet{max-width:100%;min-width:0;overflow-wrap:anywhere;word-break:break-word}
+.sheet-row b,.sheet-row strong{overflow-wrap:anywhere}
+@media (max-width:620px){
+  .sheet,.printable-sheet,.printable{padding:18px}
+  .sheet-row{padding:11px 0}
+  .chips{gap:8px}
+  .chip{font-size:12.5px;padding:7px 10px}
+}
+
+/* Skip link (keyboard users) */
+.skip-link{position:fixed;left:16px;top:12px;z-index:100;transform:translateY(-180%);padding:10px 14px;border-radius:10px;background:var(--accent);color:#fff;font-weight:700;text-decoration:none;transition:transform .2s ease}
+.skip-link:focus{transform:translateY(0)}
+</style><script defer src="/assets/cloudflare-web-analytics.js"></script>
   <link rel="icon" href="/favicon.ico" sizes="32x32">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; font-src 'self'; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com; connect-src 'self' https://cloudflareinsights.com; base-uri 'self'; form-action 'self' mailto:; upgrade-insecure-requests">
 </head>
-<body><nav class="nav"><div class="wrap nav-row"><a class="brand" href="/"><img src="../assets/dadyolked_logo_sm.webp" alt="" decoding="async" width="64" height="64">DadYolked</a><div class="links"><a href="/">Home</a><a href="/tools/">Tools</a><a href="/newborn-care-tools/">Newborn hub</a><a href="/best-baby-tracker-app-for-dads/">For dads</a><a href="/privacy/">Privacy</a></div></div></nav>
-<main class="wrap"><div class="hero"><div><span class="kicker">Diaper tracker app for dads</span><h1>Diapers are gross. They are also useful data.</h1><p class="lead">A diaper log gives tired parents a simple signal: enough wet diapers, stool changes, timing, and what to tell the pediatrician. DadYolked keeps it fast, private, and tied to feeds, sleep, medicine, and notes.</p><div class="actions"><a data-analytics-context="diaper_tracker_app_for_dads_1" data-analytics-event="app_store_click" class="pill" href="https://apps.apple.com/app/id6773113095?ct=site_diaper_tracker_app_for_dads_1&mt=8" target="_blank" rel="noopener">Download DadYolked</a><a class="pill ghost" href="#printable">Open printable diaper log</a><a class="pill ghost" href="/tools/">Browse free tools</a></div><div class="chips"><span class="chip">Wet diapers</span><span class="chip">Dirty diapers</span><span class="chip">Pattern changes</span><span class="chip">Pediatrician notes</span><span class="chip">Private records</span></div></div><aside class="panel"><span class="kicker">Diaper log basics</span><div class="metric"><div><strong>Wet</strong><span>count + time</span></div><div><strong>Dirty</strong><span>color + note</span></div><div><strong>Mixed</strong><span>quick flag</span></div><div><strong>Concern</strong><span>call guidance</span></div></div><p>Use this page for planning and record-keeping. For medical concerns, use your pediatrician or clinician’s guidance.</p></aside></div>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a><nav class="nav"><div class="wrap nav-row"><a class="brand" href="/"><img src="../assets/dadyolked_logo_sm.webp" alt="" decoding="async" width="64" height="64">DadYolked</a><div class="links"><a href="/">Home</a><a href="/tools/">Tools</a><a href="/newborn-care-tools/">Newborn hub</a><a href="/best-baby-tracker-app-for-dads/">For dads</a><a href="/privacy/">Privacy</a></div></div></nav>
+<main id="main-content" class="wrap"><div class="hero"><div><span class="kicker">Diaper tracker app for dads</span><h1>Diapers are gross. They are also useful data.</h1><p class="lead">A diaper log gives tired parents a simple signal: enough wet diapers, stool changes, timing, and what to tell the pediatrician. DadYolked keeps it fast, private, and tied to feeds, sleep, medicine, and notes.</p><div class="actions"><a data-analytics-context="diaper_tracker_app_for_dads_1" data-analytics-event="app_store_click" class="pill" href="https://apps.apple.com/app/id6773113095?ct=site_diaper_tracker_app_for_dads_1&mt=8" target="_blank" rel="noopener">Download DadYolked</a><a class="pill ghost" href="#printable">Open printable diaper log</a><a class="pill ghost" href="/tools/">Browse free tools</a></div><div class="chips"><span class="chip">Wet diapers</span><span class="chip">Dirty diapers</span><span class="chip">Pattern changes</span><span class="chip">Pediatrician notes</span><span class="chip">Private records</span></div></div><aside class="panel"><span class="kicker">Diaper log basics</span><div class="metric"><div><strong>Wet</strong><span>count + time</span></div><div><strong>Dirty</strong><span>color + note</span></div><div><strong>Mixed</strong><span>quick flag</span></div><div><strong>Concern</strong><span>call guidance</span></div></div><p>Use this page for planning and record-keeping. For medical concerns, use your pediatrician or clinician’s guidance.</p></aside></div>
 <section><div class="note safe"><strong>Useful dad job:</strong> Own the diaper record. It is one of the easiest ways to reduce the mental load, especially at pediatrician visits.</div></section>
 <section><span class="kicker">What to track</span><h2>A diaper tracker should make the pediatrician conversation easier.</h2><div class="grid"><article class="card"><h3>Wet count</h3><p>Record wet diapers by time so low-output concerns do not depend on memory.</p></article><article class="card"><h3>Dirty details</h3><p>Note dirty diapers, color changes, texture, blood or mucus concerns, and anything your pediatrician asked you to watch.</p></article><article class="card"><h3>Feeds nearby</h3><p>Diapers make more sense beside feeding and sleep logs. DadYolked keeps those records together.</p></article></div></section>
 <section><span class="kicker">Why DadYolked</span><h2>Fast enough for the changing table.</h2><div class="grid"><article class="card"><span class="tag">Quick</span><h3>Widgets, Siri, and Watch</h3><p>Capture the diaper without opening five screens while a baby attempts parkour.</p></article><article class="card"><span class="tag">Private</span><h3>No ad-tech baby diary</h3><p>Diaper and health-adjacent notes should not become targeting data.</p></article><article class="card"><span class="tag">Shareable</span><h3>Cleaner summaries</h3><p>Patterns help you give a clearer update to your partner, sitter, or pediatrician.</p></article></div></section>
@@ -65,4 +198,58 @@
     <section><div class="card"><h3>Diaper and feeding sources</h3><p>Use your child’s care team first. These references provide general parent education:</p><ul><li><a href="https://www.healthychildren.org/English/ages-stages/baby/Pages/babys-first-days-bowel-movements-and-urination.aspx" target="_blank" rel="noopener">HealthyChildren.org: Bowel Movements and Urination</a></li><li><a href="https://www.healthychildren.org/English/ages-stages/baby/feeding-nutrition/Pages/how-often-and-how-much-should-your-baby-eat.aspx" target="_blank" rel="noopener">HealthyChildren.org: How Often and How Much Should Your Baby Eat?</a></li></ul></div></section>
 <p class="editorial-note" style="margin:36px 0 0;color:rgba(247,239,228,.62);font-size:13px;line-height:1.6">Published by DadYolked · Updated September 2, 2026 · <a href="/editorial-standards/">Editorial standards and corrections</a></p>
 </main>
-<footer><div class="wrap">© 2026 DadYolked · <a href="/tools/">Tools</a> · <a href="/newborn-care-tools/">Newborn hub</a> · <a href="/support/">Support</a> · <a href="/privacy/">Privacy</a></div></footer></body></html>
+<footer><div class="wrap">© 2026 DadYolked · <a href="/tools/">Tools</a> · <a href="/newborn-care-tools/">Newborn hub</a> · <a href="/support/">Support</a> · <a href="/privacy/">Privacy</a></div></footer><script>
+/* Scroll-reveal. Content is visible unless JS actively hides it, and every path
+   ends with it visible: no IO, reduced motion, or any missed element. */
+(function(){
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce || !('IntersectionObserver' in window)) return;  /* leave content fully visible */
+
+  var els = document.querySelectorAll('main > section, main > section > .grid > *, main > section > .card');
+  if (!els.length) return;
+
+  var vh = window.innerHeight || 800;
+  /* Only hide what is BELOW the fold. Above-the-fold content never animates,
+     so there is no flash-of-invisible-content on load (worst on mobile). */
+  var pending = [];
+  els.forEach(function(el, i){
+    var r = el.getBoundingClientRect();
+    if (r.top < vh * 0.92) return;              /* already visible: leave it alone */
+    el.classList.add('reveal');
+    if (i % 4) el.setAttribute('data-d', String(i % 4));
+    pending.push(el);
+  });
+  if (!pending.length) return;
+
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, {rootMargin:'0px 0px -5% 0px', threshold:0.04});
+
+  function show(el){ el.classList.add('in'); io.unobserve(el); }
+
+  pending.forEach(function(el){ io.observe(el); });
+
+  /* Watchdog: anything that scrolled into view but missed its callback gets shown. */
+  var timer = null;
+  function sweep(){
+    timer = null;
+    var h = window.innerHeight || 800;
+    pending.forEach(function(el){
+      if (el.classList.contains('in')) return;
+      var r = el.getBoundingClientRect();
+      if (r.top < h * 1.02) show(el);
+    });
+  }
+  function queueSweep(){ if (!timer) timer = setTimeout(sweep, 150); }
+  window.addEventListener('scroll', queueSweep, {passive:true});
+  window.addEventListener('resize', queueSweep, {passive:true});
+  window.addEventListener('load', queueSweep);
+
+  /* Last resort: never leave content hidden. */
+  setTimeout(function(){ pending.forEach(show); }, 2000);
+})();
+</script>
+
+</body></html>
