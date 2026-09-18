@@ -1,0 +1,783 @@
+<!doctype html>
+<html lang="en" data-mode="dark" data-accent="copper">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Baby Feeding Tools for Dads &mdash; Free Feed Count &amp; Gap Checker</title>
+  <meta name="description" content="Free baby feeding tools for dads: count the feeds in a day, measure the longest gap between them against the published AAP and WIC ranges, work out bottle amounts, and check milk storage windows &mdash; no account, no upload." />
+  <link rel="canonical" href="https://dadyolked.com/baby-feeding-tools-for-dads/" />
+  <meta name="apple-itunes-app" content="app-id=6773113095">
+  <meta property="og:site_name" content="DadYolked">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Baby Feeding Tools for Dads &mdash; Free Feed Count &amp; Gap Checker">
+  <meta property="og:description" content="How many feeds today, and how long was the longest gap? Count the feeds and measure the spacing against the published guidance, then work out the bottle and check the milk windows.">
+  <meta property="og:url" content="https://dadyolked.com/baby-feeding-tools-for-dads/" />
+  <meta property="og:image" content="https://dadyolked.com/assets/dadyolked-social-card.png">
+  <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Baby Feeding Tools for Dads &mdash; DadYolked"><meta name="twitter:description" content="The feed count, the longest gap, the bottle amount, and the milk windows. No account, no upload."><meta name="twitter:image" content="https://dadyolked.com/assets/dadyolked-social-card.png">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@id": "https://dadyolked.com/#organization",
+      "@type": "Organization",
+      "publishingPrinciples": "https://dadyolked.com/editorial-standards/",
+      "correctionsPolicy": "https://dadyolked.com/editorial-standards/",
+      "name": "DadYolked",
+      "url": "https://dadyolked.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://dadyolked.com/assets/dadyolked_logo_08.png"
+      }
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://dadyolked.com/baby-feeding-tools-for-dads/#webpage",
+      "url": "https://dadyolked.com/baby-feeding-tools-for-dads/",
+      "name": "Baby Feeding Tools for Dads — Free Feed Count & Gap Checker",
+      "description": "Free baby feeding tools for dads: count the feeds in a day, measure the longest gap between them against the published ranges, work out bottle amounts, and check milk storage windows - no account, no upload.",
+      "isPartOf": {
+        "@id": "https://dadyolked.com/#website"
+      },
+      "about": [
+        {
+          "@id": "https://dadyolked.com/#app"
+        },
+        {
+          "@type": "Thing",
+          "name": "baby feeding"
+        },
+        {
+          "@type": "Thing",
+          "name": "responsive feeding"
+        },
+        {
+          "@type": "Thing",
+          "name": "newborn feeding frequency"
+        },
+        {
+          "@type": "Thing",
+          "name": "cluster feeding"
+        }
+      ],
+      "mainEntity": {
+        "@type": "ItemList",
+        "numberOfItems": 7,
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Baby feeding tracker app",
+            "url": "https://dadyolked.com/baby-feeding-tracker-app/",
+            "description": "Bottles, nursing notes, pumping, spit-up, and handoffs in one daily record."
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Feeding schedule by age",
+            "url": "https://dadyolked.com/feeding-schedule-by-age/",
+            "description": "What a feeding rhythm usually means from 0-2 weeks through 6-12 months."
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Bottle feeding calculator",
+            "url": "https://dadyolked.com/tools/bottle-feeding-calculator/",
+            "description": "Weight, age, and feeds per day in, an estimated per-bottle range out."
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Breast milk storage tracker for dads",
+            "url": "https://dadyolked.com/breast-milk-storage-tracker-for-dads/",
+            "description": "The published storage windows at each temperature plus a stash log."
+          },
+          {
+            "@type": "ListItem",
+            "position": 5,
+            "name": "Starting solids checklist",
+            "url": "https://dadyolked.com/starting-solids-checklist-for-dads/",
+            "description": "Readiness signs, first-food planning, and what to raise with the clinician."
+          },
+          {
+            "@type": "ListItem",
+            "position": 6,
+            "name": "First foods tracker for dads",
+            "url": "https://dadyolked.com/first-foods-tracker-for-dads/",
+            "description": "Log every new food and track the top allergens over time."
+          },
+          {
+            "@type": "ListItem",
+            "position": 7,
+            "name": "Toddler picky eating tracker for dads",
+            "url": "https://dadyolked.com/toddler-picky-eating-tracker-for-dads/",
+            "description": "Count exposures to refused foods and follow the pattern over weeks."
+          }
+        ]
+      }
+    },
+    {
+      "@type": "WebApplication",
+      "@id": "https://dadyolked.com/baby-feeding-tools-for-dads/#webapp",
+      "name": "Feed Count and Longest Gap Checker",
+      "url": "https://dadyolked.com/baby-feeding-tools-for-dads/",
+      "applicationCategory": "HealthApplication",
+      "operatingSystem": "Any",
+      "browserRequirements": "Requires JavaScript",
+      "description": "A free browser tool that counts the feeds a parent enters across a day, measures the gap between each pair of feeds including the overnight gap, and reports the count and the longest gap next to the published AAP and WIC guidance for that feeding type. It reports what was entered and whether it sits inside the published guidance. It does not decide whether a baby is eating enough, and nothing is saved or uploaded.",
+      "featureList": [
+        "Counts the feeds entered across one day",
+        "Measures every gap between consecutive feeds, including across midnight",
+        "Reports the longest gap and where it started",
+        "Compares the count against the published range for that feeding type",
+        "Compares newborn gaps against the published day and night limits",
+        "States plainly that evening cluster feeding is normal",
+        "Caregiver handoff summary and pediatrician question prompt",
+        "No account, no save, no upload"
+      ],
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "isAccessibleForFree": true,
+      "publisher": {
+        "@id": "https://dadyolked.com/#organization"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://dadyolked.com/baby-feeding-tools-for-dads/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How many times a day should a newborn feed?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For breastfed newborns the published guidance is <b>at least 8 to 12 feedings in every 24 hours</b>, with 10 to 12 sessions as the norm, nursing about every 2 hours measured from the start of one feeding to the next. For bottle-fed newborns, <b>8 feedings in 24 hours is generally recommended as the minimum</b>. This page's checker counts the feeds you enter and puts the count next to those published numbers. It does not decide whether your baby is eating enough."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long can a newborn go between feedings?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "AAP HealthyChildren states that a baby <b>should not go longer than about two to three hours during the day or four hours at night</b> without a feeding, and that even a sleepy baby should be woken to reach 8 to 12 feedings in 24 hours. The checker measures the gap between each pair of feeds you enter, including across midnight, and reports the longest one next to those limits. Note that the sources state the rule in words rather than clock hours, so this page treats 7 a.m. to 7 p.m. as day &mdash; that is this page's own convention, not the source's, and it is shown on the page rather than buried here."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "My baby feeds constantly in the evening. Is that a problem?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Usually not, and the published guidance says so directly. USDA WIC explains that when feedings are bunched together, especially in the evening, it is called <b>cluster feeding</b>, that some babies want to nurse <b>every 30 minutes to an hour in the evenings</b>, and that this is normal and does not mean the baby is not getting enough milk. Growth spurts around 2 to 3 weeks, 6 weeks, 3 months, and 6 months cause longer and more frequent feeding too, and usually last a few days. The checker will therefore show a short evening gap as a short gap, without treating it as a problem. What matters is the pattern across days, weight gain, and diaper output &mdash; which is a conversation with your care team, not a number on a page."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to feed on a schedule?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, and the sources are clear about it. For most healthy full-term infants, parents can look to the baby rather than the clock &mdash; this is responsive, or on-demand, feeding. Crying is a late hunger sign, so the cues to watch for come earlier: licking lips, rooting, hands to the mouth, opening the mouth, squirming, and fussiness. The exception is a baby born prematurely or with certain medical conditions, where scheduled feedings advised by your pediatrician are best. This page counts and measures only; it never recommends a schedule of its own."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://dadyolked.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Newborn Care Tools",
+          "item": "https://dadyolked.com/newborn-care-tools/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Baby feeding tools for dads",
+          "item": "https://dadyolked.com/baby-feeding-tools-for-dads/"
+        }
+      ]
+    }
+  ]
+}
+  </script>
+  <style>:root{--ink:#090b0f;--ink-2:#101318;--text:#f7efe4;--muted:rgba(247,239,228,.72);--line:rgba(247,239,228,.14);--accent:#c07a3e;--accent-2:#f0b36a;--card:rgba(255,255,255,.065);--card-2:rgba(255,255,255,.04);--danger:#ef8d7a;--ok:#8fd4a4;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color-scheme:dark}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(90% 70% at 50% -10%,rgba(192,122,62,.24),transparent 70%),linear-gradient(180deg,var(--ink),var(--ink-2));color:var(--text)}a{color:var(--accent-2)}.wrap{width:min(1120px,calc(100% - 40px));margin:0 auto}.nav{border-bottom:1px solid var(--line);background:rgba(9,11,15,.84);backdrop-filter:blur(18px);position:sticky;top:0;z-index:10}.nav-row{display:flex;align-items:center;justify-content:space-between;padding:16px 0}.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--text);font-weight:850}.brand img{width:36px;height:36px;border-radius:12px}.links{display:flex;gap:18px;flex-wrap:wrap}.links a{color:var(--muted);text-decoration:none;font-size:14px}.links a:hover{color:var(--text)}main{padding:68px 0 96px}.kicker{color:var(--accent-2);text-transform:uppercase;letter-spacing:.16em;font-size:12px;font-weight:850}h1{font-size:clamp(44px,7.6vw,88px);line-height:.94;letter-spacing:-.06em;margin:14px 0 20px;max-width:980px}h2{font-size:clamp(30px,4vw,50px);line-height:1;letter-spacing:-.045em;margin:0 0 14px}h3{font-size:24px;line-height:1.08;letter-spacing:-.035em;margin:0 0 10px}.lead{font-size:20px;line-height:1.65;color:var(--muted);max-width:840px}.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:34px;align-items:start}.panel,.card,.note,.cta{background:var(--card);border:1px solid var(--line);border-radius:28px;padding:26px;box-shadow:0 30px 120px rgba(0,0,0,.22)}.panel{position:sticky;top:86px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.pill{display:inline-flex;border-radius:999px;padding:12px 16px;background:var(--accent);color:#fff;text-decoration:none;font-weight:600;font-size:15px;border:1px solid transparent;cursor:pointer}.pill.ghost{background:transparent;border-color:var(--line);color:var(--text)}.pill:hover{transform:translateY(-2px);box-shadow:0 12px 34px rgba(192,122,62,.3)}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}.two{display:grid;grid-template-columns:1.1fr .9fr;gap:22px;align-items:start}.chip{display:inline-flex;align-items:center;gap:6px;padding:8px 12px;border:1px solid var(--line);border-radius:999px;font-size:13px;color:var(--muted);background:var(--card-2)}.chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}.note{border-left:3px solid var(--accent-2)}.note.warn{border-left-color:var(--danger)}.note.safe{border-left-color:var(--ok)}.tag{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-2);margin-bottom:8px}.compare-table{width:100%;border-collapse:collapse;margin-top:14px}.compare-table th,.compare-table td{padding:12px 10px;border-bottom:1px solid var(--line);text-align:left;font-size:14px}.compare-table th{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:700}.compare-table tr:last-child td{border-bottom:none}.compare-table .y{color:var(--ok);font-weight:700}.compare-table .n{color:var(--danger)}.printable-sheet{background:#fff;color:#1a1a1a;border-radius:20px;padding:32px;box-shadow:0 20px 60px rgba(0,0,0,.35);max-width:720px;margin:0 auto}.printable-sheet h2{color:#1a1a1a;font-size:28px;margin:0 0 6px;letter-spacing:-.03em}.printable-sheet h3{color:#1a1a1a;font-size:18px;margin:18px 0 8px;letter-spacing:-.02em}.printable-sheet p{color:#4a4a4a;font-size:14px;line-height:1.6}.printable-sheet .fields{margin-top:14px}.printable-sheet .field{display:flex;align-items:baseline;gap:10px;padding:13px 0;border-bottom:1px solid #e5e5e5}.printable-sheet .field b{font-size:13px;color:#1a1a1a;min-width:170px;font-weight:600}.printable-sheet .field .line{flex:1;border-bottom:1.5px dotted #888;min-width:40px}.printable-sheet .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:14px}.printable-sheet .grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}.printable-sheet .allergen-row{display:flex;align-items:center;gap:8px;padding:9px 0;border-bottom:1px solid #e5e5e5}.printable-sheet .allergen-row:last-child{border-bottom:none}.printable-sheet .allergen-row b{font-size:13px;color:#1a1a1a;min-width:120px;font-weight:600}.printable-sheet .allergen-row .line{flex:1;border-bottom:1.5px dotted #888}.printable-sheet .allergen-row .ck{width:18px;height:18px;border:1.5px solid #888;border-radius:4px}.printable-sheet .ck-group{display:flex;gap:10px;align-items:center}.printable-sheet .ck-item{display:flex;align-items:center;gap:5px;font-size:12px;color:#4a4a4a}.foodlog{display:grid;gap:12px}.foodrow{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:10px}.foodlog input,.foodlog select,.foodlog textarea{background:var(--card-2);border:1px solid var(--line);border-radius:12px;padding:11px 12px;color:var(--text);font-size:14px;font-family:inherit}.foodlog textarea{min-height:70px;resize:vertical;grid-column:1/-1}.foodlog input::placeholder,.foodlog textarea::placeholder{color:var(--muted)}.output{background:var(--card-2);border:1px solid var(--line);border-radius:16px;padding:18px;font-size:14px;line-height:1.7;white-space:pre-wrap;min-height:80px}.meter{padding:16px;background:var(--card-2);border-radius:14px;margin-top:14px}.meter strong{font-size:20px;display:block;margin-bottom:4px}.meter p{margin:0;font-size:13px;color:var(--muted)}.allergen-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px;margin-top:12px}.allergen-pill{display:flex;align-items:center;gap:8px;padding:10px 12px;border:1px solid var(--line);border-radius:12px;background:var(--card-2);font-size:13px}.allergen-pill input[type=checkbox]{accent-color:var(--accent);width:16px;height:16px;cursor:pointer}.allergy-meter{margin-top:14px;padding:14px;background:var(--card-2);border-radius:14px}.allergy-meter strong{font-size:18px}.stage{padding:18px 0;border-bottom:1px solid var(--line)}.stage:last-child{border-bottom:none}.stage h3{font-size:20px;margin:0 0 6px}.stage h3 span{font-size:13px;color:var(--muted);font-weight:400;margin-left:10px;letter-spacing:0}.stage p{margin:0;font-size:15px;line-height:1.65;color:var(--muted)}.editorial-note{margin:36px 0 0;color:rgba(247,239,228,.62);font-size:13px;line-height:1.6}
+/* ===== Polish layer: shared visual enhancements (injected) ===== */
+h1,h2,h3{text-wrap:balance}
+p,li{text-wrap:pretty}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.22,.61,.36,1),transform .7s cubic-bezier(.22,.61,.36,1)}
+.reveal.in{opacity:1;transform:none}
+.reveal[data-d="1"]{transition-delay:.08s}
+.reveal[data-d="2"]{transition-delay:.16s}
+.reveal[data-d="3"]{transition-delay:.24s}
+.reveal[data-d="4"]{transition-delay:.32s}
+.card,.cta{transition:transform .35s cubic-bezier(.22,.61,.36,1),border-color .35s ease,box-shadow .35s ease}
+.card:hover{transform:translateY(-4px);border-color:color-mix(in oklab,var(--accent) 55%,var(--line));box-shadow:0 26px 70px rgba(0,0,0,.4)}
+.grid .card{will-change:transform}
+.pill{transition:transform .25s ease,box-shadow .25s ease,background-color .25s ease,border-color .25s ease}
+.pill:hover{transform:translateY(-2px);box-shadow:0 12px 34px color-mix(in oklab,var(--accent) 42%,transparent)}
+.pill.ghost:hover{border-color:color-mix(in oklab,var(--accent) 60%,var(--line));box-shadow:none}
+.pill:active{transform:translateY(0)}
+.links a,.editorial-note a,.privacy a{transition:color .2s ease}
+main a:not(.pill):not(.chip){text-decoration-color:color-mix(in oklab,var(--accent-2) 45%,transparent);text-underline-offset:3px;transition:text-decoration-color .2s ease}
+main a:not(.pill):not(.chip):hover{text-decoration-color:var(--accent-2)}
+a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid var(--accent-2);outline-offset:3px;border-radius:6px}
+main > section + section{position:relative}
+main > section + section::before{content:"";position:absolute;top:-27px;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--line) 18%,var(--line) 82%,transparent)}
+.metric strong,.compare-table td:first-child{font-variant-numeric:tabular-nums}
+.compare-table th{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.compare-table tbody tr{transition:background-color .2s ease}
+.compare-table tbody tr:hover{background:var(--card-2)}
+.printable-sheet{box-shadow:0 20px 60px rgba(0,0,0,.35)}
+.chip{transition:border-color .2s ease,color .2s ease,transform .2s ease}
+.chip:hover{border-color:color-mix(in oklab,var(--accent) 55%,var(--line));color:var(--text);transform:translateY(-1px)}
+@media (prefers-reduced-motion: reduce){
+  .reveal{opacity:1 !important;transform:none !important;transition:none !important}
+  .card,.cta,.pill,.chip{transition:none !important}
+  .card:hover,.pill:hover,.chip:hover{transform:none !important}
+  html{scroll-behavior:auto}
+}
+@media (max-width:620px){
+  main{padding:44px 0 72px}
+  h1{letter-spacing:-.045em}
+  .card,.panel,.note,.cta{padding:20px;border-radius:22px}
+  .compare-table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .compare-table th,.compare-table td{padding:10px;font-size:13px}
+  .grid.two{grid-template-columns:1fr}
+  .hero{grid-template-columns:1fr}
+  .panel{position:static}
+  .foodrow{grid-template-columns:1fr}
+}
+@media print{
+  .reveal{opacity:1 !important;transform:none !important}
+  main > section + section::before{display:none}
+  .card,.cta{box-shadow:none !important}
+}
+.nav-row{flex-wrap:wrap;gap:10px 0}
+.links{flex-wrap:wrap;row-gap:6px;column-gap:14px}
+@media (max-width:520px){
+  .nav-row{padding:12px 0}
+  .brand img{width:30px;height:30px;border-radius:10px}
+  .brand{font-size:15px}
+  .links{font-size:13px;column-gap:12px}
+  .links a{font-size:13px}
+}
+@media (max-width:380px){
+  .links{column-gap:10px}
+  .links a{font-size:12.5px}
+}
+footer{font-size:13px}
+@media (max-width:620px){
+  footer{padding:32px 0 40px}
+  footer .wrap{display:flex;flex-wrap:wrap;gap:6px 10px;justify-content:center;text-align:center}
+}
+main > section{min-width:0;max-width:100%}
+main > section > div, main > section > .card, main > section > .table, main > section > .table-wrap{max-width:100%;min-width:0}
+main table{max-width:100%}
+main > section > div:has(> table),
+main > section > div:has(> .printable-sheet),
+main > section > .table,
+main > section > .table-wrap{
+  overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%
+}
+main > section > div:has(> table) > table,
+main > section > .table > table,
+main > section > .table-wrap > table{max-width:100%}
+@media (max-width:900px){
+  main table{width:100%}
+  main table th,main table td{white-space:normal;word-break:break-word;padding:9px}
+}
+.sheet,.sheet-row,.printable,.printable-sheet{max-width:100%;min-width:0;overflow-wrap:anywhere;word-break:break-word}
+.sheet-row b,.sheet-row strong{overflow-wrap:anywhere}
+@media (max-width:620px){
+  .sheet,.printable-sheet,.printable{padding:18px}
+  .sheet-row{padding:11px 0}
+  .chips{gap:8px}
+  .chip{font-size:12.5px;padding:7px 10px}
+}
+.skip-link{position:fixed;left:16px;top:12px;z-index:100;transform:translateY(-180%);padding:10px 14px;border-radius:10px;background:var(--accent);color:#fff;font-weight:700;text-decoration:none;transition:transform .2s ease}
+.skip-link:focus{transform:translateY(0)}
+
+
+.mt-table{width:100%;border-collapse:collapse;margin-top:14px}
+.mt-table th,.mt-table td{padding:12px 10px;border-bottom:1px solid var(--line);text-align:left;font-size:14px;vertical-align:top}
+.mt-table th{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.mt-table tr:last-child td{border-bottom:none}
+.mt-table b{font-size:15px}
+.mt-table td.src{color:var(--muted);font-size:12.5px;line-height:1.5}
+.feedgrid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:16px}
+.feedpanel{background:var(--card-2);border:1px solid var(--line);border-radius:18px;padding:18px}
+.feedpanel h4{margin:0 0 4px;font-size:15px;letter-spacing:-.01em}
+.feedpanel p.hint{margin:0 0 12px;font-size:12.5px;line-height:1.5;color:var(--muted)}
+.frow{display:grid;grid-template-columns:34px 1fr;gap:9px;align-items:center;margin-bottom:9px}
+.frow .fnum{font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums;text-align:right}
+.frow input{width:100%;min-width:0;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 9px;color:var(--text);font-size:13.5px;font-family:inherit}
+select.fsel{width:100%;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:11px 10px;color:var(--text);font-size:14px;font-family:inherit}
+.selrow{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:16px}
+.selrow label{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:6px}
+.summary{padding:16px;background:var(--card-2);border-radius:14px;margin-top:14px;border:1px solid var(--line)}
+.summary strong{font-size:18px;display:block;margin-bottom:6px}
+.summary p{margin:8px 0 0;font-size:13.5px;line-height:1.65;color:var(--muted)}
+.summary ul{margin:8px 0 0;padding-left:20px;font-size:13.5px;line-height:1.7;color:var(--muted)}
+.summary.within{border-color:color-mix(in oklab,var(--ok) 55%,var(--line))}
+.summary.outside{border-color:color-mix(in oklab,var(--danger) 55%,var(--line))}
+.summary.norange{border-color:color-mix(in oklab,var(--accent) 55%,var(--line))}
+.summary .bt{font-variant-numeric:tabular-nums;font-size:30px;font-weight:800;color:var(--accent-2);display:block;line-height:1.1}
+.summary .bt small{font-size:14px;font-weight:600;color:var(--muted)}
+.warnbox{margin-top:12px;padding:13px 15px;border-radius:13px;border:1px solid color-mix(in oklab,var(--danger) 55%,var(--line));background:var(--card-2);font-size:13.5px;line-height:1.6}
+.routes{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;margin-top:16px}
+.routes .card p{margin-top:6px}
+.gaplist{margin:12px 0 0;padding:0;list-style:none}
+.gaplist li{padding:9px 0;border-bottom:1px solid var(--line);font-size:13.5px;display:flex;justify-content:space-between;gap:12px}
+.gaplist li:last-child{border-bottom:none}
+.gaplist li.over b{color:var(--danger)}
+.gaplist li span.n{font-variant-numeric:tabular-nums;color:var(--muted)}
+.printable-sheet .field.wide{display:block}
+.printable-sheet .field.wide b{display:block;margin-bottom:6px}
+.printable-sheet .field.wide .line{display:block;min-height:20px}
+.printable-sheet .ft-table{width:100%;border-collapse:collapse;margin-top:10px}
+.printable-sheet .ft-table th,.printable-sheet .ft-table td{border:1px solid #d6d6d6;padding:8px;font-size:12px;color:#1a1a1a;text-align:left}
+.printable-sheet .ft-table th{background:#f4f4f4;font-size:10px;letter-spacing:.06em;text-transform:uppercase}
+.printable-sheet .ft-table td{height:28px}
+.pill.solid{background:var(--accent);color:#fff}
+@media (max-width:760px){
+  .feedgrid,.selrow{grid-template-columns:1fr}
+  .mt-table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}
+}
+@media print{body:has(#printable){background:#fff;color:#111}.nav,footer,.hero,main>section:not(#printable),.editorial-note{display:none!important}main{padding:0}.wrap{width:100%;margin:0}#printable{display:block!important;margin:0}.printable-sheet{box-shadow:none;border:0;border-radius:0;padding:0}.printable-sheet .actions{display:none}.printable-sheet .field,.printable-sheet .ft-table tr{break-inside:avoid}}
+@media print{
+  .mt-table tr,.frow{break-inside:avoid}
+}
+</style>
+  <script defer src="/assets/cloudflare-web-analytics.js"></script>
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; font-src 'self'; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com; connect-src 'self' https://cloudflareinsights.com; base-uri 'self'; form-action 'self' mailto:; upgrade-insecure-requests">
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+  <nav class="nav"><div class="wrap nav-row"><a class="brand" href="/"><img src="../assets/dadyolked_logo_sm.webp" alt="" decoding="async" width="64" height="64">DadYolked</a><div class="links"><a href="/">Home</a><a href="/newborn-care-tools/">Newborn hub</a><a href="/tools/">Tools</a><a href="/baby-caregiver-tools/">Caregiver hub</a><a href="/baby-sleep-tools-for-dads/">Sleep tools</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a></div></div></nav>
+  <main id="main-content" class="wrap">
+    <div class="hero">
+      <div>
+        <span class="kicker">Baby feeding toolkit</span>
+        <h1>Two numbers nobody counts.</h1>
+        <p class="lead">Feeding is the most-written-about topic on this site. Every feeding page here tells you what to log &mdash; none of them ever told you whether <em>today</em> actually added up. This page starts with the two numbers that answer that &mdash; how many feeds, and how long the longest gap was &mdash; then routes you to the tool that matches what you are actually holding.</p>
+        <div class="actions"><a class="pill" href="#count">Count the feeds and the gaps</a><a data-analytics-context="feeding_tools_1" data-analytics-event="app_store_click" class="pill ghost" href="https://apps.apple.com/app/id6773113095?ct=site_feeding_tools_1&mt=8" target="_blank" rel="noopener">Download DadYolked</a></div>
+        <div class="chips"><span class="chip">Free</span><span class="chip">No account</span><span class="chip">Nothing uploaded</span><span class="chip">Sourced guidance</span></div>
+      </div>
+      <aside class="panel">
+        <span class="kicker">Start here</span>
+        <div class="row"><strong>1. Count the day</strong><p>The feeds you enter, the gap between each pair, and the longest one &mdash; next to the published ranges.</p></div>
+        <div class="row"><strong>2. Expect the evening bunch</strong><p>Cluster feeding in the evening is normal and the published guidance says so. A short gap there is not a problem.</p></div>
+        <div class="row"><strong>3. Size the bottle</strong><p>Weight, age, and feeds per day in; an estimated per-bottle range out.</p></div>
+        <div class="row"><strong>4. Feed on cues</strong><p>Crying is a late hunger sign. Watch for the earlier cues, and follow your pediatrician's plan for a preemie or a medical condition.</p></div>
+      </aside>
+    </div>
+
+    <section id="count">
+      <span class="kicker">The two numbers nobody counts</span>
+      <h2>How many feeds, and how long was the longest gap?</h2>
+      <p class="lead" style="margin-bottom:6px">Enter every feed from one day, in the order they happened. The checker counts them, measures the gap between each pair &mdash; including a gap that crosses midnight &mdash; and reports the count and the longest gap next to the published guidance for that feeding type and age.</p>
+
+      <div class="selrow">
+        <div>
+          <label for="feedtype">1. How is your baby fed?</label>
+          <select class="fsel" id="feedtype" aria-label="Feeding type">
+          <option value="breastfed">Breastfed / nursing</option>
+          <option value="bottle">Bottle-fed (formula or expressed milk)</option>
+          <option value="mixed">Both breast and bottle</option>
+          </select>
+        </div>
+        <div>
+          <label for="ageband">2. How old is your baby?</label>
+          <select class="fsel" id="ageband" aria-label="Baby age band">
+          <option value="newborn">Newborn (0 to 1 month)</option>
+          <option value="1-3m">1 to 3 months</option>
+          <option value="3m+">3 months and older</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="feedgrid">
+        <div class="feedpanel">
+          <h4>3. The feeds, in order</h4>
+          <p class="hint">One time per feed, in the order they happened. A feed that crosses midnight is fine &mdash; keep going in order and the checker will handle the wrap.</p>
+          <div class="frow"><span class="fnum">1</span><input type="time" class="ft-time" aria-label="Feed 1 time" /></div>
+          <div class="frow"><span class="fnum">2</span><input type="time" class="ft-time" aria-label="Feed 2 time" /></div>
+          <div class="frow"><span class="fnum">3</span><input type="time" class="ft-time" aria-label="Feed 3 time" /></div>
+          <div class="frow"><span class="fnum">4</span><input type="time" class="ft-time" aria-label="Feed 4 time" /></div>
+          <div class="frow"><span class="fnum">5</span><input type="time" class="ft-time" aria-label="Feed 5 time" /></div>
+          <div class="frow"><span class="fnum">6</span><input type="time" class="ft-time" aria-label="Feed 6 time" /></div>
+          <div class="frow"><span class="fnum">7</span><input type="time" class="ft-time" aria-label="Feed 7 time" /></div>
+          <div class="frow"><span class="fnum">8</span><input type="time" class="ft-time" aria-label="Feed 8 time" /></div>
+          <div class="frow"><span class="fnum">9</span><input type="time" class="ft-time" aria-label="Feed 9 time" /></div>
+          <div class="frow"><span class="fnum">10</span><input type="time" class="ft-time" aria-label="Feed 10 time" /></div>
+          <div class="frow"><span class="fnum">11</span><input type="time" class="ft-time" aria-label="Feed 11 time" /></div>
+          <div class="frow"><span class="fnum">12</span><input type="time" class="ft-time" aria-label="Feed 12 time" /></div>
+          <div class="frow"><span class="fnum">13</span><input type="time" class="ft-time" aria-label="Feed 13 time" /></div>
+          <div class="frow"><span class="fnum">14</span><input type="time" class="ft-time" aria-label="Feed 14 time" /></div>
+        </div>
+        <div class="feedpanel">
+          <h4>4. What this counts</h4>
+          <p class="hint">The gaps <em>between</em> the feeds you list. The gap from your last feed back round to your first is not counted, because that is where your day starts &mdash; so start your list at the same feed each day and the overnight gap will be measured properly.</p>
+          <p class="hint">The published rule is stated in words, not clock hours, so this page treats <b>7 a.m. to 7 p.m. as day</b> and the rest as night. That is this page's own convention, not the source's, and you should use your own reading of the guidance with your care team if it matters.</p>
+          <p class="hint">Nothing is saved, sent, or uploaded. Refresh the page and every entry is gone.</p>
+        </div>
+      </div>
+
+      <div class="actions"><button class="pill solid" id="calc" type="button">Count the feeds</button><button class="pill ghost" id="clear" type="button">Clear</button></div>
+      <div class="warnbox" id="inlinewarn" hidden></div>
+      <div class="summary" id="summary" hidden></div>
+    </section>
+
+    <section>
+      <span class="kicker">What the published guidance actually says</span>
+      <h2>Every figure on this page, and where it came from.</h2>
+      <p class="lead" style="margin-bottom:0">Nothing here is rounded into a stronger claim than the source makes. Where no published ceiling exists, this page says so rather than inventing one.</p>
+      <div>
+        <table class="mt-table">
+          <thead><tr><th>Figure</th><th>What the source says</th><th>Source</th></tr></thead>
+          <tbody>
+          <tr><td><b>Where the guidance comes from</b></td><td>The American Academy of Pediatrics publishes feeding-frequency guidance for newborns, and the USDA WIC Breastfeeding Support program restates the same figures for families.</td><td class="src">AAP HealthyChildren; USDA WIC</td></tr>
+          <tr><td><b>Breastfed newborns, how often</b></td><td>10 to 12 sessions in 24 hours is the norm, nursing about every 2 hours measured from the start of one feeding to the next.</td><td class="src">AAP HealthyChildren</td></tr>
+          <tr><td><b>Breastfed newborns, the minimum</b></td><td>&ldquo;Nurse at least 8 to 12 times every 24 hours.&rdquo;</td><td class="src">AAP HealthyChildren</td></tr>
+          <tr><td><b>Bottle-fed newborns, how often</b></td><td>Most eat every 2 to 3 hours; 8 times is generally recommended as the minimum every 24 hours.</td><td class="src">AAP HealthyChildren</td></tr>
+          <tr><td><b>The longest gap, daytime</b></td><td>&ldquo;He should not go longer than about two to three hours during the day &hellip; without a feeding.&rdquo;</td><td class="src">AAP HealthyChildren</td></tr>
+          <tr><td><b>The longest gap, overnight</b></td><td>&ldquo;&hellip; or four hours at night without a feeding.&rdquo;</td><td class="src">AAP HealthyChildren</td></tr>
+          <tr><td><b>By 6 months</b></td><td>Babies may take 6 to 8 ounces at each of 4 or 5 feedings in 24 hours. Solid foods should start to be added at about this age.</td><td class="src">AAP HealthyChildren</td></tr>
+          <tr><td><b>Satisfaction between feeds</b></td><td>A well-nourished newborn seems satisfied and happy for an average of 1 to 3 hours between feedings.</td><td class="src">AAP HealthyChildren</td></tr>
+          <tr><td><b>Cluster feeding is normal</b></td><td>Feedings bunched together, especially in the evening, are normal. Some babies want to nurse every 30 minutes to an hour in the evenings, and it does not mean the baby is not getting enough milk.</td><td class="src">USDA WIC Breastfeeding Support</td></tr>
+          <tr><td><b>Growth spurts</b></td><td>Typically around 2 to 3 weeks, 6 weeks, 3 months, and 6 months, and they usually last a few days. More frequent feeding during one is how supply is increased.</td><td class="src">USDA WIC Breastfeeding Support</td></tr>
+          <tr><td><b>Feed on cues, not the clock</b></td><td>For most healthy full-term infants, parents can look to the baby rather than the clock. Scheduled feedings advised by a pediatrician are the exception, for babies born prematurely or with certain medical conditions.</td><td class="src">AAP HealthyChildren</td></tr>
+          <tr><td><b>What this page cannot see</b></td><td>Weight gain, diaper output, latch, and how a baby behaves awake are what a clinician uses to judge intake. This page counts feeds and measures gaps, which is a different thing entirely.</td><td class="src">This page, stated plainly</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <span class="kicker">Pick by the question you are holding</span>
+      <h2>The rest of the feeding cluster.</h2>
+      <p class="lead" style="margin-bottom:0">Eight tools, one question each. Start with whichever one matches today.</p>
+      <div class="routes">
+        <a class="card" href="/baby-feeding-tracker-app/"><span class="tag">What should I be writing down?</span><h3>Baby feeding tracker app</h3><p>The daily record: bottles, nursing notes, pumping, spit-up, and handoffs.</p></a>
+        <a class="card" href="/baby-feeding-tools-for-dads/"><span class="tag">Is the count and the spacing normal?</span><h3>Feed count and gap checker</h3><p>Count the feeds in a day and measure the longest gap against published guidance.</p></a>
+        <a class="card" href="/feeding-schedule-by-age/"><span class="tag">What does a rhythm look like by age?</span><h3>Feeding schedule by age</h3><p>What a feeding rhythm usually means from 0-2 weeks to 6-12 months.</p></a>
+        <a class="card" href="/tools/bottle-feeding-calculator/"><span class="tag">How much goes in the bottle?</span><h3>Bottle feeding calculator</h3><p>Weight, age, and feeds per day in, an estimated per-bottle range out.</p></a>
+        <a class="card" href="/breast-milk-storage-tracker-for-dads/"><span class="tag">How long can this milk sit?</span><h3>Breast milk storage tracker</h3><p>The published storage windows at each temperature, plus a stash log.</p></a>
+        <a class="card" href="/starting-solids-checklist-for-dads/"><span class="tag">When do we start solids?</span><h3>Starting solids checklist</h3><p>Readiness signs, first-food planning, and what to raise with the clinician.</p></a>
+        <a class="card" href="/first-foods-tracker-for-dads/"><span class="tag">What has he actually tried?</span><h3>First foods tracker for dads</h3><p>Log every new food and track the top allergens over time.</p></a>
+        <a class="card" href="/toddler-picky-eating-tracker-for-dads/"><span class="tag">Why won't he eat it?</span><h3>Toddler picky eating tracker</h3><p>Count exposures to refused foods and follow the pattern over weeks.</p></a>
+      </div>
+    </section>
+
+    <section>
+      <span class="kicker">Reading the result honestly</span>
+      <h2>A count and a gap are questions, not verdicts.</h2>
+      <div class="routes">
+        <article class="card"><h3>Inside the range</h3><p>Inside the published range does not mean everything is fine, and outside it does not mean anything is wrong. One day is not a pattern, and individual babies vary enormously.</p></article>
+        <article class="card"><h3>Outside the range</h3><p>The checker says &ldquo;outside the published guidance &mdash; worth raising with your care team&rdquo;. It never says your baby is not eating enough, because it cannot know that.</p></article>
+        <article class="card"><h3>A short evening gap</h3><p>Cluster feeding in the evening is normal. The checker counts the feeds and measures the gaps; it does not treat a bunch of evening feeds as a problem.</p></article>
+        <article class="card"><h3>What a count cannot see</h3><p>Weight gain, diaper output, latch, and how alert and content your baby is between feeds are what a clinician actually uses. None of them are on this page.</p></article>
+        <article class="card"><h3>Preemies and medical conditions</h3><p>For a baby born prematurely or with certain medical conditions, scheduled feedings advised by your pediatrician are best &mdash; not feeding on cues, and not this page.</p></article>
+        <article class="card"><h3>When to call instead</h3><p>Poor feeding, far fewer wet diapers, unusual sleepiness, fever, or anything that feels wrong is a call to your pediatrician or emergency services &mdash; not a spreadsheet.</p></article>
+      </div>
+    </section>
+
+    <section><div class="note"><strong>Safety note:</strong> this tool counts the feeds you enter and does arithmetic on the times you enter. It does not diagnose, does not assess growth or development, and cannot tell you whether your baby is getting enough to eat &mdash; weight gain, diaper output, and how your baby behaves awake are what a clinician uses for that. It never recommends a feeding schedule or an amount. For a baby born prematurely or with certain medical conditions, follow the scheduled feedings your pediatrician advises. Contact your pediatrician promptly for poor feeding, far fewer wet diapers, unusual lethargy, fever, or anything that concerns you, and do not delay professional or emergency care to use a tool. Follow the child's qualified care team.</div></section>
+
+    <section id="printable">
+      <span class="kicker">Take it to the appointment</span>
+      <h2>Printable feeding day sheet.</h2>
+      <p class="lead" style="margin-bottom:0">Print one per day. A week of counts and gaps is far more useful to a clinician than any single day, and it costs you a few seconds at each feed.</p>
+      <div class="printable-sheet" style="background:#fff;color:#111;border-radius:20px;padding:26px;margin-top:18px">
+        <div class="field wide"><b>Baby's age / date</b><span class="line">_______________________________________________</span></div>
+        <div class="field wide"><b>How fed (breast / bottle / both)</b><span class="line">_______________________________________________</span></div>
+        <table class="ft-table">
+          <thead><tr><th>Feed time</th><th>What was offered</th><th>What was taken</th><th>Gap since last feed</th><th>Who fed</th><th>Notes (latch, spit-up, settled?)</th></tr></thead>
+          <tbody>
+            <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          </tbody>
+        </table>
+        <div class="field wide" style="margin-top:12px"><b>Feeds today &nbsp;_______&nbsp; &middot; &nbsp;Longest gap &nbsp;_______&nbsp; &middot; &nbsp;Wet diapers today &nbsp;_______</b><span class="line">_______________________________________________</span></div>
+        <div class="field wide"><b>Questions for the pediatrician</b><span class="line">_______________________________________________</span><span class="line">_______________________________________________</span></div>
+        <div class="actions"><button class="pill" type="button" onclick="window.print()">Print this sheet</button></div>
+      </div>
+    </section>
+
+    <section><div class="card"><h3>Sources and further reading</h3><p>Every figure on this page is restated from these references. The child's qualified care team supplies medical guidance.</p><ul class="sources"><li><a href="https://www.healthychildren.org/English/ages-stages/baby/feeding-nutrition/Pages/How-Often-and-How-Much-Should-Your-Baby-Eat.aspx" target="_blank" rel="noopener">AAP HealthyChildren: How Often and How Much Should Your Baby Eat?</a></li><li><a href="https://www.healthychildren.org/English/ages-stages/baby/breastfeeding/Pages/How-to-Tell-if-Baby-is-Getting-Enough-Milk.aspx" target="_blank" rel="noopener">AAP HealthyChildren: How to Tell if Your Breastfed Baby is Getting Enough Milk</a></li><li><a href="https://www.healthychildren.org/English/ages-stages/baby/breastfeeding/Pages/How-Often-to-Breastfeed.aspx" target="_blank" rel="noopener">AAP HealthyChildren: How Often To Breastfeed</a></li><li><a href="https://wicbreastfeeding.fns.usda.gov/cluster-feeding-and-growth-spurts" target="_blank" rel="noopener">USDA WIC Breastfeeding Support: Cluster Feeding and Growth Spurts</a></li><li><a href="https://wicbreastfeeding.fns.usda.gov/how-dads-can-support-their-breastfeeding-partner" target="_blank" rel="noopener">USDA WIC Breastfeeding Support: How Dads Can Support Their Breastfeeding Partner</a></li></ul></div></section>
+
+    <section class="cta"><div><h2>Stop keeping it in your head.</h2><p>DadYolked keeps feeds, diapers, sleep, medicine, pumping, notes, and appointments in one local-first record &mdash; so the count and the pattern are there before you need them, and the second caregiver sees the same story.</p></div><a data-analytics-context="feeding_tools_2" data-analytics-event="app_store_click" class="pill" href="https://apps.apple.com/app/id6773113095?ct=site_feeding_tools_2&mt=8" target="_blank" rel="noopener">Download on the App Store</a></section>
+
+    <section id="faq">
+      <span class="kicker">Frequently asked questions</span>
+      <h2>Quick answers</h2>
+      <div class="grid">
+        <article class="card"><h3>How many times a day should a newborn feed?</h3><p>For breastfed newborns the published guidance is <b>at least 8 to 12 feedings in every 24 hours</b>, with 10 to 12 sessions as the norm, nursing about every 2 hours measured from the start of one feeding to the next. For bottle-fed newborns, <b>8 feedings in 24 hours is generally recommended as the minimum</b>. This page's checker counts the feeds you enter and puts the count next to those published numbers. It does not decide whether your baby is eating enough.</p></article>
+        <article class="card"><h3>How long can a newborn go between feedings?</h3><p>AAP HealthyChildren states that a baby <b>should not go longer than about two to three hours during the day or four hours at night</b> without a feeding, and that even a sleepy baby should be woken to reach 8 to 12 feedings in 24 hours. The checker measures the gap between each pair of feeds you enter, including across midnight, and reports the longest one next to those limits. Note that the sources state the rule in words rather than clock hours, so this page treats 7 a.m. to 7 p.m. as day &mdash; that is this page's own convention, not the source's, and it is shown on the page rather than buried here.</p></article>
+        <article class="card"><h3>My baby feeds constantly in the evening. Is that a problem?</h3><p>Usually not, and the published guidance says so directly. USDA WIC explains that when feedings are bunched together, especially in the evening, it is called <b>cluster feeding</b>, that some babies want to nurse <b>every 30 minutes to an hour in the evenings</b>, and that this is normal and does not mean the baby is not getting enough milk. Growth spurts around 2 to 3 weeks, 6 weeks, 3 months, and 6 months cause longer and more frequent feeding too, and usually last a few days. The checker will therefore show a short evening gap as a short gap, without treating it as a problem. What matters is the pattern across days, weight gain, and diaper output &mdash; which is a conversation with your care team, not a number on a page.</p></article>
+        <article class="card"><h3>Do I need to feed on a schedule?</h3><p>No, and the sources are clear about it. For most healthy full-term infants, parents can look to the baby rather than the clock &mdash; this is responsive, or on-demand, feeding. Crying is a late hunger sign, so the cues to watch for come earlier: licking lips, rooting, hands to the mouth, opening the mouth, squirming, and fussiness. The exception is a baby born prematurely or with certain medical conditions, where scheduled feedings advised by your pediatrician are best. This page counts and measures only; it never recommends a schedule of its own.</p></article>
+      </div>
+    </section>
+
+    <p class="editorial-note" style="margin:36px 0 0;color:rgba(247,239,228,.62);font-size:13px;line-height:1.6">Published by DadYolked &middot; Updated September 18, 2026 &middot; <a href="/editorial-standards/">Editorial standards and corrections</a></p>
+  </main>
+  <footer><div class="wrap">&copy; 2026 DadYolked &middot; <a href="/newborn-care-tools/">Newborn hub</a> &middot; <a href="/tools/">Tools</a> &middot; <a href="/support/">Support</a> &middot; <a href="/privacy/">Privacy</a> &middot; <a href="/terms/">Terms</a></div></footer>
+<script>
+/* Feed count and longest gap checker.
+   Pure arithmetic on the times entered. It never judges the count: it reports
+   what was entered and whether it sits inside the published guidance for the
+   feeding type and age. Where no published ceiling exists it says so. */
+(function () {
+  var TYPES = [{"key": "breastfed", "label": "Breastfed / nursing", "lo": 8, "hi": 12, "note": "Published guidance for breastfed newborns is at least 8 to 12 feedings in every 24 hours, with 10 to 12 sessions as the norm."}, {"key": "bottle", "label": "Bottle-fed (formula or expressed milk)", "lo": 8, "hi": null, "note": "Published guidance for bottle-fed newborns is 8 feedings in 24 hours, generally recommended as the minimum. No published ceiling is stated for this age, so none is applied here."}, {"key": "mixed", "label": "Both breast and bottle", "lo": 8, "hi": 12, "note": "Published breastfeeding guidance is 8 to 12 feedings in every 24 hours. Where feeds are split between breast and bottle, both are feedings, so both are counted."}];
+  var AGES = [{"key": "newborn", "label": "Newborn (0 to 1 month)", "gapRule": true}, {"key": "1-3m", "label": "1 to 3 months", "gapRule": true}, {"key": "3m+", "label": "3 months and older", "gapRule": false}];
+  var DAY_START = 7 * 60;
+  var DAY_END = 19 * 60;
+  var DAY_LIMIT = 180;
+  var NIGHT_LIMIT = 240;
+
+  var typeSel = document.getElementById("feedtype");
+  var ageSel = document.getElementById("ageband");
+  var summary = document.getElementById("summary");
+  var warnBox = document.getElementById("inlinewarn");
+  var calcBtn = document.getElementById("calc");
+  var clearBtn = document.getElementById("clear");
+  if (!typeSel || !ageSel || !summary || !calcBtn) return;
+
+  function toMin(v) {
+    if (!v || typeof v !== "string") return null;
+    var parts = v.split(":");
+    if (parts.length !== 2) return null;
+    var h = parseInt(parts[0], 10);
+    var m = parseInt(parts[1], 10);
+    if (isNaN(h) || isNaN(m) || h < 0 || h > 23 || m < 0 || m > 59) return null;
+    return h * 60 + m;
+  }
+
+  function fmtDur(mins) {
+    var h = Math.floor(mins / 60);
+    var m = mins % 60;
+    if (h === 0) return m + " min";
+    if (m === 0) return h + " hr" + (h === 1 ? "" : "s");
+    return h + " hr" + (h === 1 ? "" : "s") + " " + m + " min";
+  }
+
+  function fmtClock(min) {
+    var h = Math.floor(min / 60) % 24;
+    var m = min % 60;
+    var ap = h < 12 ? "AM" : "PM";
+    var h12 = h % 12;
+    if (h12 === 0) h12 = 12;
+    return h12 + ":" + (m < 10 ? "0" + m : String(m)) + " " + ap;
+  }
+
+  function pick(list, key) {
+    for (var i = 0; i < list.length; i++) {
+      if (list[i].key === key) return list[i];
+    }
+    return list[0];
+  }
+
+  function isDayStart(min) {
+    var t = min % 1440;
+    return t >= DAY_START && t < DAY_END;
+  }
+
+  function run() {
+    var type = pick(TYPES, typeSel.value);
+    var age = pick(AGES, ageSel.value);
+    var inputs = document.querySelectorAll(".ft-time");
+    var times = [];
+    var blankRows = 0;
+    var seen = 0;
+    for (var i = 0; i < inputs.length; i++) {
+      var v = inputs[i].value;
+      if (!v) { blankRows++; continue; }
+      seen++;
+      var t = toMin(v);
+      if (t === null) continue;
+      times.push(t);
+    }
+
+    var problems = [];
+    var dupes = 0;
+    for (var d = 1; d < times.length; d++) {
+      if (times[d] === times[d - 1]) dupes++;
+    }
+    if (dupes) problems.push(dupes + " feed(s) share the same time as the one before and add no gap");
+
+    if (warnBox) {
+      if (problems.length) {
+        warnBox.hidden = false;
+        warnBox.textContent = "Worth knowing: " + problems.join("; ") + ".";
+      } else {
+        warnBox.hidden = true;
+        warnBox.textContent = "";
+      }
+    }
+
+    if (times.length < 2) {
+      summary.hidden = false;
+      summary.className = "summary norange";
+      summary.innerHTML =
+        "<strong>Not enough feeds to measure a gap yet.</strong>" +
+        "<p>Enter at least two feed times, in the order they happened, then count again. " +
+        "A gap needs two feeds to sit between. The count needs the whole day, so include " +
+        "every feed from one day rather than only the ones you remember.</p>";
+      return;
+    }
+
+    var gaps = [];
+    var span = 0;
+    for (var g = 1; g < times.length; g++) {
+      var delta = times[g] - times[g - 1];
+      if (delta < 0) delta += 1440;
+      gaps.push({ start: times[g - 1], mins: delta });
+      span += delta;
+    }
+
+    var longest = gaps[0];
+    var total = 0;
+    var overCount = 0;
+    for (var k = 0; k < gaps.length; k++) {
+      total += gaps[k].mins;
+      if (gaps[k].mins > longest.mins) longest = gaps[k];
+      var lim = isDayStart(gaps[k].start) ? DAY_LIMIT : NIGHT_LIMIT;
+      gaps[k].limit = lim;
+      gaps[k].over = age.gapRule && gaps[k].mins > lim;
+      if (gaps[k].over) overCount++;
+    }
+    var avg = Math.round(total / gaps.length);
+    var nightGap = isDayStart(longest.start) ? false : true;
+
+    var head =
+      '<span class="bt">' + times.length + " feeds<small> entered, across " +
+      fmtDur(span) + "</small></span>";
+    var body = "<ul>";
+    body += line("Feeds entered:", times.length + " (first at " + fmtClock(times[0]) +
+                 ", last at " + fmtClock(times[times.length - 1]) + ")");
+    body += line("Span covered:", fmtDur(span) + " from the first feed to the last");
+    body += line("Longest gap:", fmtDur(longest.mins) + ", starting after the " +
+                 fmtClock(longest.start) + " feed" + (nightGap ? " (overnight)" : " (daytime)"));
+    body += line("Average gap:", fmtDur(avg) + " between feeds");
+    body += "</ul>";
+
+    var list = '<ul class="gaplist">';
+    for (var q = 0; q < gaps.length; q++) {
+      var gg = gaps[q];
+      list += "<li" + (gg.over ? ' class="over"' : "") + "><span>" + fmtClock(gg.start) +
+              " &rarr; " + fmtClock((gg.start + gg.mins) % 1440) + "</span>" +
+              '<span class="n">' + fmtDur(gg.mins) +
+              (age.gapRule ? " (limit " + (gg.limit / 60) + " hr)" : "") + "</span></li>";
+    }
+    list += "</ul>";
+
+    var countVerdict;
+    if (times.length < type.lo) {
+      countVerdict =
+        "<strong>Fewer feeds than the published minimum for this feeding type.</strong>" +
+        "<p>" + type.note + " You entered " + times.length + ", which is below that minimum. " +
+        "That is not a diagnosis, and it may simply mean you did not enter every feed from the " +
+        "day &mdash; check that first. If you did enter them all, and especially if it repeats " +
+        "across several days, it is worth raising with your care team. The AAP also notes that a " +
+        "sleepy baby may need to be woken to reach the feeding count.</p>";
+    } else if (type.hi !== null && times.length <= type.hi) {
+      countVerdict =
+        "<strong>Inside the published range for this feeding type.</strong>" +
+        "<p>" + type.note + " You entered " + times.length + ", which is inside it. That is a " +
+        "comparison against published guidance, not a clean bill of health: it says nothing " +
+        "about how much was taken, weight gain, or diaper output. Keep the printed sheet for a " +
+        "week so the pattern, not the day, is what you take to the appointment.</p>";
+    } else if (type.hi !== null) {
+      countVerdict =
+        "<strong>More feeds than the top of the published range for this feeding type.</strong>" +
+        "<p>" + type.note + " You entered " + times.length + ", which is above it. That is not a " +
+        "problem by itself: USDA WIC explains that feedings bunched together, especially in the " +
+        "evening, are normal, and that growth spurts around 2 to 3 weeks, 6 weeks, 3 months, and " +
+        "6 months cause longer and more frequent feeding for a few days. More frequent feeding is " +
+        "also how milk supply increases. What matters is the pattern across days, plus weight gain " +
+        "and diaper output.</p>";
+    } else {
+      countVerdict =
+        "<strong>At or above the published minimum for this feeding type.</strong>" +
+        "<p>" + type.note + " You entered " + times.length + ". More frequent feeding is not a " +
+        "problem by itself &mdash; cluster feeding in the evening is normal, and growth spurts " +
+        "cause it for a few days at a time. What matters is the pattern across days, plus weight " +
+        "gain and diaper output, which is a conversation with your care team.</p>";
+    }
+
+    var gapVerdict;
+    if (!age.gapRule) {
+      gapVerdict =
+        "<strong>No gap limit applied at this age.</strong>" +
+        "<p>The published day and night limits this page uses are written for newborns and the " +
+        "first few months. At 3 months and older the guidance is different &mdash; feeds space " +
+        "out, solids start to be added, and by 6 months many babies take 4 or 5 feedings in 24 " +
+        "hours. So the gaps above are reported as arithmetic, with nothing scored. Ask your " +
+        "pediatrician what spacing they want for your baby at this age.</p>";
+    } else if (overCount === 0) {
+      gapVerdict =
+        "<strong>No gap above the published limit.</strong>" +
+        "<p>Every gap between the feeds you entered is at or under the published limit for the " +
+        "time of day it started in. The AAP guidance this compares against is roughly 2 to 3 " +
+        "hours during the day and 4 hours at night, with the caveat that even a sleepy baby may " +
+        "need to be woken to reach the feeding count. Being under the limit is not a guarantee " +
+        "of anything on its own.</p>";
+    } else {
+      gapVerdict =
+        "<strong>" + overCount + " gap" + (overCount === 1 ? "" : "s") +
+        " longer than the published limit for that time of day.</strong>" +
+        "<p>The longest was " + fmtDur(longest.mins) + ", starting after the " +
+        fmtClock(longest.start) + " feed" + (nightGap ? ", overnight" : ", during the day") +
+        ". The published guidance is about 2 to 3 hours during the day and 4 hours at night. " +
+        "This is not a diagnosis and one long gap is not automatically a problem &mdash; but if " +
+        "it repeats across several days, or your baby is hard to wake or feeds poorly at the " +
+        "next feed, that is worth raising with your care team. The day/night split here is this " +
+        "page's own convention (7 a.m. to 7 p.m. counts as day), so judge the overnight gaps " +
+        "against the night limit yourself if you read the guidance differently.</p>";
+    }
+
+    summary.hidden = false;
+    summary.className = "summary " + (times.length >= type.lo ? (overCount ? "outside" : "within") : "outside");
+    summary.innerHTML = head + body + list + countVerdict + gapVerdict;
+  }
+
+  function line(label, value) {
+    return "<li><b>" + label + "</b> " + value + "</li>";
+  }
+
+  if (calcBtn.addEventListener) calcBtn.addEventListener("click", run);
+
+  if (clearBtn && clearBtn.addEventListener) {
+    clearBtn.addEventListener("click", function () {
+      var inputs = document.querySelectorAll(".frow input");
+      for (var i = 0; i < inputs.length; i++) inputs[i].value = "";
+      typeSel.value = TYPES[0].key;
+      ageSel.value = AGES[0].key;
+      summary.hidden = true;
+      summary.innerHTML = "";
+      summary.className = "summary";
+      if (warnBox) { warnBox.hidden = true; warnBox.textContent = ""; }
+    });
+  }
+})();
+</script>
+</body>
+</html>
