@@ -1,0 +1,12 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["D238M6A7R5.com.georgezikry.dadyolked"],
+        "components": [
+          { "/": "/family/*", "comment": "Caregiver install and invitation education handoff" }
+        ]
+      }
+    ]
+  }
+}
