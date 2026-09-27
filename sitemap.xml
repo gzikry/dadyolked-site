@@ -217,7 +217,11 @@
   </url>
   <url>
     <loc>https://dadyolked.com/tools/wake-window-calculator/</loc>
-  <loc>https://dadyolked.com/tools/corrected-age-calculator/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dadyolked.com/tools/corrected-age-calculator/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -268,9 +272,24 @@
 
   <url>
     <loc>https://dadyolked.com/4-month-sleep-regression-for-dads/</loc>
-  <loc>https://dadyolked.com/reflux-and-spitting-up-for-dads/</loc>
-  <loc>https://dadyolked.com/baby-fever-when-to-call-for-dads/</loc>
-  <loc>https://dadyolked.com/witching-hour-crying-for-dads/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://dadyolked.com/reflux-and-spitting-up-for-dads/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://dadyolked.com/baby-fever-when-to-call-for-dads/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://dadyolked.com/witching-hour-crying-for-dads/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
