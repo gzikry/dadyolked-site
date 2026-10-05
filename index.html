@@ -202,6 +202,10 @@
   .kicker::before{
     content:""; width:24px; height:1px; background:currentColor; opacity:0.6;
   }
+  .hero .kicker{
+    display:flex; justify-content:center; width:100%;
+  }
+  .hero .kicker::before{ content:none; }
 
   /* ---------- Nav ---------- */
   .nav{
@@ -863,17 +867,6 @@
   @media (max-width: 620px){
     .wrap{ padding:0 20px; }
     .hero{ padding:40px 0 56px; }
-    .nav-row{ flex-wrap:wrap; row-gap:12px; }
-    .nav-links{ width:100%; justify-content:flex-start; gap:14px 16px; }
-    body{ padding-bottom:88px; }
-    .mobile-download-bar{
-      display:block; position:fixed; left:0; right:0; bottom:0; z-index:40;
-      padding:12px 16px calc(12px + env(safe-area-inset-bottom));
-      background:color-mix(in oklab, var(--ink) 88%, transparent);
-      backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px);
-      border-top:1px solid var(--line-dark);
-    }
-    .mobile-download-bar .pill{ width:100%; }
     .features{ grid-template-columns: 1fr; }
     .feature.wide{ grid-column: span 1; }
     .privacy-grid{ grid-template-columns: 1fr; }
@@ -885,6 +878,31 @@
     .art-stat:last-child{ grid-column: span 2; }
     .foot-grid{ grid-template-columns: 1fr; }
     .foot-bottom{ flex-direction:column; gap:12px; }
+  }
+  @media (max-width: 640px){
+    .nav-row{
+      flex-wrap:nowrap; align-items:center; gap:12px;
+      padding:10px 20px; max-height:64px;
+    }
+    .brand{ flex:none; font-size:16px; gap:8px; }
+    .brand-mark{ width:28px; height:28px; }
+    .nav-links{
+      flex:1; width:auto; flex-wrap:nowrap; justify-content:flex-end;
+      gap:14px; overflow-x:auto; scrollbar-width:none;
+    }
+    .nav-links::-webkit-scrollbar{ display:none; }
+    .nav-links a:not(.pill){ flex:none; font-size:13px; line-height:1; padding:8px 0; }
+    .nav-links .pill{ display:none; }
+    .mobile-download-bar{
+      display:block; position:fixed; left:0; right:0; bottom:0; z-index:40;
+      padding:12px 16px calc(12px + env(safe-area-inset-bottom));
+      background:color-mix(in oklab, var(--ink) 88%, transparent);
+      backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px);
+      border-top:1px solid var(--line-dark);
+    }
+    .mobile-download-bar .pill{ width:100%; }
+    body{ padding-bottom:calc(68px + env(safe-area-inset-bottom)); }
+    .cta{ padding-bottom:calc(100px + 68px + env(safe-area-inset-bottom)); }
   }
   @media (min-width:700px){
     .ad-slot:not([hidden]){ min-height:90px; }
@@ -994,7 +1012,7 @@ p,li{text-wrap:pretty}
         Run the <span class="accent">baby day.</span>
       </h1>
       <p class="lead">
-        Prep for birth. Log feeds and diapers with one thumb. Keep dad's sleep and recovery in view. No account. Data stays on your phone.
+        Log feeds and diapers with one thumb. Keep your own sleep and recovery in view. No account, and your data stays on your phone.
       </p>
       <div class="hero-cta">
         <a data-download-cta data-analytics-context="home_1" data-analytics-event="app_store_click" href="https://apps.apple.com/app/id6773113095?ct=site_home_1&mt=8" class="pill primary" target="_blank" rel="noopener">
