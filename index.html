@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-mode="dark" data-accent="copper">
+<html lang="en" data-mode="dark" data-accent="copper" data-download-href="https://apps.apple.com/app/id6773113095?ct=site_home_1&mt=8">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -33,7 +33,7 @@
       "url": "https://dadyolked.com/",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://dadyolked.com/assets/dadyolked_logo_08.png"
+        "url": "https://dadyolked.com/assets/dadyolked_logo_sm.png"
       },
       "contactPoint": {
         "@type": "ContactPoint",
@@ -49,7 +49,7 @@
       "operatingSystem": "iOS",
       "url": "https://dadyolked.com/",
       "downloadUrl": "https://apps.apple.com/app/id6773113095",
-      "image": "https://dadyolked.com/assets/dadyolked_logo_08.png",
+      "image": "https://dadyolked.com/assets/dadyolked_logo_sm.png",
       "description": "Private iPhone companion for expecting and new dads: pregnancy prep, baby tracking, sleep, feeds, diapers, medicine, Dad Recovery, Apple Watch, Siri, widgets, and local-first records.",
       "publisher": {
         "@id": "https://dadyolked.com/#organization"
@@ -127,7 +127,7 @@
     --teal:       #20616F;
     --sand:       #95583A;
     --sage:       #51705C;
-    --slate:      #4B5B6E;
+    --slate:      #7E90A6;
     --ink-text:   #1A1F2E;
     --ink-muted:  #5F6675;
     --paper-muted:rgba(246,241,231,0.62);
@@ -202,6 +202,10 @@
   .kicker::before{
     content:""; width:24px; height:1px; background:currentColor; opacity:0.6;
   }
+  .hero .kicker{
+    display:flex; justify-content:center; width:100%;
+  }
+  .hero .kicker::before{ content:none; }
 
   /* ---------- Nav ---------- */
   .nav{
@@ -213,7 +217,7 @@
   }
   .nav-row{
     display:flex; align-items:center; justify-content:space-between;
-    padding:18px 0;
+    padding-top:18px; padding-bottom:18px;
   }
   .brand{
     display:inline-flex; align-items:center; gap:12px;
@@ -231,16 +235,12 @@
     flex-wrap:wrap; row-gap:10px; justify-content:flex-end;
     max-width:100%; min-width:0;
   }
-  /* Laptop widths: tighten spacing so 17 links never push the page past the viewport */
-  @media (max-width:1500px){ .nav-links{ gap:18px; font-size:13.5px; } }
-  @media (max-width:1300px){ .nav-links{ gap:13px; font-size:13px; } }
-  @media (max-width:1150px){ .nav-links{ gap:11px; font-size:12.5px; } }
   .nav-links a:hover{ color:#fff; }
   .nav-links .pill{ color:var(--ink); }
 
   .pill{
-    display:inline-flex; align-items:center; gap:8px;
-    height:42px; padding:0 18px;
+    display:inline-flex; align-items:center; justify-content:center; gap:8px;
+    min-height:44px; height:auto; padding:12px 20px;
     border-radius:var(--r-pill);
     font-size:14px; font-weight:600;
     letter-spacing:-0.01em;
@@ -271,8 +271,8 @@
     gap:60px;
   }
   .hero h1{
-    font-size: clamp(80px, 16vw, 240px);
-    line-height:0.88;
+    font-size: clamp(36px, 8vw, 72px);
+    line-height:1.05;
     text-align:center;
     margin:24px 0 28px;
   }
@@ -430,6 +430,15 @@
     color: rgba(233,228,216,0.65);
     max-width:480px;
     margin:0; justify-self:end;
+  }
+  .section-head a{
+    color:var(--paper);
+    text-decoration:underline;
+    text-underline-offset:3px;
+  }
+  #screens .section-head h2{
+    font-size: clamp(32px, 4vw, 56px);
+    line-height: 1.08;
   }
 
   /* ---------- Features ---------- */
@@ -766,8 +775,8 @@
       radial-gradient(60% 60% at 50% 30%, rgba(192,122,62,0.18), transparent 70%);
   }
   .cta h2{
-    font-size: clamp(56px, 9vw, 132px);
-    font-weight:800; letter-spacing:-0.05em; line-height:0.92;
+    font-size: clamp(36px, 8vw, 72px);
+    font-weight:800; letter-spacing:-0.05em; line-height:1.05;
     margin: 0 0 24px;
   }
   .cta h2 .serif{
@@ -789,7 +798,7 @@
   }
   .foot-grid{
     display:grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-template-columns: 1.4fr 1fr 1fr 1fr 1fr;
     gap:32px;
     margin-bottom:48px;
   }
@@ -841,9 +850,23 @@
     .quote{ padding:80px 0; }
     .cta{ padding:100px 0; }
   }
+  .more-link{
+    display:inline-flex; margin-top:28px;
+    color:var(--paper); font-weight:600;
+    text-decoration:underline; text-underline-offset:4px;
+  }
+  .ad-slot{ margin:0; min-height:0; }
+  .ad-slot:not([hidden]){
+    margin:32px 0 0; padding:24px 0 0;
+    border-top:1px solid var(--line-dark);
+    background:var(--ink-2);
+    min-height:50px;
+  }
+  .mobile-download-bar{ display:none; }
+
   @media (max-width: 620px){
     .wrap{ padding:0 20px; }
-    .nav-links a:not(.pill){ display:none; }
+    .hero{ padding:40px 0 56px; }
     .features{ grid-template-columns: 1fr; }
     .feature.wide{ grid-column: span 1; }
     .privacy-grid{ grid-template-columns: 1fr; }
@@ -855,6 +878,39 @@
     .art-stat:last-child{ grid-column: span 2; }
     .foot-grid{ grid-template-columns: 1fr; }
     .foot-bottom{ flex-direction:column; gap:12px; }
+  }
+  @media (max-width: 640px){
+    .nav{ height:64px; max-height:64px; box-sizing:border-box; }
+    .nav-row{
+      flex-wrap:nowrap; align-items:center; gap:8px;
+      height:100%; max-height:none; padding:0 16px;
+    }
+    .brand{ flex:none; font-size:16px; gap:8px; }
+    .brand-mark{ width:28px; height:28px; }
+    .nav-links{
+      flex:1; min-width:0; width:auto; flex-wrap:nowrap;
+      justify-content:flex-end; gap:10px; overflow:visible;
+    }
+    .nav-links a:not(.pill){
+      flex:none; display:inline-flex; align-items:center;
+      min-height:44px; padding:0 2px;
+      font-size:13px; line-height:1;
+    }
+    .nav-links a.nav-support,
+    .nav-links .pill{ display:none; }
+    .mobile-download-bar{
+      display:block; position:fixed; left:0; right:0; bottom:0; z-index:40;
+      padding:12px 16px calc(12px + env(safe-area-inset-bottom));
+      background:color-mix(in oklab, var(--ink) 88%, transparent);
+      backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px);
+      border-top:1px solid var(--line-dark);
+    }
+    .mobile-download-bar .pill{ width:100%; }
+    body{ padding-bottom:calc(68px + env(safe-area-inset-bottom)); }
+    .cta{ padding-bottom:calc(100px + 68px + env(safe-area-inset-bottom)); }
+  }
+  @media (min-width:700px){
+    .ad-slot:not([hidden]){ min-height:90px; }
   }
 
   /* ---------- Design polish (2026-08-21) ---------- */
@@ -937,32 +993,18 @@ p,li{text-wrap:pretty}
 <nav class="nav">
   <div class="wrap nav-row">
     <a href="#" class="brand" aria-label="DadYolked">
-      <span class="brand-mark"><img src="assets/dadyolked_logo_sm.webp" alt="" decoding="async" width="64" height="64"></span>
+      <span class="brand-mark"><img src="assets/dadyolked_logo_sm.webp" alt="DadYolked" decoding="async" width="64" height="64"></span>
       DadYolked
     </a>
     <div class="nav-links">
       <a href="#features">Features</a>
-      <a href="#stages">Stages</a>
-      <a href="#inside">Inside</a>
-      <a href="/tools/">Tools</a>
-      <a href="/newborn-care-tools/">Newborn hub</a>
-      <a href="/best-baby-tracker-app-for-dads/">For dads</a>
-      <a href="/dad-app-for-pregnancy/">Pregnancy app</a>
-      <a href="/private-baby-tracker-app/">Private tracker</a>
-      <a href="/hospital-bag-checklist-for-dad/">Hospital bag</a>
-      <a href="/paternity-leave-planner/">Leave plan</a>
-      <a href="/newborn-night-shift-schedule/">Night shifts</a>
-      <a href="/dad-recovery-checklist/">Dad Recovery</a>
-      <a href="/baby-tracker-template/">Baby template</a>
-      <a href="/newborn-medicine-log-template/">Medicine log</a>
+      <a href="/tools/">Guides</a>
       <a href="#privacy">Privacy</a>
-      <a href="/support/">Support</a>
-      <a class="pill primary" href="#download">Get the app</a>
+      <a class="nav-support" href="/support/">Support</a>
+      <a data-download-cta data-analytics-context="home_1" data-analytics-event="app_store_click" class="pill primary" href="https://apps.apple.com/app/id6773113095?ct=site_home_1&mt=8" target="_blank" rel="noopener">Get the app</a>
     </div>
   </div>
 </nav>
-  <div style="background:#C07A3E;color:#0E1320;text-align:center;padding:12px 20px;font-weight:700;font-size:15px;">Now live: Dad Recovery / Dad Readiness insights, Apple Watch quick logs, Siri shortcuts, widgets, Live Activities, and a privacy policy covering both the app and website.</div>
-
 <main id="main-content">
 
 <!-- ============== HERO ============== -->
@@ -975,14 +1017,14 @@ p,li{text-wrap:pretty}
         Run the <span class="accent">baby day.</span>
       </h1>
       <p class="lead">
-        One private app for the whole run: prep for birth, track feeds and diapers at 3 a.m., watch your own recovery, and find any answer fast — without an account, ads, or your data leaving the phone.
+        Log feeds and diapers with one thumb. Keep your own sleep and recovery in view. No account, and your data stays on your phone.
       </p>
       <div class="hero-cta">
-        <a data-analytics-context="home_1" data-analytics-event="app_store_click" href="https://apps.apple.com/app/id6773113095?ct=site_home_1&mt=8" class="pill primary" target="_blank" rel="noopener">
+        <a data-download-cta data-analytics-context="home_1" data-analytics-event="app_store_click" href="https://apps.apple.com/app/id6773113095?ct=site_home_1&mt=8" class="pill primary" target="_blank" rel="noopener">
           <svg width="14" height="16" viewBox="0 0 14 16" fill="currentColor" aria-hidden="true"><path d="M11.6 8.5c0-2.2 1.8-3.2 1.9-3.3-1-1.5-2.6-1.7-3.1-1.7-1.3-.1-2.6.8-3.3.8-.7 0-1.7-.8-2.9-.7-1.5 0-2.8.9-3.6 2.2-1.5 2.7-.4 6.7 1.1 8.9.7 1.1 1.6 2.3 2.7 2.2 1.1 0 1.5-.7 2.8-.7s1.7.7 2.8.7c1.2 0 1.9-1.1 2.6-2.2.8-1.2 1.2-2.5 1.2-2.5-.1 0-2.3-.9-2.2-3.7zM9.5 2c.6-.7 1-1.7.9-2.7-.9 0-1.9.6-2.5 1.3-.5.6-1 1.6-.9 2.6 1 .1 2-.5 2.5-1.2z"/></svg>
           Download for iPhone
         </a>
-        <a href="#features" class="pill ghost">See what it does →</a>
+        <a href="#screens" class="pill ghost">See screens</a>
       </div>
       <div class="hero-trust">
         <span><i class="dot"></i> Local-first and private by design</span>
@@ -1003,7 +1045,7 @@ p,li{text-wrap:pretty}
         <picture>
           <source media="(max-width: 700px)" srcset="assets/week20-400.webp">
           <source srcset="assets/week20-720.webp 720w, assets/week20.webp 1200w" sizes="571px">
-          <img src="assets/week20-720.webp" width="720" height="1080" onerror="this.onerror=null;this.parentElement.querySelectorAll('source').forEach(s=>s.remove());this.src='assets/week20.png'" alt="DadYolked week 20 illustration" fetchpriority="high" decoding="async">
+          <img src="assets/week20-720.webp" width="720" height="1080" alt="DadYolked week 20 illustration" fetchpriority="high" decoding="async">
         </picture>
       </div>
       <div class="art-stat-row">
@@ -1024,35 +1066,32 @@ p,li{text-wrap:pretty}
   </div>
 </header>
 
-<!-- ============== MARQUEE ============== -->
-<div class="strip" aria-hidden="true">
-  <div class="strip-row">
-    <span>Pregnancy timeline <i class="dot"></i></span>
-    <span>Kick counter <i class="dot"></i></span>
-    <span>Contractions <i class="dot"></i></span>
-    <span>Baby quick log <i class="dot"></i></span>
-    <span>Feeds <i class="dot"></i></span>
-    <span>Sleep locations <i class="dot"></i></span>
-    <span>Diapers <i class="dot"></i></span>
-    <span>Medicine <i class="dot"></i></span>
-    <span>Dad Recovery <i class="dot"></i></span>
-    <span>Universal search <i class="dot"></i></span>
-    <span>Siri shortcuts <i class="dot"></i></span>
-    <span>Apple Watch <i class="dot"></i></span>
-    <span>Pregnancy timeline <i class="dot"></i></span>
-    <span>Kick counter <i class="dot"></i></span>
-    <span>Contractions <i class="dot"></i></span>
-    <span>Baby quick log <i class="dot"></i></span>
-    <span>Feeds <i class="dot"></i></span>
-    <span>Sleep locations <i class="dot"></i></span>
-    <span>Diapers <i class="dot"></i></span>
-    <span>Medicine <i class="dot"></i></span>
-    <span>Dad Recovery <i class="dot"></i></span>
-    <span>Universal search <i class="dot"></i></span>
-    <span>Siri shortcuts <i class="dot"></i></span>
-    <span>Apple Watch <i class="dot"></i></span>
+<!-- ============== REAL APP SCREENS ============== -->
+<section id="screens" aria-labelledby="real-app-title">
+  <div class="wrap">
+    <div class="reveal section-head">
+      <div>
+        <span class="kicker">The actual app</span>
+        <h2 id="real-app-title">Today shows the next useful action, <span class="serif">not a wall of charts.</span></h2>
+      </div>
+      <p>Captured from the current iPhone build with demo family data.</p>
+    </div>
+    <div class="product-proof">
+      <figure class="reveal screen-card">
+        <img src="/assets/app-screens/milestones.webp" width="600" height="1305" loading="lazy" decoding="async" alt="DadYolked Milestones and Growth Guide screen on iPhone">
+        <figcaption><strong>Milestones without the scorecard</strong>Play ideas, bonding prompts, progress notes, and clear safety boundaries.</figcaption>
+      </figure>
+      <figure class="reveal screen-card">
+        <img src="/assets/app-screens/medicine.webp" width="600" height="1305" loading="lazy" decoding="async" alt="DadYolked medicine tracking screen on iPhone">
+        <figcaption><strong>Medicine history for tired brains</strong>Log what was given and when, while keeping dosing decisions with the prescriber.</figcaption>
+      </figure>
+      <figure class="reveal screen-card">
+        <img src="/assets/app-screens/appointments.webp" width="600" height="1305" loading="lazy" decoding="async" alt="DadYolked pediatric appointment organizer screen on iPhone">
+        <figcaption><strong>The medical tour, in one place</strong>Upcoming visits, notes, locations, medicine, support, and telehealth.</figcaption>
+      </figure>
+    </div>
   </div>
-</div>
+</section>
 
 <!-- ============== FEATURES ============== -->
 <section id="features">
@@ -1062,11 +1101,11 @@ p,li{text-wrap:pretty}
         <span class="kicker">What it does</span>
         <h2>From <span class="serif">what do I do?</span><br>to <em style="font-style:normal;">handled.</em></h2>
       </div>
-      <p>DadYolked isn't another tracker you feed data into and never hear back from. It tells you what to do next — for the pregnancy, the baby, and you.</p>
+      <p>DadYolked isn't another tracker you feed data into and never hear back from. It tells you what to do next, for the pregnancy, the baby, and you.</p>
     </div>
 
     <div class="features">
-      <article class="reveal feature wide">
+      <article class="reveal feature">
         <div class="glyph" aria-hidden="true"></div>
         <div>
           <h3>The Today screen, but for dads.</h3>
@@ -1076,15 +1115,15 @@ p,li{text-wrap:pretty}
       <article class="reveal reveal-d1 feature">
         <div class="glyph" aria-hidden="true"></div>
         <div>
-          <h3>Baby quick logs that survive 3 a.m.</h3>
-          <p>One-handed feeds, sleep, diapers, medicine, pumping/bottle details, and sleep locations. Big buttons. Fast saves. Fewer midnight guesses. <a href="/baby-feeding-tracker-app/">Feeding tracker guide →</a> · <a href="/feeding-schedule-by-age/">Feeding schedule guide →</a> · <a href="/starting-solids-checklist-for-dads/">Starting solids checklist →</a> · <a href="/baby-sleep-tracker-app/">Sleep tracker guide →</a> · <a href="/diaper-tracker-app-for-dads/">Diaper tracker guide →</a> · <a href="/baby-medicine-tracker-app/">Medicine tracker guide →</a> · <a href="/newborn-schedule-app-for-dads/">Schedule guide →</a> · <a href="/baby-tracker-with-pediatrician-report/">Pediatrician report guide →</a> · <a href="/baby-tracker-app-with-siri-widgets/">Siri/widgets guide →</a></p>
+          <h3>Baby quick logs, one thumb.</h3>
+          <p>One-handed feeds, sleep, diapers, medicine, pumping and bottle details, and sleep locations. Big buttons. Fast saves.</p>
         </div>
       </article>
       <article class="reveal feature">
         <div class="glyph" aria-hidden="true"></div>
         <div>
           <h3>Everything pregnancy, one place.</h3>
-          <p>Week-by-week context, birth prep, kick counter, contraction timer, hospital bag, appointments, and reminders in one stream. <a href="/dad-app-for-pregnancy/">See the dad pregnancy app guide →</a> · <a href="/kick-counter-app-for-dads/">Kick counter guide →</a> · <a href="/contraction-timer-for-dads/">Contraction timing guide →</a></p>
+          <p>Week-by-week context, birth prep, kick counter, contraction timer, hospital bag, appointments, and reminders in one stream.</p>
         </div>
       </article>
       <article class="reveal feature">
@@ -1097,72 +1136,15 @@ p,li{text-wrap:pretty}
       <article class="reveal feature">
         <div class="glyph" aria-hidden="true"></div>
         <div>
-          <h3>Search, coach, and remember.</h3>
-          <p>Universal Search finds logs, sleep locations, appointments, milestones, journals, and saved details. AI Coach keeps answers grounded in the family context you choose.</p>
+          <h3>Ask DadYolked</h3>
+          <p>Universal Search finds logs, sleep locations, appointments, milestones, journals, and saved details. Ask DadYolked for grounded answers about the active child. Private notes stay private.</p>
         </div>
       </article>
       <article class="reveal feature">
-        <div class="glyph" aria-hidden="true"></div>
-        <div>
-          <h3>Built for Apple surfaces.</h3>
-          <p>Apple Watch, Siri/App Intents, widgets, Dynamic Island, and Live Activities keep quick actions close without digging through the app. <a href="/baby-tracker-app-with-apple-watch/">See the Apple Watch baby tracker guide →</a></p>
-        </div>
-      </article>
-      <article class="reveal feature">
-        <div class="glyph" aria-hidden="true"></div>
-        <div>
-          <h3>Assistant, with boundaries.</h3>
-          <p>Ask grounded questions about the active child — with stage-safe answers, named log context, and review-first memory. Private notes stay private; off-topic questions stay out of the care digest.</p>
-        </div>
-      </article>
-      <article class="reveal feature wide">
         <div class="glyph" aria-hidden="true"></div>
         <div>
           <h3>Shared care on your terms.</h3>
-          <p>Invite a caregiver through Apple’s share flow. See Pending, Accepted, and Revoked clearly. Offline care logs retry automatically — dad journal and mood never join the share queue.</p>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ============== WHAT'S NEW ============== -->
-<section id="whats-new" style="padding-top:24px;padding-bottom:8px;">
-  <div class="wrap">
-    <div class="reveal section-head">
-      <div>
-        <span class="kicker">August 2026</span>
-        <h2>Built for 2&nbsp;AM. <span class="serif">Trusted by design.</span></h2>
-      </div>
-      <p class="lede">This update is about the 3 a.m. experience: less to read, fewer taps, and a clearer picture of who's doing what.</p>
-    </div>
-    <div class="feature-grid">
-      <article class="reveal feature">
-        <div class="glyph" aria-hidden="true"></div>
-        <div>
-          <h3>Night Quiet Today</h3>
-          <p>Overnight, Today shows current state and the next useful action only. Post-birth one-thumb logging stays available when you need it.</p>
-        </div>
-      </article>
-      <article class="reveal feature">
-        <div class="glyph" aria-hidden="true"></div>
-        <div>
-          <h3>Undo a mis-tap</h3>
-          <p>One-tap care logs get a five-second Undo window. Active feed and sleep timers can keep the screen awake so you don’t dig for the lock button.</p>
-        </div>
-      </article>
-      <article class="reveal feature">
-        <div class="glyph" aria-hidden="true"></div>
-        <div>
-          <h3>Right child, right stage</h3>
-          <p>Notifications, widgets, and Assistant ground on the active child. Wrong-stage questions get a calm redirect before model answers run.</p>
-        </div>
-      </article>
-      <article class="reveal feature">
-        <div class="glyph" aria-hidden="true"></div>
-        <div>
-          <h3>Share states you can read</h3>
-          <p>Pending acceptance, Accepted, Revoked, Last synced, and Offline pending — with a clear line that private journal never leaves on the care queue.</p>
+          <p>Invite a caregiver through Apple's share flow. See Pending, Accepted, and Revoked clearly. Offline care logs retry automatically. Dad journal and mood never join the share queue.</p>
         </div>
       </article>
     </div>
@@ -1183,7 +1165,7 @@ p,li{text-wrap:pretty}
     <div class="reveal stages">
       <article class="stage">
         <div class="reveal stage-art">
-          <img src="assets/week12.webp" srcset="assets/week12-480.webp 480w, assets/week12-720.webp 720w, assets/week12.webp 1200w" sizes="(max-width: 700px) calc(100vw - 56px), 520px" width="1200" height="1600" onerror="this.onerror=null;this.src='assets/week12.png';this.removeAttribute('srcset')" alt="Week 12 pregnancy illustration" loading="lazy" decoding="async">        </div>
+          <img src="assets/week12.webp" srcset="assets/week12-480.webp 480w, assets/week12-720.webp 720w, assets/week12.webp 1200w" sizes="(max-width: 700px) calc(100vw - 56px), 520px" width="1200" height="1600" alt="Week 12 pregnancy illustration" loading="lazy" decoding="async">        </div>
         <div class="reveal stage-body">
           <span class="num">Expecting</span>
           <h3>Prep, not panic.</h3>
@@ -1201,7 +1183,7 @@ p,li{text-wrap:pretty}
         <div class="reveal stage-body">
           <span class="num">Newborn</span>
           <h3>Survive the blur.</h3>
-          <p>Fast logs, sleep windows, feeding sides, diaper trends. The 3 a.m. screen that doesn't make you cry harder.</p>
+          <p>Fast logs, sleep windows, feeding sides, diaper trends. The screen stays readable when you are tired.</p>
           <ul>
             <li>Feeds, naps, diapers</li>
             <li>Routine builder</li>
@@ -1227,151 +1209,43 @@ p,li{text-wrap:pretty}
   </div>
 </section>
 
-<!-- ============== INSIDE THE APP ============== -->
-<section id="inside" class="inside">
+<!-- ============== GUIDES ============== -->
+<section id="guides">
   <div class="wrap">
     <div class="reveal section-head">
       <div>
-        <span class="kicker">Inside the app</span>
-        <h2>The dashboard that <span class="serif">acts like a co-pilot,</span> not a database.</h2>
+        <span class="kicker">Guides</span>
+        <h2>Pages for the job in front of you.</h2>
       </div>
-      <p>Tap-friendly. One-handed. Built around the next thing you have to do, instead of a wall of charts you will never open.</p>
-    </div>
-
-    <div class="reveal modules">
-      <div class="reveal module">
-        <span class="kicker modkicker">Today</span>
-        <h3>What is next, said simply.</h3>
-        <p>A practical dashboard for feeds, naps, diapers, meds, appointments, dad recovery, and pregnancy prep. It changes with the profile instead of making you manage tabs.</p>
-
-        <div class="today-mock" aria-hidden="true">
-          <div class="row">
-            <div class="icon">F</div>
-            <div>
-              <div class="t">Next feed window</div>
-              <div class="s">Bottle · 3.5 oz · in 1h 12m</div>
-            </div>
-            <div class="v">14:32</div>
-          </div>
-          <div class="row">
-            <div class="icon">N</div>
-            <div>
-              <div class="t">Sleep location trend</div>
-              <div class="s">Crib 6 · Bassinet 3 · Contact 2</div>
-            </div>
-            <div class="v">+38m</div>
-          </div>
-          <div class="row">
-            <div class="icon">M</div>
-            <div>
-              <div class="t">Dad Recovery</div>
-              <div class="s">Sleep debt rising · plan shifts</div>
-            </div>
-            <div class="v">soon</div>
-          </div>
-          <div class="row">
-            <div class="icon">A</div>
-            <div>
-              <div class="t">Ask / search</div>
-              <div class="s">“sleep location” finds every matching log</div>
-            </div>
-            <div class="v">Thu</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="reveal module">
-        <span class="kicker modkicker">Pregnancy + post-birth</span>
-        <h3>Pregnancy prep becomes baby ops.</h3>
-        <p>Expecting mode keeps birth prep, kicks, contractions, and week-by-week context in front. Post-birth mode shifts to quick logs, recovery, routines, and pediatrician-ready history.</p>
-
-        <div class="timeline" aria-hidden="true">
-          <div class="lane">
-            <div class="week filled"></div>
-            <div class="week filled"></div>
-            <div class="week filled"></div>
-            <div class="week filled"></div>
-            <div class="week filled"></div>
-            <div class="week filled"></div>
-            <div class="week filled"></div>
-            <div class="week active"></div>
-            <div class="week"></div>
-            <div class="week"></div>
-            <div class="week"></div>
-            <div class="week"></div>
-            <div class="week"></div>
-            <div class="week"></div>
-            <div class="week"></div>
-            <div class="week"></div>
-          </div>
-          <div class="axis">
-            <span>Pregnancy prep</span>
-            <span>Post-birth ops →</span>
-          </div>
-
-          <div class="timeline-fact">
-            <div class="cell">
-              <div class="big">40<span class="unit">wk</span></div>
-              <div class="lbl">Pregnancy guide</div>
-            </div>
-            <div class="cell">
-              <div class="big">24/7<span class="unit"></span></div>
-              <div class="lbl">Baby quick logs</div>
-            </div>
-            <div class="cell">
-              <div class="big">1<span class="unit">tap</span></div>
-              <div class="lbl">Watch + Siri actions</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============== REAL APP SCREENS ============== -->
-<section aria-labelledby="real-app-title">
-  <div class="wrap">
-    <div class="reveal section-head">
-      <div>
-        <span class="kicker">The actual app</span>
-        <h2 id="real-app-title">Real screens. <span class="serif">No concept mockups.</span></h2>
-      </div>
-      <p>Captured from the current iPhone build with demo family data.</p>
-    </div>
-    <div class="product-proof">
-      <figure class="reveal screen-card">
-        <img src="/assets/app-screens/milestones.webp" width="600" height="1305" loading="lazy" decoding="async" alt="DadYolked Milestones and Growth Guide screen on iPhone">
-        <figcaption><strong>Milestones without the scorecard</strong>Play ideas, bonding prompts, progress notes, and clear safety boundaries.</figcaption>
-      </figure>
-      <figure class="reveal screen-card">
-        <img src="/assets/app-screens/medicine.webp" width="600" height="1305" loading="lazy" decoding="async" alt="DadYolked medicine tracking screen on iPhone">
-        <figcaption><strong>Medicine history for tired brains</strong>Log what was given and when, while keeping dosing decisions with the prescriber.</figcaption>
-      </figure>
-      <figure class="reveal screen-card">
-        <img src="/assets/app-screens/appointments.webp" width="600" height="1305" loading="lazy" decoding="async" alt="DadYolked pediatric appointment organizer screen on iPhone">
-        <figcaption><strong>The medical tour, in one place</strong>Upcoming visits, notes, locations, medicine, support, and telehealth.</figcaption>
-      </figure>
-    </div>
-  </div>
-</section>
-
-<!-- ============== START HERE ============== -->
-<section aria-labelledby="start-here-title">
-  <div class="wrap">
-    <div class="reveal section-head">
-      <div>
-        <span class="kicker">Start with the job in front of you</span>
-        <h2 id="start-here-title">Find the useful page. <span class="serif">Skip the maze.</span></h2>
-      </div>
-      <p>Four practical starting points, depending on what tonight looks like.</p>
+      <p>Short checklists and explainers. The rest of the library is on the guides hub.</p>
     </div>
     <div class="faq-grid">
-      <article class="reveal faq-card"><h3>Still pregnant</h3><p>Birth prep, kick counts, contractions, appointments, and the hospital bag.</p><p><a href="/dad-app-for-pregnancy/">Pregnancy guide for dads →</a></p></article>
-      <article class="reveal faq-card"><h3>Running the newborn shift</h3><p>Feeds, diapers, sleep, medicine, schedules, and quick calculators.</p><p><a href="/newborn-care-tools/">Newborn care tools →</a></p></article>
-      <article class="reveal faq-card"><h3>Handing care to somebody else</h3><p>Night shifts, caregiver notes, emergency contacts, and pediatrician handoffs.</p><p><a href="/baby-caregiver-tools/">Caregiver handoff tools →</a></p></article>
-      <article class="reveal faq-card"><h3>Dad is running on fumes</h3><p>A private check-in for sleep, energy, mood, support, and the next conversation.</p><p><a href="/dad-recovery-checklist/">Dad recovery checklist →</a></p></article>
+      <article class="reveal faq-card">
+        <h3><a href="/hospital-bag-checklist-for-dad/">Hospital bag checklist</a></h3>
+        <p>Chargers, snacks, documents, layers, and the baby basics, packed for the person doing the support.</p>
+      </article>
+      <article class="reveal faq-card">
+        <h3><a href="/newborn-night-shift-schedule/">Night shift schedule</a></h3>
+        <p>Split the overnight hours and hand the next adult a clear picture.</p>
+      </article>
+      <article class="reveal faq-card">
+        <h3><a href="/safe-sleep-for-dads/">Safe sleep</a></h3>
+        <p>The rules the AAP and the Lullaby Trust publish, including the places they do not match.</p>
+      </article>
+      <article class="reveal faq-card">
+        <h3><a href="/dad-recovery-checklist/">Dad recovery checklist</a></h3>
+        <p>A private check on sleep, food, mood, and support. Not a diagnosis.</p>
+      </article>
+      <article class="reveal faq-card">
+        <h3><a href="/baby-fever-when-to-call-for-dads/">Fever, and when to call</a></h3>
+        <p>Published fever cutoffs side by side, and which rule a reading meets.</p>
+      </article>
+      <article class="reveal faq-card">
+        <h3><a href="/dad-app-for-pregnancy/">Pregnancy guide for dads</a></h3>
+        <p>Kick counts, contractions, the hospital bag, and birth prep in one place.</p>
+      </article>
     </div>
+    <a class="more-link" href="/tools/">See all guides</a>
   </div>
 </section>
 
@@ -1392,9 +1266,7 @@ p,li{text-wrap:pretty}
         <span class="kicker">Privacy</span>
         <h2>Your family data is <span class="serif">not</span> our business model.</h2>
       </div>
-      <p>Local-first storage, explicit CloudKit sharing, protected Assistant history, controlled exports, plain-language privacy, and direct support. The site exists so families can understand exactly what the app does before they install it.</p>
-      <p><a href="/private-baby-tracker-app/">Read the private baby tracker guide →</a></p>
-      <p><a href="/local-first-baby-tracker-app/">Compare local-first baby tracking →</a></p>
+      <p>Local-first storage, explicit CloudKit sharing, protected Ask DadYolked history, controlled exports, and plain-language privacy. <a href="/privacy/">Read the privacy policy</a></p>
     </div>
 
     <div class="privacy-grid">
@@ -1408,11 +1280,11 @@ p,li{text-wrap:pretty}
       </article>
       <article class="reveal priv-card">
         <h3>Sharing stays explicit</h3>
-        <p>Caregiver access comes from accepting Apple’s CKShare invitation. A URL, code, label, or SMS never grants it.</p>
+        <p>Caregiver access comes from accepting Apple's CKShare invitation. A URL, code, label, or SMS never grants it.</p>
       </article>
       <article class="reveal priv-card">
         <h3>Your data, exportable</h3>
-        <p>Export supported data as JSON or CSV for visits, backup, or moving off the app. Assistant history can be included in the JSON backup.</p>
+        <p>Export supported data as JSON or CSV for visits, backup, or moving off the app. Ask DadYolked history can be included in the JSON backup.</p>
       </article>
     </div>
   </div>
@@ -1454,7 +1326,7 @@ p,li{text-wrap:pretty}
   <div class="wrap">
     <span class="kicker" style="justify-content:center; display:inline-flex;">Ready when you are</span>
     <h2 class="display" style="margin-top:18px;">
-      Learn the app. <span class="serif">Then run the day.</span>
+      Get the app. <span class="serif">Run the next feed.</span>
     </h2>
     <p>Download DadYolked for iPhone or use this website to understand the app, privacy, support, and App Store links. Free to start, no account required, built for dads doing the work.</p>
     <div class="cta-row">
@@ -1469,29 +1341,45 @@ p,li{text-wrap:pretty}
 
 </main>
 
+<aside class="ad-slot" data-ad-slot="footer" aria-label="Sponsored" hidden></aside>
+
 <!-- ============== FOOTER ============== -->
 <footer>
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <a href="#" class="brand">
-          <span class="brand-mark"><img src="assets/dadyolked_logo_sm.webp" alt="" decoding="async" width="64" height="64"></span>
+        <a href="#" class="brand" aria-label="DadYolked">
+          <span class="brand-mark"><img src="assets/dadyolked_logo_sm.webp" alt="DadYolked" decoding="async" width="64" height="64"></span>
           DadYolked
         </a>
-        <p class="foot-blurb">The online home for DadYolked: pregnancy prep, newborn tracking, dad recovery, privacy, support, and App Store links.</p>
+        <p class="foot-blurb">Pregnancy prep, newborn logs, dad recovery, privacy, and support.</p>
       </div>
       <div>
         <p class="foot-heading">Product</p>
         <ul>
           <li><a href="#features">Features</a></li>
-          <li><a href="#stages">Every stage</a></li>
-          <li><a href="#inside">Inside the app</a></li>
-          <li><a href="/tools/">Free tools</a></li>
-          <li><a href="/best-baby-tracker-app-for-dads/">Best baby tracker for dads</a></li>
-          <li><a href="/dad-app-for-pregnancy/">Dad app for pregnancy</a></li>
-          <li><a href="/private-baby-tracker-app/">Private baby tracker app</a></li>
-          <li><a href="/baby-tracker-app-with-apple-watch/">Baby tracker with Apple Watch</a></li>
+          <li><a href="#screens">Screens</a></li>
+          <li><a href="#stages">Stages</a></li>
+          <li><a href="#privacy">Privacy</a></li>
           <li><a data-analytics-context="home_3" data-analytics-event="app_store_click" href="https://apps.apple.com/app/id6773113095?ct=site_home_3&mt=8" target="_blank" rel="noopener">Download</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="foot-heading">Guides</p>
+        <ul>
+          <li><a href="/tools/">All guides</a></li>
+          <li><a href="/newborn-care-tools/">Newborn hub</a></li>
+          <li><a href="/best-baby-tracker-app-for-dads/">For dads</a></li>
+          <li><a href="/dad-app-for-pregnancy/">Pregnancy</a></li>
+          <li><a href="/private-baby-tracker-app/">Private tracker</a></li>
+          <li><a href="/local-first-baby-tracker-app/">Local-first tracker</a></li>
+          <li><a href="/baby-tracker-app-with-apple-watch/">Apple Watch</a></li>
+          <li><a href="/hospital-bag-checklist-for-dad/">Hospital bag</a></li>
+          <li><a href="/paternity-leave-planner/">Leave plan</a></li>
+          <li><a href="/newborn-night-shift-schedule/">Night shifts</a></li>
+          <li><a href="/dad-recovery-checklist/">Dad recovery</a></li>
+          <li><a href="/baby-tracker-template/">Baby template</a></li>
+          <li><a href="/newborn-medicine-log-template/">Medicine log</a></li>
         </ul>
       </div>
       <div>
@@ -1507,7 +1395,8 @@ p,li{text-wrap:pretty}
       <div>
         <p class="foot-heading">Legal</p>
         <ul>
-          <li><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a></li>
+          <li><a href="/privacy/">Privacy</a></li>
+          <li><a href="/terms/">Terms</a></li>
           <li><a href="/support/">Support</a></li>
           <li><a href="mailto:support@dadyolked.com">Privacy questions</a></li>
         </ul>
@@ -1520,7 +1409,17 @@ p,li{text-wrap:pretty}
   </div>
 </footer>
 
+<div class="mobile-download-bar">
+  <a data-download-cta data-analytics-context="home_1" data-analytics-event="app_store_click" href="https://apps.apple.com/app/id6773113095?ct=site_home_1&mt=8" class="pill primary" target="_blank" rel="noopener">Download for iPhone</a>
+</div>
 
+<script>
+(function(){
+  var href = document.documentElement.getAttribute('data-download-href');
+  if (!href) return;
+  document.querySelectorAll('[data-download-cta]').forEach(function(el){ el.href = href; });
+})();
+</script>
 <script>
 (function(){
   if (!('IntersectionObserver' in window)) { document.querySelectorAll('.reveal').forEach(el=>el.classList.add('in')); return; }
