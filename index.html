@@ -880,18 +880,23 @@
     .foot-bottom{ flex-direction:column; gap:12px; }
   }
   @media (max-width: 640px){
+    .nav{ height:64px; max-height:64px; box-sizing:border-box; }
     .nav-row{
-      flex-wrap:nowrap; align-items:center; gap:12px;
-      padding:10px 20px; max-height:64px;
+      flex-wrap:nowrap; align-items:center; gap:8px;
+      height:100%; max-height:none; padding:0 16px;
     }
     .brand{ flex:none; font-size:16px; gap:8px; }
     .brand-mark{ width:28px; height:28px; }
     .nav-links{
-      flex:1; width:auto; flex-wrap:nowrap; justify-content:flex-end;
-      gap:14px; overflow-x:auto; scrollbar-width:none;
+      flex:1; min-width:0; width:auto; flex-wrap:nowrap;
+      justify-content:flex-end; gap:10px; overflow:visible;
     }
-    .nav-links::-webkit-scrollbar{ display:none; }
-    .nav-links a:not(.pill){ flex:none; font-size:13px; line-height:1; padding:8px 0; }
+    .nav-links a:not(.pill){
+      flex:none; display:inline-flex; align-items:center;
+      min-height:44px; padding:0 2px;
+      font-size:13px; line-height:1;
+    }
+    .nav-links a.nav-support,
     .nav-links .pill{ display:none; }
     .mobile-download-bar{
       display:block; position:fixed; left:0; right:0; bottom:0; z-index:40;
@@ -995,7 +1000,7 @@ p,li{text-wrap:pretty}
       <a href="#features">Features</a>
       <a href="/tools/">Guides</a>
       <a href="#privacy">Privacy</a>
-      <a href="/support/">Support</a>
+      <a class="nav-support" href="/support/">Support</a>
       <a data-download-cta data-analytics-context="home_1" data-analytics-event="app_store_click" class="pill primary" href="https://apps.apple.com/app/id6773113095?ct=site_home_1&mt=8" target="_blank" rel="noopener">Get the app</a>
     </div>
   </div>
