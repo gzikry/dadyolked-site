@@ -191,14 +191,14 @@ main > section > .table-wrap > table{max-width:100%}
     <p class="lead">This privacy policy covers both <strong>dadyolked.com</strong> and the <strong>DadYolked iOS app</strong> (available on the App Store). DadYolked is built to be local-first and private by design.</p>
 
     <div class="card">
-      <p><strong>Last updated:</strong> August 2, 2026</p>
+      <p><strong>Last updated:</strong> October 28, 2026</p>
 
     <div class="callout">
-        <p><strong>v1.1 updates:</strong> Dynamic background-refreshed notifications, fully functional Siri and App Intents that adapt to pregnancy or post-birth mode, improved birth preparation checklist, and stronger deep-link support for widgets and Live Activities. All new features continue to keep your family data local-first on your device with the same privacy commitments.</p>
+        <p><strong>v1.1:</strong> Ask DadYolked is free and on-device (Apple Intelligence where the iPhone supports it), with visible AAP, ACOG, CDC, and WHO citations and a tappable medical disclaimer. Optional DadWingman is $4.99 per month or $39.99 per year, billed and managed in Apple ID Settings. Apple processes the charge. DadYolked does not receive your payment card. Optional partner sync is a private iCloud CKShare for allowlisted baby care logs only.</p>
     </div>
 
       <div class="callout">
-        <p><strong>The short version:</strong> DadYolked is local-first. Parenting data stays on your device unless you explicitly export it, share it through Apple’s CloudKit shared-care flow, or enable an Apple system integration. Assistant Q&amp;A history is stored in protected local app storage and can be cleared or included in an export. We use Firebase Crashlytics to find and fix crashes. We do not sell your data, run ads, or share your information with data brokers.</p>
+        <p><strong>The short version:</strong> DadYolked is local-first. Family records stay on your iPhone in on-device storage unless you export them or turn on optional private iCloud shared care. That share uses Apple’s CKShare and only the allowlisted baby workspace: feeds, diapers, sleep, medicine, and growth. Private dad check-ins, journals, mood logs, HealthKit reads, and Assistant memory never leave your device. We use Firebase Crashlytics for crash reporting only. There are zero ad trackers, zero data brokers, and zero third-party analytics SDKs.</p>
       </div>
 
       <h2>1. Who we are</h2>
@@ -214,9 +214,9 @@ main > section > .table-wrap > table{max-width:100%}
         <div class="mini"><strong>Appointments & reminders</strong><span>Dates, notes, checklist states, and local notification preferences.</span></div>
       </div>
 
-      <h2>3. Storage and shared care through Apple CloudKit</h2>
-      <p>DadYolked does not operate a general-purpose parenting-data server. If you choose to invite a caregiver, DadYolked uses Apple CloudKit and Apple’s CKShare system to synchronize the specific shared-care workspace you select. The Apple share is the authorization boundary, not an invitation URL, SMS message, caregiver label, or code.</p>
-      <p>A recipient must review and accept Apple’s share invitation before access is granted. Shared records may include the care logs and profile information you deliberately place in that workspace. Private journal bodies, private mood notes, and other non-shared records remain outside the shared projection unless you explicitly share them through an app flow. Apple’s handling of iCloud data is governed by <a href="https://www.apple.com/legal/privacy/">Apple’s Privacy Policy</a>.</p>
+      <h2>3. Storage and optional private iCloud shared care</h2>
+      <p>DadYolked does not operate a general-purpose parenting-data server. Storage is local-first on the device. If you choose to invite a partner or caregiver, DadYolked uses Apple CloudKit and Apple’s CKShare system for one shared-care workspace. The Apple share is the authorization boundary, not an invitation URL, SMS message, caregiver label, or code.</p>
+      <p>The shared workspace is allowlisted. It can include baby care logs you place in it: feeds, diapers, sleep, medicine, and growth. A recipient must review and accept Apple’s share invitation before access is granted. Private dad check-ins, journals, mood logs, HealthKit reads, and Assistant memory are not part of that projection and are not uploaded for partner sync. You can still export your own copy from the app. Apple’s handling of iCloud data is governed by <a href="https://www.apple.com/legal/privacy/">Apple’s Privacy Policy</a>.</p>
 
       <h2>4. Photos</h2>
       <p>Photos are selected through Apple’s system photo picker and are used only for in-app memories, milestones, profiles, or journal features you choose. We do not use photos for advertising or brokered data sale.</p>
@@ -245,14 +245,15 @@ main > section > .table-wrap > table{max-width:100%}
 
       <h2>8. No ads, no tracking, no data brokers</h2>
       <ul>
-        <li>No advertising SDKs.</li>
-        <li>No data broker integrations.</li>
-        <li>No sale, rental, or trade of personal data.</li>
-        <li>No third-party tracking for advertising.</li>
+        <li>Zero ad trackers and no advertising SDKs.</li>
+        <li>Zero data brokers. No sale, rental, or trade of personal data.</li>
+        <li>Zero third-party analytics SDKs.</li>
+        <li>Crashlytics is used for crash reporting only, not for advertising or product analytics.</li>
       </ul>
+      <p>DadWingman purchases are processed by Apple. DadYolked does not receive your payment card number. Manage or cancel the subscription in Apple ID Settings.</p>
 
       <h2>9. Assistant Q&amp;A and on-device intelligence</h2>
-      <p>Assistant questions and answers are stored locally in protected app storage to provide bounded history and follow-up context. You can clear history for one child or all children. Generic Assistant requests receive minimal active-child context; private journal bodies, mood notes, and free-text medical/allergen details are not automatically included.</p>
+      <p>Ask DadYolked questions and answers are stored locally in protected app storage to provide bounded history and follow-up context. That Assistant memory stays on the device and is not included in the CKShare baby-care workspace. You can clear history for one child or all children. Generic Assistant requests receive minimal active-child context; private journal bodies, mood notes, and free-text medical/allergen details are not automatically included.</p>
       <p>On supported devices, Apple on-device intelligence may refine responses. When unavailable, DadYolked uses deterministic local fallbacks. DadYolked does not send parenting logs to an unapproved external AI service. Assistant-generated text is informational and cannot silently perform privileged app actions.</p>
 
       <h2>10. Third-party processors</h2>
