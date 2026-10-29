@@ -224,7 +224,42 @@ p,li{text-wrap:pretty}
 .pill.primary:hover{background:#D08848}
 .pill.ghost{background:transparent;color:var(--paper);border-color:rgba(255,255,255,0.28)}
 .pill.ghost:hover{border-color:var(--paper)}
+button.pill,button.soon-inline{
+  font-family:inherit;
+  appearance:none;
+  -webkit-appearance:none;
+}
+.pill.soon{
+  background:rgba(192,122,62,0.16);
+  color:var(--paper);
+  border-color:#E0975A;
+  box-shadow:none;
+  cursor:not-allowed;
+  white-space:normal;
+  height:auto;
+  line-height:1.25;
+  text-align:center;
+  text-wrap:balance;
+}
+.pill.soon:hover,.pill.soon:focus{background:rgba(192,122,62,0.16);color:var(--paper);border-color:#E0975A}
 .nav-cta{margin-left:8px}
+button.soon-inline{
+  display:inline-block;
+  max-width:100%;
+  margin:0;
+  padding:0 0 1px;
+  border:0;
+  border-bottom:1px dashed #E0975A;
+  background:transparent;
+  color:var(--paper);
+  font-size:14.5px;
+  font-weight:650;
+  line-height:1.45;
+  text-align:left;
+  text-decoration:none;
+  cursor:not-allowed;
+}
+button.soon-inline:hover,button.soon-inline:focus{color:var(--paper)}
 
 .hero{padding:64px 0 36px}
 .hero-grid{
@@ -376,6 +411,10 @@ footer{border-top:1px solid var(--line-dark);padding:48px 0 64px;background:var(
 
 .sticky-cta{display:none}
 
+@media (max-width:1100px){
+  .nav-row{flex-wrap:wrap}
+  .nav-cta.soon{margin-left:auto;max-width:100%}
+}
 @media (max-width:980px){
   .hero-grid,.section-head,.flows,.stages,.privacy-grid,.faq-grid{grid-template-columns:1fr}
   .privacy-grid{grid-template-columns:1fr 1fr}
@@ -388,7 +427,7 @@ footer{border-top:1px solid var(--line-dark);padding:48px 0 64px;background:var(
 @media (max-width:768px){
   html{scroll-padding-bottom:96px}
   .wrap{padding:0 20px}
-  .nav-row{flex-wrap:wrap;align-items:center;min-height:0;padding:10px 0 8px}
+  .nav-row{flex-wrap:wrap;align-items:center;min-height:0;padding:10px 20px 8px}
   .nav-links{
     order:3;width:100%;margin-left:0;overflow-x:auto;flex-wrap:nowrap;
     gap:16px;padding:2px 0 6px;-webkit-overflow-scrolling:touch;scrollbar-width:none;
@@ -396,6 +435,8 @@ footer{border-top:1px solid var(--line-dark);padding:48px 0 64px;background:var(
   .nav-links::-webkit-scrollbar{display:none}
   .nav-links a{display:inline-flex;align-items:center;min-height:44px}
   .nav-cta{margin-left:auto}
+  .nav-cta.soon{flex:1 1 100%;width:auto;max-width:100%;margin:6px 0 2px;height:auto}
+  .hero-cta .pill.soon,.sticky-cta .pill.soon{width:100%;height:auto;white-space:normal}
   .hero{padding:16px 0 8px}
   .hero h1{margin:8px 0 10px}
   .lead{margin-bottom:14px}
@@ -412,7 +453,8 @@ footer{border-top:1px solid var(--line-dark);padding:48px 0 64px;background:var(
     backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
   }
   .sticky-cta .pill{width:100%;min-height:48px;height:48px}
-  body{padding-bottom:calc(72px + env(safe-area-inset-bottom))}
+  .sticky-cta .pill.soon{height:auto;padding-top:12px;padding-bottom:12px}
+  body{padding-bottom:calc(96px + env(safe-area-inset-bottom))}
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
@@ -442,10 +484,10 @@ footer{border-top:1px solid var(--line-dark);padding:48px 0 64px;background:var(
       <a href="#faq">FAQ</a>
       <a href="/tools/">Tools &amp; Guides</a>
     </div>
-    <a class="pill primary nav-cta" data-analytics-context="home_nav" data-analytics-event="app_store_click" href="https://apps.apple.com/app/id6773113095?ct=site_home_nav&mt=8" target="_blank" rel="noopener">
+    <button type="button" class="pill soon nav-cta" data-app-store="home_nav" data-analytics-context="home_nav" data-analytics-event="app_store_click" aria-disabled="true">
       <svg width="14" height="16" viewBox="0 0 14 16" fill="currentColor" aria-hidden="true"><path d="M11.6 8.5c0-2.2 1.8-3.2 1.9-3.3-1-1.5-2.6-1.7-3.1-1.7-1.3-.1-2.6.8-3.3.8-.7 0-1.7-.8-2.9-.7-1.5 0-2.8.9-3.6 2.2-1.5 2.7-.4 6.7 1.1 8.9.7 1.1 1.6 2.3 2.7 2.2 1.1 0 1.5-.7 2.8-.7s1.7.7 2.8.7c1.2 0 1.9-1.1 2.6-2.2.8-1.2 1.2-2.5 1.2-2.5-.1 0-2.3-.9-2.2-3.7zM9.5 2c.6-.7 1-1.7.9-2.7-.9 0-1.9.6-2.5 1.3-.5.6-1 1.6-.9 2.6 1 .1 2-.5 2.5-1.2z"/></svg>
-      Get the app
-    </a>
+      Coming soon to the App Store
+    </button>
   </div>
 </nav>
 
@@ -457,10 +499,10 @@ footer{border-top:1px solid var(--line-dark);padding:48px 0 64px;background:var(
         <h1>From First Ultrasound to 3 AM Feeds — <span class="serif">Built for Dads</span></h1>
         <p class="lead">A stage-aware companion for the dad holding the phone. Today’s briefing, one-tap care logs, and Ask DadYolked are free. Invite a partner only if you want private iCloud shared care.</p>
         <div class="hero-cta">
-          <a class="pill primary" data-analytics-context="home_1" data-analytics-event="app_store_click" href="https://apps.apple.com/app/id6773113095?ct=site_home_1&mt=8" target="_blank" rel="noopener">
+          <button type="button" class="pill soon" data-app-store="home_1" data-analytics-context="home_1" data-analytics-event="app_store_click" aria-disabled="true">
             <svg width="14" height="16" viewBox="0 0 14 16" fill="currentColor" aria-hidden="true"><path d="M11.6 8.5c0-2.2 1.8-3.2 1.9-3.3-1-1.5-2.6-1.7-3.1-1.7-1.3-.1-2.6.8-3.3.8-.7 0-1.7-.8-2.9-.7-1.5 0-2.8.9-3.6 2.2-1.5 2.7-.4 6.7 1.1 8.9.7 1.1 1.6 2.3 2.7 2.2 1.1 0 1.5-.7 2.8-.7s1.7.7 2.8.7c1.2 0 1.9-1.1 2.6-2.2.8-1.2 1.2-2.5 1.2-2.5-.1 0-2.3-.9-2.2-3.7zM9.5 2c.6-.7 1-1.7.9-2.7-.9 0-1.9.6-2.5 1.3-.5.6-1 1.6-.9 2.6 1 .1 2-.5 2.5-1.2z"/></svg>
-            Download on the App Store
-          </a>
+            Coming soon to the App Store
+          </button>
           <a class="pill ghost" href="#features">See the three flows</a>
         </div>
         <p class="price-note">Free to download. Optional DadWingman is $4.99/mo or $39.99/yr, managed in Apple ID Settings.</p>
@@ -704,10 +746,10 @@ footer{border-top:1px solid var(--line-dark);padding:48px 0 64px;background:var(
       <h2 id="download-title">Get the app. <span class="serif">Run the night.</span></h2>
       <p>Free on iPhone. Ask DadYolked included. DadWingman is there if you want the digest, Tonight Mode, partner handoff, pediatrician PDF, and Memory.</p>
       <div class="cta-row">
-        <a class="pill primary" data-analytics-context="home_2" data-analytics-event="app_store_click" href="https://apps.apple.com/app/id6773113095?ct=site_home_2&mt=8" target="_blank" rel="noopener">
+        <button type="button" class="pill soon" data-app-store="home_2" data-analytics-context="home_2" data-analytics-event="app_store_click" aria-disabled="true">
           <svg width="14" height="16" viewBox="0 0 14 16" fill="currentColor" aria-hidden="true"><path d="M11.6 8.5c0-2.2 1.8-3.2 1.9-3.3-1-1.5-2.6-1.7-3.1-1.7-1.3-.1-2.6.8-3.3.8-.7 0-1.7-.8-2.9-.7-1.5 0-2.8.9-3.6 2.2-1.5 2.7-.4 6.7 1.1 8.9.7 1.1 1.6 2.3 2.7 2.2 1.1 0 1.5-.7 2.8-.7s1.7.7 2.8.7c1.2 0 1.9-1.1 2.6-2.2.8-1.2 1.2-2.5 1.2-2.5-.1 0-2.3-.9-2.2-3.7zM9.5 2c.6-.7 1-1.7.9-2.7-.9 0-1.9.6-2.5 1.3-.5.6-1 1.6-.9 2.6 1 .1 2-.5 2.5-1.2z"/></svg>
-          Download on the App Store
-        </a>
+          Coming soon to the App Store
+        </button>
         <a class="pill ghost" href="/privacy/">Read the privacy policy</a>
       </div>
     </div>
@@ -734,7 +776,7 @@ footer{border-top:1px solid var(--line-dark);padding:48px 0 64px;background:var(
           <li><a href="#faq">FAQ</a></li>
           <li><a href="/tools/">Tools &amp; Guides</a></li>
           <li><a href="/dadwingman/">DadWingman</a></li>
-          <li><a data-analytics-context="home_3" data-analytics-event="app_store_click" href="https://apps.apple.com/app/id6773113095?ct=site_home_3&mt=8" target="_blank" rel="noopener">Download</a></li>
+          <li><button type="button" class="soon-inline" data-app-store="home_3" data-analytics-context="home_3" data-analytics-event="app_store_click" aria-disabled="true">Coming soon to the App Store</button></li>
         </ul>
       </div>
       <div>
@@ -744,7 +786,7 @@ footer{border-top:1px solid var(--line-dark);padding:48px 0 64px;background:var(
           <li><a href="/editorial-standards/">Editorial standards</a></li>
           <li><a href="/support/">Support</a></li>
           <li><a href="mailto:support@dadyolked.com">Contact</a></li>
-          <li><a data-analytics-context="home_4" data-analytics-event="app_store_click" href="https://apps.apple.com/app/id6773113095?ct=site_home_4&mt=8" target="_blank" rel="noopener">App Store</a></li>
+          <li><button type="button" class="soon-inline" data-app-store="home_4" data-analytics-context="home_4" data-analytics-event="app_store_click" aria-disabled="true">Coming soon to the App Store</button></li>
         </ul>
       </div>
       <div>
@@ -869,11 +911,12 @@ footer{border-top:1px solid var(--line-dark);padding:48px 0 64px;background:var(
   </div>
 </footer>
 
-<div class="sticky-cta" role="region" aria-label="Download DadYolked">
-  <a class="pill primary" data-analytics-context="home_sticky" data-analytics-event="app_store_click" href="https://apps.apple.com/app/id6773113095?ct=site_home_sticky&mt=8" target="_blank" rel="noopener">
+<div class="sticky-cta" role="region" aria-label="App Store availability">
+  <button type="button" class="pill soon" data-app-store="home_sticky" data-analytics-context="home_sticky" data-analytics-event="app_store_click" aria-disabled="true">
     <svg width="14" height="16" viewBox="0 0 14 16" fill="currentColor" aria-hidden="true"><path d="M11.6 8.5c0-2.2 1.8-3.2 1.9-3.3-1-1.5-2.6-1.7-3.1-1.7-1.3-.1-2.6.8-3.3.8-.7 0-1.7-.8-2.9-.7-1.5 0-2.8.9-3.6 2.2-1.5 2.7-.4 6.7 1.1 8.9.7 1.1 1.6 2.3 2.7 2.2 1.1 0 1.5-.7 2.8-.7s1.7.7 2.8.7c1.2 0 1.9-1.1 2.6-2.2.8-1.2 1.2-2.5 1.2-2.5-.1 0-2.3-.9-2.2-3.7zM9.5 2c.6-.7 1-1.7.9-2.7-.9 0-1.9.6-2.5 1.3-.5.6-1 1.6-.9 2.6 1 .1 2-.5 2.5-1.2z"/></svg>
-    Download on the App Store
-  </a>
+    Coming soon to the App Store
+  </button>
 </div>
+<script src="/assets/app-store.js"></script>
 </body>
 </html>
