@@ -46,4 +46,4 @@ https://apps.apple.com/app/id6773113095?ct=<token>&mt=8
 
 No other file needs to change for that flip. Do not paste the store URL back into homepage `href` attributes.
 
-The Smart App Banner (`apple-itunes-app`) is an HTML comment on the homepage until the App Store ID is confirmed. Do not uncomment it while the listing 404s. Homepage JSON-LD `downloadUrl` points at `/waitlist/` until the listing is public. This flag does not change either of those. Guide pages that still link to the store are outside this homepage switch.
+The Smart App Banner (`apple-itunes-app`) stays off until the App Store listing is public. Do not add that meta while the listing 404s. Homepage JSON-LD `downloadUrl` points at `/waitlist/` until the listing is public. This flag does not change either of those. Guide pages that still link to the store are outside this homepage switch.

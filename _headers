@@ -1,0 +1,4 @@
+# Content-Type for the extensionless Apple App Site Association file.
+# Honored by static hosts that read _headers (Netlify, Cloudflare Pages).
+/.well-known/apple-app-site-association
+  Content-Type: application/json

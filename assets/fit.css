@@ -1,0 +1,42 @@
+/* Keep side-by-side cards and tables inside the viewport.
+   A wide table keeps readable columns and scrolls in its own box. */
+.wrap, main, section, article,
+.hero, .two, .grid, .foodlog, .foodrow, .selrow, .big-band,
+.actions, .chips, .metric, .links, .nav-row, .routes,
+aside, .card, .panel, .note, .cta,
+.printable-sheet, .printable, .sheet, .output, pre {
+  min-width: 0;
+  max-width: 100%;
+}
+.hero > *, .two > *, .grid > *, .foodlog > *, .foodrow > *,
+.selrow > *, .big-band > *, .metric > * {
+  min-width: 0;
+  max-width: 100%;
+  overflow-x: auto;
+}
+input, select, textarea, button, img, svg, video, canvas {
+  max-width: 100%;
+  min-width: 0;
+}
+img, svg, video { height: auto; }
+aside, .card, .panel, .note, .cta, .foodlog,
+.printable-sheet, .printable, .sheet, pre, .output,
+main > section, main > div, section {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+table {
+  display: table !important;
+  width: max-content !important;
+  max-width: none !important;
+  min-width: 100% !important;
+}
+th, td {
+  white-space: normal !important;
+  word-break: normal !important;
+  overflow-wrap: break-word;
+  max-width: 16rem;
+}
+@media (max-width: 900px) {
+  .foodrow { grid-template-columns: 1fr !important; }
+}
