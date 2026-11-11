@@ -1,6 +1,6 @@
 # DadYolked Site Measurement Plan
 
-This repo intentionally avoids invasive analytics by default. The current conversion measurement layer uses Apple App Store campaign tokens on outbound App Store links, plus `data-analytics-*` attributes that can be wired to a privacy-safe analytics provider later.
+This repo does not load an analytics script. The privacy policy says the website does not use analytics. An HTML comment in `privacy/index.html` has the steps to add Cloudflare Web Analytics later, and the policy sentence to swap in at the same time. App Store campaign tokens and `data-analytics-*` attributes are still on the links. They do nothing until a script reads them.
 
 ## Current implementation
 

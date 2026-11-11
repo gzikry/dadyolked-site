@@ -25,7 +25,7 @@
 <link rel="preload" href="/assets/fonts/geist-04.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" as="image" href="/assets/screens/today.avif" type="image/avif" fetchpriority="high">
 <meta name="referrer" content="strict-origin-when-cross-origin">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; font-src 'self'; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com; connect-src 'self' https://cloudflareinsights.com; base-uri 'self'; form-action 'self' mailto:; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; font-src 'self'; script-src 'self' 'unsafe-inline'; connect-src 'self'; base-uri 'self'; form-action 'self' mailto:; upgrade-insecure-requests">
 <!-- TODO(George): The App Store listing is not live, and this banner stays off until you confirm the app ID.
      Then add: <meta name="apple-itunes-app" content="app-id=APP_STORE_ID">
      The store URL is the single constant APP_STORE.url in /assets/app-store.js. Set live: true there at the same time. Do not point the banner at a 404. -->
@@ -110,7 +110,7 @@
           "name": "Where does my data go?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "On your iPhone. If you tap Invite your partner, the baby feeds, diapers, sleep, medicine, and growth sync through your iCloud. The app sends crash diagnostics to Firebase Crashlytics: crash data, performance data, and other diagnostic data, linked to the device and not used for tracking. No ads. This website uses Cloudflare Web Analytics, which is cookieless and aggregate."
+            "text": "On your iPhone. If you tap Invite your partner, the baby feeds, diapers, sleep, medicine, and growth sync through your iCloud. The app sends crash diagnostics to Firebase Crashlytics: crash data, performance data, and other diagnostic data, linked to the device and not used for tracking. No ads. This website does not use analytics."
           }
         },
         {
@@ -223,12 +223,6 @@ section{padding:64px 0}
   border-top:1px solid var(--line);border-bottom:1px solid var(--line);
   background:#141A2A;
 }
-.todo{
-  border-left:3px solid var(--copper-2);
-  padding:8px 0 8px 14px;
-  color:var(--paper);
-}
-.todo-label{display:block;font-size:12px;font-weight:750;letter-spacing:0.08em;text-transform:uppercase;color:var(--copper-2);margin-bottom:4px}
 .faq-list{display:grid;gap:12px}
 .faq-list article{border:1px solid var(--line);border-radius:16px;padding:18px 18px 16px}
 .faq-list h3{font-size:20px;margin:0 0 8px}
@@ -272,7 +266,7 @@ footer{border-top:1px solid var(--line);padding:36px 0 28px}
   body{padding-bottom:0;background:#fff;color:#111}
 }
 </style>
-<script defer src="/assets/cloudflare-web-analytics.js"></script>
+
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -383,9 +377,8 @@ footer{border-top:1px solid var(--line);padding:36px 0 28px}
     <div class="wrap split">
       <div class="copy">
         <h2 id="dad-title">Made by a dad.</h2>
-        <p>I’m George Zikry. I build DadYolked, and I read <a href="mailto:support@dadyolked.com">support@dadyolked.com</a>.</p>
-        <!-- TODO(George): Replace the note below with two or three sentences in your own words. The public site does not include a personal story, so none was written here. Do not add a child’s name, a birth story, or a timeline that is not already public. -->
-        <p class="todo"><span class="todo-label">TODO for George</span> Replace this with two or three sentences in your own words. The public site does not include a personal story, so none was added here.</p>
+        <!-- George: modest placeholder. Replace this paragraph with your own sentences if you want. Do not add a child’s name, a birth story, or any detail that is not already public. -->
+        <p>DadYolked is built by George Zikry, an independent developer and dad in California. No investors, no ads, just the app I wanted on my own phone.</p>
       </div>
       <figure class="phone">
         <picture>
@@ -403,7 +396,7 @@ footer{border-top:1px solid var(--line);padding:36px 0 28px}
       <p class="lead">Logs live on your iPhone. If you tap Invite your partner, the baby’s feeds, diapers, sleep, medicine, and growth sync through your iCloud. Your own check-ins do not.</p>
       <p>No ads. DadYolked does not sell the data.</p>
       <p>The app does send crash diagnostics to Firebase Crashlytics. That is crash data, performance data, and other diagnostic data. It is linked to the device. It is not used for tracking.</p>
-      <p>This website uses Cloudflare Web Analytics. It is cookieless and aggregate.</p>
+      <p>This website does not use analytics.</p>
       <p><a href="/privacy/">Read the privacy policy</a></p>
     </div>
   </section>
@@ -426,7 +419,7 @@ footer{border-top:1px solid var(--line);padding:36px 0 28px}
         </article>
         <article>
           <h3>Where does my data go?</h3>
-          <p>On your iPhone. If you tap Invite your partner, the baby’s feeds, diapers, sleep, medicine, and growth sync through your iCloud. The app sends crash diagnostics to Firebase Crashlytics: crash data, performance data, and other diagnostic data, linked to the device and not used for tracking. No ads. This website uses Cloudflare Web Analytics, which is cookieless and aggregate. <a href="/privacy/">The privacy policy has the rest.</a></p>
+          <p>On your iPhone. If you tap Invite your partner, the baby’s feeds, diapers, sleep, medicine, and growth sync through your iCloud. The app sends crash diagnostics to Firebase Crashlytics: crash data, performance data, and other diagnostic data, linked to the device and not used for tracking. No ads. This website does not use analytics. <a href="/privacy/">The privacy policy has the rest.</a></p>
         </article>
         <article>
           <h3>Is this medical advice?</h3>
