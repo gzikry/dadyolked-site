@@ -1,16 +1,20 @@
 /*
   Homepage App Store CTAs.
 
-  The listing at APP_STORE.url is not public yet. While `live` is false, the
-  six homepage controls stay non-links labeled "Coming soon to the App Store".
+  APP_STORE.url is the one store URL. The listing is not public yet.
+  While `live` is false, every [data-app-store] control on the homepage is a
+  non-link labeled "Coming soon to the App Store".
 
-  Flip `live` to true when that listing is public. This file is the only
-  change required: each control becomes its campaign link again, using the
-  ct token and label stored here. Do not put the store URL back into href
-  attributes by hand.
+  Flip `live` to true when that listing loads. This file is the only change
+  required for those controls: each one becomes its campaign link, using the
+  ct token and label stored here. Do not paste the store URL into hrefs.
 
-  The Smart App Banner meta and the JSON-LD downloadUrl are separate and
-  stay pointed at the store URL (DEC-2026-09-19).
+  The homepage currently renders home_nav, home_1, and home_sticky.
+  home_2, home_3, and home_4 stay defined so a later control can use them.
+
+  TODO(George): the apple-itunes-app smart banner is an HTML comment on the
+  homepage until the App Store ID is confirmed. Do not emit that meta while
+  the listing 404s. JSON-LD downloadUrl points at /waitlist/ until then.
 */
 (function () {
   "use strict";
