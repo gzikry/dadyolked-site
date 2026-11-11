@@ -1,28 +1,34 @@
 <!doctype html>
-<html lang="en" data-mode="dark" data-accent="copper">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta property="og:site_name" content="DadYolked">
 <meta property="og:type" content="website">
-<meta property="og:title" content="DadYolked: Pregnancy &amp; Baby Tracker for Dads on iPhone">
-<meta property="og:description" content="Stage-aware iPhone tracker for expecting and new dads. Free Ask DadYolked and quick logs. Optional DadWingman is $4.99/mo or $39.99/yr. Local-first, with private iCloud shared care.">
+<meta property="og:title" content="DadYolked for iPhone, for new and expecting dads">
+<meta property="og:description" content="Today’s plan and a 3 a.m. log for feeds, diapers, and sleep. Ask DadYolked is free and on your phone. Optional DadWingman is $39.99/yr or $4.99/mo. Coming soon.">
 <meta property="og:url" content="https://dadyolked.com/">
 <meta property="og:image" content="https://dadyolked.com/assets/dadyolked-social-card.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="DadYolked. What to do on your shift. An iPhone app for new and expecting dads, coming soon to the App Store.">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="DadYolked: Pregnancy &amp; Baby Tracker for Dads on iPhone">
-<meta name="twitter:description" content="Stage-aware iPhone tracker for expecting and new dads. Free Ask DadYolked and quick logs. Optional DadWingman is $4.99/mo or $39.99/yr. Local-first, with private iCloud shared care.">
+<meta name="twitter:title" content="DadYolked for iPhone, for new and expecting dads">
+<meta name="twitter:description" content="Today’s plan and a 3 a.m. log for feeds, diapers, and sleep. Ask DadYolked is free and on your phone. Optional DadWingman is $39.99/yr or $4.99/mo. Coming soon.">
 <meta name="twitter:image" content="https://dadyolked.com/assets/dadyolked-social-card.png">
-<title>DadYolked: Pregnancy &amp; Baby Tracker for Dads on iPhone</title>
-<meta name="description" content="Stage-aware iPhone tracker for expecting and new dads. Free Ask DadYolked and quick logs. Optional DadWingman is $4.99/mo or $39.99/yr. Local-first, with private iCloud shared care." />
+<meta name="twitter:image:alt" content="DadYolked. What to do on your shift. An iPhone app for new and expecting dads, coming soon to the App Store.">
+<title>DadYolked for iPhone, for new and expecting dads</title>
+<meta name="description" content="Today’s plan and a 3 a.m. log for feeds, diapers, and sleep. Ask DadYolked is free and on your phone. Optional DadWingman is $39.99/yr or $4.99/mo. Coming soon." />
 <link rel="icon" href="/favicon.ico" sizes="32x32">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <link rel="canonical" href="https://dadyolked.com/" />
 <link rel="preload" href="/assets/fonts/geist-04.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" href="/assets/screens/today.avif" type="image/avif" fetchpriority="high">
 <meta name="referrer" content="strict-origin-when-cross-origin">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; font-src 'self'; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com; connect-src 'self' https://cloudflareinsights.com; base-uri 'self'; form-action 'self' mailto:; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; font-src 'self'; script-src 'self' 'unsafe-inline'; connect-src 'self'; base-uri 'self'; form-action 'self' mailto:; upgrade-insecure-requests">
+<!-- TODO: The App Store listing is not live, and this banner stays off until the app ID is confirmed.
+     Then add: <meta name="apple-itunes-app" content="app-id=APP_STORE_ID">
+     The store URL is the single constant APP_STORE.url in /assets/app-store.js. Set live: true there at the same time. Do not point the banner at a 404. -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -52,15 +58,16 @@
       "operatingSystem": "iOS",
       "url": "https://dadyolked.com/",
       "downloadUrl": "https://dadyolked.com/waitlist/",
-      "image": "https://dadyolked.com/assets/dadyolked_logo_08.png",
-      "description": "Stage-aware iPhone companion for expecting and new dads. Free core tracking and Ask DadYolked, with optional DadWingman and optional private iCloud CKShare shared care.",
+      "image": "https://dadyolked.com/assets/screens/today.webp",
+      "description": "iPhone app for new and expecting dads. Free Today plan, quick logs, Dad Guides, and on-device Ask DadYolked. Optional DadWingman is $39.99/yr or $4.99/mo with a 1-week free trial. Coming soon to the App Store.",
       "publisher": { "@id": "https://dadyolked.com/#organization" },
       "offers": {
         "@type": "AggregateOffer",
         "lowPrice": "0",
         "highPrice": "39.99",
         "priceCurrency": "USD",
-        "offerCount": "3"
+        "offerCount": "3",
+        "description": "The app is free. Optional DadWingman is $39.99 per year or $4.99 per month in the US App Store, each with a 1-week free trial."
       }
     },
     {
@@ -76,18 +83,10 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What is free in DadYolked?",
+          "name": "Is DadYolked free?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Core tracking and Ask DadYolked are free. That covers the stage-aware Today briefing, the 3 AM SOS sheet, the Labor 5-1-1 / 4-1-1 Command Center, and one-tap Feed, Sleep, Diaper, and Medicine logs. No account is required."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is Ask DadYolked?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Ask DadYolked is free on-device Q&A. On supported iPhones it uses Apple Intelligence. Answers are clinician-anchored, show AAP, ACOG, CDC, and WHO source citations, and include a tappable medical disclaimer. It helps you prepare questions. It does not diagnose or replace your clinician."
+            "text": "Yes. Today, quick logs for feeds, diapers, and sleep, Dad Guides, Invite your partner, appointments, and the Me check-in are free. Ask DadYolked, the on-device assistant, is free too. No account. DadWingman is the optional paid tier."
           }
         },
         {
@@ -95,31 +94,31 @@
           "name": "What does DadWingman cost?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "DadWingman is optional. It is $4.99 per month or $39.99 per year in the US App Store; local prices can differ. It unlocks Weekly Digest, Tonight Mode, 1-tap Partner Handoff, the Pediatrician Prep PDF packet, and Memory. Manage or cancel it in Apple ID Settings. Deleting the app does not cancel the subscription."
+            "text": "DadWingman is optional. In the US App Store, Annual is $39.99 a year and Monthly is $4.99 a month. Both include a 1-week free trial. Local prices can differ. It adds Tonight Mode, Weekly Digest, Partner Handoff, Pediatrician Prep, and Memory. Apple bills you. Cancel in Apple ID Settings. Deleting the app does not cancel the subscription."
           }
         },
         {
           "@type": "Question",
-          "name": "What syncs if I invite a partner?",
+          "name": "Does my partner need the app?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Partner sync is off until you turn it on. Optional private iCloud shared care uses Apple CKShare and only the allowlisted baby logs: feeds, diapers, sleep, medicine, and growth. Private dad check-ins, journals, mood logs, HealthKit reads, and Assistant memory stay on your device."
+            "text": "To see the shared log, yes. They install DadYolked and accept the iCloud invite. They do not need DadWingman for feeds, diapers, sleep, medicine, and growth. Your Me check-in, journal, mood, Health data, and Ask DadYolked memory stay on your phone."
           }
         },
         {
           "@type": "Question",
-          "name": "Does DadYolked track me for ads?",
+          "name": "Where does my data go?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No. DadYolked ships zero ad trackers, zero data brokers, and zero third-party analytics SDKs. Crashlytics is used for crash reporting only."
+            "text": "On your iPhone. If you tap Invite your partner, the baby feeds, diapers, sleep, medicine, and growth sync through your iCloud. The app sends crash diagnostics to Firebase Crashlytics: crash data, performance data, and other diagnostic data, linked to the device and not used for tracking. No ads. This website does not use analytics."
           }
         },
         {
           "@type": "Question",
-          "name": "Is DadYolked medical advice?",
+          "name": "Is this medical advice?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No. DadYolked organizes logs and clinician-anchored references so you can ask better questions. In an emergency, call your local emergency number. Health decisions belong with your clinician."
+            "text": "No. DadYolked is not a medical device and does not provide medical advice, diagnosis, or treatment. Guides and logs are general information. In an emergency, call your local emergency number (911 in the United States). Health decisions belong with your clinician."
           }
         }
       ]
@@ -128,42 +127,31 @@
 }
 </script>
 <style>
-@font-face{font-family:'Geist';font-style:normal;font-weight:400 900;font-display:swap;src:url('/assets/fonts/geist-04.woff2') format('woff2')}
-@font-face{font-family:'Geist Mono';font-style:normal;font-weight:400 600;font-display:swap;src:url('/assets/fonts/geistmono-07.woff2') format('woff2')}
-@font-face{font-family:'Newsreader';font-style:italic;font-weight:400 600;font-display:swap;src:url('/assets/fonts/newsreader-11.woff2') format('woff2')}
+@font-face{font-family:'Geist';font-style:normal;font-weight:400 800;font-display:swap;src:url('/assets/fonts/geist-04.woff2') format('woff2')}
 :root{
   --ink:#0E1320;
-  --ink-2:#141B2D;
-  --ink-3:#1E2638;
   --paper:#F6F1E7;
-  --line-dark:rgba(255,255,255,0.12);
+  --text:#F3EEE4;
+  --muted:#D5CBBA;
   --copper:#C07A3E;
   --copper-2:#E0975A;
-  --slate:#94A3B8;
-  --paper-muted:#94A3B8;
-  --ink-muted:#94A3B8;
-  --text:#E9E4D8;
-  --accent:#C07A3E;
-  --accent-soft:rgba(192,122,62,0.16);
-  --r-card:22px;
-  --r-pill:999px;
-  --max:1120px;
+  --line:rgba(246,241,231,0.16);
+  --max:1080px;
   color-scheme:dark;
 }
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:88px}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
 body{
   font-family:'Geist',system-ui,-apple-system,sans-serif;
-  font-weight:450;
   background:var(--ink);
   color:var(--text);
+  font-size:17px;
+  line-height:1.55;
   -webkit-font-smoothing:antialiased;
-  text-rendering:optimizeLegibility;
-  overflow-x:hidden;
 }
-img{max-width:100%;display:block}
-a{color:inherit}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--copper-2)}
 :focus-visible{outline:2px solid var(--paper);outline-offset:3px;border-radius:6px}
 .skip-link{
   position:fixed;left:16px;top:12px;z-index:100;
@@ -171,322 +159,129 @@ a{color:inherit}
   border-radius:10px;background:var(--paper);color:var(--ink);
   font-weight:700;text-decoration:none;
 }
-.skip-link:focus{transform:translateY(0)}
-.wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
-.kicker{
-  display:inline-flex;align-items:center;gap:10px;
-  font-family:'Geist Mono',ui-monospace,monospace;
-  font-size:12px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;
-  color:var(--copper-2);
-}
-.kicker::before{content:"";width:22px;height:1px;background:currentColor}
-.serif{font-family:'Newsreader',serif;font-style:italic;font-weight:500;letter-spacing:-0.02em;color:var(--copper-2)}
-h1,h2,h3{text-wrap:balance;color:var(--paper)}
-p,li{text-wrap:pretty}
-
+.skip-link:focus{transform:none}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+h1,h2,h3{color:var(--paper);text-wrap:balance;letter-spacing:-0.03em;line-height:1.08;margin:0}
+p{text-wrap:pretty}
 .nav{
-  position:sticky;top:0;z-index:50;
-  background:color-mix(in oklab,var(--ink) 88%,transparent);
-  backdrop-filter:blur(16px) saturate(140%);
-  -webkit-backdrop-filter:blur(16px) saturate(140%);
-  border-bottom:1px solid var(--line-dark);
+  position:sticky;top:0;z-index:40;
+  background:var(--ink);
+  border-bottom:1px solid var(--line);
 }
-.nav-row{display:flex;align-items:center;gap:18px;padding:12px 0;min-height:72px}
+.nav-row{display:flex;align-items:center;gap:16px;min-height:64px;padding:8px 0}
 .brand{
   display:inline-flex;align-items:center;gap:10px;
-  font-weight:750;font-size:18px;letter-spacing:-0.02em;
-  text-decoration:none;color:var(--paper);flex:none;
+  color:var(--paper);font-weight:750;font-size:18px;letter-spacing:-0.02em;
+  text-decoration:none;flex:none;
 }
-.brand-mark{
-  width:34px;height:34px;border-radius:9px;overflow:hidden;
-  background:var(--ink-3);border:1px solid var(--line-dark);
-}
-.brand-mark img{width:100%;height:100%;object-fit:cover}
+.brand img{width:32px;height:32px;border-radius:8px}
 .nav-links{
-  display:flex;align-items:center;gap:20px;margin-left:auto;
-  font-size:15px;font-weight:560;color:var(--slate);
+  display:flex;gap:16px;margin-left:auto;align-items:center;
+  font-size:15px;font-weight:600;
 }
-.nav-links a{text-decoration:none;color:var(--slate);white-space:nowrap}
+.nav-links a{color:var(--muted);text-decoration:none;min-height:44px;display:inline-flex;align-items:center}
 .nav-links a:hover{color:var(--paper)}
 .pill{
   display:inline-flex;align-items:center;justify-content:center;gap:8px;
-  min-height:48px;height:48px;padding:0 18px;
-  border-radius:var(--r-pill);
-  font-size:15px;font-weight:700;letter-spacing:-0.01em;
-  text-decoration:none;border:1px solid transparent;
-  white-space:nowrap;cursor:pointer;flex:none;
+  min-height:48px;padding:10px 16px;border-radius:999px;
+  font:700 15px/1.2 'Geist',system-ui,sans-serif;
+  text-decoration:none;border:1px solid transparent;cursor:pointer;
 }
-.pill.primary{
-  background:var(--accent);color:var(--ink);
-  box-shadow:0 10px 30px rgba(192,122,62,0.32);
+button.pill{appearance:none;-webkit-appearance:none}
+.pill.primary,.pill.soon{
+  background:var(--copper);color:var(--ink);border-color:var(--copper);
 }
-.pill.primary:hover{background:#D08848}
-.pill.ghost{background:transparent;color:var(--paper);border-color:rgba(255,255,255,0.28)}
-.pill.ghost:hover{border-color:var(--paper)}
-button.pill,button.soon-inline{
-  font-family:inherit;
-  appearance:none;
-  -webkit-appearance:none;
+.pill.soon{cursor:default}
+.pill.soon:hover{background:var(--copper);color:var(--ink)}
+.pill.ghost{background:transparent;color:var(--paper);border-color:var(--line);text-decoration:none}
+.nav-cta{margin-left:8px;flex:none}
+.hero{padding:36px 0 12px}
+.hero-grid,.split{display:grid;gap:28px;align-items:center}
+.hero h1{font-size:clamp(40px,7vw,68px);font-weight:800;margin:8px 0 12px}
+.kicker{margin:0 0 8px;color:var(--copper-2);font-size:13px;font-weight:700;letter-spacing:0.04em;text-transform:uppercase}
+.lead{margin:0 0 18px;max-width:38rem;color:var(--text);font-size:18px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.fine{margin:12px 0 0;color:var(--muted);font-size:14px;max-width:38rem}
+.phone{margin:0;justify-self:center}
+.phone img{width:min(260px,72vw);height:auto}
+section{padding:64px 0}
+  .split h2,.prose h2{font-size:clamp(30px,4vw,44px);font-weight:800;margin:0 0 12px}
+.split p,.prose p{margin:0 0 12px;color:var(--muted)}
+.split p strong{color:var(--paper)}
+.prose{max-width:40rem}
+.price-card{
+  border:1px solid var(--line);border-radius:18px;padding:22px;
+  background:#141A2A;max-width:360px;justify-self:center;width:100%;
 }
-.pill.soon{
-  background:rgba(192,122,62,0.16);
-  color:var(--paper);
-  border-color:#E0975A;
-  box-shadow:none;
-  cursor:not-allowed;
-  white-space:normal;
-  height:auto;
-  line-height:1.25;
-  text-align:center;
-  text-wrap:balance;
+.price-card h3{font-size:22px;margin:0 0 8px}
+.price-line{display:flex;align-items:baseline;gap:8px;margin:14px 0 0}
+.price-line strong{font-size:32px;letter-spacing:-0.04em;color:var(--paper)}
+.price-line span,.trial{color:var(--muted);font-size:15px}
+.trial{margin:2px 0 0}
+.price-card .fine{margin-top:16px}
+.note{
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  background:#141A2A;
 }
-.pill.soon:hover,.pill.soon:focus{background:rgba(192,122,62,0.16);color:var(--paper);border-color:#E0975A}
-.nav-cta{margin-left:8px}
-button.soon-inline{
-  display:inline-block;
-  max-width:100%;
-  margin:0;
-  padding:0 0 1px;
-  border:0;
-  border-bottom:1px dashed #E0975A;
-  background:transparent;
-  color:var(--paper);
-  font-size:14.5px;
-  font-weight:650;
-  line-height:1.45;
-  text-align:left;
-  text-decoration:none;
-  cursor:not-allowed;
-}
-button.soon-inline:hover,button.soon-inline:focus{color:var(--paper)}
-
-.hero{padding:64px 0 36px}
-.hero-grid{
-  display:grid;grid-template-columns:minmax(0,1.12fr) minmax(280px,0.88fr);
-  gap:48px;align-items:center;
-}
-.hero h1{
-  font-size:clamp(40px,5.2vw,72px);
-  line-height:0.96;letter-spacing:-0.045em;font-weight:800;
-  margin:14px 0 16px;
-}
-.lead{font-size:18px;line-height:1.55;color:#C5D0DE;margin:0 0 22px;max-width:38rem}
-.hero-cta{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
-.price-note{margin:14px 0 0;color:var(--slate);font-size:14px;line-height:1.45}
-.trust{
-  list-style:none;padding:0;margin:26px 0 0;
-  display:flex;flex-wrap:wrap;gap:8px;
-}
-.trust li{
-  border:1px solid var(--line-dark);
-  background:rgba(255,255,255,0.03);
-  color:#C5D0DE;
-  border-radius:999px;
-  padding:8px 12px;
-  font-size:13px;line-height:1.35;font-weight:600;
-}
-.hero-art{
-  border-radius:28px;border:1px solid var(--line-dark);
-  background:
-    radial-gradient(120% 80% at 80% 0%,rgba(192,122,62,0.22),transparent 60%),
-    linear-gradient(180deg,#141B2D 0%,#0E1320 100%);
-  padding:16px;box-shadow:0 40px 80px -36px rgba(0,0,0,0.65);
-}
-.art-meta{display:flex;justify-content:space-between;gap:12px;padding:4px 6px 12px}
-.art-meta .label{font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--slate)}
-.art-meta .week{font-weight:800;font-size:28px;letter-spacing:-0.04em;line-height:1;color:var(--paper);margin-top:4px}
-.tag{
-  align-self:flex-start;flex:none;white-space:nowrap;padding:6px 10px;border-radius:999px;
-  border:1px solid var(--line-dark);background:var(--accent-soft);color:var(--copper-2);
-  font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;
-}
-.art-image{border-radius:18px;overflow:hidden;aspect-ratio:1024/1536;background:#000}
-.art-image img{width:100%;height:100%;object-fit:cover}
-
-section{position:relative;padding:88px 0}
-.section-head{display:grid;grid-template-columns:1.2fr 0.8fr;gap:28px;align-items:end;margin-bottom:32px}
-.section-head h2{
-  font-size:clamp(34px,4.6vw,58px);line-height:0.98;letter-spacing:-0.04em;
-  font-weight:800;margin:12px 0 0;
-}
-.section-head p{margin:0;color:#C5D0DE;font-size:17px;line-height:1.55}
-
-.flows{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
-.flow{
-  border:1px solid var(--line-dark);border-radius:var(--r-card);
-  background:linear-gradient(180deg,rgba(255,255,255,0.035),rgba(255,255,255,0.012));
-  padding:24px 22px 26px;display:flex;flex-direction:column;gap:12px;min-width:0;
-}
-.flow.upgrade{background:linear-gradient(180deg,rgba(192,122,62,0.16),rgba(255,255,255,0.02));border-color:rgba(224,151,90,0.45)}
-.flow .num{font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:var(--copper-2)}
-.flow h3{margin:0;font-size:26px;letter-spacing:-0.03em;line-height:1.05}
-.flow p{margin:0;color:#C5D0DE;font-size:15px;line-height:1.55}
-.flow ul{list-style:none;padding:0;margin:6px 0 0;display:flex;flex-direction:column;gap:8px}
-.flow li{color:var(--paper);font-size:14.5px;line-height:1.4;padding-left:18px;position:relative}
-.flow li::before{content:"";position:absolute;left:0;top:0.45em;width:8px;height:8px;border-radius:2px;background:var(--copper-2)}
-.price{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:baseline;margin-top:auto;padding-top:8px}
-.price strong{font-size:28px;letter-spacing:-0.04em;color:var(--paper)}
-.price span{color:var(--slate);font-size:14px}
-.free-flag{
-  display:inline-flex;align-items:center;min-height:28px;padding:0 10px;border-radius:999px;
-  background:rgba(145,196,160,0.14);color:#B7E0C4;font-size:12px;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;
-}
-
-.screens{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:18px}
-.screen-card{
-  margin:0;padding:12px 12px 16px;border:1px solid var(--line-dark);border-radius:24px;
-  background:rgba(255,255,255,0.025);
-}
-.screen-card img{width:100%;height:auto;border-radius:16px}
-.screen-card figcaption{padding:12px 4px 0;color:#C5D0DE;font-size:14px;line-height:1.5}
-.screen-card strong{display:block;color:var(--paper);font-size:16px;margin-bottom:4px}
-
-.stages{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
-.stage{border:1px solid var(--line-dark);border-radius:var(--r-card);background:var(--ink-2);overflow:hidden;display:flex;flex-direction:column}
-.stage-art{aspect-ratio:4/5;background:#0B1018;position:relative;overflow:hidden}
-.stage-art img{width:100%;height:100%;object-fit:cover}
-.stage-art .badge,.logboard .badge{
-  position:absolute;top:16px;left:16px;padding:7px 12px;border-radius:999px;
-  background:rgba(14,19,32,0.72);border:1px solid rgba(255,255,255,0.18);color:var(--paper);
-  font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;
-}
-.logboard{
-  height:100%;display:flex;flex-direction:column;justify-content:flex-end;gap:10px;padding:18px;
-  background:
-    radial-gradient(80% 60% at 20% 0%,rgba(192,122,62,0.28),transparent 70%),
-    linear-gradient(180deg,#1E2638,#0E1320);
-}
-.logboard .logs{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.logboard .logs span{
-  border:1px solid var(--line-dark);border-radius:14px;padding:14px 12px;
-  background:rgba(255,255,255,0.04);color:var(--paper);font-weight:700;
-}
-.stage-body{padding:22px 22px 26px;display:flex;flex-direction:column;gap:10px}
-.stage-body .num{font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:var(--copper-2)}
-.stage-body h3{margin:0;font-size:28px;letter-spacing:-0.03em}
-.stage-body p{margin:0;color:#C5D0DE;font-size:15px;line-height:1.55}
-.stage-body ul{list-style:none;padding:0;margin:4px 0 0;display:flex;flex-direction:column;gap:8px}
-.stage-body li{color:var(--paper);font-size:14px}
-
-.privacy{background:var(--ink-2);border-top:1px solid var(--line-dark);border-bottom:1px solid var(--line-dark)}
-.privacy-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
-.priv-card{border:1px solid var(--line-dark);border-radius:18px;padding:20px;background:rgba(14,19,32,0.45)}
-.priv-card .num{font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:var(--copper-2)}
-.priv-card h3{margin:12px 0 8px;font-size:20px;letter-spacing:-0.03em}
-.priv-card p{margin:0;color:#C5D0DE;font-size:14.5px;line-height:1.55}
-.policy-link{margin:22px 0 0}
-.policy-link a{color:var(--copper-2);font-weight:700}
-
-.faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.faq-card{border:1px solid var(--line-dark);border-radius:18px;padding:22px;background:rgba(255,255,255,0.03)}
-.faq-card h3{margin:0 0 8px;font-size:20px;letter-spacing:-0.03em}
-.faq-card p{margin:0;color:#C5D0DE;font-size:15.5px;line-height:1.6}
-
-.cta{text-align:center;padding:108px 0 120px;background:radial-gradient(60% 70% at 50% 20%,rgba(192,122,62,0.18),transparent 70%)}
-.cta h2{font-size:clamp(42px,6vw,84px);line-height:0.96;letter-spacing:-0.045em;font-weight:800;margin:14px 0 16px}
-.cta p{color:#C5D0DE;font-size:18px;line-height:1.5;max-width:38rem;margin:0 auto 24px}
-.cta-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-
-footer{border-top:1px solid var(--line-dark);padding:48px 0 64px;background:var(--ink)}
-.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:28px}
-.foot-blurb{color:#C5D0DE;font-size:15px;line-height:1.5;max-width:320px}
-.foot-heading{
-  margin:0 0 12px;font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:0.14em;
-  text-transform:uppercase;color:var(--slate);font-weight:600;
-}
-.foot-grid ul,.guide-col ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}
-.foot-grid a,.guide-col a{color:#D5DCE6;text-decoration:underline;text-decoration-color:rgba(224,151,90,0.55);text-underline-offset:3px;font-size:14.5px;line-height:1.4}
-.foot-grid a:hover,.guide-col a:hover{color:var(--paper)}
-.guides{margin-top:40px;padding-top:28px;border-top:1px solid var(--line-dark)}
-.guides h2{margin:0 0 8px;font-size:clamp(28px,3vw,40px);letter-spacing:-0.04em}
-.guides .intro{margin:0 0 22px;color:#C5D0DE;max-width:46rem}
-.guide-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:26px 22px}
-.guide-col h3{margin:0 0 10px;font-size:15px;letter-spacing:-0.02em}
-.foot-bottom{
-  display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
-  margin-top:32px;padding-top:18px;border-top:1px solid var(--line-dark);
-  color:var(--slate);font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:0.06em;
-}
-
+.faq-list{display:grid;gap:12px}
+.faq-list article{border:1px solid var(--line);border-radius:16px;padding:18px 18px 16px}
+.faq-list h3{font-size:20px;margin:0 0 8px}
+.faq-list p{margin:0;color:var(--muted)}
+footer{border-top:1px solid var(--line);padding:36px 0 28px}
+.foot-grid{display:grid;gap:22px}
+.foot-links{display:flex;flex-wrap:wrap;gap:12px 18px;list-style:none;padding:0;margin:0}
+.foot-links a{color:var(--paper);font-weight:650}
+.legal{margin:18px 0 0;color:var(--muted);font-size:14px}
+.copy{margin:8px 0 0;color:var(--muted);font-size:13px}
 .sticky-cta{display:none}
-
-@media (max-width:1100px){
-  .nav-row{flex-wrap:wrap}
-  .nav-cta.soon{margin-left:auto;max-width:100%}
+@media (min-width:860px){
+  .wrap{padding:0 28px}
+  .hero{padding:72px 0 20px}
+  .hero-grid{grid-template-columns:1.15fr 0.85fr;gap:48px}
+  .split{grid-template-columns:1fr 1fr;gap:56px}
+  .split.flip .copy{order:2}
+  .phone img{width:280px}
+  .foot-grid{grid-template-columns:1.4fr 1fr;align-items:start}
+  section{padding:88px 0}
 }
-@media (max-width:980px){
-  .hero-grid,.section-head,.flows,.stages,.privacy-grid,.faq-grid{grid-template-columns:1fr}
-  .privacy-grid{grid-template-columns:1fr 1fr}
-  .faq-grid{grid-template-columns:1fr 1fr}
-  .flows{grid-template-columns:1fr}
-  .guide-grid,.foot-grid{grid-template-columns:1fr 1fr}
-  .screens{grid-template-columns:repeat(3,minmax(220px,1fr))}
-  section{padding:72px 0}
-}
-@media (max-width:768px){
-  html{scroll-padding-bottom:96px}
-  .wrap{padding:0 20px}
-  .nav-row{flex-wrap:wrap;align-items:center;min-height:0;padding:10px 20px 8px}
+@media (max-width:859px){
+  .nav-row{flex-wrap:wrap;padding:8px 0 4px}
   .nav-links{
-    order:3;width:100%;margin-left:0;overflow-x:auto;flex-wrap:nowrap;
-    gap:16px;padding:2px 0 6px;-webkit-overflow-scrolling:touch;scrollbar-width:none;
+    order:3;width:100%;margin:0;flex-wrap:wrap;
+    row-gap:0;padding-bottom:4px;
   }
-  .nav-links::-webkit-scrollbar{display:none}
-  .nav-links a{display:inline-flex;align-items:center;min-height:44px}
-  .nav-cta{margin-left:auto}
-  .nav-cta.soon{flex:1 1 100%;width:auto;max-width:100%;margin:6px 0 2px;height:auto}
-  .hero-cta .pill.soon,.sticky-cta .pill.soon{width:100%;height:auto;white-space:normal}
-  .hero{padding:16px 0 8px}
-  .hero h1{margin:8px 0 10px}
-  .lead{margin-bottom:14px}
-  .hero .pill.ghost,.price-note{display:none}
-  .hero-cta .pill.primary{width:100%}
-  .faq-grid,.privacy-grid,.guide-grid,.foot-grid,.screens{grid-template-columns:1fr}
-  .screens{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;padding-bottom:6px}
-  .screen-card{flex:0 0 78%;scroll-snap-align:start}
+  .nav-cta{display:none}
+  .hero-cta .pill,.sticky-cta .pill{width:100%}
   .sticky-cta{
     display:block;position:fixed;left:0;right:0;bottom:0;z-index:60;
     padding:10px 16px calc(10px + env(safe-area-inset-bottom));
-    background:color-mix(in oklab,var(--ink) 94%,transparent);
-    border-top:1px solid var(--line-dark);
-    backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+    background:var(--ink);border-top:1px solid var(--line);
   }
-  .sticky-cta .pill{width:100%;min-height:48px;height:48px}
-  .sticky-cta .pill.soon{height:auto;padding-top:12px;padding-bottom:12px}
-  body{padding-bottom:calc(96px + env(safe-area-inset-bottom))}
+  body{padding-bottom:calc(84px + env(safe-area-inset-bottom))}
+  html{scroll-padding-bottom:96px}
 }
-@media (prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
-  .reveal{opacity:1 !important;transform:none !important;transition:none !important}
-}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 @media print{
   .nav,.sticky-cta{display:none}
-  body{padding-bottom:0}
+  body{padding-bottom:0;background:#fff;color:#111}
 }
 </style>
-<script defer src="/assets/cloudflare-web-analytics.js"></script>
+
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to main content</a>
-
 <nav class="nav" aria-label="Primary">
   <div class="wrap nav-row">
-    <a href="/" class="brand" aria-label="DadYolked home">
-      <span class="brand-mark"><img src="/assets/dadyolked_logo_sm.webp" alt="" width="64" height="64" decoding="async"></span>
-      DadYolked
-    </a>
+    <a href="/" class="brand"><img src="/assets/dadyolked_logo_sm.webp" alt="" width="64" height="64" decoding="async">DadYolked</a>
     <div class="nav-links">
-      <a href="#features">Features</a>
-      <a href="#stages">Stages</a>
-      <a href="#ask">Ask DadYolked</a>
+      <a href="#today">Today</a>
+      <a href="#guides">Guides</a>
+      <a href="#partner">Partner</a>
+      <a href="#dadwingman">DadWingman</a>
       <a href="#privacy">Privacy</a>
       <a href="#faq">FAQ</a>
-      <a href="/tools/">Tools &amp; Guides</a>
     </div>
-    <button type="button" class="pill soon nav-cta" data-app-store="home_nav" data-analytics-context="home_nav" data-analytics-event="app_store_click" aria-disabled="true">
-      <svg width="14" height="16" viewBox="0 0 14 16" fill="currentColor" aria-hidden="true"><path d="M11.6 8.5c0-2.2 1.8-3.2 1.9-3.3-1-1.5-2.6-1.7-3.1-1.7-1.3-.1-2.6.8-3.3.8-.7 0-1.7-.8-2.9-.7-1.5 0-2.8.9-3.6 2.2-1.5 2.7-.4 6.7 1.1 8.9.7 1.1 1.6 2.3 2.7 2.2 1.1 0 1.5-.7 2.8-.7s1.7.7 2.8.7c1.2 0 1.9-1.1 2.6-2.2.8-1.2 1.2-2.5 1.2-2.5-.1 0-2.3-.9-2.2-3.7zM9.5 2c.6-.7 1-1.7.9-2.7-.9 0-1.9.6-2.5 1.3-.5.6-1 1.6-.9 2.6 1 .1 2-.5 2.5-1.2z"/></svg>
-      Coming soon to the App Store
-    </button>
+    <button type="button" class="pill soon nav-cta" data-app-store="home_nav" data-analytics-context="home_nav" data-analytics-event="app_store_click" aria-disabled="true">Coming soon to the App Store</button>
   </div>
 </nav>
 
@@ -494,262 +289,142 @@ footer{border-top:1px solid var(--line-dark);padding:48px 0 64px;background:var(
   <header class="hero">
     <div class="wrap hero-grid">
       <div>
-        <p class="kicker">Expecting and new dads · iPhone</p>
-        <h1>From First Ultrasound to 3 AM Feeds — <span class="serif">Built for Dads</span></h1>
-        <p class="lead">A stage-aware companion for the dad holding the phone. Today’s briefing, one-tap care logs, and Ask DadYolked are free. Invite a partner only if you want private iCloud shared care.</p>
+        <p class="kicker">For new and expecting dads</p>
+        <h1>What to do on your shift.</h1>
+        <p class="lead">Today’s plan, a quick log for feeds, diapers, and sleep, and the words to use when you are not sure.</p>
         <div class="hero-cta">
           <button type="button" class="pill soon" data-app-store="home_1" data-analytics-context="home_1" data-analytics-event="app_store_click" aria-disabled="true">
             <svg width="14" height="16" viewBox="0 0 14 16" fill="currentColor" aria-hidden="true"><path d="M11.6 8.5c0-2.2 1.8-3.2 1.9-3.3-1-1.5-2.6-1.7-3.1-1.7-1.3-.1-2.6.8-3.3.8-.7 0-1.7-.8-2.9-.7-1.5 0-2.8.9-3.6 2.2-1.5 2.7-.4 6.7 1.1 8.9.7 1.1 1.6 2.3 2.7 2.2 1.1 0 1.5-.7 2.8-.7s1.7.7 2.8.7c1.2 0 1.9-1.1 2.6-2.2.8-1.2 1.2-2.5 1.2-2.5-.1 0-2.3-.9-2.2-3.7zM9.5 2c.6-.7 1-1.7.9-2.7-.9 0-1.9.6-2.5 1.3-.5.6-1 1.6-.9 2.6 1 .1 2-.5 2.5-1.2z"/></svg>
             Coming soon to the App Store
           </button>
-          <a class="pill ghost" href="#features">See the three flows</a>
         </div>
-        <p class="price-note">Free to download. Optional DadWingman is $4.99/mo or $39.99/yr, managed in Apple ID Settings.</p>
-        <ul class="trust">
-          <li>Local-First SwiftData</li>
-          <li>Optional Private iCloud Partner Sync</li>
-          <li>Clinician-Anchored AAP/ACOG/CDC/WHO Guidance</li>
-          <li>Apple Watch + Live Activities</li>
-        </ul>
+        <p class="fine">Free to download. Ask DadYolked is included and stays on your phone. DadWingman is optional: $39.99/yr or $4.99/mo, with a 1-week free trial.</p>
       </div>
-      <div class="hero-art">
-        <div class="art-meta">
-          <div>
-            <div class="label">Today · Expecting</div>
-            <div class="week">Week 20, still your shift.</div>
-          </div>
-          <span class="tag">Stage-aware</span>
-        </div>
-        <div class="art-image">
-          <picture>
-            <source media="(max-width: 700px)" srcset="/assets/week20-400.webp">
-            <source srcset="/assets/week20-720.webp 720w, /assets/week20.webp 1200w" sizes="(max-width: 980px) 100vw, 480px">
-            <img src="/assets/week20-720.webp" width="720" height="1080" alt="DadYolked week 20 illustration for expecting dads" fetchpriority="high" decoding="async">
-          </picture>
-        </div>
-      </div>
+      <figure class="phone">
+        <picture>
+          <source type="image/avif" srcset="/assets/screens/today.avif">
+          <source type="image/webp" srcset="/assets/screens/today.webp">
+          <img src="/assets/screens/today.webp" width="506" height="1080" alt="DadYolked Today screen with the plan for the day and Feed, Sleep, and Diaper buttons." fetchpriority="high" decoding="async">
+        </picture>
+      </figure>
     </div>
   </header>
 
-  <section id="features" aria-labelledby="features-title">
-    <div id="inside"></div>
-    <div class="wrap">
-      <div class="section-head">
-        <div>
-          <p class="kicker">Three core flows</p>
-          <h2 id="features-title">The product, <span class="serif">not a brochure.</span></h2>
-        </div>
-        <p>A Today screen that changes with the stage, free on-device answers, and an optional upgrade when the night shift needs a system.</p>
+  <section id="today" aria-labelledby="today-title">
+    <div id="features"></div>
+    <div class="wrap prose">
+        <h2 id="today-title">The 3 a.m. log is three buttons.</h2>
+        <p>Today is the plan for the stage you are in. Under it, Feed, Sleep, and Diaper are one tap. Medicine is there too. The log is a record, not a dose.</p>
+        <p>If your hands are full, you can log with Siri. DadYolked does not keep the recording. Apple may process the speech on the phone or on Apple’s servers, depending on the device.</p>
+        <p>Appointments live in the app, so the pediatrician question about wet diapers is something you can look up in the parking lot. If you are still pregnant, Today follows the week. The contraction clock times labor. It does not tell you when to leave.</p>
+    </div>
+  </section>
+
+  <section id="guides" aria-labelledby="guides-title">
+    <div class="wrap split">
+      <div class="copy">
+        <h2 id="guides-title">What to say, and what to skip.</h2>
+        <p>Dad Guides is a short script for the moment you are in. At the birth center it is the sentence that helps, and the one that will not. Later it is the practical thing: ice chips, the next feed, who is taking this stretch.</p>
+        <p>Journey is the stage guide next to that. Bonding, sleep, play, and when to call someone. It is general information. It is not a diagnosis, and it does not hand you a kick target.</p>
       </div>
+      <figure class="phone">
+        <picture>
+          <source type="image/avif" srcset="/assets/screens/guides.avif">
+          <source type="image/webp" srcset="/assets/screens/guides.webp">
+          <img src="/assets/screens/guides.webp" width="506" height="1080" alt="Dad Guides screen with a short list of what to say and what not to say." loading="lazy" decoding="async">
+        </picture>
+      </figure>
+    </div>
+  </section>
 
-      <div class="flows">
-        <article class="flow">
-          <p class="num">01 · Free</p>
-          <h3>Today &amp; 2 AM Quick Log</h3>
-          <p>The screen you can use with one thumb when the house is dark. It changes with the stage you are in.</p>
-          <ul>
-            <li>Stage-aware daily briefing</li>
-            <li>3 AM SOS sheet</li>
-            <li>Labor 5-1-1 / 4-1-1 Command Center</li>
-            <li>1-tap Feed, Sleep, Diaper, and Medicine logging</li>
-            <li>Dynamic Island and Apple Watch companion</li>
-          </ul>
-        </article>
-
-        <article class="flow" id="ask">
-          <p class="num">02 · Free</p>
-          <h3>Ask DadYolked</h3>
-          <p>Questions get clinician-anchored answers on the device, with the source sitting next to the sentence.</p>
-          <ul>
-            <li>Free on-device Apple Intelligence where your iPhone supports it</li>
-            <li>Visible AAP, ACOG, CDC, and WHO source citations</li>
-            <li>Tappable medical disclaimer sheet in the app</li>
-            <li>Prepares the question for your clinician</li>
-            <li>Does not diagnose, dose, or replace care</li>
-          </ul>
-        </article>
-
-        <article class="flow upgrade">
-          <p class="num">03 · Optional upgrade</p>
-          <h3>DadWingman</h3>
-          <p>Core tracking and Ask DadYolked stay free. DadWingman is the night-shift layer when you want the week packaged.</p>
-          <ul>
-            <li>Weekly Digest</li>
-            <li>Tonight Mode</li>
-            <li>1-tap Partner Handoff</li>
-            <li>Pediatrician Prep PDF packet</li>
-            <li>Memory</li>
-          </ul>
-          <p class="price"><strong>$4.99</strong><span>/mo</span><span>or</span><strong>$39.99</strong><span>/yr</span></p>
-          <p class="free-flag">Manage in Apple ID Settings</p>
-        </article>
-      </div>
-
-      <div class="screens" aria-label="Screens from the current iPhone build">
-        <figure class="screen-card">
-          <img src="/assets/app-screens/medicine.webp" width="600" height="1305" loading="lazy" decoding="async" alt="DadYolked medicine tracking screen on iPhone">
-          <figcaption><strong>Medicine, logged once</strong>What was given and when, kept with the feeds and sleep from the same night.</figcaption>
-        </figure>
-        <figure class="screen-card">
-          <img src="/assets/app-screens/milestones.webp" width="600" height="1305" loading="lazy" decoding="async" alt="DadYolked Milestones and Growth Guide screen on iPhone">
-          <figcaption><strong>Milestones without a scorecard</strong>Play ideas and notes beside the daily record, with safety boundaries left visible.</figcaption>
-        </figure>
-        <figure class="screen-card">
-          <img src="/assets/app-screens/appointments.webp" width="600" height="1305" loading="lazy" decoding="async" alt="DadYolked pediatric appointment organizer screen on iPhone">
-          <figcaption><strong>The visit, already gathered</strong>Appointments and notes in one place. DadWingman can turn the lookback into a PDF packet.</figcaption>
-        </figure>
+  <section id="partner" aria-labelledby="partner-title">
+    <div class="wrap split flip">
+      <figure class="phone">
+        <picture>
+          <source type="image/avif" srcset="/assets/screens/partner.avif">
+          <source type="image/webp" srcset="/assets/screens/partner.webp">
+          <img src="/assets/screens/partner.webp" width="506" height="1080" alt="Care screen with Share access to invite a partner, and a note offering to take the next stretch." loading="lazy" decoding="async">
+        </picture>
+      </figure>
+      <div class="copy">
+        <h2 id="partner-title">One button: Invite your partner.</h2>
+        <p>The share goes through iCloud. Your partner installs DadYolked and accepts Apple’s invitation on their iPhone. They do not need DadWingman to see the shared log.</p>
+        <p>What they can see: feeds, diapers, sleep, medicine, and growth. What stays on your phone: your Me check-in, journal, mood, Health data, and Ask DadYolked memory.</p>
+        <p>The same Care screen is where you take the next stretch, when your partner needs the break and you need the baby.</p>
       </div>
     </div>
   </section>
 
-  <section id="stages" aria-labelledby="stages-title">
-    <div class="wrap">
-      <div class="section-head">
-        <div>
-          <p class="kicker">Three stages</p>
-          <h2 id="stages-title">Same app. <span class="serif">The job changes.</span></h2>
-        </div>
-        <p>Expecting, labor, then the first year. The Today screen follows the stage instead of making you hunt through a tracker built for someone else.</p>
+  <section id="dadwingman" aria-labelledby="wingman-title">
+    <div class="wrap split">
+      <div class="copy">
+        <h2 id="wingman-title">DadWingman is optional.</h2>
+        <p>The Today plan, the logs, Dad Guides, and Invite your partner work without it. Ask DadYolked, the free assistant, also works without it. Ask DadYolked runs on your iPhone: Apple’s on-device model, or a built-in library if that model is not available. Nothing from it is sent to an AI service.</p>
+        <p>DadWingman is the paid tier. It adds Tonight Mode, Weekly Digest, Partner Handoff, Pediatrician Prep, and Memory. The assistant itself is Ask DadYolked, and that stays on the phone.</p>
       </div>
-      <div class="stages">
-        <article class="stage">
-          <div class="stage-art">
-            <img src="/assets/week12.webp" srcset="/assets/week12-480.webp 480w, /assets/week12-720.webp 720w, /assets/week12.webp 1200w" sizes="(max-width: 700px) calc(100vw - 40px), 340px" width="1200" height="1600" alt="Week 12 pregnancy illustration" loading="lazy" decoding="async">
-          </div>
-          <div class="stage-body">
-            <p class="num">Expecting</p>
-            <h3>Prep, not panic.</h3>
-            <p>Week-by-week context, kicks, appointments, and the hospital bag, so the third trimester is a list instead of a scramble.</p>
-            <ul>
-              <li>Trimester briefing on Today</li>
-              <li>Kick counts and appointments</li>
-              <li>Hospital bag and birth prep</li>
-            </ul>
-          </div>
-        </article>
-        <article class="stage">
-          <div class="stage-art">
-            <img src="/assets/week40.webp" width="1200" height="1600" alt="Week 40 pregnancy illustration" loading="lazy" decoding="async">
-          </div>
-          <div class="stage-body">
-            <p class="num">Labor &amp; Delivery</p>
-            <h3>Keep the clock.</h3>
-            <p>The Labor 5-1-1 / 4-1-1 Command Center times contractions and keeps the go-bag straight. It does not decide when you leave for the hospital. Your clinician does.</p>
-            <ul>
-              <li>5-1-1 and 4-1-1 timing</li>
-              <li>Contraction log you can read out loud</li>
-              <li>One list for the room</li>
-            </ul>
-          </div>
-        </article>
-        <article class="stage">
-          <div class="stage-art">
-            <div class="logboard">
-              <span class="badge">Months 0–12</span>
-              <div class="logs" aria-hidden="true">
-                <span>Feed</span><span>Sleep</span><span>Diaper</span><span>Medicine</span>
-              </div>
-            </div>
-          </div>
-          <div class="stage-body">
-            <p class="num">Newborn &amp; Infant</p>
-            <h3>Survive the blur.</h3>
-            <p>From the first night through month 12: a stage-aware briefing, a 3 AM SOS sheet, and one-tap logs when both hands are not free.</p>
-            <ul>
-              <li>Feed, sleep, diaper, medicine</li>
-              <li>Apple Watch and Live Activities</li>
-              <li>A record you can hand to the pediatrician</li>
-            </ul>
-          </div>
-        </article>
+      <div class="price-card">
+        <h3>US App Store prices</h3>
+        <p class="price-line"><strong>$39.99</strong><span>/ year</span></p>
+        <p class="trial">1-week free trial. Listed first in the app.</p>
+        <p class="price-line"><strong>$4.99</strong><span>/ month</span></p>
+        <p class="trial">1-week free trial.</p>
+        <p class="fine">Your local price can differ. Apple bills you. Cancel in Settings, your name, Subscriptions. Deleting the app does not cancel it.</p>
       </div>
     </div>
   </section>
 
-  <section id="privacy" class="privacy" aria-labelledby="privacy-title">
+  <section class="note" id="from-the-dad" aria-labelledby="dad-title">
+    <div class="wrap split">
+      <div class="copy">
+        <h2 id="dad-title">Made by a dad.</h2>
+        <!-- Placeholder. Replace this paragraph if you want different wording. Do not add a name, a child’s name, a birth story, or any detail that is not already public. -->
+        <p>DadYolked is built by an independent developer and dad in California. No investors, no ads, just the app I wanted on my own phone.</p>
+      </div>
+      <figure class="phone">
+        <picture>
+          <source type="image/avif" srcset="/assets/screens/me.avif">
+          <source type="image/webp" srcset="/assets/screens/me.webp">
+          <img src="/assets/screens/me.webp" width="506" height="1080" alt="Me screen with a dad check-in for mood, energy, and sleep, separate from the baby log." loading="lazy" decoding="async">
+        </picture>
+      </figure>
+    </div>
+  </section>
+
+  <section id="privacy" aria-labelledby="privacy-title">
     <div class="wrap">
-      <div class="section-head">
-        <div>
-          <p class="kicker">Four privacy pillars</p>
-          <h2 id="privacy-title">Your family data is <span class="serif">not</span> the product.</h2>
-        </div>
-        <p>Local by default. A partner sees only the baby logs you explicitly share.</p>
-      </div>
-      <div class="privacy-grid">
-        <article class="priv-card">
-          <p class="num">01</p>
-          <h3>Local-first, on device</h3>
-          <p>Records live on your iPhone in SwiftData by default. Core tracking works with no account.</p>
-        </article>
-        <article class="priv-card">
-          <p class="num">02</p>
-          <h3>Optional private iCloud</h3>
-          <p>Shared care is an Apple CKShare you turn on. The allowlist is baby logs only: feeds, diapers, sleep, medicine, and growth. Apple’s invitation is the only way in.</p>
-        </article>
-        <article class="priv-card">
-          <p class="num">03</p>
-          <h3>Dad notes stay put</h3>
-          <p>Private dad check-ins, journals, mood logs, HealthKit reads, and Assistant memory never leave your device, including when shared care is on.</p>
-        </article>
-        <article class="priv-card">
-          <p class="num">04</p>
-          <h3>No ads, no brokers</h3>
-          <p>Zero ad trackers, zero data brokers, and zero third-party analytics SDKs. Crashlytics is crash reporting only.</p>
-        </article>
-      </div>
-      <p class="policy-link"><a href="/privacy/">Read the full privacy policy</a></p>
+      <h2 id="privacy-title">It stays on your phone.</h2>
+      <p class="lead">Logs live on your iPhone. If you tap Invite your partner, the baby’s feeds, diapers, sleep, medicine, and growth sync through your iCloud. Your own check-ins do not.</p>
+      <p>No ads. DadYolked does not sell the data.</p>
+      <p>The app does send crash diagnostics to Firebase Crashlytics. That is crash data, performance data, and other diagnostic data. It is linked to the device. It is not used for tracking.</p>
+      <p>This website does not use analytics.</p>
+      <p><a href="/privacy/">Read the privacy policy</a></p>
     </div>
   </section>
 
   <section id="faq" aria-labelledby="faq-title">
     <div class="wrap">
-      <div class="section-head">
-        <div>
-          <p class="kicker">FAQ</p>
-          <h2 id="faq-title">Before you <span class="serif">download.</span></h2>
-        </div>
-        <p>Pricing, what a partner can see, and what the app will not pretend to be.</p>
-      </div>
-      <div class="faq-grid">
-        <article class="faq-card">
-          <h3>What is free in DadYolked?</h3>
-          <p>Core tracking and Ask DadYolked are free. That covers the stage-aware Today briefing, the 3 AM SOS sheet, the Labor 5-1-1 / 4-1-1 Command Center, and one-tap Feed, Sleep, Diaper, and Medicine logs. No account is required.</p>
+      <h2 id="faq-title">Before you install it.</h2>
+      <div class="faq-list">
+        <article>
+          <h3>Is DadYolked free?</h3>
+          <p>Yes. Today, quick logs for feeds, diapers, and sleep, Dad Guides, Invite your partner, appointments, and the Me check-in are free. Ask DadYolked, the on-device assistant, is free too. No account. DadWingman is the optional paid tier.</p>
         </article>
-        <article class="faq-card">
-          <h3>What is Ask DadYolked?</h3>
-          <p>Ask DadYolked is free on-device Q&amp;A. On supported iPhones it uses Apple Intelligence. Answers are clinician-anchored, show AAP, ACOG, CDC, and WHO source citations, and include a tappable medical disclaimer. It helps you prepare questions. It does not diagnose or replace your clinician.</p>
-        </article>
-        <article class="faq-card">
+        <article>
           <h3>What does DadWingman cost?</h3>
-          <p>DadWingman is optional. It is $4.99 per month or $39.99 per year in the US App Store; local prices can differ. It unlocks Weekly Digest, Tonight Mode, 1-tap Partner Handoff, the Pediatrician Prep PDF packet, and Memory. Manage or cancel it in Apple ID Settings. Deleting the app does not cancel the subscription.</p>
+          <p>DadWingman is optional. In the US App Store, Annual is $39.99 a year and Monthly is $4.99 a month. Both include a 1-week free trial. Local prices can differ. It adds Tonight Mode, Weekly Digest, Partner Handoff, Pediatrician Prep, and Memory. Apple bills you. Cancel in Apple ID Settings. Deleting the app does not cancel the subscription.</p>
         </article>
-        <article class="faq-card">
-          <h3>What syncs if I invite a partner?</h3>
-          <p>Partner sync is off until you turn it on. Optional private iCloud shared care uses Apple CKShare and only the allowlisted baby logs: feeds, diapers, sleep, medicine, and growth. Private dad check-ins, journals, mood logs, HealthKit reads, and Assistant memory stay on your device.</p>
+        <article>
+          <h3>Does my partner need the app?</h3>
+          <p>To see the shared log, yes. They install DadYolked and accept the iCloud invite. They do not need DadWingman for feeds, diapers, sleep, medicine, and growth. Your Me check-in, journal, mood, Health data, and Ask DadYolked memory stay on your phone.</p>
         </article>
-        <article class="faq-card">
-          <h3>Does DadYolked track me for ads?</h3>
-          <p>No. DadYolked ships zero ad trackers, zero data brokers, and zero third-party analytics SDKs. Crashlytics is used for crash reporting only.</p>
+        <article>
+          <h3>Where does my data go?</h3>
+          <p>On your iPhone. If you tap Invite your partner, the baby’s feeds, diapers, sleep, medicine, and growth sync through your iCloud. The app sends crash diagnostics to Firebase Crashlytics: crash data, performance data, and other diagnostic data, linked to the device and not used for tracking. No ads. This website does not use analytics. <a href="/privacy/">The privacy policy has the rest.</a></p>
         </article>
-        <article class="faq-card">
-          <h3>Is DadYolked medical advice?</h3>
-          <p>No. DadYolked organizes logs and clinician-anchored references so you can ask better questions. In an emergency, call your local emergency number. Health decisions belong with your clinician.</p>
+        <article>
+          <h3>Is this medical advice?</h3>
+          <p>No. DadYolked is not a medical device and does not provide medical advice, diagnosis, or treatment. Guides and logs are general information. In an emergency, call your local emergency number (911 in the United States). Health decisions belong with your clinician.</p>
         </article>
-      </div>
-    </div>
-  </section>
-
-  <section id="download" class="cta" aria-labelledby="download-title">
-    <div class="wrap">
-      <p class="kicker" style="justify-content:center">Ready when you are</p>
-      <h2 id="download-title">Get the app. <span class="serif">Run the night.</span></h2>
-      <p>Free on iPhone. Ask DadYolked included. DadWingman is there if you want the digest, Tonight Mode, partner handoff, pediatrician PDF, and Memory.</p>
-      <div class="cta-row">
-        <button type="button" class="pill soon" data-app-store="home_2" data-analytics-context="home_2" data-analytics-event="app_store_click" aria-disabled="true">
-          <svg width="14" height="16" viewBox="0 0 14 16" fill="currentColor" aria-hidden="true"><path d="M11.6 8.5c0-2.2 1.8-3.2 1.9-3.3-1-1.5-2.6-1.7-3.1-1.7-1.3-.1-2.6.8-3.3.8-.7 0-1.7-.8-2.9-.7-1.5 0-2.8.9-3.6 2.2-1.5 2.7-.4 6.7 1.1 8.9.7 1.1 1.6 2.3 2.7 2.2 1.1 0 1.5-.7 2.8-.7s1.7.7 2.8.7c1.2 0 1.9-1.1 2.6-2.2.8-1.2 1.2-2.5 1.2-2.5-.1 0-2.3-.9-2.2-3.7zM9.5 2c.6-.7 1-1.7.9-2.7-.9 0-1.9.6-2.5 1.3-.5.6-1 1.6-.9 2.6 1 .1 2-.5 2.5-1.2z"/></svg>
-          Coming soon to the App Store
-        </button>
-        <a class="pill ghost" href="/privacy/">Read the privacy policy</a>
       </div>
     </div>
   </section>
@@ -759,162 +434,25 @@ footer{border-top:1px solid var(--line-dark);padding:48px 0 64px;background:var(
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <a href="/" class="brand">
-          <span class="brand-mark"><img src="/assets/dadyolked_logo_sm.webp" alt="" width="64" height="64" decoding="async"></span>
-          DadYolked
-        </a>
-        <p class="foot-blurb">The iPhone app for expecting and new dads. Local-first logs, Ask DadYolked, and optional DadWingman.</p>
+        <a href="/" class="brand"><img src="/assets/dadyolked_logo_sm.webp" alt="" width="64" height="64" decoding="async">DadYolked</a>
+        <p class="legal">DadYolked is not a medical device and does not give medical advice, diagnosis, or treatment.</p>
       </div>
-      <div>
-        <p class="foot-heading">Product</p>
-        <ul>
-          <li><a href="#features">Features</a></li>
-          <li><a href="#stages">Stages</a></li>
-          <li><a href="#ask">Ask DadYolked</a></li>
-          <li><a href="#privacy">Privacy</a></li>
-          <li><a href="#faq">FAQ</a></li>
-          <li><a href="/tools/">Tools &amp; Guides</a></li>
-          <li><a href="/dadwingman/">DadWingman</a></li>
-          <li><button type="button" class="soon-inline" data-app-store="home_3" data-analytics-context="home_3" data-analytics-event="app_store_click" aria-disabled="true">Coming soon to the App Store</button></li>
-        </ul>
-      </div>
-      <div>
-        <p class="foot-heading">Company</p>
-        <ul>
-          <li><a href="/about/">About</a></li>
-          <li><a href="/editorial-standards/">Editorial standards</a></li>
-          <li><a href="/support/">Support</a></li>
-          <li><a href="mailto:support@dadyolked.com">Contact</a></li>
-          <li><button type="button" class="soon-inline" data-app-store="home_4" data-analytics-context="home_4" data-analytics-event="app_store_click" aria-disabled="true">Coming soon to the App Store</button></li>
-        </ul>
-      </div>
-      <div>
-        <p class="foot-heading">Legal</p>
-        <ul>
-          <li><a href="/privacy/">Privacy</a></li>
-          <li><a href="/terms/">Terms</a></li>
-          <li><a href="/support/">Support</a></li>
-          <li><a href="mailto:support@dadyolked.com">Privacy questions</a></li>
-        </ul>
-      </div>
+      <ul class="foot-links">
+        <li><a href="/privacy/">Privacy</a></li>
+        <li><a href="/terms/">Terms</a></li>
+        <li><a href="/support/">Support</a></li>
+        <li><a href="mailto:support@dadyolked.com">Contact</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/dadwingman/">DadWingman</a></li>
+        <li><a href="/tools/">Guides</a></li>
+      </ul>
     </div>
-
-    <div class="guides" id="guides">
-      <h2>Guides &amp; resources</h2>
-      <p class="intro">Practical pages for the question in front of you. The app is the log. These are the references, calculators, and checklists.</p>
-      <div class="guide-grid">
-        <div class="guide-col">
-          <h3>Pregnancy &amp; labor</h3>
-          <ul>
-            <li><a href="/dad-app-for-pregnancy/">Dad app for pregnancy</a></li>
-            <li><a href="/pregnancy-tools-for-dads/">Pregnancy tools for dads</a></li>
-            <li><a href="/kick-counter-app-for-dads/">Kick counter</a></li>
-            <li><a href="/contraction-timer-for-dads/">Contraction timer</a></li>
-            <li><a href="/hospital-bag-checklist-for-dad/">Hospital bag checklist</a></li>
-            <li><a href="/paternity-leave-planner/">Paternity leave planner</a></li>
-          </ul>
-        </div>
-        <div class="guide-col">
-          <h3>Feeding</h3>
-          <ul>
-            <li><a href="/baby-feeding-tracker-app/">Feeding tracker</a></li>
-            <li><a href="/feeding-schedule-by-age/">Feeding schedule by age</a></li>
-            <li><a href="/baby-feeding-tools-for-dads/">Feeding tools for dads</a></li>
-            <li><a href="/bottle-feeding-for-dads/">Bottle feeding</a></li>
-            <li><a href="/formula-feeding-for-dads/">Formula feeding</a></li>
-            <li><a href="/breast-milk-storage-tracker-for-dads/">Breast milk storage</a></li>
-            <li><a href="/starting-solids-checklist-for-dads/">Starting solids checklist</a></li>
-            <li><a href="/first-foods-tracker-for-dads/">First foods tracker</a></li>
-            <li><a href="/allergen-introduction-for-dads/">Allergen introduction</a></li>
-            <li><a href="/toddler-picky-eating-tracker-for-dads/">Toddler picky eating</a></li>
-            <li><a href="/tools/bottle-feeding-calculator/">Bottle feeding calculator</a></li>
-          </ul>
-        </div>
-        <div class="guide-col">
-          <h3>Sleep, diapers &amp; nights</h3>
-          <ul>
-            <li><a href="/baby-sleep-tracker-app/">Sleep tracker</a></li>
-            <li><a href="/baby-sleep-tools-for-dads/">Sleep tools for dads</a></li>
-            <li><a href="/safe-sleep-for-dads/">Safe sleep</a></li>
-            <li><a href="/4-month-sleep-regression-for-dads/">4-month sleep regression</a></li>
-            <li><a href="/tools/wake-window-calculator/">Wake window calculator</a></li>
-            <li><a href="/witching-hour-crying-for-dads/">Witching hour crying</a></li>
-            <li><a href="/diaper-tracker-app-for-dads/">Diaper tracker</a></li>
-            <li><a href="/tools/newborn-diaper-output-checker/">Diaper output checker</a></li>
-            <li><a href="/baby-poop-color-guide-for-dads/">Poop color guide</a></li>
-            <li><a href="/newborn-schedule-app-for-dads/">Newborn schedule</a></li>
-            <li><a href="/newborn-night-shift-schedule/">Night-shift schedule</a></li>
-          </ul>
-        </div>
-        <div class="guide-col">
-          <h3>Health &amp; pediatrician</h3>
-          <ul>
-            <li><a href="/baby-medicine-tracker-app/">Medicine tracker</a></li>
-            <li><a href="/newborn-medicine-log-template/">Medicine log template</a></li>
-            <li><a href="/baby-fever-when-to-call-for-dads/">Fever: when to call</a></li>
-            <li><a href="/newborn-jaundice-for-dads/">Newborn jaundice</a></li>
-            <li><a href="/reflux-and-spitting-up-for-dads/">Reflux and spitting up</a></li>
-            <li><a href="/teething-tracker-app/">Teething tracker</a></li>
-            <li><a href="/newborn-skin-and-cord-care/">Skin and cord care</a></li>
-            <li><a href="/diaper-rash-for-dads/">Diaper rash</a></li>
-            <li><a href="/tummy-time-tracker-for-dads/">Tummy time</a></li>
-            <li><a href="/baby-growth-tracker-app/">Growth tracker</a></li>
-            <li><a href="/baby-milestone-tracker-app/">Milestone tracker</a></li>
-            <li><a href="/baby-appointment-tracker-app/">Appointment tracker</a></li>
-            <li><a href="/baby-vaccination-record-organizer/">Vaccination record</a></li>
-            <li><a href="/baby-checkup-tools-for-dads/">Checkup tools</a></li>
-            <li><a href="/first-pediatrician-appointment-checklist-for-dads/">First pediatrician checklist</a></li>
-            <li><a href="/pediatrician-questions-organizer/">Pediatrician questions</a></li>
-            <li><a href="/pediatrician-visit-notes-template/">Visit notes template</a></li>
-            <li><a href="/baby-symptom-notes-organizer/">Symptom notes</a></li>
-            <li><a href="/baby-tracker-with-pediatrician-report/">Pediatrician report</a></li>
-            <li><a href="/tools/corrected-age-calculator/">Corrected age calculator</a></li>
-          </ul>
-        </div>
-        <div class="guide-col">
-          <h3>Handoffs, privacy &amp; Apple</h3>
-          <ul>
-            <li><a href="/newborn-care-tools/">Newborn care hub</a></li>
-            <li><a href="/best-baby-tracker-app-for-dads/">Best baby tracker for dads</a></li>
-            <li><a href="/private-baby-tracker-app/">Private baby tracker</a></li>
-            <li><a href="/local-first-baby-tracker-app/">Local-first baby tracker</a></li>
-            <li><a href="/shared-baby-tracker-app/">Shared baby tracker</a></li>
-            <li><a href="/family/">Accept a family share</a></li>
-            <li><a href="/baby-caregiver-tools/">Caregiver tools</a></li>
-            <li><a href="/baby-caregiver-handoff-template/">Caregiver handoff template</a></li>
-            <li><a href="/baby-emergency-contacts-worksheet/">Emergency contacts</a></li>
-            <li><a href="/baby-information-card-for-caregivers/">Caregiver information card</a></li>
-            <li><a href="/baby-tracker-template/">Baby tracker template</a></li>
-            <li><a href="/baby-tracker-app-with-apple-watch/">Apple Watch baby tracker</a></li>
-            <li><a href="/baby-tracker-app-with-siri-widgets/">Siri shortcuts and widgets</a></li>
-            <li><a href="/daycare-and-childcare-for-dads/">Daycare and childcare</a></li>
-            <li><a href="/car-seat-safety-for-dads/">Car seat safety</a></li>
-          </ul>
-        </div>
-        <div class="guide-col">
-          <h3>For the dad</h3>
-          <ul>
-            <li><a href="/dad-recovery-checklist/">Dad recovery checklist</a></li>
-            <li><a href="/postpartum-depression-in-dads/">Postpartum depression in dads</a></li>
-            <li><a href="/support/">App support</a></li>
-            <li><a href="/tools/">All tools and guides</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="foot-bottom">
-      <span>© 2026 DadYolked</span>
-      <span>iPhone · Apple Watch · Local-first</span>
-    </div>
+    <p class="copy">© 2026 DadYolked</p>
   </div>
 </footer>
 
 <div class="sticky-cta" role="region" aria-label="App Store availability">
-  <button type="button" class="pill soon" data-app-store="home_sticky" data-analytics-context="home_sticky" data-analytics-event="app_store_click" aria-disabled="true">
-    <svg width="14" height="16" viewBox="0 0 14 16" fill="currentColor" aria-hidden="true"><path d="M11.6 8.5c0-2.2 1.8-3.2 1.9-3.3-1-1.5-2.6-1.7-3.1-1.7-1.3-.1-2.6.8-3.3.8-.7 0-1.7-.8-2.9-.7-1.5 0-2.8.9-3.6 2.2-1.5 2.7-.4 6.7 1.1 8.9.7 1.1 1.6 2.3 2.7 2.2 1.1 0 1.5-.7 2.8-.7s1.7.7 2.8.7c1.2 0 1.9-1.1 2.6-2.2.8-1.2 1.2-2.5 1.2-2.5-.1 0-2.3-.9-2.2-3.7zM9.5 2c.6-.7 1-1.7.9-2.7-.9 0-1.9.6-2.5 1.3-.5.6-1 1.6-.9 2.6 1 .1 2-.5 2.5-1.2z"/></svg>
-    Coming soon to the App Store
-  </button>
+  <button type="button" class="pill soon" data-app-store="home_sticky" data-analytics-context="home_sticky" data-analytics-event="app_store_click" aria-disabled="true">Coming soon to the App Store</button>
 </div>
 <script src="/assets/app-store.js"></script>
 </body>
