@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta property="og:site_name" content="DadYolked">
 <meta property="og:type" content="website">
@@ -29,9 +30,6 @@
 <link rel="preload" as="image" href="/assets/screens/today.avif" type="image/avif" fetchpriority="high">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; font-src 'self'; script-src 'self' 'unsafe-inline'; connect-src 'self'; base-uri 'self'; form-action 'self' mailto:; upgrade-insecure-requests">
-<!-- TODO: The App Store listing is not live, and this banner stays off until the app ID is confirmed.
-     Then add: <meta name="apple-itunes-app" content="app-id=APP_STORE_ID">
-     The store URL is the single constant APP_STORE.url in /assets/app-store.js. Set live: true there at the same time. Do not point the banner at a 404. -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -380,7 +378,6 @@ footer{border-top:1px solid var(--line);padding:36px 0 28px}
     <div class="wrap split">
       <div class="copy">
         <h2 id="dad-title">Made by a dad.</h2>
-        <!-- Placeholder. Replace this paragraph if you want different wording. Do not add a name, a child’s name, a birth story, or any detail that is not already public. -->
         <p>DadYolked is built by an independent developer and dad in California. No investors, no ads, just the app I wanted on my own phone.</p>
       </div>
       <figure class="phone">
@@ -458,5 +455,6 @@ footer{border-top:1px solid var(--line);padding:36px 0 28px}
   <button type="button" class="pill soon" data-app-store="home_sticky" data-analytics-context="home_sticky" data-analytics-event="app_store_click" aria-disabled="true">Coming soon to the App Store</button>
 </div>
 <script src="/assets/app-store.js"></script>
+<link rel="stylesheet" href="/assets/fit.css">
 </body>
 </html>
