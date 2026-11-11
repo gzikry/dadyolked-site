@@ -26,7 +26,7 @@ a{color:var(--accent-2)}
 .nav{border-bottom:1px solid var(--line);background:rgba(9,11,15,.84);backdrop-filter:blur(18px);position:sticky;top:0;z-index:10}
 .nav-row{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--text);font-weight:850}
-.brand img{width:36px;height:36px;border-radius:22.37%}
+.brand img{width:36px;height:36px;border-radius:12px}
 .links{display:flex;gap:18px;flex-wrap:wrap}
 .links a{color:var(--muted);text-decoration:none;font-size:14px}
 .links a:hover{color:var(--text)}
@@ -149,7 +149,7 @@ main > section + section::before{content:"";position:absolute;top:-27px;left:0;r
 .links{flex-wrap:wrap;row-gap:6px;column-gap:14px}
 @media (max-width:520px){
   .nav-row{padding:12px 0}
-  .brand img{width:30px;height:30px;border-radius:22.37%}
+  .brand img{width:30px;height:30px;border-radius:10px}
   .brand{font-size:15px}
   .links{font-size:13px;column-gap:12px}
   .links a{font-size:13px}
@@ -288,14 +288,14 @@ input.fnum{width:100%;background:var(--card);border:1px solid var(--line);border
 @media print{.jd-tbl tr,.jd-call,.jd-row{break-inside:avoid}.jd-noprint{display:none!important}}
 
   </style>
-  <script defer src="/assets/cloudflare-web-analytics.js"></script>
+  
   <link rel="icon" href="/favicon.ico?v=92fba44" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32-92fba44.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16-92fba44.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon-92fba44.png">
 <link rel="manifest" href="/site.webmanifest">
   <meta name="referrer" content="strict-origin-when-cross-origin">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; font-src 'self'; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com; connect-src 'self' https://cloudflareinsights.com; base-uri 'self'; form-action 'self' mailto:; upgrade-insecure-requests">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; font-src 'self'; script-src 'self' 'unsafe-inline'; connect-src 'self'; base-uri 'self'; form-action 'self' mailto:; upgrade-insecure-requests">
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to main content</a>

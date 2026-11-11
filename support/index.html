@@ -41,7 +41,7 @@
   <style>
     :root{--ink:#090b0f;--ink-2:#101318;--text:#f7efe4;--muted:rgba(247,239,228,.70);--line:rgba(247,239,228,.14);--accent:#c07a3e;--accent-2:#f0b36a;--card:rgba(255,255,255,.065);--card-2:rgba(255,255,255,.04);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color-scheme:dark}
     *{box-sizing:border-box} body{margin:0;background:radial-gradient(80% 70% at 50% -10%,rgba(192,122,62,.22),transparent 70%),linear-gradient(180deg,var(--ink),var(--ink-2));color:var(--text);min-height:100vh} a{color:var(--accent-2)}
-    .wrap{width:min(980px,calc(100% - 40px));margin:0 auto}.nav{border-bottom:1px solid var(--line);background:rgba(9,11,15,.82);backdrop-filter:blur(18px);position:sticky;top:0;z-index:10}.nav-row{display:flex;align-items:center;justify-content:space-between;padding:16px 0}.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--text);font-weight:800}.brand img{width:36px;height:36px;border-radius:22.37%}.links{display:flex;gap:18px;align-items:center}.links a{color:var(--muted);text-decoration:none;font-size:14px}.links a:hover{color:var(--text)}
+    .wrap{width:min(980px,calc(100% - 40px));margin:0 auto}.nav{border-bottom:1px solid var(--line);background:rgba(9,11,15,.82);backdrop-filter:blur(18px);position:sticky;top:0;z-index:10}.nav-row{display:flex;align-items:center;justify-content:space-between;padding:16px 0}.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--text);font-weight:800}.brand img{width:36px;height:36px;border-radius:12px}.links{display:flex;gap:18px;align-items:center}.links a{color:var(--muted);text-decoration:none;font-size:14px}.links a:hover{color:var(--text)}
     main{padding:72px 0 96px}.kicker{color:var(--accent-2);text-transform:uppercase;letter-spacing:.16em;font-size:12px;font-weight:800} h1{font-size:clamp(44px,7vw,84px);line-height:.95;letter-spacing:-.055em;margin:14px 0 24px;max-width:880px} h2{font-size:24px;margin:0 0 10px} h3{font-size:18px;margin:0 0 8px} p,li{color:var(--muted);font-size:17px;line-height:1.72}.lead{font-size:20px;max-width:780px}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:32px}.card{background:var(--card);border:1px solid var(--line);border-radius:28px;padding:28px;box-shadow:0 30px 120px rgba(0,0,0,.24)}.card.soft{background:var(--card-2);box-shadow:none}.pill{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:12px 18px;background:var(--accent);color:white;text-decoration:none;font-weight:800;margin-top:10px}.ghost{background:transparent;border:1px solid var(--line);color:var(--text)} ul{padding-left:20px;margin-bottom:0}.faq{margin-top:42px}.faq .card{margin-top:14px}.note{border:1px solid rgba(240,179,106,.30);background:rgba(240,179,106,.10);border-radius:22px;padding:18px 20px;margin-top:26px} footer{border-top:1px solid var(--line);padding:28px 0;color:rgba(247,239,228,.48)} @media(max-width:760px){.grid{grid-template-columns:1fr}.links{gap:10px}.links a{font-size:13px}main{padding-top:48px}.card{padding:22px;border-radius:22px}}
   
 /* ===== Polish layer: shared visual enhancements (injected) ===== */
@@ -126,7 +126,7 @@ main > section + section::before{content:"";position:absolute;top:-27px;left:0;r
 .links{flex-wrap:wrap;row-gap:6px;column-gap:14px}
 @media (max-width:520px){
   .nav-row{padding:12px 0}
-  .brand img{width:30px;height:30px;border-radius:22.37%}
+  .brand img{width:30px;height:30px;border-radius:10px}
   .brand{font-size:15px}
   .links{font-size:13px;column-gap:12px}
   .links a{font-size:13px}
@@ -176,14 +176,14 @@ main > section > .table-wrap > table{max-width:100%}
 .skip-link{position:fixed;left:16px;top:12px;z-index:100;transform:translateY(-180%);padding:10px 14px;border-radius:10px;background:var(--accent);color:#fff;font-weight:700;text-decoration:none;transition:transform .2s ease}
 .skip-link:focus{transform:translateY(0)}
 </style>
-  <script defer src="/assets/cloudflare-web-analytics.js"></script>
+  
   <link rel="icon" href="/favicon.ico?v=92fba44" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32-92fba44.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16-92fba44.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon-92fba44.png">
 <link rel="manifest" href="/site.webmanifest">
   <meta name="referrer" content="strict-origin-when-cross-origin">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; font-src 'self'; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com; connect-src 'self' https://cloudflareinsights.com; base-uri 'self'; form-action 'self' mailto:; upgrade-insecure-requests">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; font-src 'self'; script-src 'self' 'unsafe-inline'; connect-src 'self'; base-uri 'self'; form-action 'self' mailto:; upgrade-insecure-requests">
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -200,13 +200,13 @@ main > section > .table-wrap > table{max-width:100%}
       </section>
       <section class="card">
         <h2>Privacy policy</h2>
-        <p>v1.1 keeps logs local-first and adds optional private iCloud (CKShare) shared care for allowlisted baby logs: feeds, diapers, sleep, medicine, and growth. Private dad check-ins, journals, mood logs, HealthKit reads, and Ask DadYolked memory stay on the device. Read how the app handles those boundaries, exports, Crashlytics crash reports, and this website.</p>
+        <p>v1.1 keeps logs local-first and adds optional private iCloud (CKShare) shared care for allowlisted baby logs: feeds, diapers, sleep, medicine, and growth. Private dad check-ins, journals, mood logs, HealthKit reads, and Ask DadYolked memory stay on the device. The app sends crash diagnostics to Firebase Crashlytics (crash data, performance data, and other diagnostic data, linked to the device, not used for tracking). This website does not use analytics.</p>
         <a class="pill ghost" href="/privacy/">Read privacy policy</a>
       </section>
       <section class="card">
         <h2>App Store</h2>
-        <p>Open the DadYolked App Store listing for downloads, reviews, release notes, and official app metadata.</p>
-        <a data-analytics-context="support_1" data-analytics-event="app_store_click" class="pill" href="/waitlist/" target="_blank" rel="noopener">Open App Store</a>
+        <p>DadYolked is not on the App Store yet. The listing link on this site will switch over when the page is public.</p>
+        <a data-analytics-context="support_1" data-analytics-event="app_store_click" class="pill" href="/waitlist/">Coming soon to the App Store</a>
       </section>
       <section class="card">
         <h2>What DadYolked covers</h2>
@@ -232,8 +232,9 @@ main > section > .table-wrap > table{max-width:100%}
           <h3>DadWingman subscription</h3>
           <ul>
             <li>Core tracking and Ask DadYolked are free.</li>
-            <li>DadWingman is $4.99 per month or $39.99 per year in the US App Store. Local prices can differ.</li>
-            <li>It unlocks Weekly Digest, Tonight Mode, 1-tap Partner Handoff, the Pediatrician Prep PDF packet, and Memory.</li>
+            <li>Ask DadYolked, the free assistant, runs on your iPhone. It is not part of DadWingman.</li>
+            <li>DadWingman is $39.99 per year or $4.99 per month in the US App Store, each with a 1-week free trial. Annual is listed first. Local prices can differ.</li>
+            <li>It adds Tonight Mode, Weekly Digest, Partner Handoff, Pediatrician Prep, and Memory.</li>
             <li>Manage, cancel, or restore it in Apple ID Settings → Subscriptions. Cancel at least 24 hours before renewal.</li>
             <li>Deleting the app does not cancel the subscription. Apple bills the charge. DadYolked does not see your card.</li>
           </ul>
