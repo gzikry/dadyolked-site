@@ -9,7 +9,7 @@ This repo does not load an analytics script. The privacy policy says the website
 Clickable App Store links use:
 
 ```text
-https://apps.apple.com/app/id6773113095?ct=site_<page_slug>_<link_number>&mt=8
+https://apps.apple.com/us/app/dadyolked/id6773113095?ct=site_<page_slug>_<link_number>&mt=8
 ```
 
 Examples:
