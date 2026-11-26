@@ -1,27 +1,33 @@
 /*
   Homepage App Store CTAs.
 
-  APP_STORE.url is the one store URL. The listing is not public yet.
-  While `live` is false, every [data-app-store] control on the homepage is a
-  non-link labeled "Coming soon to the App Store".
+  APP_STORE.url is the canonical public listing:
+  https://apps.apple.com/us/app/dadyolked/id6773113095
 
-  Flip `live` to true when that listing loads. This file is the only change
-  required for those controls: each one becomes its campaign link, using the
-  ct token and label stored here. Do not paste the store URL into hrefs.
+  `live` is true. Each [data-app-store] control is a real link to that
+  listing. This file adds the campaign query already used on the homepage
+  (?ct=<token>&mt=8). The HTML href is the bare listing, so a no-JS visit
+  still reaches the App Store.
 
-  The homepage currently renders home_nav, home_1, and home_sticky.
+  home_1 and home_sticky use Apple's official Download on the App Store
+  badge (assets/download-on-the-app-store-white.svg). Only one is visible
+  at a time: the hero badge on wide screens, the sticky badge on narrow
+  screens. home_nav keeps the "Get the app" label.
+
+  This file does not change JSON-LD, the Smart App Banner, or copy on
+  guide, support, privacy, or waitlist pages. Edit those in their HTML.
+
   home_2, home_3, and home_4 stay defined so a later control can use them.
 
-  The apple-itunes-app smart banner stays off while the listing is not public.
-  Do not add that meta while the listing 404s. JSON-LD downloadUrl points at
-  /waitlist/ until then.
+  While `live` is false, controls fall back to a non-link labeled
+  soonLabel. That branch is unused while the listing is public.
 */
 (function () {
   "use strict";
 
   var APP_STORE = {
-    live: false,
-    url: "https://apps.apple.com/app/id6773113095",
+    live: true,
+    url: "https://apps.apple.com/us/app/dadyolked/id6773113095",
     soonLabel: "Coming soon to the App Store",
     slots: {
       home_nav: { ct: "site_home_nav", label: "Get the app", className: "pill primary nav-cta" },
@@ -64,16 +70,26 @@
       return;
     }
 
-    var link = document.createElement("a");
-    link.className = campaign.className;
+    var link = el;
+    if (el.tagName !== "A") {
+      link = document.createElement("a");
+      link.className = el.className;
+      link.setAttribute("data-app-store", slot);
+      link.setAttribute("data-analytics-context", el.getAttribute("data-analytics-context") || slot);
+      link.setAttribute("data-analytics-event", el.getAttribute("data-analytics-event") || "app_store_click");
+      while (el.firstChild) link.appendChild(el.firstChild);
+      el.replaceWith(link);
+    }
+
     link.href = APP_STORE.url + "?ct=" + encodeURIComponent(campaign.ct) + "&mt=8";
     link.target = "_blank";
     link.rel = "noopener";
-    link.setAttribute("data-app-store", slot);
-    link.setAttribute("data-analytics-context", el.getAttribute("data-analytics-context") || slot);
-    link.setAttribute("data-analytics-event", "app_store_click");
-    if (el.querySelector("svg")) link.appendChild(el.querySelector("svg"));
-    setLabel(link, campaign.label);
-    el.replaceWith(link);
+    link.removeAttribute("aria-disabled");
+
+    if (!link.querySelector("img")) {
+      var svgs = link.querySelectorAll("svg");
+      for (var i = 0; i < svgs.length; i++) svgs[i].remove();
+      link.textContent = campaign.label;
+    }
   });
 }());

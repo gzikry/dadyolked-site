@@ -13,37 +13,33 @@ See the live site at https://gzikry.github.io/dadyolked-site/ (temporary) or the
 
 ## App Store listing
 
-The App Store page `https://apps.apple.com/app/id6773113095` is not live yet, so that URL 404s. The homepage CTAs are a non-link **Coming soon to the App Store** state until it is public:
+DadYolked is on the App Store. The canonical listing is:
 
-- Nav (`home_nav`)
-- Hero (`home_1`)
-- Mobile sticky bar (`home_sticky`)
+```text
+https://apps.apple.com/us/app/dadyolked/id6773113095
+```
+
+`https://apps.apple.com/app/id6773113095` and `https://apps.apple.com/us/app/id6773113095` redirect there. Use that canonical URL for CTAs, official badges, and JSON-LD `downloadUrl`.
+
+Homepage controls are real links in `index.html`, so a visit with JavaScript off still opens the listing. `assets/app-store.js` has `live: true` and adds the campaign query already used on the homepage (`?ct=<token>&mt=8`) to these slots:
+
+- Nav (`home_nav`) — text link, "Get the app"
+- Hero (`home_1`) — official Download on the App Store badge, visible on wide screens
+- Mobile sticky bar (`home_sticky`) — the same official badge, visible on narrow screens
+
+Only one of those badges is on screen at a time. Apple's one-badge-per-layout rule is why the hero badge hides when the sticky bar is showing. The badge files are Apple's unmodified US English artwork in `/assets/`. The white badge is the one on the dark homepage. The black badge is the one on the light family page.
 
 `home_2`, `home_3`, and `home_4` remain in `assets/app-store.js` and are unused until a control sets `data-app-store` to that slot.
 
-Each one is a `<button type="button" aria-disabled="true">` with no `href`. Availability, the store URL, and every `ct` campaign token live in `assets/app-store.js`.
-
-Flip the listing on by changing one line in that file:
-
-```js
-live: true
-```
-
-Leave `live` as `false` until the App Store page loads. With `live: true`, each rendered control becomes a link again:
-
-```text
-https://apps.apple.com/app/id6773113095?ct=<token>&mt=8
-```
-
-| Slot | `ct` token | Label restored when live |
+| Slot | `ct` token | What the page shows |
 |---|---|---|
 | `home_nav` | `site_home_nav` | Get the app |
-| `home_1` | `site_home_1` | Download on the App Store |
+| `home_1` | `site_home_1` | Official Download on the App Store badge |
 | `home_2` | `site_home_2` | Download on the App Store |
 | `home_3` | `site_home_3` | Download |
 | `home_4` | `site_home_4` | App Store |
-| `home_sticky` | `site_home_sticky` | Download on the App Store |
+| `home_sticky` | `site_home_sticky` | Official Download on the App Store badge |
 
-No other file needs to change for that flip. Do not paste the store URL back into homepage `href` attributes.
+The Smart App Banner is on: `<meta name="apple-itunes-app" content="app-id=6773113095">`. Homepage JSON-LD `downloadUrl` is the canonical listing. `live` does not update JSON-LD, the Smart App Banner, or the copy and CTAs on guide, support, privacy, or waitlist pages. Those live in their own HTML. `/waitlist/` stays up as a short "on the App Store" page for old links. It does not say the download is still coming.
 
-The Smart App Banner (`apple-itunes-app`) stays off until the App Store listing is public. Do not add that meta while the listing 404s. Homepage JSON-LD `downloadUrl` points at `/waitlist/` until the listing is public. This flag does not change either of those. Guide pages that still link to the store are outside this homepage switch.
+`soonLabel` in `assets/app-store.js` is only the `live === false` fallback. It is not shown while `live` is true.

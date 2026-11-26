@@ -40,3 +40,20 @@ th, td {
 @media (max-width: 900px) {
   .foodrow { grid-template-columns: 1fr !important; }
 }
+
+/* Official Download on the App Store badge. Artwork is unmodified.
+   40px is Apple's on-screen minimum. Clear space is one-quarter of that. */
+.app-store-badge {
+  display: inline-flex;
+  line-height: 0;
+  margin: 10px;
+  padding: 0;
+  border: 0;
+  background: none;
+  text-decoration: none;
+}
+.app-store-badge img {
+  width: auto;
+  height: 40px;
+  max-width: none;
+}
